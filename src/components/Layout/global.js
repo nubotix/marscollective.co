@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Baloo 2', 'sans-serif';
+    font-family: 'Baloo 2', sans-serif;
     font-size: 16px;
     text-rendering: optimizeLegibility;
     color: var(--default);
@@ -20,6 +20,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1,
+  h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
   h2,
   h3,
   h4,
@@ -28,16 +34,12 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.1;
   }
 
-  h1,
-  h2 {
-    font-display: 'Rubik', 'sans-serif';
-    font-weight: 900;
-  }
-
   h1 {
     font-size: 5rem;
+    color: var(--default);
 
     .big {
+      display: block;
       font-size: 8.75rem;
       color: var(--highLight);
     }
@@ -45,8 +47,9 @@ const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-size: 3rem;
+    text-align: center;
     color: var(--highLight);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   h3,
@@ -54,12 +57,13 @@ const GlobalStyles = createGlobalStyle`
   h5,
   h6 {
     font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
 
   h3 {
     font-size: 2rem;
     color: var(--highLight);
-    margin-bottom: 0.5rem;
   }
 
   h4 {
@@ -70,11 +74,11 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.5;
     margin-bottom: 1rem;
 
-    .lead {
+    &.lead {
       font-size: 1.5rem;
     }
 
-    :last-child {
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -84,11 +88,15 @@ const GlobalStyles = createGlobalStyle`
     color: var(--background);
     background: var(--highLight);
     padding: 1rem 2rem;
+    border: 2px solid var(--highLight);
     border-radius: 10px;
 
-    .ghost {
+    &.ghost {
       color: var(--highLight);
       background: transparent;
+    }
+  }
+
   input,
   textarea {
     display: block;
