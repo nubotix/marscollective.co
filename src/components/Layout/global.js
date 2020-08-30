@@ -89,8 +89,21 @@ const GlobalStyles = createGlobalStyle`
     .ghost {
       color: var(--highLight);
       background: transparent;
-      border: 2px solid var(--highLight);
-    }
+  input,
+  textarea {
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+  }
+
+  textarea {
+    height: 9rem;
   }
 `
 
