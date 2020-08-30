@@ -19,6 +19,7 @@ export const ItemLanguage = styled.li`
 
 export const LinkItem = styled(Link)`
   color: var(--default);
+  font-weight: 600;
   text-decoration: none;
   border: none;
 
