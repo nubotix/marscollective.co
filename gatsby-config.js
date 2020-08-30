@@ -27,6 +27,30 @@ module.exports = {
         icon: `src/images/icon.png`
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Rubik`,
+            variants: [`900`]
+          },
+          {
+            family: `Baloo 2`,
+            variants: [
+              `400`,
+              `400i`,
+              `500`,
+              `500i`,
+              `600`,
+              `600i`,
+              `700`,
+              `700i`
+            ]
+          }
+        ]
+      }
+    }
   ]
 }
