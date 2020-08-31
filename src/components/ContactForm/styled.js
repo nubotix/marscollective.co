@@ -11,8 +11,3 @@ export const Title = styled.h3`
   text-align: left;
   margin-bottom: 2rem;
 `
-
-export const Button = styled.button`
-  border-color: var(--default);
-  color: var(--default);
-`

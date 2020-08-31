@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Baloo 2', sans-serif;
     font-size: 16px;
+    line-height: 1;
     text-rendering: optimizeLegibility;
     color: var(--default);
     background: var(--background);
@@ -76,6 +77,7 @@ const GlobalStyles = createGlobalStyle`
 
     &.lead {
       font-size: 1.5rem;
+      margin: -1rem 0 0 0;
     }
 
     &:last-child {
@@ -84,16 +86,24 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
     font-weight: 700;
     color: var(--background);
     background: var(--highLight);
-    padding: 1rem 2rem;
+    padding: calc(1rem - 2px) 2rem;
     border: 2px solid var(--highLight);
     border-radius: 10px;
 
     &.ghost {
       color: var(--highLight);
       background: transparent;
+
+      &.white {
+        color: var(--default);
+        border-color: var(--default);
+      }
     }
   }
 
@@ -112,6 +122,7 @@ const GlobalStyles = createGlobalStyle`
 
   textarea {
     height: 9rem;
+    margin-bottom: 2rem;
   }
 `
 

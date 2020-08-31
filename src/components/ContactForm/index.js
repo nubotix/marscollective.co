@@ -27,9 +27,9 @@ const ContactForm = () => (
         required
       />
 
-      <S.Button type="submit" className="ghost">
+      <button type="submit" className="ghost white">
         Send
-      </S.Button>
+      </button>
     </form>
   </S.Wrapper>
 )
