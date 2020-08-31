@@ -2,20 +2,15 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-`
-
-export const Image = styled.div`
-  width: 100%;
-  height: 100%;
-  background: grey;
+  grid-template-columns: 1fr 26rem;
+  gap: 5rem;
+  margin: 4rem 0;
 `
 
 export const TextWrapper = styled.section`
   display: grid;
+  align-content: center;
   gap: 2rem;
-  padding: 4rem 0;
 `
 
 export const Lead = styled.p`

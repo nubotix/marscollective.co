@@ -1,10 +1,11 @@
 import React from 'react'
 
+import Image from '../../images/welcome.svg'
 import * as S from './styled'
 
 const Welcome = () => (
   <S.Wrapper>
-    <S.Image />
+    <img src={Image} alt="We are Mars" />
     <S.TextWrapper>
       <h1>
         We are <span className="big">Mars</span>

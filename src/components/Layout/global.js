@@ -107,6 +107,10 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  img {
+    max-width: 100%;
+  }
+
   input,
   textarea {
     display: block;
