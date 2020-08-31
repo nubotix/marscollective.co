@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: 1fr 26rem;
+  grid-template-columns: 1fr 27rem;
   gap: 5rem;
-  margin: 4rem 0;
+  margin: 4rem 0 8rem;
 `
 
 export const TextWrapper = styled.section`

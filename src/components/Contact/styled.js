@@ -8,6 +8,7 @@ export const Wrapper = styled.section`
   grid-template-columns: auto 26.5rem;
   gap: 2rem;
   padding: 4rem;
+  margin: 8rem 0;
   border-radius: 2rem;
   background: #353535;
 `
