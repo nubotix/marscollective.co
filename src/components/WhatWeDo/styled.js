@@ -16,10 +16,4 @@ export const Item = styled.div`
   gap: 2rem;
 `
 
-export const Image = styled.div`
-  background: gray;
-  width: 100%;
-  height: 230px;
-`
-
 export const TextWrapper = styled.div``

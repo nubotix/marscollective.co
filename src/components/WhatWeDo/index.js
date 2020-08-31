@@ -1,5 +1,9 @@
 import React from 'react'
 
+import weDesign from '../../images/weDesign.svg'
+import weDevelop from '../../images/weDevelop.svg'
+import weWrite from '../../images/weWrite.svg'
+import weLocalize from '../../images/weLocalize.svg'
 import * as S from './styled'
 
 const WhatWeDo = () => (
@@ -7,7 +11,7 @@ const WhatWeDo = () => (
     <h2>What we do</h2>
     <S.Itens>
       <S.Item>
-        <S.Image />
+        <img src={weDesign} alt="We design" />
         <S.TextWrapper>
           <h3>We design</h3>
           <p>
@@ -18,7 +22,7 @@ const WhatWeDo = () => (
         </S.TextWrapper>
       </S.Item>
       <S.Item>
-        <S.Image />
+        <img src={weDevelop} alt="We develop" />
         <S.TextWrapper>
           <h3>We develop</h3>
           <p>
@@ -29,7 +33,7 @@ const WhatWeDo = () => (
         </S.TextWrapper>
       </S.Item>
       <S.Item>
-        <S.Image />
+        <img src={weWrite} alt="We write" />
         <S.TextWrapper>
           <h3>We write</h3>
           <p>
@@ -40,7 +44,7 @@ const WhatWeDo = () => (
         </S.TextWrapper>
       </S.Item>
       <S.Item>
-        <S.Image />
+        <img src={weLocalize} alt="We localize" />
         <S.TextWrapper>
           <h3>We localize</h3>
           <p>
