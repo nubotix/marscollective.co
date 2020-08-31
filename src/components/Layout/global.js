@@ -89,7 +89,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--background);
     background: var(--highLight);
     padding: calc(1rem - 2px) 2rem;
