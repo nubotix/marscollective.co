@@ -12,8 +12,8 @@ const links = [
     url: '/our-work/'
   },
   {
-    label: 'Team',
-    url: '/team/'
+    label: 'Who we are',
+    url: '/who-we-are/'
   },
   {
     label: 'Blog',
