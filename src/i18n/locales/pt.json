@@ -1,29 +1,11 @@
 {
   "nav": {
-    "home": {
-      "label": "Início",
-      "url": "/"
-    },
-    "whatWeDo": {
-      "label": "O que fazemos",
-      "url": "/"
-    },
-    "ourWork": {
-      "label": "Nosso trabalho",
-      "url": "/our-work/"
-    },
-    "whoWeAre": {
-      "label": "Quem somos",
-      "url": "/who-we-are/"
-    },
-    "blog": {
-      "label": "Blog",
-      "url": "/blog/"
-    },
-    "contact": {
-      "label": "Contato",
-      "url": "/contact/"
-    }
+    "home": "Início",
+    "whatWeDo": "O que fazemos",
+    "ourWork": "Nosso trabalho",
+    "whoWeAre": "Quem somos",
+    "blog": "Blog",
+    "contact": "Contato"
   },
   "welcome": {
     "weAre": "Nós somos a",
