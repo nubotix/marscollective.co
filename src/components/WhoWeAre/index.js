@@ -41,7 +41,7 @@ const WhoWeAre = ({ t }) => {
   )
 
   return (
-    <S.Wrapper>
+    <S.Wrapper id="who-we-are">
       <h2>{t('whoWeAre.title')}</h2>
       <S.Itens>
         <S.Item>

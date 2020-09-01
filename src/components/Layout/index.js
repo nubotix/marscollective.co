@@ -6,7 +6,7 @@ import GlobalStyles from './global'
 import * as S from './styled'
 
 const Layout = ({ children }) => (
-  <S.Wrapper>
+  <S.Wrapper id="home">
     <GlobalStyles />
     <Header />
     <main>{children}</main>

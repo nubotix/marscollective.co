@@ -8,7 +8,7 @@ import * as S from './styled'
 import { translate } from '../../i18n/translate'
 
 const WhatWeDo = ({ t }) => (
-  <S.Wrapper>
+  <S.Wrapper id="what-we-do">
     <h2>{t('whatWeDo.title')}</h2>
     <S.Itens>
       <S.Item>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 export const Wrapper = styled.nav``
 
@@ -21,7 +21,7 @@ export const ItemLanguage = styled.li`
   }
 `
 
-export const LinkItem = styled(Link)`
+export const LinkItem = styled(AnchorLink)`
   color: var(--default);
   font-weight: 600;
   text-decoration: none;
@@ -31,7 +31,7 @@ export const LinkItem = styled(Link)`
     color: var(--highLight);
   }
 
-  :active {
+  &.active {
     color: var(--highLight);
   }
 `

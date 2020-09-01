@@ -1,28 +1,78 @@
 import React from 'react'
 
-import links from './content'
-import languages from './languages'
 import * as S from './styled'
+import { translate } from '../../i18n/translate'
 
-const Nav = () => (
+const Nav = ({ t }) => (
   <S.Wrapper>
     <S.List>
-      {links.map((link, i) => (
-        <S.Item key={i}>
-          <S.LinkItem to={link.url} activeClassName="active">
-            {link.label}
-          </S.LinkItem>
-        </S.Item>
-      ))}
-      {languages.map((language, i) => (
-        <S.ItemLanguage key={i}>
-          <S.LinkItem to={language.url} activeClassName="active">
-            {language.label}
-          </S.LinkItem>
-        </S.ItemLanguage>
-      ))}
+      <S.Item>
+        <S.LinkItem to="/#home" alt={t('nav.home')} activeClassName="active">
+          {t('nav.home')}
+        </S.LinkItem>
+      </S.Item>
+
+      <S.Item>
+        <S.LinkItem
+          to="/#what-we-do"
+          alt={t('nav.whatWeDo')}
+          activeClassName="active"
+        >
+          {t('nav.whatWeDo')}
+        </S.LinkItem>
+      </S.Item>
+
+      <S.Item>
+        <S.LinkItem
+          to="/#our-work"
+          alt={t('nav.ourWork')}
+          activeClassName="active"
+        >
+          {t('nav.ourWork')}
+        </S.LinkItem>
+      </S.Item>
+
+      <S.Item>
+        <S.LinkItem
+          to="/#who-we-are"
+          alt={t('nav.whoWeAre')}
+          activeClassName="active"
+        >
+          {t('nav.whoWeAre')}
+        </S.LinkItem>
+      </S.Item>
+
+      <S.Item>
+        <S.LinkItem to="/#blog" alt={t('nav.blog')} activeClassName="active">
+          {t('nav.blog')}
+        </S.LinkItem>
+      </S.Item>
+
+      <S.Item>
+        <S.LinkItem
+          to="/#contact"
+          alt={t('nav.contact')}
+          activeClassName="active"
+        >
+          {t('nav.contact')}
+        </S.LinkItem>
+      </S.Item>
+
+      <S.ItemLanguage>
+        <S.LinkItem to="" activeClassName="active">
+          [en]
+        </S.LinkItem>
+
+        <S.LinkItem to="" activeClassName="active">
+          [es]
+        </S.LinkItem>
+
+        <S.LinkItem to="" activeClassName="active">
+          [pt]
+        </S.LinkItem>
+      </S.ItemLanguage>
     </S.List>
   </S.Wrapper>
 )
 
-export default Nav
+export default translate(Nav)
