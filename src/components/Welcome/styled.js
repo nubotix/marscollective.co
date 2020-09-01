@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: 1fr 27rem;
+  grid-template-columns: 1fr 30rem;
   gap: 5rem;
   margin: 4rem 0 8rem;
 `

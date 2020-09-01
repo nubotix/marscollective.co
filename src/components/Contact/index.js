@@ -3,11 +3,12 @@ import React from 'react'
 import Social from '../Social'
 import ContactForm from '../ContactForm'
 import * as S from './styled'
+import { translate } from '../../i18n/translate'
 
-const Contact = () => (
+const Contact = ({ t }) => (
   <S.Wrapper>
     <S.TextWrapper>
-      <S.Title>LET'S BUILD AMAZING THINGS TOGETHER</S.Title>
+      <S.Title>{t('contact.title')}</S.Title>
       <S.InfoWrapper>
         <S.MapIcon /> Rua Parque Antârtica, 329 <br /> Morumbi, Foz do Iguaçu -
         PR, Brazil
@@ -24,4 +25,4 @@ const Contact = () => (
   </S.Wrapper>
 )
 
-export default Contact
+export default translate(Contact)

@@ -5,58 +5,42 @@ import weDevelop from '../../images/weDevelop.svg'
 import weWrite from '../../images/weWrite.svg'
 import weLocalize from '../../images/weLocalize.svg'
 import * as S from './styled'
+import { translate } from '../../i18n/translate'
 
-const WhatWeDo = () => (
+const WhatWeDo = ({ t }) => (
   <S.Wrapper>
-    <h2>What we do</h2>
+    <h2>{t('whatWeDo.title')}</h2>
     <S.Itens>
       <S.Item>
-        <img src={weDesign} alt="We design" />
+        <img src={weDesign} alt={t('whatWeDo.weDesign.title')} />
         <S.TextWrapper>
-          <h3>We design</h3>
-          <p>
-            Inspired by simplicity, we design elegant solutions in branding,
-            advertising and UI/UX, crafting the strong presence your brand needs
-            to make a difference.
-          </p>
+          <h3>{t('whatWeDo.weDesign.title')}</h3>
+          <p>{t('whatWeDo.weDesign.text')}</p>
         </S.TextWrapper>
       </S.Item>
       <S.Item>
-        <img src={weDevelop} alt="We develop" />
+        <img src={weDevelop} alt={t('whatWeDo.weDevelop.title')} />
         <S.TextWrapper>
-          <h3>We develop</h3>
-          <p>
-            Your website on the first page. Using modern technologies, we
-            develop powerful websites optimized to your public and your company
-            needs.
-          </p>
+          <h3>{t('whatWeDo.weDevelop.title')}</h3>
+          <p>{t('whatWeDo.weDevelop.text')}</p>
         </S.TextWrapper>
       </S.Item>
       <S.Item>
-        <img src={weWrite} alt="We write" />
+        <img src={weWrite} alt={t('whatWeDo.weWrite.title')} />
         <S.TextWrapper>
-          <h3>We write</h3>
-          <p>
-            Your company is what it does; your brand is what it speaks. We craft
-            strong, direct and compelling messages for all your communication
-            needs.
-          </p>
+          <h3>{t('whatWeDo.weWrite.title')}</h3>
+          <p>{t('whatWeDo.weWrite.text')}</p>
         </S.TextWrapper>
       </S.Item>
       <S.Item>
-        <img src={weLocalize} alt="We localize" />
+        <img src={weLocalize} alt={t('whatWeDo.weLocalize.title')} />
         <S.TextWrapper>
-          <h3>We localize</h3>
-          <p>
-            Does your audience <em>hablas español</em> or{' '}
-            <em>fala português?</em> We can help you reach them. We do more than
-            just a simple translation: we adapt your tone to their native
-            language.
-          </p>
+          <h3>{t('whatWeDo.weLocalize.title')}</h3>
+          <p>{t('whatWeDo.weLocalize.text')}</p>
         </S.TextWrapper>
       </S.Item>
     </S.Itens>
   </S.Wrapper>
 )
 
-export default WhatWeDo
+export default translate(WhatWeDo)

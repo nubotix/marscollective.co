@@ -2,8 +2,9 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import * as S from './styled'
+import { translate } from '../../i18n/translate'
 
-const WhoWeAre = () => {
+const WhoWeAre = ({ t }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -41,34 +42,34 @@ const WhoWeAre = () => {
 
   return (
     <S.Wrapper>
-      <h2>Who we are</h2>
+      <h2>{t('whoWeAre.title')}</h2>
       <S.Itens>
         <S.Item>
           <S.Image fixed={data.Anderson.childImageSharp.fixed} />
           <S.TextWrapper>
             <h3>Anderson Lima</h3>
-            <h4>Social Strategist</h4>
+            <h4>{t('whoWeAre.anderson.position')}</h4>
           </S.TextWrapper>
         </S.Item>
         <S.Item>
           <S.Image fixed={data.Daniel.childImageSharp.fixed} />
           <S.TextWrapper>
             <h3>Daniel Soares</h3>
-            <h4>Web Developer</h4>
+            <h4>{t('whoWeAre.daniel.position')}</h4>
           </S.TextWrapper>
         </S.Item>
         <S.Item>
           <S.Image fixed={data.Etienne.childImageSharp.fixed} />
           <S.TextWrapper>
             <h3>Etienne Bom</h3>
-            <h4>Graphic Designer</h4>
+            <h4>{t('whoWeAre.etienne.position')}</h4>
           </S.TextWrapper>
         </S.Item>
         <S.Item>
           <S.Image fixed={data.Frank.childImageSharp.fixed} />
           <S.TextWrapper>
             <h3>Frank Cedeño</h3>
-            <h4>UI Designer</h4>
+            <h4>{t('whoWeAre.frank.position')}</h4>
           </S.TextWrapper>
         </S.Item>
       </S.Itens>
@@ -76,4 +77,4 @@ const WhoWeAre = () => {
   )
 }
 
-export default WhoWeAre
+export default translate(WhoWeAre)

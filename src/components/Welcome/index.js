@@ -2,24 +2,22 @@ import React from 'react'
 
 import Image from '../../images/welcome.svg'
 import * as S from './styled'
+import { translate } from '../../i18n/translate'
 
-const Welcome = () => (
+const Welcome = ({ t }) => (
   <S.Wrapper>
     <img src={Image} alt="We are Mars" />
     <S.TextWrapper>
       <h1>
-        We are <span className="big">Mars</span>
+        {t('welcome.weAre')} <span className="big">Mars</span>
       </h1>
-      <p className="lead">
-        A collective of creative minds located in Brazil with an international
-        mindset.
-      </p>
+      <p className="lead">{t('welcome.text')}</p>
       <S.ButtonsWrapper>
-        <button>Get in touch</button>
-        <button className="ghost">See our work</button>
+        <button>{t('welcome.primaryButton')}</button>
+        <button className="ghost">{t('welcome.ghostButton')}</button>
       </S.ButtonsWrapper>
     </S.TextWrapper>
   </S.Wrapper>
 )
 
-export default Welcome
+export default translate(Welcome)

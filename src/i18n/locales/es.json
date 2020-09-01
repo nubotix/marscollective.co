@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": {
+      "label": "Home",
+      "url": "/"
+    },
+    "whatWeDo": {
+      "label": "What we do",
+      "url": "/"
+    },
+    "ourWork": {
+      "label": "Our work",
+      "url": "/our-work/"
+    },
+    "whoWeAre": {
+      "label": "Who we are",
+      "url": "/who-we-are/"
+    },
+    "blog": {
+      "label": "Blog",
+      "url": "/blog/"
+    },
+    "contact": {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  },
+  "welcome": {
+    "weAre": "Nós somos a",
+    "text": "Um coletivo de mentes criativas localizado no Brasil com um mindset internacional.",
+    "primaryButton": "Entre em contato",
+    "ghostButton": "Conheça nosso trabalho"
+  },
+  "whatWeDo": {
+    "title": "O que fazemos",
+    "weDesign": {
+      "title": "Design",
+      "text": "Inspirados na simplicidade, projetamos soluções elegantes em branding, publicidade e UI/UX, criando a forte presença que sua marca precisa para fazer a diferença."
+    },
+    "weDevelop": {
+      "title": "Desenvolvimento Web",
+      "text": "Seu site na primeira página. Usando tecnologias modernas, criamos sites poderosos e otimizados para o seu público e as necessidades do seu negócio."
+    },
+    "weWrite": {
+      "title": "Redação Publicitária",
+      "text": "Sua empresa é o que ela faz; sua marca é o que ela fala. Desenvolvemos mensagens fortes, diretas e convincentes para todas as suas necessidades de comunicação."
+    },
+    "weLocalize": {
+      "title": "Traduções",
+      "text": "O seu público hablas español ou speak English? Nós te ajudamos a alcançá-los. Fazemos mais do que apenas uma simples tradução: adaptamos seu tom à língua deles."
+    },
+    "primaryButton": "See how we do it"
+  },
+  "ourWork": {
+    "title": "Nosso trabalho",
+    "all": "Tudo",
+    "webDesign": "Web Design",
+    "branding": "Branding",
+    "socialMedia": "Social Media",
+    "audiovisual": "Audiovisual",
+    "primaryButton": "Ver mais"
+  },
+  "whoWeAre": {
+    "title": "Quem somos",
+    "anderson": {
+      "position": "Redator"
+    },
+    "daniel": {
+      "position": "Desenvolvedor web"
+    },
+    "etienne": {
+      "position": "Designer gráfico"
+    },
+    "frank": {
+      "position": "Designer de interfaces"
+    }
+  },
+  "blog": {
+    "ghostButton": "Ver mais"
+  },
+  "contact": {
+    "title": "Vamos criar coisas incríveis juntos",
+    "form": {
+      "title": "Entre em contato",
+      "yourName": "Seu nome",
+      "yourEmail": "Seu email",
+      "yourMessage": "Sua mensagem",
+      "ghostButton": "Enviar"
+    }
+  }
+}
