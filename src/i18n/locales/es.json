@@ -1,72 +1,72 @@
 {
   "nav": {
-    "home": "Início",
-    "whatWeDo": "O que fazemos",
-    "ourWork": "Nosso trabalho",
-    "whoWeAre": "Quem somos",
+    "home": "Inicio",
+    "whatWeDo": "Qué hacemos",
+    "ourWork": "Nuestro trabajo",
+    "whoWeAre": "Quienes somos",
     "blog": "Blog",
-    "contact": "Contato"
+    "contact": "Contacto"
   },
   "welcome": {
-    "weAre": "Nós somos a",
-    "text": "Um coletivo de mentes criativas localizado no Brasil com um mindset internacional.",
-    "primaryButton": "Entre em contato",
-    "ghostButton": "Conheça nosso trabalho"
+    "weAre": "Somos",
+    "text": "Un colectivo de mentes creativas localizado en Brasil, con una mentalidad internacional.",
+    "primaryButton": "Entre en contacto",
+    "ghostButton": "Vea nuestro trabajo"
   },
   "whatWeDo": {
-    "title": "O que fazemos",
+    "title": "Qué hacemos",
     "weDesign": {
-      "title": "Design",
-      "text": "Inspirados na simplicidade, projetamos soluções elegantes em branding, publicidade e UI/UX, criando a forte presença que sua marca precisa para fazer a diferença."
+      "title": "Diseño",
+      "text": "Inspirados en la simplicidad, proyectamos soluciones elegantes en branding, publicidad y UI/UX, creando la fuerte presencia que su marca necesita para hacer la diferencia."
     },
     "weDevelop": {
-      "title": "Desenvolvimento Web",
-      "text": "Seu site na primeira página. Usando tecnologias modernas, criamos sites poderosos e otimizados para o seu público e as necessidades do seu negócio."
+      "title": "Desarrollo Web",
+      "text": "Su website en la primera página de los motores de búsqueda. Usando tecnologías modernas, creamos websites poderosos y optimizados para su público y las necesidades de su negocio."
     },
     "weWrite": {
-      "title": "Redação Publicitária",
-      "text": "Sua empresa é o que ela faz; sua marca é o que ela fala. Desenvolvemos mensagens fortes, diretas e convincentes para todas as suas necessidades de comunicação."
+      "title": "Redacción",
+      "text": "Su empresa es lo que ella hace; su marca es lo que ella comunica. Desarrollamos mensajes fuortes, directas y convincentes para todas las necesidades de comunicación."
     },
     "weLocalize": {
-      "title": "Traduções",
-      "text": "O seu público hablas español ou speak English? Nós te ajudamos a alcançá-los. Fazemos mais do que apenas uma simples tradução: adaptamos seu tom à língua deles."
+      "title": "Traducciones",
+      "text": "Su público fala português o speak English? Te ayudamos a alcanzarlos. Hacemos más que una simple traducción: adaptamos su tono a la lengua de ellos."
     },
-    "primaryButton": "See how we do it"
+    "primaryButton": "Revisa nuestro trabajo"
   },
   "ourWork": {
-    "title": "Nosso trabalho",
-    "all": "Tudo",
-    "webDesign": "Web Design",
+    "title": "Nuestro trabajo",
+    "all": "Todo",
+    "webDesign": "Diseño Web",
     "branding": "Branding",
     "socialMedia": "Social Media",
     "audiovisual": "Audiovisual",
-    "primaryButton": "Ver mais"
+    "primaryButton": "Ver más"
   },
   "whoWeAre": {
-    "title": "Quem somos",
+    "title": "Quiénes somos",
     "anderson": {
-      "position": "Redator"
+      "position": "Redactor"
     },
     "daniel": {
-      "position": "Desenvolvedor web"
+      "position": "Desarrollador Web"
     },
     "etienne": {
-      "position": "Designer gráfico"
+      "position": "Diseñadora Gráfica"
     },
     "frank": {
-      "position": "Designer de interfaces"
+      "position": "Diseñador de Interfaces"
     }
   },
   "blog": {
-    "ghostButton": "Ver mais"
+    "ghostButton": "Ver más"
   },
   "contact": {
-    "title": "Vamos criar coisas incríveis juntos",
+    "title": "Vamos a crear cosas increibles juntos",
     "form": {
-      "title": "Entre em contato",
-      "yourName": "Seu nome",
-      "yourEmail": "Seu email",
-      "yourMessage": "Sua mensagem",
+      "title": "Entre en contacto",
+      "yourName": "Nombre",
+      "yourEmail": "E-mail",
+      "yourMessage": "Mensaje",
       "ghostButton": "Enviar"
     }
   }
