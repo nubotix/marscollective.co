@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     --highLight: #00d1b7;
     --default: #fff;
     --background: #262626;
-    --backgroundMedium: #1c8c7f;
+    --backgroundMedium: #25796f;
   }
 
   body {
