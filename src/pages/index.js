@@ -11,7 +11,6 @@ import { translate } from '../i18n/translate'
 const IndexPage = ({ t }) => (
   <Layout>
     <SEO
-      title="Home"
       description={t('siteMetaData.description')}
       lang={t('siteMetaData.lang')}
     />
