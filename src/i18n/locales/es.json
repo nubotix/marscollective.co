@@ -1,4 +1,8 @@
 {
+  "siteMetaData": {
+    "lang": "es",
+    "description": "Un colectivo de mentes creativas localizado en Brasil, con una mentalidad internacional."
+  },
   "nav": {
     "home": "Inicio",
     "whatWeDo": "Qué hacemos",

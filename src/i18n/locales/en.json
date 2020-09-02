@@ -1,4 +1,8 @@
 {
+  "siteMetaData": {
+    "lang": "en",
+    "description": "A collective of creative minds located in Brazil with an international mindset."
+  },
   "nav": {
     "home": "Home",
     "whatWeDo": "What we do",

@@ -1,4 +1,8 @@
 {
+  "siteMetaData": {
+    "lang": "pt",
+    "description": "Um coletivo de mentes criativas localizado no Brasil com um mindset internacional."
+  },
   "nav": {
     "home": "Início",
     "whatWeDo": "O que fazemos",
