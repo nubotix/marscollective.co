@@ -18,7 +18,7 @@ export const Lead = styled.p`
 `
 
 export const ButtonsWrapper = styled.div`
-  button {
+  a {
     margin-right: 2rem;
 
     &:last-child {
