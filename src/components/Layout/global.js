@@ -8,7 +8,16 @@ const GlobalStyles = createGlobalStyle`
     --highLight: #00d1b7;
     --default: #fff;
     --background: #262626;
+    --backgroundGray: #353535;
     --backgroundMedium: #25796f;
+
+    /* @media screen and (prefers-color-scheme: light) {
+      --highLight: #25796f;
+      --default: #262626;
+      --background: #fff;
+      --backgroundGray: #f1f1f1;
+      --backgroundMedium: #00d1b7;
+    } */
   }
 
   body {

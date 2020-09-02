@@ -10,7 +10,7 @@ export const Wrapper = styled.section`
   padding: 4rem;
   margin: 8rem 0;
   border-radius: 2rem;
-  background: #353535;
+  background: var(--backgroundGray);
 `
 
 export const TextWrapper = styled.div`
