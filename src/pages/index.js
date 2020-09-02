@@ -6,10 +6,15 @@ import Welcome from '../components/Welcome'
 import WhatWeDo from '../components/WhatWeDo'
 import WhoWeAre from '../components/WhoWeAre'
 import Contact from '../components/Contact'
+import { translate } from '../i18n/translate'
 
-const IndexPage = () => (
+const IndexPage = ({ t }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO
+      title="Home"
+      description={t('siteMetaData.description')}
+      lang={t('siteMetaData.lang')}
+    />
     <Welcome />
     <WhatWeDo />
     <WhoWeAre />
@@ -17,4 +22,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default translate(IndexPage)
