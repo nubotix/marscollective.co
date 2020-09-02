@@ -9,10 +9,10 @@ const Contact = ({ t }) => (
   <S.Wrapper id="contact">
     <S.TextWrapper>
       <S.Title>{t('contact.title')}</S.Title>
-      <S.InfoWrapper>
+      {/* <S.InfoWrapper>
         <S.MapIcon /> Rua Parque Antârtica, 329 <br /> Morumbi, Foz do Iguaçu -
         PR, Brazil
-      </S.InfoWrapper>
+      </S.InfoWrapper> */}
       <S.InfoWrapper>
         <S.EnvelopeIcon /> hi@marscollective.co
       </S.InfoWrapper>
