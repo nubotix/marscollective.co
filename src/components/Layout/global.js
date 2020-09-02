@@ -95,6 +95,7 @@ const GlobalStyles = createGlobalStyle`
     padding: calc(1rem - 2px) 2rem;
     border: 2px solid var(--highLight);
     border-radius: 10px;
+    cursor: pointer;
 
     &.ghost {
       color: var(--highLight);
