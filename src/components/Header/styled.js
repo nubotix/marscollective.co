@@ -2,11 +2,10 @@ import styled from 'styled-components'
 import Headroom from 'react-headroom'
 
 export const Wrapper = styled(Headroom)`
-  margin: 4rem 0;
-
   .headroom--scrolled {
     img {
       width: 64px;
+      margin: 1rem 0;
     }
   }
 `
@@ -17,6 +16,10 @@ export const NavBar = styled.div`
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
   background: var(--background);
+
+  img {
+    height: 60px;
+    margin: 4rem 0;
+  }
 `
