@@ -13,15 +13,7 @@ export const Item = styled.li`
   margin: 0 2rem 0 0;
 `
 
-export const ItemLanguage = styled.li`
-  margin: 0 0.5rem 0 0;
-
-  &:last-child {
-    margin: 0;
-  }
-`
-
-export const LinkItem = styled(AnchorLink)`
+export const ItemLink = styled(AnchorLink)`
   color: var(--default);
   font-weight: 600;
   text-decoration: none;
