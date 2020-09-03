@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { H3 } from '../Typography'
 
 export const Wrapper = styled.div`
   border-radius: 2rem;
@@ -6,8 +7,8 @@ export const Wrapper = styled.div`
   background: var(--backgroundMedium);
 `
 
-export const Title = styled.h3`
+export const Title = styled(H3)`
   color: var(--default);
   text-align: left;
-  margin-bottom: 2rem;
+  margin-bottom: var(--gutter);
 `

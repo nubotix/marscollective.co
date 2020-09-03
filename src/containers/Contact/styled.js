@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { H2 } from '../../components/Typography'
 import { Map } from '@styled-icons/boxicons-regular/Map'
 import { Envelope } from '@styled-icons/boxicons-regular/Envelope'
 import { Phone } from '@styled-icons/boxicons-regular/Phone'
@@ -8,13 +9,11 @@ export const Wrapper = styled.section`
   grid-template-columns: auto 26.5rem;
   gap: 2rem;
   padding: 4rem;
-  margin: 8rem 0;
   border-radius: 2rem;
   background: var(--backgroundGray);
 
   @media (max-width: 960px) {
     padding: 2rem;
-    margin: 4rem 0;
   }
 
   @media (max-width: 860px) {
@@ -28,7 +27,7 @@ export const TextWrapper = styled.div`
   align-self: center;
 `
 
-export const Title = styled.h2`
+export const Title = styled(H2)`
   text-align: left;
   color: var(--default);
 `

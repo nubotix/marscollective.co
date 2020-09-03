@@ -1,13 +1,7 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-export const Wrapper = styled.section`
-  margin: 8rem 0;
-
-  @media (max-width: 960px) {
-    margin: 4rem 0;
-  }
-`
+export const Wrapper = styled.section``
 
 export const Itens = styled.div`
   display: grid;

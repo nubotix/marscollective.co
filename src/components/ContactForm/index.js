@@ -1,36 +1,38 @@
 import React from 'react'
 
 import * as S from './styled'
+import { Input, TextArea } from '../Input'
+import { ButtonGhostWhite } from '../Buttons'
 import { translate } from '../../i18n/translate'
 
 const ContactForm = ({ t }) => (
   <S.Wrapper>
     <S.Title>{t('contact.form.title')}</S.Title>
     <form>
-      <input
+      <Input
         type="text"
         placeholder={t('contact.form.yourName')}
         id="name"
         aria-label={t('contact.form.yourName')}
         required
       />
-      <input
+      <Input
         type="email"
         placeholder={t('contact.form.yourEmail')}
         id="email"
         aria-label={t('contact.form.yourEmail')}
         required
       />
-      <textarea
+      <TextArea
         placeholder={t('contact.form.yourMessage')}
         id="message"
         aria-label={t('contact.form.yourMessage')}
         required
       />
 
-      <button type="submit" className="ghost white">
+      <ButtonGhostWhite type="submit" className="ghost white">
         {t('contact.form.ghostButton')}
-      </button>
+      </ButtonGhostWhite>
     </form>
   </S.Wrapper>
 )
