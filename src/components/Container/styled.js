@@ -10,3 +10,7 @@ export const Container = styled.section`
     margin: 4rem auto;
   }
 `
+
+export const ContainerNM = styled(Container)`
+  margin: 0 auto !important;
+`

@@ -1,1 +1,1 @@
-export { Container } from './styled'
+export { Container, ContainerNM } from './styled'
