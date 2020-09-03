@@ -1,15 +1,15 @@
 import React from 'react'
 
 import Logo from '../../images/logo.svg'
-import Nav from '../Nav'
+// import Nav from '../Nav'
 import * as S from './styled'
 
 const Footer = () => (
   <S.Wrapper>
     <img src={Logo} alt="Mars Collective" />
-    <S.NavWrapper>
+    {/* <S.NavWrapper>
       <Nav />
-    </S.NavWrapper>
+    </S.NavWrapper> */}
     <S.CopyLeft>
       Mars Collective <S.CopyleftIcon /> 2020
     </S.CopyLeft>

@@ -5,6 +5,9 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  :root {
     --highLight: #00d1b7;
     --default: #fff;
     --background: #262626;
@@ -18,6 +21,15 @@ const GlobalStyles = createGlobalStyle`
       --backgroundGray: #f1f1f1;
       --backgroundMedium: #00d1b7;
     } */
+
+    --gutter: 2rem;
+    --halfGutter: calc(var(--gutter) / 2);
+    --doubleGutter: calc(var(--gutter) * 2);
+    --titleFont: 'Rubik', sans-serif;
+    --bodyFont: 'Baloo 2', sans-serif;
+    --bodyFontSize: 16px;
+    --borderSize: 2px;
+    --borderRadius: 10px;
   }
 
   html {
@@ -25,17 +37,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 16px;
+    font-family: var(--bodyFont);
+    font-size: var(--bodyFontSize);
     line-height: 1;
     text-rendering: optimizeLegibility;
     color: var(--default);
-    transition: 1s;
   }
 
   h1,
   h2 {
-    font-family: 'Rubik', sans-serif;
+    font-family: var(--titleFont);
     font-weight: 900;
     text-transform: uppercase;
   }
@@ -71,11 +82,11 @@ const GlobalStyles = createGlobalStyle`
     font-size: 3rem;
     text-align: center;
     color: var(--highLight);
-    margin-bottom: 4rem;
+    margin-bottom: var(--doubleGutter);
 
     @media (max-width: 960px) {
       font-size: 2.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: var(--gutter);
     }
   }
 
@@ -85,7 +96,7 @@ const GlobalStyles = createGlobalStyle`
   h6 {
     font-weight: 600;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: calc(var(--halfGutter) / 2);
   }
 
   h3 {
@@ -126,8 +137,8 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 600;
     color: var(--background);
     background: var(--highLight);
-    padding: calc(1rem - 2px) 2rem;
-    border: 2px solid var(--highLight);
+    padding: calc(var(--halfGutter) - 2px) var(--gutter);
+    border: var(--borderSize) solid var(--highLight);
     border-radius: 10px;
     cursor: pointer;
 
@@ -150,18 +161,18 @@ const GlobalStyles = createGlobalStyle`
   textarea {
     display: block;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: var(--bodyFont);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--borderRadius);
     width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: var(--halfGutter);
+    margin-bottom: var(--halfGutter);
 
   }
 
   textarea {
     height: 9rem;
-    margin-bottom: 2rem;
+    margin-bottom: var(--gutter);
   }
 `
 
