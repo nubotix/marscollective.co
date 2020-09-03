@@ -8,7 +8,9 @@ const Header = () => (
   <S.Wrapper pinStart={300}>
     <S.NavBar>
       <img src={Logo} alt="Mars Collective" />
-      <Nav />
+      <S.NavBarWrapper>
+        <Nav />
+      </S.NavBarWrapper>
     </S.NavBar>
   </S.Wrapper>
 )

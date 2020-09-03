@@ -7,7 +7,9 @@ import * as S from './styled'
 const Footer = () => (
   <S.Wrapper>
     <img src={Logo} alt="Mars Collective" />
-    <Nav />
+    <S.NavWrapper>
+      <Nav />
+    </S.NavWrapper>
     <S.CopyLeft>
       Mars Collective <S.CopyleftIcon /> 2020
     </S.CopyLeft>

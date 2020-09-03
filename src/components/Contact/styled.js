@@ -11,6 +11,17 @@ export const Wrapper = styled.section`
   margin: 8rem 0;
   border-radius: 2rem;
   background: var(--backgroundGray);
+
+  @media (max-width: 960px) {
+    padding: 2rem;
+    margin: 4rem 0;
+  }
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    padding: 0;
+    background: none;
+  }
 `
 
 export const TextWrapper = styled.div`

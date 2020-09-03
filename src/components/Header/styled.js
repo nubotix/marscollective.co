@@ -23,3 +23,9 @@ export const NavBar = styled.div`
     margin: 4rem 0;
   }
 `
+
+export const NavBarWrapper = styled.div`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+`

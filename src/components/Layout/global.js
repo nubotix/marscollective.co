@@ -20,13 +20,17 @@ const GlobalStyles = createGlobalStyle`
     } */
   }
 
+  html {
+    background: var(--background);
+  }
+
   body {
     font-family: 'Baloo 2', sans-serif;
     font-size: 16px;
     line-height: 1;
     text-rendering: optimizeLegibility;
     color: var(--default);
-    background: var(--background);
+    transition: 1s;
   }
 
   h1,
@@ -48,10 +52,18 @@ const GlobalStyles = createGlobalStyle`
     font-size: 5rem;
     color: var(--default);
 
+    @media (max-width: 1200px) {
+      font-size: 3.8rem;
+    }
+
     .big {
       display: block;
       font-size: 8.75rem;
       color: var(--highLight);
+
+      @media (max-width: 1200px) {
+        font-size: 7rem;
+      }
     }
   }
 
@@ -60,6 +72,11 @@ const GlobalStyles = createGlobalStyle`
     text-align: center;
     color: var(--highLight);
     margin-bottom: 4rem;
+
+    @media (max-width: 960px) {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
   }
 
   h3,
@@ -74,10 +91,18 @@ const GlobalStyles = createGlobalStyle`
   h3 {
     font-size: 2rem;
     color: var(--highLight);
+
+    @media (max-width: 1200px) {
+      font-size: 1.4rem;
+    }
   }
 
   h4 {
     font-size: 1.5rem;
+
+    @media (max-width: 1200px) {
+      font-size: 1rem;
+    }
   }
 
   p {
