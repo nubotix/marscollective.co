@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import * as S from './styled'
@@ -45,7 +46,9 @@ const WhoWeAre = ({ t }) => {
   return (
     <Container id="who-we-are">
       <S.Wrapper>
-        <H2>{t('whoWeAre.title')}</H2>
+        <H2>
+          <Fade bottom>{t('whoWeAre.title')}</Fade>
+        </H2>
         <S.Itens>
           <S.Item>
             <S.Image fixed={data.Anderson.childImageSharp.fixed} />
