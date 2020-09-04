@@ -9,7 +9,7 @@ const baseStyles = css`
   background: var(--highLight);
   padding: calc(var(--halfGutter) - 2px) var(--gutter);
   border: var(--borderSize) solid var(--highLight);
-  border-radius: 10px;
+  border-radius: var(--halfBorderRadius);
   cursor: pointer;
 `
 

@@ -7,7 +7,7 @@ export const Container = styled.section`
 
   &:nth-child(1),
   &:last-child {
-    margin: 4rem auto;
+    margin: calc(var(--margin) / 2) auto;
   }
 `
 

@@ -5,7 +5,7 @@ const baseStyles = css`
   font-family: inherit;
   font-size: var(--bodyFont);
   border: none;
-  border-radius: var(--borderRadius);
+  border-radius: var(--halfBorderRadius);
   outline: none;
   width: 100%;
   padding: var(--halfGutter);

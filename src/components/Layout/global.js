@@ -12,14 +12,14 @@ const GlobalStyles = createGlobalStyle`
     --default: #fff;
     --background: #262626;
     --backgroundGray: #353535;
-    --backgroundMedium: #25796f;
+    --backgroundGreen: #25796f;
 
     /* @media screen and (prefers-color-scheme: light) {
       --highLight: #25796f;
       --default: #262626;
       --background: #fff;
       --backgroundGray: #f1f1f1;
-      --backgroundMedium: #00d1b7;
+      --backgroundGreen: #00d1b7;
     } */
 
     --maxWidth: calc(1200px + var(--gutter) * 2);
@@ -32,7 +32,9 @@ const GlobalStyles = createGlobalStyle`
     --bodyFont: 'Baloo 2', sans-serif;
     --bodyFontSize: 16px;
     --borderSize: 2px;
-    --borderRadius: 10px;
+    --borderRadius: 1rem;
+    --halfBorderRadius: calc(var(--borderRadius) / 2);
+    --doubleBorderRadius: calc(var(--borderRadius) * 2);
   }
 
   html {
