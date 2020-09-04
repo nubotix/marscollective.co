@@ -14,13 +14,12 @@ const Welcome = ({ t }) => (
     <S.Wrapper>
       <img src={Image} alt="We are Mars" />
       <S.TextWrapper>
-        <H1>
-          <Fade top cascade>
+        <Fade top cascade>
+          <H1>
             {t('welcome.weAre')}
-
             <Big>Mars</Big>
-          </Fade>
-        </H1>
+          </H1>
+        </Fade>
         <Lead>{t('welcome.text')}</Lead>
         <Fade bottom cascade>
           <S.ButtonsWrapper>
