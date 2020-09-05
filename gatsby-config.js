@@ -74,6 +74,27 @@ module.exports = {
           ]
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        path: `${__dirname}/src/locales`,
+        languages: [`en`, `es`, `pt`],
+        defaultLanguage: `en`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false
+          },
+          keySeparator: false,
+          nsSeparator: false
+        }
+        // pages: [
+        //   {
+        //     matchPath: '/:lang?/blog/:uid',
+        //     getLanguageFromPath: true
+        //   }
+        // ]
+      }
     }
   ]
 }

@@ -5,9 +5,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 import * as S from './styled'
 import { Container } from '../../components/Container'
 import { H2, H3, H4 } from '../../components/Typography'
-import { translate } from '../../i18n/translate'
+import { Trans } from 'gatsby-plugin-react-i18next'
 
-const WhoWeAre = ({ t }) => {
+const WhoWeAre = () => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -47,35 +47,45 @@ const WhoWeAre = ({ t }) => {
     <Container id="who-we-are">
       <S.Wrapper>
         <H2>
-          <Fade bottom>{t('whoWeAre.title')}</Fade>
+          <Fade bottom>
+            <Trans>Who we are</Trans>
+          </Fade>
         </H2>
         <S.Itens>
           <S.Item>
             <S.Image fixed={data.Anderson.childImageSharp.fixed} />
             <S.TextWrapper>
               <H3>Anderson Lima</H3>
-              <H4>{t('whoWeAre.anderson.position')}</H4>
+              <H4>
+                <Trans>Social Strategist</Trans>
+              </H4>
             </S.TextWrapper>
           </S.Item>
           <S.Item>
             <S.Image fixed={data.Daniel.childImageSharp.fixed} />
             <S.TextWrapper>
               <H3>Daniel Soares</H3>
-              <H4>{t('whoWeAre.daniel.position')}</H4>
+              <H4>
+                <Trans>Web Developer</Trans>
+              </H4>
             </S.TextWrapper>
           </S.Item>
           <S.Item>
             <S.Image fixed={data.Etienne.childImageSharp.fixed} />
             <S.TextWrapper>
               <H3>Etienne Bom</H3>
-              <H4>{t('whoWeAre.etienne.position')}</H4>
+              <H4>
+                <Trans>Graphic Designer</Trans>
+              </H4>
             </S.TextWrapper>
           </S.Item>
           <S.Item>
             <S.Image fixed={data.Frank.childImageSharp.fixed} />
             <S.TextWrapper>
               <H3>Frank Cedeño</H3>
-              <H4>{t('whoWeAre.frank.position')}</H4>
+              <H4>
+                <Trans>UI Designer</Trans>
+              </H4>
             </S.TextWrapper>
           </S.Item>
         </S.Itens>
@@ -84,4 +94,4 @@ const WhoWeAre = ({ t }) => {
   )
 }
 
-export default translate(WhoWeAre)
+export default WhoWeAre

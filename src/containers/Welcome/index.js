@@ -7,33 +7,46 @@ import * as S from './styled'
 import { Container } from '../../components/Container'
 import { H1, Big, Lead } from '../../components/Typography'
 import { Button, ButtonGhost } from '../../components/Buttons'
-import { translate } from '../../i18n/translate'
+import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
-const Welcome = ({ t }) => (
-  <Container>
-    <S.Wrapper>
-      <img src={Image} alt="We are Mars" />
-      <S.TextWrapper>
-        <Fade top cascade>
-          <H1>
-            {t('welcome.weAre')}
-            <Big>Mars</Big>
-          </H1>
-        </Fade>
-        <Lead>{t('welcome.text')}</Lead>
-        <Fade bottom cascade>
-          <S.ButtonsWrapper>
-            <AnchorLink to="/#contact" alt={t('welcome.primaryButton')}>
-              <Button>{t('welcome.primaryButton')}</Button>
-            </AnchorLink>
-            <AnchorLink to="/#our-work" alt={t('welcome.ghostButton')}>
-              <ButtonGhost>{t('welcome.ghostButton')}</ButtonGhost>
-            </AnchorLink>
-          </S.ButtonsWrapper>
-        </Fade>
-      </S.TextWrapper>
-    </S.Wrapper>
-  </Container>
-)
+const Welcome = () => {
+  const { t } = useTranslation()
 
-export default translate(Welcome)
+  return (
+    <Container>
+      <S.Wrapper>
+        <img src={Image} alt="We are Mars" />
+        <S.TextWrapper>
+          <Fade top cascade>
+            <H1>
+              <Trans>We are</Trans>
+              <Big>Mars</Big>
+            </H1>
+          </Fade>
+          <Lead>
+            <Trans>
+              A collective of creative minds located in Brazil with an
+              international mindset.
+            </Trans>
+          </Lead>
+          <Fade bottom cascade>
+            <S.ButtonsWrapper>
+              <AnchorLink to="/#contact" alt={t('Get in touch')}>
+                <Button>
+                  <Trans>Get in touch</Trans>
+                </Button>
+              </AnchorLink>
+              <AnchorLink to="/#our-work" alt={t('Our work')}>
+                <ButtonGhost>
+                  <Trans>Our work</Trans>
+                </ButtonGhost>
+              </AnchorLink>
+            </S.ButtonsWrapper>
+          </Fade>
+        </S.TextWrapper>
+      </S.Wrapper>
+    </Container>
+  )
+}
+
+export default Welcome

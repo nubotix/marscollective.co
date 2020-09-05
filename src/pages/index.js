@@ -8,21 +8,22 @@ import OurWork from '../containers/OurWork'
 import WhoWeAre from '../containers/WhoWeAre'
 import Blog from '../containers/Blog'
 import Contact from '../containers/Contact'
-import { translate } from '../i18n/translate'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
-const IndexPage = ({ t }) => (
-  <Layout>
-    <SEO
-      description={t('siteMetaData.description')}
-      lang={t('siteMetaData.lang')}
-    />
-    <Welcome />
-    <WhatWeDo />
-    <OurWork />
-    <WhoWeAre />
-    <Blog />
-    <Contact />
-  </Layout>
-)
+const IndexPage = () => {
+  const { t } = useTranslation()
 
-export default translate(IndexPage)
+  return (
+    <Layout>
+      <SEO lang={t('Lang')} />
+      <Welcome />
+      <WhatWeDo />
+      <OurWork />
+      <WhoWeAre />
+      <Blog />
+      <Contact />
+    </Layout>
+  )
+}
+
+export default IndexPage

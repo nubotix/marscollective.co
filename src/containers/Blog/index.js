@@ -5,9 +5,9 @@ import Img from 'gatsby-image'
 
 import { Container } from '../../components/Container'
 import { H2 } from '../../components/Typography'
-import { translate } from '../../i18n/translate'
+import { Trans } from 'gatsby-plugin-react-i18next'
 
-const Blog = ({ t }) => {
+const Blog = () => {
   const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -55,7 +55,9 @@ const Blog = ({ t }) => {
 
   return (
     <Container>
-      <H2>Blog</H2>
+      <H2>
+        <Trans>Blog</Trans>
+      </H2>
       <Wrapper>
         {items.map(({ node }, i) => (
           <Div fluid={node.frontmatter.thumb.childImageSharp.fluid} key={i} />
@@ -65,4 +67,4 @@ const Blog = ({ t }) => {
   )
 }
 
-export default translate(Blog)
+export default Blog

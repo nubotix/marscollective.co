@@ -4,13 +4,15 @@ import Social from '../../components/Social'
 import ContactForm from '../../components/ContactForm'
 import * as S from './styled'
 import { Container } from '../../components/Container'
-import { translate } from '../../i18n/translate'
+import { Trans } from 'gatsby-plugin-react-i18next'
 
-const Contact = ({ t }) => (
+const Contact = () => (
   <Container id="contact">
     <S.Wrapper>
       <S.TextWrapper>
-        <S.Title>{t('contact.title')}</S.Title>
+        <S.Title>
+          <Trans>Let's build amazing things together</Trans>
+        </S.Title>
         {/* <S.InfoWrapper>
         <S.MapIcon /> Rua Parque Antârtica, 329 <br /> Morumbi, Foz do Iguaçu -
         PR, Brazil
@@ -28,4 +30,4 @@ const Contact = ({ t }) => (
   </Container>
 )
 
-export default translate(Contact)
+export default Contact
