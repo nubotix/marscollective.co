@@ -55,7 +55,7 @@ const OurWork = () => {
   const items = allMarkdownRemark.edges
 
   return (
-    <Container>
+    <Container id="our-work">
       <H2>
         <Trans>Our work</Trans>
       </H2>
