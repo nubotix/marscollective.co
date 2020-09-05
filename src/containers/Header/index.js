@@ -3,6 +3,7 @@ import Headroom from 'react-headroom'
 
 import Logo from '../../images/logo.svg'
 import Nav from '../../components/Nav'
+import LanguageSelector from '../../components/LanguageSelector'
 import * as S from './styled'
 import { ContainerNM as Container } from '../../components/Container'
 
@@ -12,6 +13,7 @@ const Header = () => (
       <S.Wrapper>
         <Logo />
         <Nav />
+        <LanguageSelector />
       </S.Wrapper>
     </Container>
   </Headroom>
