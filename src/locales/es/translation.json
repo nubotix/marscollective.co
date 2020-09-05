@@ -33,5 +33,8 @@
   "Your name": "Nombre",
   "Your email": "E-mail",
   "Your message": "Mensaje",
-  "Send": "Enviar"
+  "Send": "Enviar",
+  "Role": "Areas",
+  "Team": "Equipo",
+  "Finished date": "Fecha de entrega"
 }
