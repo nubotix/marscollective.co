@@ -8,7 +8,7 @@ import { Container } from '../../components/Container'
 const Footer = () => (
   <Container>
     <S.Wrapper>
-      <img src={Logo} alt="Mars Collective" />
+      <Logo />
       {/* <S.NavWrapper>
       <Nav />
     </S.NavWrapper> */}

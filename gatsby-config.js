@@ -7,6 +7,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: `${__dirname}/src/images/logo.svg`
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-anchor-links`,
       options: {
         offset: -128
@@ -90,7 +98,7 @@ module.exports = {
         }
         // pages: [
         //   {
-        //     matchPath: '/:lang?/blog/:uid',
+        //     matchPath: `/:lang?/blog/:uid`,
         //     getLanguageFromPath: true
         //   }
         // ]

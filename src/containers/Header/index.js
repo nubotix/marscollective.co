@@ -10,7 +10,7 @@ const Header = () => (
   <Headroom style={{ overflow: 'hidden' }}>
     <Container>
       <S.Wrapper>
-        <S.Img src={Logo} alt="Mars Collective" />
+        <Logo />
         <Nav />
       </S.Wrapper>
     </Container>

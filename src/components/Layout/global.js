@@ -14,13 +14,13 @@ const GlobalStyles = createGlobalStyle`
     --backgroundGray: #353535;
     --backgroundGreen: #25796f;
 
-    /* @media screen and (prefers-color-scheme: light) {
+    @media screen and (prefers-color-scheme: light) {
       --highLight: #25796f;
       --default: #262626;
       --background: #fff;
       --backgroundGray: #f1f1f1;
       --backgroundGreen: #00d1b7;
-    } */
+    }
 
     --maxWidth: calc(1200px + var(--gutter) * 2);
     --gutter: 2rem;
