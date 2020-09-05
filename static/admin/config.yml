@@ -1,0 +1,215 @@
+backend:
+  name: git-gateway
+  branch: master
+
+  commit_messages:
+    create: 'create content'
+    update: 'update content'
+    delete: 'delete content'
+    uploadMedia: 'upload asset'
+    deleteMedia: 'delete asset'
+
+media_folder: 'content/assets'
+public_folder: '/assets'
+locale: 'pt'
+display_url: https://marscollective.co
+logo_url: https://mars-dev.netlify.app/logo.svg
+
+collections:
+  - name: 'blog-en'
+    label: 'Blog EN'
+    label_singular: 'post EN'
+    folder: 'content/en/blog'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'blog'
+
+      - label: 'Título'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Descrição'
+        name: 'description'
+        widget: 'text'
+
+      - label: 'Imagem'
+        name: 'thumb'
+        widget: 'image'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/en/blog/{{title}}'
+            public_folder: '{{public_folder}}/en/blog/{{title}}'
+
+      - label: 'Arquivo(s)'
+        name: 'files'
+        widget: 'list'
+        summary: '{{fields.file}}'
+        field:
+          label: 'Arquivo'
+          name: 'file'
+          widget: 'file'
+
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+
+      - label: 'Autor(a)'
+        name: 'author'
+        widget: 'select'
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Corpo'
+        name: 'body'
+        widget: 'markdown'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/en/blog/{{title}}'
+            public_folder: '{{public_folder}}/en/blog/{{title}}'
+
+  - name: 'blog-es'
+    label: 'Blog ES'
+    label_singular: 'post ES'
+    folder: 'content/es/blog'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'blog'
+
+      - label: 'Título'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Descrição'
+        name: 'description'
+        widget: 'text'
+
+      - label: 'Imagem'
+        name: 'thumb'
+        widget: 'image'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/es/blog/{{title}}'
+            public_folder: '{{public_folder}}/es/blog/{{title}}'
+
+      - label: 'Arquivo(s)'
+        name: 'files'
+        widget: 'list'
+        summary: '{{fields.file}}'
+        field:
+          label: 'Arquivo'
+          name: 'file'
+          widget: 'file'
+
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+
+      - label: 'Autor(a)'
+        name: 'author'
+        widget: 'select'
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Corpo'
+        name: 'body'
+        widget: 'markdown'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/es/blog/{{title}}'
+            public_folder: '{{public_folder}}/es/blog/{{title}}'
+
+  - name: 'blog-pt'
+    label: 'Blog PT'
+    label_singular: 'post PT'
+    folder: 'content/pt/blog'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'blog'
+
+      - label: 'Título'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Descrição'
+        name: 'description'
+        widget: 'text'
+
+      - label: 'Imagem'
+        name: 'thumb'
+        widget: 'image'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+            public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'Arquivo(s)'
+        name: 'files'
+        widget: 'list'
+        summary: '{{fields.file}}'
+        field:
+          label: 'Arquivo'
+          name: 'file'
+          widget: 'file'
+
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+
+      - label: 'Autor(a)'
+        name: 'author'
+        widget: 'select'
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Corpo'
+        name: 'body'
+        widget: 'markdown'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+            public_folder: '{{public_folder}}/pt/blog/{{title}}'

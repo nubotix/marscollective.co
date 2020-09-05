@@ -49,6 +49,12 @@ module.exports = {
               quality: 100,
               withWebp: true
             }
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: f => `static/${f.hash}/${f.name}`
+            }
           }
         ]
       }
@@ -103,6 +109,7 @@ module.exports = {
         //   }
         // ]
       }
-    }
+    },
+    `gatsby-plugin-netlify-cms`
   ]
 }
