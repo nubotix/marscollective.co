@@ -13,7 +13,7 @@ content:
   - 03.jpg
   - 04.jpg
 role:
-  - web-design
+  - Web design
   - design
 team:
   - Frank Cedeño
