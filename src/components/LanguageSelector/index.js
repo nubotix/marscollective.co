@@ -1,20 +1,20 @@
 import React from 'react'
-import { Link, useI18next } from 'gatsby-plugin-react-i18next'
+import { useI18next } from 'gatsby-plugin-react-i18next'
+
+import * as S from './styled'
 
 const LanguageSelector = () => {
   const { languages, originalPath } = useI18next()
 
   return (
     <>
-      <ul className="languages">
-        {languages.map(lng => (
-          <li key={lng}>
-            <Link to={originalPath} language={lng}>
-              [{lng}]
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {languages.map(lng => (
+        <S.Item key={lng}>
+          <S.ItemLink to={originalPath} language={lng} activeClassName="active">
+            [{lng}]
+          </S.ItemLink>
+        </S.Item>
+      ))}
     </>
   )
 }

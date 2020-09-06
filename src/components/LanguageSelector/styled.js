@@ -1,27 +1,25 @@
 import styled from 'styled-components'
+import { Link } from 'gatsby-plugin-react-i18next'
 
-export const Wrapper = styled.div``
-
-export const Item = styled.button`
-  padding: 0;
+export const Item = styled.li`
+  display: inline-flex;
   margin: 0 0.5rem 0 0;
+  font-weight: 600;
+
+  :last-child {
+    margin: 0;
+  }
+`
+
+export const ItemLink = styled(Link)`
   color: var(--default);
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  text-decoration: none;
 
   :hover {
     color: var(--highLight);
   }
 
-  :last-child {
-    margin: 0;
-  }
-
-  &.en:lang(en),
-  &.es:lang(es),
-  &.pt:lang(pt) {
+  &.active {
     color: var(--highLight);
   }
 `
