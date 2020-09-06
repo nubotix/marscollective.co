@@ -34,6 +34,7 @@ const WorkItemTemplate = ({ data }) => {
         title={title[t('Lang')]}
         description={description[t('Lang')]}
         content={workItem.content}
+        video={workItem.video}
         role={workItem.role}
         team={workItem.team}
         date={workItem.date}
@@ -60,6 +61,7 @@ export const query = graphql`
             }
           }
         }
+        video
         role
         team
         date
