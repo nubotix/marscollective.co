@@ -7,7 +7,10 @@ description: Lorem ipsum
 descriptionES: Lorem ipsum
 descriptionPT: Lorem ipsum
 thumb: devfarias-2.jpg
-content: devfarias-2.jpg
+content:
+  - devfarias-1.jpg
+  - devfarias-2.jpg
+  - devfarias-3.jpg
 role:
   - Branding
 team:
