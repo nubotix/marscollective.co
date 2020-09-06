@@ -1,46 +1,65 @@
-import React from 'react'
+import React, { Component } from 'react'
 
+import ContactInputs from '../ContactInputs'
 import * as S from './styled'
-import { Input, TextArea } from '../Input'
 import { ButtonGhostWhite } from '../Buttons'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { Trans } from 'gatsby-plugin-react-i18next'
 
-const ContactForm = () => {
-  const { t } = useTranslation()
+class ContactForm extends Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <S.Wrapper>
-      <S.Title>
-        <Trans>Contact us</Trans>
-      </S.Title>
-      <form>
-        <Input
-          type="text"
-          placeholder={t('Your name')}
-          id="name"
-          aria-label={t('Your name')}
-          required
-        />
-        <Input
-          type="email"
-          placeholder={t('Your email')}
-          id="email"
-          aria-label={t('Your email')}
-          required
-        />
-        <TextArea
-          placeholder={t('Your message')}
-          id="message"
-          aria-label={t('Your message')}
-          required
-        />
+    this.state = {
+      message: null
+    }
+  }
+  async handleSubmit(event) {
+    event.preventDefault()
+    const { target: form } = event
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    }
 
-        <ButtonGhostWhite type="submit">
-          <Trans>Send</Trans>
-        </ButtonGhostWhite>
-      </form>
-    </S.Wrapper>
-  )
+    const response = await (
+      await fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+    ).json()
+    this.setState({
+      message: response.message
+    })
+    console.log(response)
+  }
+
+  render() {
+    const { message } = this.state
+
+    return (
+      <S.Wrapper>
+        <S.Title>
+          <Trans>Contact us</Trans>
+        </S.Title>
+        <S.Form
+          action="/.netlify/functions/sendMail"
+          onSubmit={this.handleSubmit.bind(this)}
+        >
+          <ContactInputs />
+          <S.SubmitWrapper>
+            <S.Alert>{message ? <Trans>{message}</Trans> : ''}</S.Alert>
+            <ButtonGhostWhite type="submit" id="sendMail">
+              <Trans>Send</Trans>
+            </ButtonGhostWhite>
+          </S.SubmitWrapper>
+        </S.Form>
+      </S.Wrapper>
+    )
+  }
 }
 
 export default ContactForm

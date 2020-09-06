@@ -14,14 +14,14 @@ const Contact = () => (
           <Trans>Let's build amazing things together</Trans>
         </S.Title>
         {/* <S.InfoWrapper>
-        <S.MapIcon /> Rua Parque Antârtica, 329 <br /> Morumbi, Foz do Iguaçu -
-        PR, Brazil
+        <S.MapIcon /> <S.InfoItem>Rua Parque Antârtica, 329 <br /> Morumbi, Foz do Iguaçu -
+        PR, Brazil</S.InfoItem>
       </S.InfoWrapper> */}
         <S.InfoWrapper>
-          <S.EnvelopeIcon /> hi@marscollective.co
+          <S.EnvelopeIcon /> <S.InfoItem>hi@marscollective.co</S.InfoItem>
         </S.InfoWrapper>
         <S.InfoWrapper>
-          <S.PhoneIcon /> +55 (45) 99132-8593
+          <S.PhoneIcon /> <S.InfoItem>+55 (45) 99132-8593</S.InfoItem>
         </S.InfoWrapper>
         <Social />
       </S.TextWrapper>

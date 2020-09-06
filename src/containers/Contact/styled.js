@@ -34,8 +34,7 @@ export const Title = styled(H2)`
 
 export const InfoWrapper = styled.div`
   display: flex;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  margin-bottom: var(--halfGutter);
 
   a {
     color: var(--default);
@@ -47,17 +46,19 @@ export const InfoWrapper = styled.div`
   }
 `
 
+export const InfoItem = styled.span``
+
 export const MapIcon = styled(Map)`
   width: 24px;
-  margin-right: 1rem;
+  margin: -5px var(--halfGutter) 0 0;
 `
 
 export const EnvelopeIcon = styled(Envelope)`
   width: 24px;
-  margin-right: 1rem;
+  margin: -5px var(--halfGutter) 0 0;
 `
 
 export const PhoneIcon = styled(Phone)`
   width: 24px;
-  margin-right: 1rem;
+  margin: -5px var(--halfGutter) 0 0;
 `

@@ -12,3 +12,17 @@ export const Title = styled(H3)`
   text-align: left;
   margin-bottom: var(--gutter);
 `
+
+export const Form = styled.form`
+  display: grid;
+  gap: var(--gutter);
+`
+
+export const SubmitWrapper = styled.div`
+  display: flex;
+`
+
+export const Alert = styled.span`
+  flex: 1;
+  margin-right: var(--gutter);
+`

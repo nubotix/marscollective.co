@@ -9,7 +9,6 @@ const baseStyles = css`
   outline: none;
   width: 100%;
   padding: var(--halfGutter);
-  margin-bottom: var(--halfGutter);
 `
 
 export const Input = styled.input`
@@ -18,7 +17,6 @@ export const Input = styled.input`
 
 export const TextArea = styled.textarea`
   ${baseStyles}
-
   height: 9rem;
-  margin-bottom: var(--gutter);
+  resize: none;
 `
