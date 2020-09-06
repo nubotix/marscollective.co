@@ -3,40 +3,42 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import PortfolioItem from '../containers/PortfolioItem'
+import WorkItem from '../containers/WorkItem'
+import Contact from '../containers/Contact'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
-const Portfolio = ({ data }) => {
+const WorkItemTemplate = ({ data }) => {
   const { t } = useTranslation()
-  const portfolioItem = data.markdownRemark
+  const workItem = data.markdownRemark.frontmatter
 
   const title = {
-    en: portfolioItem.frontmatter.title,
-    es: portfolioItem.frontmatter.titleES,
-    pt: portfolioItem.frontmatter.titlePT
+    en: workItem.title,
+    es: workItem.titleES,
+    pt: workItem.titlePT
   }
 
   const description = {
-    en: portfolioItem.frontmatter.description,
-    es: portfolioItem.frontmatter.descriptionES,
-    pt: portfolioItem.frontmatter.descriptionPT
+    en: workItem.description,
+    es: workItem.descriptionES,
+    pt: workItem.descriptionPT
   }
 
   return (
     <Layout>
       <SEO
-        title={portfolioItem.frontmatter.title}
-        description={portfolioItem.frontmatter.description}
+        title={workItem.title}
+        description={workItem.description}
         lang={t('Lang')}
       />
-      <PortfolioItem
+      <WorkItem
         title={title[t('Lang')]}
         description={description[t('Lang')]}
-        content={portfolioItem.frontmatter.content}
-        role={portfolioItem.frontmatter.role}
-        team={portfolioItem.frontmatter.team}
-        date={portfolioItem.frontmatter.date}
+        content={workItem.content}
+        role={workItem.role}
+        team={workItem.team}
+        date={workItem.date}
       />
+      <Contact />
     </Layout>
   )
 }
@@ -66,4 +68,4 @@ export const query = graphql`
   }
 `
 
-export default Portfolio
+export default WorkItemTemplate

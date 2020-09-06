@@ -13,7 +13,7 @@ const SocialMedia = () => {
           filter: {
             frontmatter: {
               key: { eq: "portfolio" }
-              role: { in: "Social Media" }
+              role: { in: "Social media" }
             }
           }
         ) {

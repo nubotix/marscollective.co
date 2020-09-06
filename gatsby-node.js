@@ -39,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
 
       createPage({
         path: portfolioItem.node.fields.slug,
-        component: path.resolve('src/templates/portfolioItem.js'),
+        component: path.resolve('src/templates/workItemTemplate.js'),
         context: {
           slug: portfolioItem.node.fields.slug,
           previous,

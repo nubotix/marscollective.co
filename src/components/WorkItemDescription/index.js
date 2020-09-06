@@ -5,7 +5,7 @@ import { P } from '../Typography'
 import { HR } from '../HR'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
-const PortfolioItemDescription = ({ title, description, role, team, date }) => {
+const WorkItemDescription = ({ title, description, role, team, date }) => {
   const { t } = useTranslation()
 
   return (
@@ -40,4 +40,4 @@ const PortfolioItemDescription = ({ title, description, role, team, date }) => {
   )
 }
 
-export default PortfolioItemDescription
+export default WorkItemDescription

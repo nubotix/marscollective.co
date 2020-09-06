@@ -1,19 +1,18 @@
 import React from 'react'
-import Img from 'gatsby-image'
 
 import * as S from './styled'
 import { Container } from '../../components/Container'
-import PortfolioItemDescription from '../../components/PortfolioItemDescription'
+import WorkItemDescription from '../../components/WorkItemDescription'
 
 const PortfolioItem = ({ title, description, content, role, team, date }) => (
   <Container>
     <S.Wrapper>
-      <div>
+      <S.ImageWrapper>
         {content.map((contentItem, i) => (
-          <Img key={i} fluid={contentItem.childImageSharp.fluid} />
+          <S.Image key={i} fluid={contentItem.childImageSharp.fluid} />
         ))}
-      </div>
-      <PortfolioItemDescription
+      </S.ImageWrapper>
+      <WorkItemDescription
         title={title}
         description={description}
         role={role}
