@@ -1,19 +1,16 @@
 import React from 'react'
 import Headroom from 'react-headroom'
 
-import Logo from '../../images/logo.svg'
 import Nav from '../../components/Nav'
-import LanguageSelector from '../../components/LanguageSelector'
 import * as S from './styled'
 import { ContainerNM as Container } from '../../components/Container'
 
 const Header = () => (
-  <Headroom style={{ overflow: 'hidden' }}>
+  <Headroom>
     <Container>
       <S.Wrapper>
-        <Logo />
+        <S.LogoSVG />
         <Nav />
-        <LanguageSelector />
       </S.Wrapper>
     </Container>
   </Headroom>

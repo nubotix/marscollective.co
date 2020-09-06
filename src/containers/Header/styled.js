@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Logo from '../../images/logo.svg'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const Img = styled.img`
+export const LogoSVG = styled(Logo)`
   width: 64px;
-  margin: calc(var(--halfMargin) / 2) 0;
+  margin: var(--tinyMargin) 0;
 `

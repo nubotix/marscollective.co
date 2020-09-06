@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 export const StyledBurger = styled.div`
   width: 2rem;
@@ -39,32 +40,47 @@ export const StyledBurger = styled.div`
 export const List = styled.ul`
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-around;
   list-style: none;
 
   @media (max-width: 1200px) {
     flex-flow: column nowrap;
-    background-color: #fffcf3;
+    background-color: var(--background);
     position: fixed;
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
     top: 0;
     right: 0;
     height: 100vh;
-    width: 300px;
-    padding-top: 3.5rem;
+    width: 100%;
+    padding: var(--margin);
     transition: transform 0.3s ease-in-out;
   }
 `
 
 export const ListItem = styled.li`
   align-self: center;
-  text-transform: uppercase;
-  margin-left: 30px;
+  margin: 0 var(--gutter) 0 0;
 
-  a {
-    color: #707070;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
+  :last-child {
+    margin: 0;
+  }
+
+  @media (max-width: 1200px) {
+    margin: 0;
+  }
+`
+
+export const ItemLink = styled(AnchorLink)`
+  color: var(--default);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+
+  :hover {
+    color: var(--highLight);
+  }
+
+  &.active {
+    color: var(--highLight);
   }
 `

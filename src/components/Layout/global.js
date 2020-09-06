@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     --doubleGutter: calc(var(--gutter) * 2);
     --margin: 8rem;
     --halfMargin: calc(var(--margin) / 2);
+    --tinyMargin: 1rem;
     --titleFont: 'Rubik', sans-serif;
     --bodyFont: 'Baloo 2', sans-serif;
     --bodyFontSize: 16px;
