@@ -3,10 +3,10 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 export const StyledBurger = styled.div`
   width: 2rem;
-  height: 2rem;
+  height: 1.7rem;
   position: fixed;
-  top: 25px;
-  left: 32px;
+  top: var(--gutter);
+  left: var(--gutter);
   z-index: 20;
   display: none;
   cursor: pointer;

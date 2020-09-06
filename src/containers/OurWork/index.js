@@ -15,19 +15,30 @@ import { Trans } from 'gatsby-plugin-react-i18next'
 const OurWork = () => (
   <Container id="our-work">
     <S.Wrapper>
-      <S.ItemsList>
+      <S.ItemsWrapper>
         <H2>
           <Trans>Our work</Trans>
         </H2>
-        <S.Item>All</S.Item>
-        <S.Item>Web design</S.Item>
-        <S.Item>Branding</S.Item>
-        <S.Item>Social media</S.Item>
-        <S.Item>Audiovisual</S.Item>
-        <Button>
-          <Trans>View more</Trans>
-        </Button>
-      </S.ItemsList>
+        <S.ItemsListWrapper>
+          <S.ItemsList>
+            <S.Item>All</S.Item>
+            <S.Item>Web design</S.Item>
+            <S.Item>Branding</S.Item>
+            <S.Item>Social media</S.Item>
+            <S.Item>Audiovisual</S.Item>
+          </S.ItemsList>
+          <a
+            href="https://www.behance.net/marscollective"
+            title="Behance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>
+              <Trans>View more</Trans>
+            </Button>
+          </a>
+        </S.ItemsListWrapper>
+      </S.ItemsWrapper>
       <div>
         <S.ImagesWrapper>
           <All />

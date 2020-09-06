@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Logo from '../../images/logo.svg'
 import { Copyleft } from '@styled-icons/remix-line/Copyleft'
 
 export const Wrapper = styled.footer`
@@ -8,11 +9,13 @@ export const Wrapper = styled.footer`
 
   @media (max-width: 460px) {
     flex-direction: column;
+  }
+`
 
-    img {
-      height: 48px;
-      margin-bottom: 2rem;
-    }
+export const LogoSVG = styled(Logo)`
+  @media (max-width: 460px) {
+    height: 48px;
+    margin-bottom: var(--gutter);
   }
 `
 

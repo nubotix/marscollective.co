@@ -7,16 +7,32 @@ export const Wrapper = styled(Tabs)`
   gap: var(--gutter);
 `
 
-export const ItemsList = styled(TabList)`
+export const ItemsWrapper = styled(TabList)`
   align-self: center;
   list-style: none;
   text-align: center;
 `
 
+export const ItemsListWrapper = styled.div`
+  display: grid;
+  gap: var(--doubleGutter);
+`
+
+export const ItemsList = styled.div`
+  display: grid;
+  gap: var(--gutter);
+`
+
 export const Item = styled(Tab)`
-  margin-bottom: 1rem;
+  font-weight: 600;
   outline: none;
+  transition: 0.5s;
   cursor: pointer;
+
+  :hover,
+  &.react-tabs__tab--selected {
+    color: var(--highLight);
+  }
 `
 
 export const ImagesWrapper = styled(TabPanel)`

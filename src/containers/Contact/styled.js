@@ -7,7 +7,7 @@ import { Phone } from '@styled-icons/boxicons-regular/Phone'
 export const Wrapper = styled.section`
   display: grid;
   grid-template-columns: auto 26.5rem;
-  gap: var(--gutter);
+  gap: var(--doubleGutter);
   padding: calc(var(--gutter) * 2);
   border-radius: var(--doubleBorderRadius);
   background: var(--backgroundGray);

@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Logo from '../../images/logo.svg'
 import Nav from '../../components/Nav'
 import * as S from './styled'
 import { Container } from '../../components/Container'
@@ -8,7 +7,7 @@ import { Container } from '../../components/Container'
 const Footer = () => (
   <Container>
     <S.Wrapper>
-      <Logo />
+      <S.LogoSVG />
       <S.NavWrapper>
         <Nav />
       </S.NavWrapper>

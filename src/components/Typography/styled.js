@@ -34,7 +34,6 @@ export const H2 = styled.h2`
 
   @media (max-width: 960px) {
     font-size: 2.5rem;
-    margin-bottom: var(--gutter);
   }
 `
 

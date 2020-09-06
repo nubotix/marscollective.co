@@ -6,7 +6,7 @@ export const Wrapper = styled.section``
 export const Itens = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: var(--doubleGutter);
 
   @media (max-width: 860px) {
     grid-template-columns: repeat(2, 1fr);
@@ -19,7 +19,7 @@ export const Itens = styled.div`
 
 export const Item = styled.div`
   display: grid;
-  gap: 2rem;
+  gap: var(--gutter);
 `
 
 export const Image = styled(Img)`
