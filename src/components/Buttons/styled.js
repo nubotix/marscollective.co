@@ -11,7 +11,13 @@ const baseStyles = css`
   border: var(--borderSize) solid var(--highLight);
   border-radius: var(--halfBorderRadius);
   outline: none;
+  transition: 0.5s;
   cursor: pointer;
+
+  :hover {
+    background: var(--hover);
+    border-color: var(--hover);
+  }
 `
 
 export const Button = styled.button`
@@ -20,9 +26,13 @@ export const Button = styled.button`
 
 export const ButtonGhost = styled.button`
   ${baseStyles}
-
   color: var(--highLight);
-  background: transparent;
+  background: transparent !important;
+
+  :hover {
+    color: var(--hover);
+    border-color: var(--hover);
+  }
 `
 
 export const ButtonGhostWhite = styled(ButtonGhost)`

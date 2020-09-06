@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
   :root {
     --highLight: #00d1b7;
+    --hover: #8cfff1;
     --default: #fff;
     --background: #262626;
     --backgroundGray: #353535;
@@ -16,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
     @media screen and (prefers-color-scheme: light) {
       --highLight: #25796f;
+      --hover: #00d1b7;
       --default: #262626;
       --background: #fff;
       --backgroundGray: #f1f1f1;
