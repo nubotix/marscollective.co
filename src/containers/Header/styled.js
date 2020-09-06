@@ -6,10 +6,6 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   background: var(--background);
-
-  @media (max-width: 1200px) {
-    flex-direction: row-reverse;
-  }
 `
 
 export const LogoSVG = styled(Logo)`

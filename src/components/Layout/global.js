@@ -50,6 +50,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1;
     text-rendering: optimizeLegibility;
     color: var(--default);
+    overflow-x: hidden;
   }
 
   img {

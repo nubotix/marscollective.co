@@ -3,10 +3,10 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 export const StyledBurger = styled.div`
   width: 2rem;
-  height: 1.7rem;
+  height: 2rem;
   position: fixed;
-  top: var(--gutter);
-  left: var(--gutter);
+  top: calc(var(--gutter) - 2px);
+  right: var(--gutter);
   z-index: 20;
   display: none;
   cursor: pointer;
@@ -21,7 +21,7 @@ export const StyledBurger = styled.div`
     width: 2rem;
     height: 0.25rem;
     background-color: ${({ open }) => (open ? '#fff' : '#fff')};
-    border-radius: 10px;
+    border-radius: var(--borderRadius);
     transform-origin: 1px;
     transition: all 0.3s linear;
     &:nth-child(1) {
@@ -53,7 +53,7 @@ export const List = styled.ul`
     height: 100vh;
     width: 100%;
     padding: var(--margin);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
 `
 
