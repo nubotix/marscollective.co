@@ -33,7 +33,9 @@ export const Title = styled(H2)`
 `
 
 export const InfoWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: var(--halfGutter);
   margin-bottom: var(--halfGutter);
 
   a {
