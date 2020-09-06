@@ -25,4 +25,5 @@ export const SubmitWrapper = styled.div`
 export const Alert = styled.span`
   flex: 1;
   margin-right: var(--gutter);
+  align-self: center;
 `
