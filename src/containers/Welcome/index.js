@@ -13,7 +13,7 @@ const Welcome = () => {
   const { t } = useTranslation()
 
   return (
-    <Container>
+    <Container id="home">
       <S.Wrapper>
         <img src={Image} alt="We are Mars" />
         <S.TextWrapper>
