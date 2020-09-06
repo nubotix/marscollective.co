@@ -213,3 +213,81 @@ collections:
           config:
             media_folder: '/{{media_folder}}/pt/blog/{{title}}'
             public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+  - name: 'portfolio'
+    label: 'Portfólio'
+    label_singular: 'item no portfólio'
+    folder: 'content/portfolio'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'portfolio'
+
+      - label: 'Título em inglês'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Título em espanhol'
+        name: 'titleES'
+        widget: 'string'
+
+      - label: 'Título em português'
+        name: 'titlePT'
+        widget: 'string'
+
+      - label: 'Descrição em inglês'
+        name: 'description'
+        widget: 'text'
+
+      - label: 'Descrição em espanhol'
+        name: 'descriptionES'
+        widget: 'text'
+
+      - label: 'Descrição em português'
+        name: 'descriptionPT'
+        widget: 'text'
+
+      - label: 'Thumbnail'
+        name: 'thumb'
+        widget: 'image'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+            public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'Conteúdo'
+        name: 'content'
+        widget: 'image'
+        multiple: true
+        media_library:
+          config:
+            multiple: true
+            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+            public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
