@@ -1,5 +1,4 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import Image from '../../images/welcome.svg'
@@ -15,34 +14,46 @@ const Welcome = () => {
   return (
     <Container id="home">
       <S.Wrapper>
-        <img src={Image} alt="We are Mars" />
+        <img
+          src={Image}
+          alt="We are Mars"
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        />
         <S.TextWrapper>
-          <Fade top cascade>
-            <H1>
-              <Trans>We are</Trans>
-              <Big>Mars</Big>
-            </H1>
-          </Fade>
-          <Lead>
+          <H1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+            <Trans>We are</Trans>
+            <Big
+              data-sal="slide-up"
+              data-sal-delay="600"
+              data-sal-easing="ease"
+            >
+              Mars
+            </Big>
+          </H1>
+          <Lead data-sal="slide-up" data-sal-delay="900" data-sal-easing="ease">
             <Trans>
               A collective of creative minds located in Brazil with an
               international mindset.
             </Trans>
           </Lead>
-          <Fade bottom cascade>
-            <S.ButtonsWrapper>
-              <AnchorLink to="/#contact" alt={t('Get in touch')}>
-                <Button>
-                  <Trans>Get in touch</Trans>
-                </Button>
-              </AnchorLink>
-              <AnchorLink to="/#our-work" alt={t('Our work')}>
-                <ButtonGhost>
-                  <Trans>Our work</Trans>
-                </ButtonGhost>
-              </AnchorLink>
-            </S.ButtonsWrapper>
-          </Fade>
+          <S.ButtonsWrapper
+            data-sal="slide-up"
+            data-sal-delay="1200"
+            data-sal-easing="ease"
+          >
+            <AnchorLink to="/#contact" alt={t('Get in touch')}>
+              <Button>
+                <Trans>Get in touch</Trans>
+              </Button>
+            </AnchorLink>
+            <AnchorLink to="/#our-work" alt={t('Our work')}>
+              <ButtonGhost>
+                <Trans>Our work</Trans>
+              </ButtonGhost>
+            </AnchorLink>
+          </S.ButtonsWrapper>
         </S.TextWrapper>
       </S.Wrapper>
     </Container>

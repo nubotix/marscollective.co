@@ -16,11 +16,11 @@ const OurWork = () => (
   <Container id="our-work">
     <S.Wrapper>
       <S.ItemsWrapper>
-        <H2>
+        <H2 data-sal="slide-up">
           <Trans>Our work</Trans>
         </H2>
         <S.ItemsListWrapper>
-          <S.ItemsList>
+          <S.ItemsList data-sal="slide-up">
             <S.Item>
               <Trans>All</Trans>
             </S.Item>
@@ -43,13 +43,13 @@ const OurWork = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button>
+            <Button data-sal="slide-up">
               <Trans>View more</Trans>
             </Button>
           </a>
         </S.ItemsListWrapper>
       </S.ItemsWrapper>
-      <div>
+      <div data-sal="slide-up">
         <S.ImagesWrapper>
           <All />
         </S.ImagesWrapper>

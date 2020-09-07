@@ -55,7 +55,7 @@ const Blog = () => {
 
   return (
     <Container>
-      <H2>
+      <H2 data-sal="slide-up">
         <Trans>Blog</Trans>
       </H2>
       <Wrapper>

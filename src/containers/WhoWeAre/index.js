@@ -1,5 +1,4 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import * as S from './styled'
@@ -46,13 +45,11 @@ const WhoWeAre = () => {
   return (
     <Container id="who-we-are">
       <S.Wrapper>
-        <H2>
-          <Fade bottom>
-            <Trans>Who we are</Trans>
-          </Fade>
+        <H2 data-sal="slide-up">
+          <Trans>Who we are</Trans>
         </H2>
         <S.Itens>
-          <S.Item>
+          <S.Item data-sal="slide-up">
             <S.Image fixed={data.Anderson.childImageSharp.fixed} />
             <S.TextWrapper>
               <H3>Anderson Lima</H3>
@@ -61,7 +58,7 @@ const WhoWeAre = () => {
               </H4>
             </S.TextWrapper>
           </S.Item>
-          <S.Item>
+          <S.Item data-sal="slide-up">
             <S.Image fixed={data.Daniel.childImageSharp.fixed} />
             <S.TextWrapper>
               <H3>Daniel Soares</H3>
@@ -70,7 +67,7 @@ const WhoWeAre = () => {
               </H4>
             </S.TextWrapper>
           </S.Item>
-          <S.Item>
+          <S.Item data-sal="slide-up">
             <S.Image fixed={data.Etienne.childImageSharp.fixed} />
             <S.TextWrapper>
               <H3>Etienne Bom</H3>
@@ -79,7 +76,7 @@ const WhoWeAre = () => {
               </H4>
             </S.TextWrapper>
           </S.Item>
-          <S.Item>
+          <S.Item data-sal="slide-up">
             <S.Image fixed={data.Frank.childImageSharp.fixed} />
             <S.TextWrapper>
               <H3>Frank Cedeño</H3>

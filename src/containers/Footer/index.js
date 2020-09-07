@@ -7,11 +7,11 @@ import { Container } from '../../components/Container'
 const Footer = () => (
   <Container>
     <S.Wrapper>
-      <S.LogoSVG />
+      <S.LogoSVG data-sal="slide-up" />
       <S.NavWrapper>
-        <Nav />
+        <Nav data-sal="slide-up" />
       </S.NavWrapper>
-      <S.CopyLeft>
+      <S.CopyLeft data-sal="slide-up">
         Mars Collective <S.CopyleftIcon /> 2020
       </S.CopyLeft>
     </S.Wrapper>

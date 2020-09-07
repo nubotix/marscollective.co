@@ -8,7 +8,11 @@ import { ContainerNM as Container } from '../../components/Container'
 const Header = () => (
   <Headroom>
     <Container>
-      <S.Wrapper>
+      <S.Wrapper
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+      >
         <S.LogoSVG />
         <Nav />
       </S.Wrapper>

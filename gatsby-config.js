@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
@@ -100,8 +101,8 @@ module.exports = {
             escapeValue: false
           },
           keySeparator: false,
-          nsSeparator: false,
-          redirect: false
+          nsSeparator: false
+          // redirect: false
         }
         // pages: [
         //   {

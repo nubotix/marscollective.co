@@ -10,18 +10,18 @@ const Contact = () => (
   <Container id="contact">
     <S.Wrapper>
       <S.TextWrapper>
-        <S.Title>
+        <S.Title data-sal="slide-up">
           <Trans>Let's build amazing things together</Trans>
         </S.Title>
-        <S.InfoWrapper>
+        <S.InfoWrapper data-sal="slide-up">
           {/* <S.MapIcon /> <S.InfoItem>Rua Parque Antârtica, 329 <br /> Morumbi, Foz do Iguaçu -
       PR, Brazil</S.InfoItem> */}
           <S.EnvelopeIcon /> <S.InfoItem>hi@marscollective.co</S.InfoItem>
           <S.PhoneIcon /> <S.InfoItem>+55 (45) 99132-8593</S.InfoItem>
         </S.InfoWrapper>
-        <Social />
+        <Social data-sal="slide-up" />
       </S.TextWrapper>
-      <ContactForm />
+      <ContactForm data-sal="slide-up" />
     </S.Wrapper>
   </Container>
 )
