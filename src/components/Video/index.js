@@ -1,18 +1,11 @@
 import React from 'react'
 
-const Video = ({ videoSrcURL, videoTitle, ...props }) => (
-  <div className="video">
-    <iframe
-      className="responsive-iframe"
-      src={videoSrcURL}
-      title={videoTitle}
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      frameBorder="0"
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
-      allowFullScreen
-    />
-  </div>
+import * as S from './styled'
+
+const Video = ({ videoSrcURL, videoTitle }) => (
+  <S.Wrapper>
+    <S.Iframe src={videoSrcURL} title={videoTitle} frameBorder="0" />
+  </S.Wrapper>
 )
 
 export default Video
