@@ -8,7 +8,7 @@ exports.createPages = ({ actions, graphql }) => {
     {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { key: { eq: "portfolio" } } }
+        filter: { frontmatter: { key: { eq: "work" } } }
         limit: 50
       ) {
         edges {
@@ -28,20 +28,18 @@ exports.createPages = ({ actions, graphql }) => {
       throw result.errors
     }
 
-    const portfolioItems = result.data.allMarkdownRemark.edges
+    const workItems = result.data.allMarkdownRemark.edges
 
-    portfolioItems.forEach((portfolioItem, index) => {
+    workItems.forEach((workItem, index) => {
       const previous =
-        index === portfolioItems.length - 1
-          ? null
-          : portfolioItems[index + 1].node
-      const next = index === 0 ? null : portfolioItems[index - 1].node
+        index === workItems.length - 1 ? null : workItems[index + 1].node
+      const next = index === 0 ? null : workItems[index - 1].node
 
       createPage({
-        path: portfolioItem.node.fields.slug,
+        path: workItem.node.fields.slug,
         component: path.resolve('src/templates/workItemTemplate.js'),
         context: {
-          slug: portfolioItem.node.fields.slug,
+          slug: workItem.node.fields.slug,
           previous,
           next
         }

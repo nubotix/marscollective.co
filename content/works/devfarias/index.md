@@ -1,5 +1,5 @@
 ---
-key: portfolio
+key: work
 title: DevFarias
 titleES: DevFarias
 titlePT: DevFarias

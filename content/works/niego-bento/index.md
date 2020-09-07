@@ -1,5 +1,5 @@
 ---
-key: portfolio
+key: work
 title: Sittz
 titleES: Sittz
 titlePT: Sittz
