@@ -1,11 +1,12 @@
 ---
 key: 'team'
 title: 'Etienne Bom'
-bio:
-bio_ES:
-bio_PT:
+member: true
+image: 'EtienneBom.jpg'
 position: 'Graphic Designer'
 position_ES: 'Diseñadora Gráfica'
 position_PT: 'Designer gráfico'
-image: 'EtienneBom.jpg'
+bio:
+bio_ES:
+bio_PT:
 ---
