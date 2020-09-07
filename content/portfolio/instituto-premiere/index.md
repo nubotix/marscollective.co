@@ -8,7 +8,7 @@ descriptionES: Lorem ipsum
 descriptionPT: Lorem ipsum
 thumb: test.png
 content:
-video: 'https://www.youtube.com/embed/iV2eWX60jIw'
+video: 'iV2eWX60jIw'
 role:
   - Audiovisual
 team:

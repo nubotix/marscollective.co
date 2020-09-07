@@ -23,6 +23,8 @@ const WorkItemTemplate = ({ data }) => {
     pt: workItem.descriptionPT
   }
 
+  const video = 'https://www.youtube.com/embed/' + workItem.video
+
   return (
     <Layout>
       <SEO
@@ -34,7 +36,7 @@ const WorkItemTemplate = ({ data }) => {
         title={title[t('Lang')]}
         description={description[t('Lang')]}
         content={workItem.content}
-        video={workItem.video}
+        video={video}
         role={workItem.role}
         team={workItem.team}
         date={workItem.date}
