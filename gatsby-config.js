@@ -112,6 +112,14 @@ module.exports = {
         // ]
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-TG7DCN7',
+        includeInDevelopment: true,
+        defaultDataLayer: { platform: 'gatsby' }
+      }
+    },
     `gatsby-plugin-netlify-cms`
   ]
 }

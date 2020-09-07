@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: dev
+  branch: master
 
   commit_messages:
     create: 'create content'
@@ -13,12 +13,12 @@ media_folder: 'content/assets'
 public_folder: '/assets'
 locale: 'pt'
 display_url: https://marscollective.co
-logo_url: https://mars-dev.netlify.app/logo.svg
+logo_url: https://marscollective.co/logo.svg
 
 collections:
   - name: 'blog-en'
-    label: 'Blog EN'
-    label_singular: 'post EN'
+    label: 'Blog em inglês'
+    label_singular: 'post em inglês'
     folder: 'content/en/blog'
     create: true
     media_folder: ''
@@ -83,8 +83,8 @@ collections:
             public_folder: '{{public_folder}}/en/blog/{{title}}'
 
   - name: 'blog-es'
-    label: 'Blog ES'
-    label_singular: 'post ES'
+    label: 'Blog em espanhol'
+    label_singular: 'post em espanhol'
     folder: 'content/es/blog'
     create: true
     media_folder: ''
@@ -149,8 +149,8 @@ collections:
             public_folder: '{{public_folder}}/es/blog/{{title}}'
 
   - name: 'blog-pt'
-    label: 'Blog PT'
-    label_singular: 'post PT'
+    label: 'Blog em português'
+    label_singular: 'post em português'
     folder: 'content/pt/blog'
     create: true
     media_folder: ''
@@ -214,10 +214,10 @@ collections:
             media_folder: '/{{media_folder}}/pt/blog/{{title}}'
             public_folder: '{{public_folder}}/pt/blog/{{title}}'
 
-  - name: 'portfolio'
-    label: 'Portfólio'
-    label_singular: 'item no portfólio'
-    folder: 'content/portfolio'
+  - name: 'works'
+    label: 'Todos os trabalhos'
+    label_singular: 'trabalho'
+    folder: 'content/works'
     create: true
     media_folder: ''
     public_folder: ''
@@ -228,7 +228,7 @@ collections:
       - label: 'Key'
         name: 'key'
         widget: 'hidden'
-        default: 'portfolio'
+        default: 'work'
 
       - label: 'Título em inglês'
         name: 'title'
@@ -262,15 +262,27 @@ collections:
             media_folder: '/{{media_folder}}/pt/blog/{{title}}'
             public_folder: '{{public_folder}}/pt/blog/{{title}}'
 
-      - label: 'Conteúdo'
+      - label: 'Imagens'
         name: 'content'
-        widget: 'image'
-        multiple: true
-        media_library:
-          config:
-            multiple: true
-            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
-            public_folder: '{{public_folder}}/pt/blog/{{title}}'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+          media_library:
+            config:
+              multiple: true
+              media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+              public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
 
       - label: 'Categoria'
         name: 'role'
@@ -291,3 +303,396 @@ collections:
         dateFormat: 'DD/MM/YYYY'
         timeFormat: 'HH:mm'
         format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'web_design'
+    label: 'Trabalhos em web design'
+    folder: 'content/works'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    filter: { field: 'role', value: 'Web design' }
+    editor:
+      preview: false
+    fields:
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Título em inglês'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Título em espanhol'
+        name: 'titleES'
+        widget: 'string'
+
+      - label: 'Título em português'
+        name: 'titlePT'
+        widget: 'string'
+
+      - label: 'Descrição em inglês'
+        name: 'description'
+        widget: 'text'
+
+      - label: 'Descrição em espanhol'
+        name: 'descriptionES'
+        widget: 'text'
+
+      - label: 'Descrição em português'
+        name: 'descriptionPT'
+        widget: 'text'
+
+      - label: 'Thumbnail'
+        name: 'thumb'
+        widget: 'image'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+            public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+          media_library:
+            config:
+              multiple: true
+              media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+              public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'branding'
+    label: 'Trabalhos em branding'
+    folder: 'content/works'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    filter: { field: 'role', value: 'Branding' }
+    editor:
+      preview: false
+    fields:
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Título em inglês'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Título em espanhol'
+        name: 'titleES'
+        widget: 'string'
+
+      - label: 'Título em português'
+        name: 'titlePT'
+        widget: 'string'
+
+      - label: 'Descrição em inglês'
+        name: 'description'
+        widget: 'text'
+
+      - label: 'Descrição em espanhol'
+        name: 'descriptionES'
+        widget: 'text'
+
+      - label: 'Descrição em português'
+        name: 'descriptionPT'
+        widget: 'text'
+
+      - label: 'Thumbnail'
+        name: 'thumb'
+        widget: 'image'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+            public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+          media_library:
+            config:
+              multiple: true
+              media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+              public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'social_media'
+    label: 'Trabalhos em social media'
+    folder: 'content/works'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    filter: { field: 'role', value: 'Social media' }
+    editor:
+      preview: false
+    fields:
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Título em inglês'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Título em espanhol'
+        name: 'titleES'
+        widget: 'string'
+
+      - label: 'Título em português'
+        name: 'titlePT'
+        widget: 'string'
+
+      - label: 'Descrição em inglês'
+        name: 'description'
+        widget: 'text'
+
+      - label: 'Descrição em espanhol'
+        name: 'descriptionES'
+        widget: 'text'
+
+      - label: 'Descrição em português'
+        name: 'descriptionPT'
+        widget: 'text'
+
+      - label: 'Thumbnail'
+        name: 'thumb'
+        widget: 'image'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+            public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+          media_library:
+            config:
+              multiple: true
+              media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+              public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'audiovisual'
+    label: 'Trabalhos em audiovisual'
+    folder: 'content/works'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    filter: { field: 'role', value: 'Audiovisual' }
+    editor:
+      preview: false
+    fields:
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Título em inglês'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Título em espanhol'
+        name: 'titleES'
+        widget: 'string'
+
+      - label: 'Título em português'
+        name: 'titlePT'
+        widget: 'string'
+
+      - label: 'Descrição em inglês'
+        name: 'description'
+        widget: 'text'
+
+      - label: 'Descrição em espanhol'
+        name: 'descriptionES'
+        widget: 'text'
+
+      - label: 'Descrição em português'
+        name: 'descriptionPT'
+        widget: 'text'
+
+      - label: 'Thumbnail'
+        name: 'thumb'
+        widget: 'image'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+            public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+          media_library:
+            config:
+              multiple: true
+              media_folder: '/{{media_folder}}/pt/blog/{{title}}'
+              public_folder: '{{public_folder}}/pt/blog/{{title}}'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'locales'
+    label: 'Localização'
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    files:
+      - file: 'src/locales/en/translation.json'
+        label: 'Inglês'
+        name: 'en'
+        extension: 'json'
+        fields:
+          - label: 'Lang'
+            name: 'Lang'
+            widget: 'hidden'
+            default: 'en'
+
+          - label: 'Home'
+            name: 'Home'
+            widget: 'string'
+
+          - label: 'What we do'
+            name: 'What we do'
+            widget: 'string'
+
+          - label: 'Our work'
+            name: 'Our work'
+            widget: 'string'
+
+          - label: 'Who we are'
+            name: 'Who we are'
+            widget: 'string'
+
+          - label: 'A collective of creative minds located in Brazil with an international mindset.'
+            name: 'A collective of creative minds located in Brazil with an international mindset.'
+            widget: 'text'
