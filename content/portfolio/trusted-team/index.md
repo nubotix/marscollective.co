@@ -6,8 +6,8 @@ titlePT: Trusted Team
 description: Lorem ipsum
 descriptionES: Lorem ipsum
 descriptionPT: Lorem ipsum
-thumb: .jpg
-content: ''
+thumb: test.png
+content:
 video: 'https://www.youtube.com/embed/OtnFvQ5upNc'
 role:
   - Audiovisual
