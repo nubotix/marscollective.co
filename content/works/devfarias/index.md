@@ -11,6 +11,7 @@ content:
   - devfarias-1.jpg
   - devfarias-2.jpg
   - devfarias-3.jpg
+video:
 role:
   - Branding
 team:
