@@ -48,11 +48,11 @@ const Welcome = () => {
                 <Trans>Get in touch</Trans>
               </Button>
             </AnchorLink>
-            <AnchorLink to="/#our-work" alt={t('Our work')}>
+            {/* <AnchorLink to="/#our-work" alt={t('Our work')}>
               <ButtonGhost>
                 <Trans>Our work</Trans>
               </ButtonGhost>
-            </AnchorLink>
+            </AnchorLink> */}
           </S.ButtonsWrapper>
         </S.TextWrapper>
       </S.Wrapper>

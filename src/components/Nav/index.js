@@ -38,7 +38,7 @@ const Nav = () => {
                 <Trans>What we do</Trans>
               </S.ItemLink>
             </S.ListItem>
-            <S.ListItem>
+            {/* <S.ListItem>
               <S.ItemLink
                 to={location.pathname + '#our-work'}
                 alt={t('Our work')}
@@ -46,7 +46,7 @@ const Nav = () => {
               >
                 <Trans>Our work</Trans>
               </S.ItemLink>
-            </S.ListItem>
+            </S.ListItem> */}
             <S.ListItem>
               <S.ItemLink
                 to={location.pathname + '#who-we-are'}
