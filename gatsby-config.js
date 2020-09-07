@@ -100,7 +100,8 @@ module.exports = {
             escapeValue: false
           },
           keySeparator: false,
-          nsSeparator: false
+          nsSeparator: false,
+          redirect: false
         }
         // pages: [
         //   {
