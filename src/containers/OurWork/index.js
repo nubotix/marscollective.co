@@ -21,11 +21,21 @@ const OurWork = () => (
         </H2>
         <S.ItemsListWrapper>
           <S.ItemsList>
-            <S.Item>All</S.Item>
-            <S.Item>Web design</S.Item>
-            <S.Item>Branding</S.Item>
-            <S.Item>Social media</S.Item>
-            <S.Item>Audiovisual</S.Item>
+            <S.Item>
+              <Trans>All</Trans>
+            </S.Item>
+            <S.Item>
+              <Trans>Web design</Trans>
+            </S.Item>
+            <S.Item>
+              <Trans>Branding</Trans>
+            </S.Item>
+            <S.Item>
+              <Trans>Social media</Trans>
+            </S.Item>
+            <S.Item>
+              <Trans>Audiovisual</Trans>
+            </S.Item>
           </S.ItemsList>
           <a
             href="https://www.behance.net/marscollective"
