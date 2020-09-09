@@ -42,6 +42,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-transformer-remark-frontmatter',
+            options: {
+              whitelist: ['textEN', 'textES', 'textPT']
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,

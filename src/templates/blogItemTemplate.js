@@ -9,6 +9,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 const BlogItemTemplate = ({ data }) => {
   const { t } = useTranslation()
   const blogItem = data.blogItem.frontmatter
+  const blogItemBody = data.blogItem.fields.frontmattermd
 
   const title = {
     en: blogItem.titles.en,
@@ -28,10 +29,10 @@ const BlogItemTemplate = ({ data }) => {
     pt: blogItem.descriptions.pt
   }
 
-  const text = {
-    en: blogItem.text.en,
-    es: blogItem.text.es,
-    pt: blogItem.text.pt
+  const body = {
+    en: blogItemBody.textEN.html,
+    es: blogItemBody.textES.html,
+    pt: blogItemBody.textPT.html
   }
 
   return (
@@ -42,7 +43,7 @@ const BlogItemTemplate = ({ data }) => {
         author={blogItem.author}
         image={blogItem.image.childImageSharp.fluid}
         date={dataLocale[t('Lang')]}
-        html={text[t('Lang')]}
+        html={body[t('Lang')]}
       />
       <Contact />
     </Layout>
@@ -72,10 +73,19 @@ export const query = graphql`
         }
         tags
         author
-        text {
-          en
-          es
-          pt
+        textEN
+      }
+      fields {
+        frontmattermd {
+          textEN {
+            html
+          }
+          textES {
+            html
+          }
+          textPT {
+            html
+          }
         }
       }
     }
