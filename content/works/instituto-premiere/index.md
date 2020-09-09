@@ -1,12 +1,14 @@
 ---
-key: work
-title: Instituto Premiere
-titleES: Instituto Premiere
-titlePT: Instituto Premiere
-description: Lorem ipsum
-descriptionES: Lorem ipsum
-descriptionPT: Lorem ipsum
-thumb: test.png
+templateKey: work
+titles:
+  en: Instituto Premiere
+  es: Instituto Premiere
+  pt: Instituto Premiere
+descriptions:
+  en: Lorem ipsum
+  es: Lorem ipsum
+  pt: Lorem ipsum
+image: test.png
 content:
 video: 'iV2eWX60jIw'
 role:

@@ -19,7 +19,7 @@ const Branding = () => {
               frontmatter {
                 role
                 key
-                thumb {
+                image {
                   childImageSharp {
                     fluid(maxWidth: 900, quality: 90) {
                       ...GatsbyImageSharpFluid_withWebp
@@ -44,7 +44,7 @@ const Branding = () => {
       {items.map(({ node }, i) => (
         <S.LinkItem to={node.fields.slug}>
           <S.Image
-            fluid={node.frontmatter.thumb.childImageSharp.fluid}
+            fluid={node.frontmatter.image.childImageSharp.fluid}
             key={i}
           />
         </S.LinkItem>

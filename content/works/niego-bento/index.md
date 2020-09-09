@@ -1,12 +1,14 @@
 ---
-key: work
-title: Sittz
-titleES: Sittz
-titlePT: Sittz
-description: Lorem ipsum
-descriptionES: Lorem ipsum
-descriptionPT: Lorem ipsum
-thumb: test.png
+templateKey: work
+titles:
+  en: Niego Bento
+  es: Niego Bento
+  pt: Niego Bento
+descriptions:
+  en: Lorem ipsum
+  es: Lorem ipsum
+  pt: Lorem ipsum
+image: test.png
 content:
 video: 'uDJFmlFiae4'
 role:

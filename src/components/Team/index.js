@@ -25,9 +25,11 @@ const Team = () => {
                     }
                   }
                 }
-                position
-                position_ES
-                position_PT
+                position {
+                  en
+                  es
+                  pt
+                }
               }
             }
           }
@@ -42,9 +44,9 @@ const Team = () => {
     <S.Itens>
       {teamItems.map(({ node }, i) => {
         const position = {
-          en: node.frontmatter.position,
-          es: node.frontmatter.position_ES,
-          pt: node.frontmatter.position_PT
+          en: node.frontmatter.position.en,
+          es: node.frontmatter.position.es,
+          pt: node.frontmatter.position.pt
         }
 
         return (

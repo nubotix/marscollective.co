@@ -24,7 +24,7 @@ const PortfolioItem = ({
             ))}
           </>
         )}
-        {video && <Video videoSrcURL={video} videoTitle={title} />}
+        {video && <Video videoID={video} videoTitle={title} />}
       </S.ImageWrapper>
       <WorkItemDescription
         title={title}

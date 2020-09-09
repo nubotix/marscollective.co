@@ -1,12 +1,14 @@
 ---
-key: 'team'
-title: 'Daniel Soares'
+key: team
+name: Daniel Soares
 member: true
-image: 'DanielSoares.jpg'
-position: 'Web Developer'
-position_ES: 'Desarrollador Web'
-position_PT: 'Desenvolvedor web'
+image: DanielSoares.jpg
+position:
+  en: Web Developer
+  es: Desarrollador Web
+  pt: Desenvolvedor web
 bio:
-bio_ES:
-bio_PT:
+  en:
+  es:
+  pt:
 ---

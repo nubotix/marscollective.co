@@ -1,12 +1,14 @@
 ---
-key: work
-title: Trusted Team
-titleES: Trusted Team
-titlePT: Trusted Team
-description: Lorem ipsum
-descriptionES: Lorem ipsum
-descriptionPT: Lorem ipsum
-thumb: test.png
+templateKey: work
+titles:
+  en: Trusted Team
+  es: Trusted Team
+  pt: Trusted Team
+descriptions:
+  en: Lorem ipsum
+  es: Lorem ipsum
+  pt: Lorem ipsum
+image: test.png
 content:
 video: 'OtnFvQ5upNc'
 role:

@@ -1,12 +1,14 @@
 ---
-key: work
-title: DevFarias
-titleES: DevFarias
-titlePT: DevFarias
-description: Lorem ipsum
-descriptionES: Lorem ipsum
-descriptionPT: Lorem ipsum
-thumb: devfarias-2.jpg
+templateKey: work
+titles:
+  en: DevFarias
+  es: DevFarias
+  pt: DevFarias
+descriptions:
+  en: Lorem ipsum
+  es: Lorem ipsum
+  pt: Lorem ipsum
+image: devfarias-2.jpg
 content:
   - devfarias-1.jpg
   - devfarias-2.jpg

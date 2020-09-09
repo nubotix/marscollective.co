@@ -12,31 +12,29 @@ const WorkItemTemplate = ({ data }) => {
   const workItem = data.markdownRemark.frontmatter
 
   const title = {
-    en: workItem.title,
-    es: workItem.titleES,
-    pt: workItem.titlePT
+    en: workItem.titles.en,
+    es: workItem.titles.es,
+    pt: workItem.titles.pt
   }
 
   const description = {
-    en: workItem.description,
-    es: workItem.descriptionES,
-    pt: workItem.descriptionPT
+    en: workItem.descriptions.en,
+    es: workItem.descriptions.es,
+    pt: workItem.descriptions.pt
   }
-
-  const video = 'https://www.youtube.com/embed/' + workItem.video
 
   return (
     <Layout>
       <SEO
-        title={workItem.title}
-        description={workItem.description}
+        title={title[t('Lang')]}
+        description={description[t('Lang')]}
         lang={t('Lang')}
       />
       <WorkItem
         title={title[t('Lang')]}
         description={description[t('Lang')]}
         content={workItem.content}
-        video={video}
+        video={workItem.video}
         role={workItem.role}
         team={workItem.team}
         date={workItem.date}
@@ -47,18 +45,22 @@ const WorkItemTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
-        titleES
-        titlePT
-        description
-        descriptionES
-        descriptionPT
+        titles {
+          en
+          es
+          pt
+        }
+        descriptions {
+          en
+          es
+          pt
+        }
         content {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 90) {
+            fluid(maxWidth: 900, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

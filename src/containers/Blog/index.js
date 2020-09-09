@@ -36,7 +36,7 @@ const Blog = () => {
             node {
               frontmatter {
                 key
-                thumb {
+                image {
                   childImageSharp {
                     fluid(maxWidth: 900, quality: 90) {
                       ...GatsbyImageSharpFluid_withWebp
@@ -60,7 +60,7 @@ const Blog = () => {
       </H2>
       <Wrapper>
         {items.map(({ node }, i) => (
-          <Div fluid={node.frontmatter.thumb.childImageSharp.fluid} key={i} />
+          <Div fluid={node.frontmatter.image.childImageSharp.fluid} key={i} />
         ))}
       </Wrapper>
     </Container>

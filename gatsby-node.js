@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
@@ -6,18 +7,17 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { key: { eq: "work" } } }
-        limit: 50
-      ) {
+      allMarkdownRemark(limit: 1000) {
         edges {
           node {
+            id
             fields {
               slug
             }
             frontmatter {
-              title
+              templateKey
+              team
+              author
             }
           }
         }
@@ -28,20 +28,49 @@ exports.createPages = ({ actions, graphql }) => {
       throw result.errors
     }
 
-    const workItems = result.data.allMarkdownRemark.edges
+    const items = result.data.allMarkdownRemark.edges
 
-    workItems.forEach((workItem, index) => {
-      const previous =
-        index === workItems.length - 1 ? null : workItems[index + 1].node
-      const next = index === 0 ? null : workItems[index - 1].node
+    items.forEach(edge => {
+      const id = edge.node.id
+      const author = edge.node.frontmatter.author
+      // const previous =
+      //   index === blogItems.length - 1 ? null : blogItems[index + 1].node
+      // const next = index === 0 ? null : blogItems[index - 1].node
+      if (_.get(edge, `node.frontmatter.templateKey`)) {
+        createPage({
+          path: edge.node.fields.slug,
+          component: path.resolve(
+            `src/templates/${String(
+              edge.node.frontmatter.templateKey
+            )}ItemTemplate.js`
+          ),
+          context: {
+            id,
+            author
+            // previous,
+            // next
+          }
+        })
+      }
+    })
+
+    let team = []
+    items.forEach(edge => {
+      if (_.get(edge, `node.frontmatter.team`)) {
+        team = team.concat(edge.node.frontmatter.team)
+      }
+    })
+
+    team = _.uniq(team)
+
+    team.forEach(author => {
+      const authorPath = `/authors/${_.kebabCase(author)}/`
 
       createPage({
-        path: workItem.node.fields.slug,
-        component: path.resolve('src/templates/workItemTemplate.js'),
+        path: authorPath,
+        component: path.resolve(`src/templates/authorItemTemplate.js`),
         context: {
-          slug: workItem.node.fields.slug,
-          previous,
-          next
+          author
         }
       })
     })

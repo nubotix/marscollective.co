@@ -1,12 +1,14 @@
 ---
-key: 'team'
-title: 'Anderson Lima'
+key: team
+name: Anderson Lima
 member: true
-image: 'AndersonLima.jpg'
-position: 'Social Strategist'
-position_ES: 'Redactor'
-position_PT: 'Redator'
+image: AndersonLima.jpg
+position:
+  en: Social Strategist
+  es: Redactor
+  pt: Redator
 bio:
-bio_ES:
-bio_PT:
+  en:
+  es:
+  pt:
 ---
