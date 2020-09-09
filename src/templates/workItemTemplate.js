@@ -9,7 +9,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const WorkItemTemplate = ({ data }) => {
   const { t } = useTranslation()
-  const workItem = data.markdownRemark.frontmatter
+  const workItem = data.workItem.frontmatter
 
   const title = {
     en: workItem.titles.en,
@@ -21,6 +21,12 @@ const WorkItemTemplate = ({ data }) => {
     en: workItem.descriptions.en,
     es: workItem.descriptions.es,
     pt: workItem.descriptions.pt
+  }
+
+  const dataLocale = {
+    en: data.dateEN.frontmatter.date,
+    es: data.dateES.frontmatter.date,
+    pt: data.datePT.frontmatter.date
   }
 
   return (
@@ -37,7 +43,7 @@ const WorkItemTemplate = ({ data }) => {
         video={workItem.video}
         role={workItem.role}
         team={workItem.team}
-        date={workItem.date}
+        date={dataLocale[t('Lang')]}
       />
       <Contact />
     </Layout>
@@ -46,7 +52,7 @@ const WorkItemTemplate = ({ data }) => {
 
 export const query = graphql`
   query($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    workItem: markdownRemark(id: { eq: $id }) {
       frontmatter {
         titles {
           en
@@ -68,7 +74,21 @@ export const query = graphql`
         video
         role
         team
-        date
+      }
+    }
+    dateEN: markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        date(locale: "en", formatString: "MMMM DD, YYYY")
+      }
+    }
+    dateES: markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        date(locale: "es", formatString: "DD [de] MMMM [de] YYYY")
+      }
+    }
+    datePT: markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        date(locale: "pt", formatString: "DD [de] MMMM [de] YYYY")
       }
     }
   }
