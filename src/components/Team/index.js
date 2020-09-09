@@ -11,13 +11,13 @@ const Team = () => {
     graphql`
       query {
         allMarkdownRemark(
-          sort: { fields: frontmatter___title, order: ASC }
+          sort: { fields: frontmatter___name, order: ASC }
           filter: { frontmatter: { key: { eq: "team" }, member: { eq: true } } }
         ) {
           edges {
             node {
               frontmatter {
-                title
+                name
                 image {
                   childImageSharp {
                     fixed(width: 150, height: 150, quality: 100) {
@@ -53,7 +53,7 @@ const Team = () => {
           <S.Item data-sal="slide-up" key={i}>
             <S.Image fixed={node.frontmatter.image.childImageSharp.fixed} />
             <S.TextWrapper>
-              <H3>{node.frontmatter.title}</H3>
+              <H3>{node.frontmatter.name}</H3>
               <H4>{position[t('Lang')]}</H4>
             </S.TextWrapper>
           </S.Item>
