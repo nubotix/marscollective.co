@@ -10,6 +10,11 @@ import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Welcome = () => {
   const { t } = useTranslation()
+  const baseURL = {
+    en: '/',
+    es: '/es/',
+    pt: '/pt/'
+  }
 
   return (
     <Container id="home">
@@ -40,15 +45,18 @@ const Welcome = () => {
           </Lead>
           <S.ButtonsWrapper
             data-sal="slide-up"
-            data-sal-delay="1200"
+            data-sal-delay="900"
             data-sal-easing="ease"
           >
-            <AnchorLink to="/#contact" alt={t('Get in touch')}>
+            <AnchorLink
+              to={baseURL[t('Lang')] + '#contact'}
+              alt={t('Get in touch')}
+            >
               <Button>
                 <Trans>Get in touch</Trans>
               </Button>
             </AnchorLink>
-            {/* <AnchorLink to="/#our-work" alt={t('Our work')}>
+            {/* <AnchorLink to={baseURL[t('Lang')] + '#our-work'} alt={t('Our work')}>
               <ButtonGhost>
                 <Trans>Our work</Trans>
               </ButtonGhost>
