@@ -5,10 +5,14 @@ member: true
 image: AndersonLima.jpg
 position:
   en: Social Strategist
-  es: Redactor
-  pt: Redator
+  es: Social Strategist
+  pt: Social Strategist
 bio:
-  en:
-  es:
-  pt:
+  en: A brazilian strategist working in digital media and planning. I help brands
+    connect with their target audience by developing marketing strategies and
+    managing ad campaigns.
+  es: Lorem ipsum
+  pt: Um publicitário iguaçuense apaixonado por mídias digitais e planejamento.
+    Desenvolvo estratégias de comunicação, gerencio campanhas de anúncios e
+    aproximo marcas de seu público alvo.
 ---
