@@ -12,7 +12,9 @@ const Team = () => {
       query {
         allMarkdownRemark(
           sort: { fields: frontmatter___name, order: ASC }
-          filter: { frontmatter: { key: { eq: "team" }, member: { eq: true } } }
+          filter: {
+            frontmatter: { templateKey: { eq: "team" }, member: { eq: true } }
+          }
         ) {
           edges {
             node {

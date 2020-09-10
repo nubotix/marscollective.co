@@ -12,7 +12,7 @@ const SocialMedia = () => {
           limit: 4
           filter: {
             frontmatter: {
-              key: { eq: "portfolio" }
+              templateKey: { eq: "work" }
               role: { in: "Social media" }
             }
           }
@@ -21,7 +21,6 @@ const SocialMedia = () => {
             node {
               frontmatter {
                 role
-                key
                 image {
                   childImageSharp {
                     fluid(maxWidth: 900, quality: 90) {

@@ -11,14 +11,16 @@ const Branding = () => {
           sort: { fields: frontmatter___date, order: DESC }
           limit: 4
           filter: {
-            frontmatter: { key: { eq: "portfolio" }, role: { in: "Branding" } }
+            frontmatter: {
+              templateKey: { eq: "work" }
+              role: { in: "Branding" }
+            }
           }
         ) {
           edges {
             node {
               frontmatter {
                 role
-                key
                 image {
                   childImageSharp {
                     fluid(maxWidth: 900, quality: 90) {

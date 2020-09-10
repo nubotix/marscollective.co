@@ -10,13 +10,12 @@ const All = () => {
         allMarkdownRemark(
           sort: { fields: frontmatter___date, order: DESC }
           limit: 4
-          filter: { frontmatter: { key: { eq: "portfolio" } } }
+          filter: { frontmatter: { templateKey: { eq: "work" } } }
         ) {
           edges {
             node {
               frontmatter {
                 role
-                key
                 image {
                   childImageSharp {
                     fluid(maxWidth: 900, quality: 90) {

@@ -12,7 +12,7 @@ const WebDesign = () => {
           limit: 4
           filter: {
             frontmatter: {
-              key: { eq: "portfolio" }
+              templateKey: { eq: "work" }
               role: { in: "Web design" }
             }
           }
@@ -21,7 +21,6 @@ const WebDesign = () => {
             node {
               frontmatter {
                 role
-                key
                 image {
                   childImageSharp {
                     fluid(maxWidth: 900, quality: 90) {

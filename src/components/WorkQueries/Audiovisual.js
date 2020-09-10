@@ -12,7 +12,7 @@ const Audiovisual = () => {
           limit: 4
           filter: {
             frontmatter: {
-              key: { eq: "portfolio" }
+              templateKey: { eq: "work" }
               role: { in: "Audiovisual" }
             }
           }
@@ -21,7 +21,6 @@ const Audiovisual = () => {
             node {
               frontmatter {
                 role
-                key
                 image {
                   childImageSharp {
                     fluid(maxWidth: 900, quality: 90) {
