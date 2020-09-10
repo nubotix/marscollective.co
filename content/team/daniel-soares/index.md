@@ -1,5 +1,5 @@
 ---
-key: team
+templateKey: team
 name: Daniel Soares
 member: true
 image: DanielSoares.jpg

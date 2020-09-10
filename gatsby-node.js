@@ -53,27 +53,6 @@ exports.createPages = ({ actions, graphql }) => {
         })
       }
     })
-
-    let team = []
-    items.forEach(edge => {
-      if (_.get(edge, `node.frontmatter.team`)) {
-        team = team.concat(edge.node.frontmatter.team)
-      }
-    })
-
-    team = _.uniq(team)
-
-    team.forEach(author => {
-      const authorPath = `/authors/${_.kebabCase(author)}/`
-
-      createPage({
-        path: authorPath,
-        component: path.resolve(`src/templates/authorItemTemplate.js`),
-        context: {
-          author
-        }
-      })
-    })
   })
 }
 

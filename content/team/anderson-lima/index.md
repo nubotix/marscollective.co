@@ -1,5 +1,5 @@
 ---
-key: team
+templateKey: team
 name: Anderson Lima
 member: true
 image: AndersonLima.jpg

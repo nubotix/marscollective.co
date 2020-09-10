@@ -1,5 +1,5 @@
 ---
-key: team
+templateKey: team
 name: Etienne Bom
 member: true
 image: EtienneBom.jpg
