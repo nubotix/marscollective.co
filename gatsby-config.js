@@ -42,9 +42,9 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-transformer-remark-frontmatter',
+            resolve: `gatsby-transformer-remark-frontmatter`,
             options: {
-              whitelist: ['textEN', 'textES', 'textPT']
+              whitelist: [`textEN`, `textES`, `textPT`]
             }
           },
           {
@@ -108,22 +108,15 @@ module.exports = {
           },
           keySeparator: false,
           nsSeparator: false
-          // redirect: false
         }
-        // pages: [
-        //   {
-        //     matchPath: `/:lang?/blog/:uid`,
-        //     getLanguageFromPath: true
-        //   }
-        // ]
       }
     },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: 'GTM-TG7DCN7',
+        id: `GTM-TG7DCN7`,
         includeInDevelopment: true,
-        defaultDataLayer: { platform: 'gatsby' }
+        defaultDataLayer: { platform: `gatsby` }
       }
     },
     `gatsby-plugin-netlify-cms`
