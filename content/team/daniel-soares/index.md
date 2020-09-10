@@ -8,7 +8,8 @@ position:
   es: Desarrollador Web
   pt: Desenvolvedor web
 bio:
-  en:
-  es:
-  pt:
+  en: Lorem.
+  es: Lorem.
+  pt: Graduado em Design e Ciência Política e Sociologia, trabalho desde 2004 com
+    publicidade, onde me especializei no desenvolvimento web.
 ---
