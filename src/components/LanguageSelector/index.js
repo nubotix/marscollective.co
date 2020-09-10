@@ -7,7 +7,7 @@ const LanguageSelector = () => {
   const { languages, originalPath } = useI18next()
 
   return (
-    <>
+    <S.Wrapper>
       {languages.map(lng => (
         <S.Item key={lng}>
           <S.ItemLink to={originalPath} language={lng} activeClassName="active">
@@ -15,7 +15,7 @@ const LanguageSelector = () => {
           </S.ItemLink>
         </S.Item>
       ))}
-    </>
+    </S.Wrapper>
   )
 }
 
