@@ -6,11 +6,11 @@ image: DanielSoares.jpg
 position:
   en: Web Developer
   es: Desarrollador Web
-  pt: Desenvolvedor web
+  pt: Desenvolvedor Web
 bio:
   en: Graduated in Design and Political Science and Sociology, I work since 2004
     with advertising, where I specialized in web development.
-  es: Lorem.
+  es: Lorem ipsum
   pt: Graduado em Design e Ciência Política e Sociologia, trabalho desde 2004 com
     publicidade, onde me especializei no desenvolvimento web.
 ---
