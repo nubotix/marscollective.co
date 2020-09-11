@@ -3,14 +3,18 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import Article from '../containers/Article'
+import BlogItemHeader from '../components/BlogItemHeader'
+import BlogItemBody from '../components/BlogItemBody'
+import AuthorWrapper from '../components/AuthorWrapper'
 import Contact from '../containers/Contact'
+import { Container } from '../components/Container'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const BlogItemTemplate = ({ data }) => {
   const { t } = useTranslation()
   const blogItem = data.blogItem.frontmatter
   const blogItemBody = data.blogItem.fields.frontmattermd
+  const blogItemAuthor = data.authorInfo.frontmatter
 
   const title = {
     en: blogItem.titles.en,
@@ -36,6 +40,12 @@ const BlogItemTemplate = ({ data }) => {
     pt: blogItemBody.textPT.html
   }
 
+  const bio = {
+    en: blogItemAuthor.bio.en,
+    es: blogItemAuthor.bio.es,
+    pt: blogItemAuthor.bio.pt
+  }
+
   return (
     <Layout>
       <SEO
@@ -43,14 +53,23 @@ const BlogItemTemplate = ({ data }) => {
         description={description[t('Lang')]}
         lang={t('Lang')}
       />
-      <Article
-        title={title[t('Lang')]}
-        avatar={data.authorInfo.frontmatter.image.childImageSharp.fixed}
-        author={blogItem.author}
-        image={blogItem.image.childImageSharp.fluid}
-        date={dataLocale[t('Lang')]}
-        html={body[t('Lang')]}
-      />
+
+      <Container>
+        <BlogItemHeader
+          image={blogItem.image.childImageSharp.fluid}
+          title={title[t('Lang')]}
+          avatar={blogItemAuthor.image.childImageSharp.fixed}
+          author={blogItem.author}
+          date={dataLocale[t('Lang')]}
+        />
+        <BlogItemBody html={body[t('Lang')]} />
+        <AuthorWrapper
+          avatar={blogItemAuthor.image.childImageSharp.fixed}
+          author={blogItem.author}
+          bio={bio[t('Lang')]}
+          socialLinks={blogItemAuthor.social}
+        />
+      </Container>
       <Contact />
     </Layout>
   )
@@ -116,10 +135,19 @@ export const query = graphql`
       frontmatter {
         image {
           childImageSharp {
-            fixed(width: 64, height: 64, quality: 100) {
+            fixed(width: 160, quality: 100) {
               ...GatsbyImageSharpFixed_withWebp
             }
           }
+        }
+        bio {
+          en
+          es
+          pt
+        }
+        social {
+          label
+          url
         }
       }
     }

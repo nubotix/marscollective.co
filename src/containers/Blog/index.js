@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 import { Container } from '../../components/Container'
-import { H2 } from '../../components/Typography'
 import { Trans } from 'gatsby-plugin-react-i18next'
 
 const Blog = () => {
@@ -54,9 +53,9 @@ const Blog = () => {
 
   return (
     <Container>
-      <H2 data-sal="slide-up">
+      <h2 data-sal="slide-up">
         <Trans>Blog</Trans>
-      </H2>
+      </h2>
       <Wrapper>
         {items.map(({ node }, i) => (
           <Div fluid={node.frontmatter.image.childImageSharp.fluid} key={i} />

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import { Link } from 'gatsby-plugin-react-i18next'
 
 export const StyledBurger = styled.div`
   width: 2rem;

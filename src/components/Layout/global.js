@@ -64,22 +64,10 @@ const GlobalStyles = createGlobalStyle`
     text-transform: uppercase;
     color: var(--default);
 
-    .big {
-      display: block;
-      font-size: 8.75rem;
-      color: var(--highLight);
-
-      @media (max-width: 1200px) {
-        font-size: 7rem;
-      }
-    }
-
     @media (max-width: 1200px) {
       font-size: 3.8rem;
     }
   }
-
-
 
   h2 {
     font-size: 3rem;
@@ -134,11 +122,6 @@ const GlobalStyles = createGlobalStyle`
   p {
     line-height: 1.5;
     margin-bottom: 1rem;
-
-    &.lead {
-      font-size: 1.5rem;
-      margin: -1rem 0 0 0;
-    }
 
     &:last-child {
       margin-bottom: 0;
