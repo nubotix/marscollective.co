@@ -11,12 +11,6 @@ const WorkItemTemplate = ({ data }) => {
   const { t } = useTranslation()
   const workItem = data.workItem.frontmatter
 
-  const title = {
-    en: workItem.titles.en,
-    es: workItem.titles.es,
-    pt: workItem.titles.pt
-  }
-
   const description = {
     en: workItem.descriptions.en,
     es: workItem.descriptions.es,
@@ -32,12 +26,12 @@ const WorkItemTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={title[t('Lang')]}
+        title={workItem.title}
         description={description[t('Lang')]}
         lang={t('Lang')}
       />
       <WorkItem
-        title={title[t('Lang')]}
+        title={workItem.title}
         description={description[t('Lang')]}
         content={workItem.content}
         video={workItem.video}
