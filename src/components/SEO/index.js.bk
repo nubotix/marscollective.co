@@ -2,29 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            description {
-              en
-              es
-              pt
-            }
           }
         }
       }
     `
   )
-
-  //TODO
-  //i18n
-
-  const metaDescription = description || site.siteMetadata.description.en
+  const { t } = useTranslation()
+  const title = site.siteMetadata.title
+  const metaDescription =
+    description ||
+    t(
+      'A collective of creative minds located in Brazil with an international mindset.'
+    )
 
   return (
     <Helmet
@@ -32,8 +30,6 @@ function SEO({ description, lang, meta, title }) {
         lang
       }}
       title={title}
-      // titleTemplate={`%s | ${site.siteMetadata.title}`}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -69,7 +65,7 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: ``,
   meta: [],
   description: ``
 }
@@ -77,8 +73,7 @@ SEO.defaultProps = {
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
+  meta: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default SEO
