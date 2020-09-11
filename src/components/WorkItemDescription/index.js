@@ -1,7 +1,6 @@
 import React from 'react'
 
 import * as S from './styled'
-import { P } from '../Typography'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
 const WorkItemDescription = ({ title, description, role, team, date }) => {
@@ -10,20 +9,20 @@ const WorkItemDescription = ({ title, description, role, team, date }) => {
   return (
     <S.Wrapper>
       <S.Title>{title}</S.Title>
-      <P>{description}</P>
+      <p>{description}</p>
 
       <S.ItemWrapper>
         <S.TitleItem>
           <Trans>Role</Trans>
         </S.TitleItem>
-        <P>{role.map(roleItem => t(roleItem)).join(', ')}</P>
+        <p>{role.map(roleItem => t(roleItem)).join(', ')}</p>
       </S.ItemWrapper>
 
       <S.ItemWrapper>
         <S.TitleItem>
           <Trans>Team</Trans>
         </S.TitleItem>
-        <P>{team.join(', ')}</P>
+        <p>{team.join(', ')}</p>
       </S.ItemWrapper>
 
       {date && (
@@ -31,7 +30,7 @@ const WorkItemDescription = ({ title, description, role, team, date }) => {
           <S.TitleItem>
             <Trans>Finished date</Trans>
           </S.TitleItem>
-          <P>{date}</P>
+          <p>{date}</p>
         </S.ItemWrapper>
       )}
     </S.Wrapper>

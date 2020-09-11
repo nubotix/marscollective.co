@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { H2 } from '../../components/Typography'
-import { Map } from '@styled-icons/boxicons-regular/Map'
 import { Envelope } from '@styled-icons/boxicons-regular/Envelope'
 import { Phone } from '@styled-icons/boxicons-regular/Phone'
 
@@ -8,7 +6,7 @@ export const Wrapper = styled.section`
   display: grid;
   grid-template-columns: auto 26.5rem;
   gap: var(--doubleGutter);
-  padding: calc(var(--gutter) * 2);
+  padding: var(--doubleGutter);
   border-radius: var(--doubleBorderRadius);
   background: var(--backgroundGray);
 
@@ -27,7 +25,7 @@ export const TextWrapper = styled.div`
   align-self: center;
 `
 
-export const Title = styled(H2)`
+export const Title = styled.h2`
   text-align: left;
   color: var(--default);
 `
@@ -49,11 +47,6 @@ export const InfoWrapper = styled.div`
 `
 
 export const InfoItem = styled.span``
-
-export const MapIcon = styled(Map)`
-  width: 24px;
-  margin: -5px var(--halfGutter) 0 0;
-`
 
 export const EnvelopeIcon = styled(Envelope)`
   width: 24px;

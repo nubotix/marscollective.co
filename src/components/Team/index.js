@@ -2,7 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import * as S from './styled'
-import { H3, H4 } from '../../components/Typography'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Team = () => {
@@ -55,8 +54,8 @@ const Team = () => {
           <S.Item data-sal="slide-up" key={i}>
             <S.Image fixed={node.frontmatter.image.childImageSharp.fixed} />
             <S.TextWrapper>
-              <H3>{node.frontmatter.name}</H3>
-              <H4>{position[t('Lang')]}</H4>
+              <h3>{node.frontmatter.name}</h3>
+              <h4>{position[t('Lang')]}</h4>
             </S.TextWrapper>
           </S.Item>
         )

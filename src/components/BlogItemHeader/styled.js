@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { H1, H4 } from '../../components/Typography'
 
 export const Wrapper = styled.div`
   display: grid;
@@ -17,7 +16,7 @@ export const TitleWrapper = styled.div`
   padding: var(--doubleGutter) 0;
 `
 
-export const Title = styled(H1)`
+export const Title = styled.h1`
   font-size: 3.2rem;
   line-height: 1.1;
 `
@@ -33,10 +32,12 @@ export const Meta = styled.div`
   align-self: center;
 `
 
-export const Author = styled(H4)`
+export const Author = styled.h4`
   text-align: left;
 `
 
 export const Avatar = styled(Img)`
+  max-width: 64px;
+  max-height: 64px;
   border-radius: 50%;
 `

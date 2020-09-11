@@ -32,8 +32,19 @@ export const TextWrapper = styled.section`
   }
 `
 
+export const Big = styled.span`
+  display: block;
+  font-size: 8.75rem;
+  color: var(--highLight);
+
+  @media (max-width: 1200px) {
+    font-size: 7rem;
+  }
+`
+
 export const Lead = styled.p`
-  margin: 0;
+  font-size: 1.5rem;
+  margin: -1rem 0 0 0;
 `
 
 export const ButtonsWrapper = styled.div`

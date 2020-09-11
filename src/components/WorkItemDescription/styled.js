@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { H3, H4 } from '../Typography'
 
 export const Wrapper = styled.div`
   position: sticky;
@@ -12,7 +11,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const Title = styled(H3)`
+export const Title = styled.h3`
   text-align: left;
 `
 
@@ -21,6 +20,6 @@ export const ItemWrapper = styled.div`
   border-top: 2px solid var(--highLight);
 `
 
-export const TitleItem = styled(H4)`
+export const TitleItem = styled.h3`
   text-align: left;
 `

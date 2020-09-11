@@ -4,7 +4,6 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import Image from '../../images/welcome.svg'
 import * as S from './styled'
 import { Container } from '../../components/Container'
-import { H1, Big, Lead } from '../../components/Typography'
 import { Button, ButtonGhost } from '../../components/Buttons'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
@@ -27,22 +26,26 @@ const Welcome = () => {
           data-sal-easing="ease"
         />
         <S.TextWrapper>
-          <H1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+          <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
             <Trans>We are</Trans>
-            <Big
+            <S.Big
               data-sal="slide-up"
               data-sal-delay="600"
               data-sal-easing="ease"
             >
               Mars
-            </Big>
-          </H1>
-          <Lead data-sal="slide-up" data-sal-delay="900" data-sal-easing="ease">
+            </S.Big>
+          </h1>
+          <S.Lead
+            data-sal="slide-up"
+            data-sal-delay="900"
+            data-sal-easing="ease"
+          >
             <Trans>
               A collective of creative minds located in Brazil with an
               international mindset.
             </Trans>
-          </Lead>
+          </S.Lead>
           <S.ButtonsWrapper
             data-sal="slide-up"
             data-sal-delay="900"

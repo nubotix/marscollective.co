@@ -8,7 +8,6 @@ import Audiovisual from '../../components/WorkQueries/Audiovisual'
 
 import * as S from './styled'
 import { Container } from '../../components/Container'
-import { H2 } from '../../components/Typography'
 import { Button } from '../../components/Buttons'
 import { Trans } from 'gatsby-plugin-react-i18next'
 
@@ -16,9 +15,9 @@ const OurWork = () => (
   <Container id="our-work">
     <S.Wrapper>
       <S.ItemsWrapper>
-        <H2 data-sal="slide-up">
+        <h2 data-sal="slide-up">
           <Trans>Our work</Trans>
-        </H2>
+        </h2>
         <S.ItemsListWrapper>
           <S.ItemsList data-sal="slide-up">
             <S.Item>
