@@ -15,6 +15,10 @@ const Contact = () => {
           frontmatter {
             email
             phone
+            social {
+              label
+              url
+            }
           }
         }
       }
@@ -36,7 +40,7 @@ const Contact = () => {
             <S.EnvelopeIcon /> <S.InfoItem>{socialLinks.email}</S.InfoItem>
             <S.PhoneIcon /> <S.InfoItem>{socialLinks.phone}</S.InfoItem>
           </S.InfoWrapper>
-          <Social data-sal="slide-up" />
+          <Social data-sal="slide-up" socialLinks={socialLinks.social} />
         </S.TextWrapper>
         <ContactForm data-sal="slide-up" />
       </S.Wrapper>
