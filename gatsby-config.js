@@ -1,7 +1,13 @@
+const settings = require('./content/settings')
+
 module.exports = {
   siteMetadata: {
-    title: `Mars Collective`,
-    description: `A collective of creative minds located in Brazil with an international mindset.`
+    title: settings.title,
+    description: {
+      en: settings.description.en,
+      es: settings.description.es,
+      pt: settings.description.pt
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -65,8 +71,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Mars Collective`,
-        short_name: `Mars`,
+        name: settings.title,
+        short_name: settings.shortTitle,
         start_url: `/`,
         background_color: `#262626`,
         theme_color: `#00D1B7`,
