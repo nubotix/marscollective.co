@@ -1,9 +1,6 @@
 ---
 templateKey: work
-titles:
-  en: Sittz
-  es: Sittz
-  pt: Sittz
+title: Sittz
 descriptions:
   en: Lorem ipsum
   es: Lorem ipsum

@@ -1,9 +1,6 @@
 ---
 templateKey: work
-titles:
-  en: Trusted Team
-  es: Trusted Team
-  pt: Trusted Team
+title: Trusted Team
 descriptions:
   en: Lorem ipsum
   es: Lorem ipsum

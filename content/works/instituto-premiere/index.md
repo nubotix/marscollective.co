@@ -1,9 +1,6 @@
 ---
 templateKey: work
-titles:
-  en: Instituto Premiere
-  es: Instituto Premiere
-  pt: Instituto Premiere
+title:
 descriptions:
   en: Lorem ipsum
   es: Lorem ipsum

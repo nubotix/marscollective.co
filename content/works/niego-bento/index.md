@@ -1,9 +1,6 @@
 ---
 templateKey: work
-titles:
-  en: Niego Bento
-  es: Niego Bento
-  pt: Niego Bento
+title: Niego Bento
 descriptions:
   en: Lorem ipsum
   es: Lorem ipsum

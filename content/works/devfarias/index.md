@@ -1,9 +1,6 @@
 ---
 templateKey: work
-titles:
-  en: DevFarias
-  es: DevFarias
-  pt: DevFarias
+title: DevFarias
 descriptions:
   en: Lorem ipsum
   es: Lorem ipsum
