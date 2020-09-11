@@ -1,17 +1,20 @@
 backend:
   name: git-gateway
   branch: master
+
   commit_messages:
-    create: 'create content'
-    update: 'update content'
-    delete: 'delete content'
-    uploadMedia: '[skip ci] upload asset'
-    deleteMedia: '[skip ci] delete asset'
+    create: ':pencil: create “{{path}}”'
+    update: ':pencil: update “{{path}}”'
+    delete: ':fire: delete “{{path}}”'
+    uploadMedia: '[skip ci] :bento: upload “{{path}}”'
+    deleteMedia: '[skip ci] :fire: delete “{{path}}”'
+
 media_folder: 'content/assets'
 public_folder: '/assets'
 locale: 'pt'
 display_url: https://marscollective.co
 logo_url: https://marscollective.co/logo.svg
+
 collections:
   - name: 'posts'
     label: 'Posts'
@@ -30,6 +33,7 @@ collections:
         name: 'templateKey'
         widget: 'hidden'
         default: 'blog'
+
       - label: 'Título'
         name: 'titles'
         widget: 'object'
@@ -37,12 +41,15 @@ collections:
           - label: 'Em inglês'
             name: 'en'
             widget: 'string'
+
           - label: 'Em espanhol'
             name: 'es'
             widget: 'string'
+
           - label: 'Em português'
             name: 'pt'
             widget: 'string'
+
       - label: 'Descrição'
         name: 'descriptions'
         widget: 'object'
@@ -50,352 +57,449 @@ collections:
           - label: 'Em inglês'
             name: 'en'
             widget: 'text'
+
           - label: 'Em espanhol'
             name: 'es'
             widget: 'text'
+
           - label: 'Em português'
             name: 'pt'
             widget: 'text'
+
       - label: 'Imagem em destaque'
         name: 'image'
         widget: 'image'
+
       - label: 'Créditos da imagem em destaque'
         name: 'credits'
         widget: 'string'
         required: false
+
       - label: 'Data'
         name: 'date'
         widget: 'datetime'
         dateFormat: 'DD/MM/YYYY'
         timeFormat: 'HH:mm'
         format: 'YYYY-MM-DD HH:mm:ss'
+
       - label: 'Tags'
         name: 'tags'
         widget: 'list'
+
       - label: 'Autoria'
         name: 'author'
         widget: 'select'
         options:
           ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
       - label: 'Texto em inglês'
         name: 'textEN'
         widget: 'markdown'
+
       - label: 'Texto em Espanhol'
         name: 'textES'
         widget: 'markdown'
+
       - label: 'Texto em Português'
         name: 'textPT'
         widget: 'markdown'
-  # - name: 'works'
-  #   label: 'Todos os trabalhos'
-  #   label_singular: 'trabalho'
-  #   folder: 'content/works'
-  #   create: true
-  #   media_folder: ''
-  #   public_folder: ''
-  #   slug: '{{fields.titles.pt}}'
-  #   summary: '{{fields.titles.pt}}'
-  #   path: '{{slug}}/index'
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - label: 'key'
-  #       name: 'key'
-  #       widget: 'hidden'
-  #       default: 'work'
-  #     - label: 'Título'
-  #       name: 'titles'
-  #       widget: 'object'
-  #       fields:
-  #         - label: 'Em inglês'
-  #           name: 'en'
-  #           widget: 'string'
-  #         - label: 'Em espanhol'
-  #           name: 'es'
-  #           widget: 'string'
-  #         - label: 'Em português'
-  #           name: 'pt'
-  #           widget: 'string'
-  #     - label: 'Descrição'
-  #       name: 'descriptions'
-  #       widget: 'object'
-  #       fields:
-  #         - label: 'Em inglês'
-  #           name: 'en'
-  #           widget: 'text'
-  #         - label: 'Em espanhol'
-  #           name: 'es'
-  #           widget: 'text'
-  #         - label: 'Em português'
-  #           name: 'pt'
-  #           widget: 'text'
-  #     - label: 'Imagem em destaque'
-  #       name: 'image'
-  #       widget: 'image'
-  #     - label: 'Imagens'
-  #       name: 'content'
-  #       label_singular: 'imagem'
-  #       widget: 'list'
-  #       required: false
-  #       summary: '{{fields.content_item}}'
-  #       field:
-  #         label: 'Imagem'
-  #         name: 'content_item'
-  #         widget: 'image'
-  #     - label: 'ID do vídeo no YouTube'
-  #       name: 'video'
-  #       widget: 'string'
-  #       required: false
-  #       hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
-  #     - label: 'Categoria'
-  #       name: 'role'
-  #       widget: 'select'
-  #       multiple: true
-  #       options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
-  #     - label: 'Equipe'
-  #       name: 'team'
-  #       widget: 'select'
-  #       multiple: true
-  #       options:
-  #         ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
-  #     - label: 'Data'
-  #       name: 'date'
-  #       widget: 'datetime'
-  #       dateFormat: 'DD/MM/YYYY'
-  #       timeFormat: 'HH:mm'
-  #       format: 'YYYY-MM-DD HH:mm:ss'
-  # - name: 'web_design'
-  #   label: 'Trabalhos em web design'
-  #   folder: 'content/works'
-  #   media_folder: ''
-  #   public_folder: ''
-  #   slug: '{{fields.titles.pt}}'
-  #   summary: '{{fields.titles.pt}}'
-  #   path: '{{slug}}/index'
-  #   filter: { field: 'role', value: 'Web design' }
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - label: 'key'
-  #       name: 'key'
-  #       widget: 'hidden'
-  #       default: 'work'
-  #     - label: 'Título'
-  #       name: 'titles'
-  #       widget: 'object'
-  #       fields:
-  #         - label: 'Em inglês'
-  #           name: 'en'
-  #           widget: 'string'
-  #         - label: 'Em espanhol'
-  #           name: 'es'
-  #           widget: 'string'
-  #         - label: 'Em português'
-  #           name: 'pt'
-  #           widget: 'string'
-  #     - label: 'Descrição'
-  #       name: 'descriptions'
-  #       widget: 'object'
-  #       fields:
-  #         - label: 'Em inglês'
-  #           name: 'en'
-  #           widget: 'text'
-  #         - label: 'Em espanhol'
-  #           name: 'es'
-  #           widget: 'text'
-  #         - label: 'Em português'
-  #           name: 'pt'
-  #           widget: 'text'
-  #     - label: 'Imagem em destaque'
-  #       name: 'image'
-  #       widget: 'image'
-  #     - label: 'Imagens'
-  #       name: 'content'
-  #       label_singular: 'imagem'
-  #       widget: 'list'
-  #       required: false
-  #       summary: '{{fields.content_item}}'
-  #       field:
-  #         label: 'Imagem'
-  #         name: 'content_item'
-  #         widget: 'image'
-  #     - label: 'ID do vídeo no YouTube'
-  #       name: 'video'
-  #       widget: 'string'
-  #       required: false
-  #       hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
-  #     - label: 'Categoria'
-  #       name: 'role'
-  #       widget: 'select'
-  #       multiple: true
-  #       options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
-  #     - label: 'Equipe'
-  #       name: 'team'
-  #       widget: 'select'
-  #       multiple: true
-  #       options:
-  #         ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
-  #     - label: 'Data'
-  #       name: 'date'
-  #       widget: 'datetime'
-  #       dateFormat: 'DD/MM/YYYY'
-  #       timeFormat: 'HH:mm'
-  #       format: 'YYYY-MM-DD HH:mm:ss'
-  # - name: 'branding'
-  #   label: 'Trabalhos em branding'
-  #   folder: 'content/works'
-  #   media_folder: ''
-  #   public_folder: ''
-  #   slug: '{{fields.titles.pt}}'
-  #   summary: '{{fields.titles.pt}}'
-  #   path: '{{slug}}/index'
-  #   filter: { field: 'role', value: 'Branding' }
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - label: 'key'
-  #       name: 'key'
-  #       widget: 'hidden'
-  #       default: 'work'
-  #     - label: 'Título'
-  #       name: 'titles'
-  #       widget: 'object'
-  #       fields:
-  #         - label: 'Em inglês'
-  #           name: 'en'
-  #           widget: 'string'
-  #         - label: 'Em espanhol'
-  #           name: 'es'
-  #           widget: 'string'
-  #         - label: 'Em português'
-  #           name: 'pt'
-  #           widget: 'string'
-  #     - label: 'Descrição'
-  #       name: 'descriptions'
-  #       widget: 'object'
-  #       fields:
-  #         - label: 'Em inglês'
-  #           name: 'en'
-  #           widget: 'text'
-  #         - label: 'Em espanhol'
-  #           name: 'es'
-  #           widget: 'text'
-  #         - label: 'Em português'
-  #           name: 'pt'
-  #           widget: 'text'
-  #     - label: 'Imagem em destaque'
-  #       name: 'image'
-  #       widget: 'image'
-  #     - label: 'Imagens'
-  #       name: 'content'
-  #       label_singular: 'imagem'
-  #       widget: 'list'
-  #       required: false
-  #       summary: '{{fields.content_item}}'
-  #       field:
-  #         label: 'Imagem'
-  #         name: 'content_item'
-  #         widget: 'image'
-  #     - label: 'ID do vídeo no YouTube'
-  #       name: 'video'
-  #       widget: 'string'
-  #       required: false
-  #       hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
-  #     - label: 'Categoria'
-  #       name: 'role'
-  #       widget: 'select'
-  #       multiple: true
-  #       options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
-  #     - label: 'Equipe'
-  #       name: 'team'
-  #       widget: 'select'
-  #       multiple: true
-  #       options:
-  #         ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
-  #     - label: 'Data'
-  #       name: 'date'
-  #       widget: 'datetime'
-  #       dateFormat: 'DD/MM/YYYY'
-  #       timeFormat: 'HH:mm'
-  #       format: 'YYYY-MM-DD HH:mm:ss'
-  # - name: 'social_media'
-  #   label: 'Trabalhos em social media'
-  #   folder: 'content/works'
-  #   media_folder: ''
-  #   public_folder: ''
-  #   slug: '{{fields.titles.pt}}'
-  #   summary: '{{fields.titles.pt}}'
-  #   path: '{{slug}}/index'
-  #   filter: { field: 'role', value: 'Social media' }
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - label: 'key'
-  #       name: 'key'
-  #       widget: 'hidden'
-  #       default: 'work'
-  #     - label: 'Título'
-  #       name: 'titles'
-  #       widget: 'object'
-  #       fields:
-  #         - label: 'Em inglês'
-  #           name: 'en'
-  #           widget: 'string'
-  #         - label: 'Em espanhol'
-  #           name: 'es'
-  #           widget: 'string'
-  #         - label: 'Em português'
-  #           name: 'pt'
-  #           widget: 'string'
-  #     - label: 'Descrição'
-  #       name: 'descriptions'
-  #       widget: 'object'
-  #       fields:
-  #         - label: 'Em inglês'
-  #           name: 'en'
-  #           widget: 'text'
-  #         - label: 'Em espanhol'
-  #           name: 'es'
-  #           widget: 'text'
-  #         - label: 'Em português'
-  #           name: 'pt'
-  #           widget: 'text'
-  #     - label: 'Imagem em destaque'
-  #       name: 'image'
-  #       widget: 'image'
-  #     - label: 'Imagens'
-  #       name: 'content'
-  #       label_singular: 'imagem'
-  #       widget: 'list'
-  #       required: false
-  #       summary: '{{fields.content_item}}'
-  #       field:
-  #         label: 'Imagem'
-  #         name: 'content_item'
-  #         widget: 'image'
-  #     - label: 'ID do vídeo no YouTube'
-  #       name: 'video'
-  #       widget: 'string'
-  #       required: false
-  #       hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
-  #     - label: 'Categoria'
-  #       name: 'role'
-  #       widget: 'select'
-  #       multiple: true
-  #       options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
-  #     - label: 'Equipe'
-  #       name: 'team'
-  #       widget: 'select'
-  #       multiple: true
-  #       options:
-  #         ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
-  #     - label: 'Data'
-  #       name: 'date'
-  #       widget: 'datetime'
-  #       dateFormat: 'DD/MM/YYYY'
-  #       timeFormat: 'HH:mm'
-  #       format: 'YYYY-MM-DD HH:mm:ss'
-  - name: 'equipe'
+
+  - name: 'works'
+    label: 'Todos os trabalhos'
+    label_singular: 'trabalho'
+    folder: 'content/works'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    slug: '{{fields.title}}'
+    summary: '{{fields.title}}'
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - label: 'templateKey'
+        name: 'templateKey'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Nome do cliente ou projeto'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Descrição'
+        name: 'descriptions'
+        widget: 'object'
+        fields:
+          - label: 'Em inglês'
+            name: 'en'
+            widget: 'text'
+
+          - label: 'Em espanhol'
+            name: 'es'
+            widget: 'text'
+
+          - label: 'Em português'
+            name: 'pt'
+            widget: 'text'
+
+      - label: 'Imagem em destaque'
+        name: 'image'
+        widget: 'image'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data de finalização'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'web-design'
+    label: 'Trabalhos em web design'
+    folder: 'content/works'
+    create: false
+    media_folder: ''
+    public_folder: ''
+    slug: '{{fields.title}}'
+    summary: '{{fields.title}}'
+    path: '{{slug}}/index'
+    filter: { field: 'role', value: 'Web design' }
+    editor:
+      preview: false
+    fields:
+      - label: 'templateKey'
+        name: 'templateKey'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Nome do cliente ou projeto'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Descrição'
+        name: 'descriptions'
+        widget: 'object'
+        fields:
+          - label: 'Em inglês'
+            name: 'en'
+            widget: 'text'
+
+          - label: 'Em espanhol'
+            name: 'es'
+            widget: 'text'
+
+          - label: 'Em português'
+            name: 'pt'
+            widget: 'text'
+
+      - label: 'Imagem em destaque'
+        name: 'image'
+        widget: 'image'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data de finalização'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'branding'
+    label: 'Trabalhos em branding'
+    folder: 'content/works'
+    create: false
+    media_folder: ''
+    public_folder: ''
+    slug: '{{fields.title}}'
+    summary: '{{fields.title}}'
+    path: '{{slug}}/index'
+    filter: { field: 'role', value: 'Branding' }
+    editor:
+      preview: false
+    fields:
+      - label: 'templateKey'
+        name: 'templateKey'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Nome do cliente ou projeto'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Descrição'
+        name: 'descriptions'
+        widget: 'object'
+        fields:
+          - label: 'Em inglês'
+            name: 'en'
+            widget: 'text'
+
+          - label: 'Em espanhol'
+            name: 'es'
+            widget: 'text'
+
+          - label: 'Em português'
+            name: 'pt'
+            widget: 'text'
+
+      - label: 'Imagem em destaque'
+        name: 'image'
+        widget: 'image'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data de finalização'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'social-media'
+    label: 'Trabalhos em social media'
+    folder: 'content/works'
+    create: false
+    media_folder: ''
+    public_folder: ''
+    slug: '{{fields.title}}'
+    summary: '{{fields.title}}'
+    path: '{{slug}}/index'
+    filter: { field: 'role', value: 'Social media' }
+    editor:
+      preview: false
+    fields:
+      - label: 'templateKey'
+        name: 'templateKey'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Nome do cliente ou projeto'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Descrição'
+        name: 'descriptions'
+        widget: 'object'
+        fields:
+          - label: 'Em inglês'
+            name: 'en'
+            widget: 'text'
+
+          - label: 'Em espanhol'
+            name: 'es'
+            widget: 'text'
+
+          - label: 'Em português'
+            name: 'pt'
+            widget: 'text'
+
+      - label: 'Imagem em destaque'
+        name: 'image'
+        widget: 'image'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data de finalização'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'audiovisual'
+    label: 'Trabalhos em audiovisual'
+    folder: 'content/works'
+    create: false
+    media_folder: ''
+    public_folder: ''
+    slug: '{{fields.title}}'
+    summary: '{{fields.title}}'
+    path: '{{slug}}/index'
+    filter: { field: 'role', value: 'Audiovisual' }
+    editor:
+      preview: false
+    fields:
+      - label: 'templateKey'
+        name: 'templateKey'
+        widget: 'hidden'
+        default: 'work'
+
+      - label: 'Nome do cliente ou projeto'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Descrição'
+        name: 'descriptions'
+        widget: 'object'
+        fields:
+          - label: 'Em inglês'
+            name: 'en'
+            widget: 'text'
+
+          - label: 'Em espanhol'
+            name: 'es'
+            widget: 'text'
+
+          - label: 'Em português'
+            name: 'pt'
+            widget: 'text'
+
+      - label: 'Imagem em destaque'
+        name: 'image'
+        widget: 'image'
+
+      - label: 'Imagens'
+        name: 'content'
+        label_singular: 'imagem'
+        widget: 'list'
+        required: false
+        summary: '{{fields.content_item}}'
+        field:
+          label: 'Imagem'
+          name: 'content_item'
+          widget: 'image'
+
+      - label: 'ID do vídeo no YouTube'
+        name: 'video'
+        widget: 'string'
+        required: false
+        hint: 'O ID fica no final da URL, tudo que fica depois de watch?v='
+
+      - label: 'Categoria'
+        name: 'role'
+        widget: 'select'
+        multiple: true
+        options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+
+      - label: 'Equipe'
+        name: 'team'
+        widget: 'select'
+        multiple: true
+        options:
+          ['Anderson Lima', 'Daniel Soares', 'Etienne Bom', 'Frank Cedeño']
+
+      - label: 'Data de finalização'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
+
+  - name: 'team'
     label: 'Equipe'
     folder: 'content/team'
     media_folder: ''
@@ -406,19 +510,23 @@ collections:
     editor:
       preview: false
     fields:
-      - label: 'Key'
-        name: 'key'
+      - label: 'templateKey'
+        name: 'templateKey'
         widget: 'hidden'
         default: 'team'
+
       - label: 'Nome'
         name: 'name'
         widget: 'string'
+
       - label: 'Membro'
         name: 'member'
         widget: 'boolean'
+
       - label: 'Foto'
         name: 'image'
         widget: 'image'
+
       - label: 'Função'
         name: 'position'
         widget: 'object'
@@ -426,12 +534,15 @@ collections:
           - label: 'Em inglês'
             name: 'en'
             widget: 'string'
+
           - label: 'Em espanhol'
             name: 'es'
             widget: 'string'
+
           - label: 'Em português'
             name: 'pt'
             widget: 'string'
+
       - label: 'Bio'
         name: 'bio'
         widget: 'object'
@@ -439,9 +550,121 @@ collections:
           - label: 'Em inglês'
             name: 'en'
             widget: 'text'
+
           - label: 'Em espanhol'
             name: 'es'
             widget: 'text'
+
           - label: 'Em português'
             name: 'pt'
             widget: 'text'
+
+      - label: 'Perfis sociais'
+        label_singular: 'perfil'
+        name: 'social'
+        widget: 'list'
+        fields:
+          - label: 'Opção'
+            name: 'label'
+            widget: 'select'
+            hint: 'Evitar passar de 5 perfis'
+            options:
+              [
+                'Behance',
+                'Dribbble',
+                'Email',
+                'Facebook',
+                'Github',
+                'Instagram',
+                'Medium',
+                'Messenger',
+                'Site',
+                'Telegram',
+                'Twitter',
+                'WhatsApp',
+              ]
+
+          - label: 'URL'
+            name: 'url'
+            widget: 'string'
+            hint: 'Ex.: https://facebook.com/usuario OU mailto:nome@mail.com OU https://api.whatsapp.com/send?phone=5545999999999 (com DDI e DDD)'
+
+  - name: 'settings'
+    label: 'Configurações'
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    files:
+      - file: 'content/settings/socialLinks.md'
+        label: 'Perfis sociais'
+        name: 'social-links'
+        fields:
+          - label: 'key'
+            name: 'key'
+            widget: 'hidden'
+            default: 'socialLinks'
+
+          - label: 'E-mail'
+            name: 'email'
+            widget: 'string'
+
+          - label: 'Telefone'
+            name: 'phone'
+            widget: 'string'
+
+          - label: 'Perfis sociais'
+            label_singular: 'perfil'
+            name: 'social'
+            widget: 'list'
+            fields:
+              - label: 'Opção'
+                name: 'label'
+                widget: 'select'
+                options:
+                  [
+                    'Behance',
+                    'Dribbble',
+                    'Email',
+                    'Facebook',
+                    'Github',
+                    'Instagram',
+                    'Medium',
+                    'Messenger',
+                    'Telegram',
+                    'Twitter',
+                    'WhatsApp',
+                  ]
+
+              - label: 'URL'
+                name: 'url'
+                widget: 'string'
+                hint: 'Ex.: https://facebook.com/usuario OU mailto:nome@mail.com OU https://api.whatsapp.com/send?phone=5545999999999 (com DDI e DDD)'
+
+      - file: 'content/settings/siteMetadata.json'
+        label: 'Metadados'
+        name: 'metadata'
+        fields:
+          - label: 'Título'
+            name: 'title'
+            widget: 'string'
+
+          - label: 'Título curto'
+            name: 'shortTitle'
+            widget: 'string'
+
+          - label: 'Descrição'
+            name: 'description'
+            widget: 'object'
+            fields:
+              - label: 'Em inglês'
+                name: 'en'
+                widget: 'text'
+
+              - label: 'Em espanhol'
+                name: 'es'
+                widget: 'text'
+
+              - label: 'Em português'
+                name: 'pt'
+                widget: 'text'
