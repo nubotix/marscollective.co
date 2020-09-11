@@ -24,8 +24,10 @@ collections:
     media_folder: ''
     public_folder: ''
     slug: '{{fields.titles.en}}'
-    summary: '{{fields.titles.pt}}'
     path: '{{slug}}/index'
+    identifier_field: 'titles.pt'
+    # sortableFields: ['commit_date', 'author', 'date', 'titles.pt']
+    sortableFields: []
     editor:
       preview: false
     fields:
@@ -114,6 +116,7 @@ collections:
     slug: '{{fields.title}}'
     summary: '{{fields.title}}'
     path: '{{slug}}/index'
+    sortableFields: []
     editor:
       preview: false
     fields:
@@ -193,6 +196,7 @@ collections:
     summary: '{{fields.title}}'
     path: '{{slug}}/index'
     filter: { field: 'role', value: 'Web design' }
+    sortableFields: []
     editor:
       preview: false
     fields:
@@ -272,6 +276,7 @@ collections:
     summary: '{{fields.title}}'
     path: '{{slug}}/index'
     filter: { field: 'role', value: 'Branding' }
+    sortableFields: []
     editor:
       preview: false
     fields:
@@ -351,6 +356,7 @@ collections:
     summary: '{{fields.title}}'
     path: '{{slug}}/index'
     filter: { field: 'role', value: 'Social media' }
+    sortableFields: []
     editor:
       preview: false
     fields:
@@ -430,6 +436,7 @@ collections:
     summary: '{{fields.title}}'
     path: '{{slug}}/index'
     filter: { field: 'role', value: 'Audiovisual' }
+    sortableFields: []
     editor:
       preview: false
     fields:
@@ -507,6 +514,7 @@ collections:
     summary: '{{fields.name}}'
     path: '{{title}}/index'
     delete: false
+    sortableFields: []
     editor:
       preview: false
     fields:
@@ -593,6 +601,7 @@ collections:
     label: 'Configurações'
     media_folder: ''
     public_folder: ''
+    sortableFields: []
     editor:
       preview: false
     files:
