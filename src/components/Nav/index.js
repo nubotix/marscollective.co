@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import links from './content'
 import LanguageSelector from '../LanguageSelector'
 import * as S from './styled'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const Nav = () => {
   const { t } = useTranslation()
@@ -32,7 +32,7 @@ const Nav = () => {
                 alt={t(link.label)}
                 activeClassName="active"
               >
-                <Trans>{link.label}</Trans>
+                {t(link.label)}
               </S.ItemLink>
             </S.ListItem>
           )
