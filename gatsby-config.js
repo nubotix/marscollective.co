@@ -118,6 +118,12 @@ module.exports = {
         defaultDataLayer: { platform: `gatsby` }
       }
     },
-    `gatsby-plugin-netlify-cms`
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        htmlTitle: `Painel Administrativo`,
+        htmlFavicon: `src/images/icon.png`
+      }
+    }
   ]
 }
