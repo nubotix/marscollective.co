@@ -9,3 +9,5 @@ This project is open source and you're free to fork and remix it to fit your nee
 See it live in action at [marscollective.co](http://marscollective.co) 🌎
 
 [Follow us on Instagram](https://instagram.com/mars.collective) and keep in touch with us.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ac03a378-3f0c-4246-9a8a-fcb1cdcc154b/deploy-status)](https://app.netlify.com/sites/marscollective/deploys)
