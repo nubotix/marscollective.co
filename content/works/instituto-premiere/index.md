@@ -1,13 +1,13 @@
 ---
 templateKey: work
-title:
+title: Instituto Premiere
 descriptions:
   en: Lorem ipsum
   es: Lorem ipsum
   pt: Lorem ipsum
 image: test.png
-content:
-video: 'iV2eWX60jIw'
+content: null
+video: iV2eWX60jIw
 role:
   - Audiovisual
 team:
