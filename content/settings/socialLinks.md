@@ -1,5 +1,7 @@
 ---
 key: socialLinks
+email: hi@marscollective.co
+phone: +55 (45) 99132-8593
 social:
   - label: Facebook
     url: https://www.facebook.com/marscollective.co
