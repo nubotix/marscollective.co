@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import Article from '../containers/Article'
 import Contact from '../containers/Contact'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
@@ -37,6 +38,11 @@ const BlogItemTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO
+        title={title[t('Lang')]}
+        description={description[t('Lang')]}
+        lang={t('Lang')}
+      />
       <Article
         title={title[t('Lang')]}
         avatar={data.authorInfo.frontmatter.image.childImageSharp.fixed}
