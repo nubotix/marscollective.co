@@ -1,1 +1,0 @@
-export { HR } from './styled'

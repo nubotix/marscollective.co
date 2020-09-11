@@ -48,11 +48,7 @@ export const query = graphql`
   query($id: String!) {
     workItem: markdownRemark(id: { eq: $id }) {
       frontmatter {
-        titles {
-          en
-          es
-          pt
-        }
+        title
         descriptions {
           en
           es

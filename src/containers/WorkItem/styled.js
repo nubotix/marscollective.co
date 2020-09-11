@@ -5,9 +5,17 @@ export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: var(--gutter);
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+  }
 `
 
-export const ImageWrapper = styled.div``
+export const ImageWrapper = styled.div`
+  @media (max-width: 860px) {
+    order: 1;
+  }
+`
 
 export const Image = styled(Img)`
   :nth-child(1) {
@@ -18,3 +26,5 @@ export const Image = styled(Img)`
     border-radius: 0 0 var(--doubleBorderRadius) var(--doubleBorderRadius);
   }
 `
+
+export const DescriptionWrapper = styled.div``

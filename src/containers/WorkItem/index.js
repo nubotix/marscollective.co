@@ -26,13 +26,15 @@ const PortfolioItem = ({
         )}
         {video && <Video videoID={video} videoTitle={title} />}
       </S.ImageWrapper>
-      <WorkItemDescription
-        title={title}
-        description={description}
-        role={role}
-        team={team}
-        date={date}
-      />
+      <S.DescriptionWrapper>
+        <WorkItemDescription
+          title={title}
+          description={description}
+          role={role}
+          team={team}
+          date={date}
+        />
+      </S.DescriptionWrapper>
     </S.Wrapper>
   </Container>
 )
