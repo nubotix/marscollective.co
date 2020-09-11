@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
 import links from './content'
-import LanguageSelector from '../LanguageSelector'
 import * as S from './styled'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next'
 
 const Nav = () => {
   const { t } = useTranslation()
+  const { languages, originalPath } = useI18next()
   const [open, setOpen] = useState(false)
 
   return (
@@ -38,7 +38,19 @@ const Nav = () => {
           )
         })}
         <S.ListItem>
-          <LanguageSelector />
+          <S.LanguageSelectorWrapper>
+            {languages.map(lng => (
+              <S.LanguageSelectorItem key={lng}>
+                <S.LanguageSelectorItemLink
+                  to={originalPath}
+                  language={lng}
+                  activeClassName="active"
+                >
+                  [{lng}]
+                </S.LanguageSelectorItemLink>
+              </S.LanguageSelectorItem>
+            ))}
+          </S.LanguageSelectorWrapper>
         </S.ListItem>
       </S.List>
     </nav>
