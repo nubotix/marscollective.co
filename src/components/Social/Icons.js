@@ -3,7 +3,7 @@ import { Instagram } from '@styled-icons/boxicons-logos/Instagram'
 import { Behance } from '@styled-icons/boxicons-logos/Behance'
 import { Medium } from '@styled-icons/boxicons-logos/Medium'
 import { Github } from '@styled-icons/boxicons-logos/Github'
-import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp'
+import { Whatsapp as WhatsApp } from '@styled-icons/boxicons-logos/Whatsapp'
 
 const Icons = {
   Facebook,
@@ -11,7 +11,7 @@ const Icons = {
   Behance,
   Medium,
   Github,
-  Whatsapp
+  WhatsApp
 }
 
 export default Icons
