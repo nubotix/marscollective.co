@@ -668,3 +668,11 @@ collections:
               - label: 'Em português'
                 name: 'pt'
                 widget: 'text'
+
+      - file: 'README.md'
+        label: 'Readme do repositório'
+        name: 'readme'
+        fields:
+          - label: 'Corpo'
+            name: 'body'
+            widget: 'markdown'
