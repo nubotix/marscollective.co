@@ -13,4 +13,15 @@ bio:
   es: Lorem ipsum
   pt: Graduado em Design e Ciência Política e Sociologia, trabalho desde 2004 com
     publicidade, onde me especializei no desenvolvimento web.
+social:
+  - label: Instagram
+    url: https://www.instagram.com/dansoares
+  - label: Github
+    url: https://github.com/dsoaress
+  - label: WhatsApp
+    url: https://api.whatsapp.com/send?phone=5545988031679
+  - label: Email
+    url: mailto:daniel.soares@me.com
+  - label: Site
+    url: https://dsoares.me
 ---
