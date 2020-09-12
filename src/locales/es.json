@@ -25,5 +25,77 @@
       "label": "Contacto",
       "url": "contacto"
     }
+  },
+  "welcome": {
+    "title": "Somos",
+    "lead": "Un colectivo de mentes creativas localizado en Brasil, con una mentalidad internacional.",
+    "primaryButton": {
+      "label": "Entre en contacto",
+      "url": "#contacto"
+    },
+    "ghostButton": {
+      "label": "Nuestro trabajo",
+      "url": "#nuestro-trabajo"
+    }
+  },
+  "services": {
+    "title": "Qué hacemos",
+    "firstItem": {
+      "title": "Diseño",
+      "content": "Inspirados en la simplicidad, proyectamos soluciones elegantes en branding, publicidad y UI/UX, creando la fuerte presencia que su marca necesita para hacer la diferencia."
+    },
+    "secondItem": {
+      "title": "Desarrollo Web",
+      "content": "Su website en la primera página de los motores de búsqueda. Usando tecnologías modernas, creamos websites poderosos y optimizados para su público y las necesidades de su negocio."
+    },
+    "thirdItem": {
+      "title": "Redacción",
+      "content": "Su empresa es lo que ella hace; su marca es lo que ella comunica. Desarrollamos mensajes fuortes, directas y convincentes para todas las necesidades de comunicación."
+    },
+    "fourthItem": {
+      "title": "Traducciones",
+      "content": "u público fala português o speak English? Te ayudamos a alcanzarlos. Hacemos más que una simple traducción: adaptamos su tono a la lengua de ellos."
+    },
+    "button": {
+      "label": "Revisa nuestro trabajo",
+      "url": ""
+    }
+  },
+  "portfolio": {
+    "title": "Nuestro trabajo",
+    "items": {
+      "all": "Todo",
+      "webDesign": "Diseño web",
+      "branding": "Branding",
+      "socialMedia": "Social media",
+      "audiovisual": "Audiovisual"
+    },
+    "button": {
+      "label": "Ver más",
+      "url": ""
+    },
+    "itemPage": {
+      "role": "Categoria",
+      "team": "Equipo",
+      "finishedDate": "Fecha de entrega"
+    }
+  },
+  "about": {
+    "title": "Quienes somos",
+    "button": {
+      "label": "Ver más",
+      "url": ""
+    }
+  },
+  "contact": {
+    "title": "Vamos a crear cosas increibles juntos",
+    "form": {
+      "title": "Entre en contacto",
+      "name": "Su nombre",
+      "email": "Su e-mail",
+      "message": "Su mensaje",
+      "button": "Enviar",
+      "success": "Mensaje enviado exitosamente."
+    }
   }
 }
