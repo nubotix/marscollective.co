@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: dev
 
   commit_messages:
     create: ':pencil: create “{{path}}”'
@@ -685,3 +685,88 @@ collections:
           - label: 'Corpo'
             name: 'body'
             widget: 'markdown'
+
+      - file: 'src/locales/en/translation.json'
+        label: 'Textos em inglês'
+        name: 'en'
+        fields:
+          - label: 'lang'
+            name: 'lang'
+            default: 'en'
+            widget: 'hidden'
+
+          - label: 'Navegação'
+            name: 'nav'
+            widget: 'object'
+            fields:
+              - label: 'Início'
+                name: 'home'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Serviços'
+                name: 'services'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Portfólio'
+                name: 'portfolio'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Sobre nós'
+                name: 'about'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Blog'
+                name: 'blog'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Contato'
+                name: 'contact'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
