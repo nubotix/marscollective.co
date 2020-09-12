@@ -1,5 +1,31 @@
 {
-  "Lang": "pt",
+  "lang": "pt",
+  "nav": {
+    "home": {
+      "label": "Início",
+      "url": "inicio"
+    },
+    "services": {
+      "label": "O que fazemos",
+      "url": "que-fazemos"
+    },
+    "portfolio": {
+      "label": "Nosso trabalho",
+      "url": "nosso-trabalho"
+    },
+    "about": {
+      "label": "Quem somos",
+      "url": "quem-somos"
+    },
+    "blog": {
+      "label": "Blog",
+      "url": "blog"
+    },
+    "contact": {
+      "label": "Contato",
+      "url": "contato"
+    }
+  },
   "Home": "Início",
   "What we do": "O que fazemos",
   "Our work": "Nosso trabalho",

@@ -770,3 +770,173 @@ collections:
                   - label: 'URL'
                     name: 'url'
                     widget: 'string'
+
+      - file: 'src/locales/es/translation.json'
+        label: 'Textos em espanhol'
+        name: 'es'
+        fields:
+          - label: 'lang'
+            name: 'lang'
+            default: 'es'
+            widget: 'hidden'
+
+          - label: 'Navegação'
+            name: 'nav'
+            widget: 'object'
+            fields:
+              - label: 'Início'
+                name: 'home'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Serviços'
+                name: 'services'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Portfólio'
+                name: 'portfolio'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Sobre nós'
+                name: 'about'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Blog'
+                name: 'blog'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Contato'
+                name: 'contact'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+      - file: 'src/locales/pt/translation.json'
+        label: 'Textos em português'
+        name: 'pt'
+        fields:
+          - label: 'lang'
+            name: 'lang'
+            default: 'pt'
+            widget: 'hidden'
+
+          - label: 'Navegação'
+            name: 'nav'
+            widget: 'object'
+            fields:
+              - label: 'Início'
+                name: 'home'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Serviços'
+                name: 'services'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Portfólio'
+                name: 'portfolio'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Sobre nós'
+                name: 'about'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Blog'
+                name: 'blog'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+              - label: 'Contato'
+                name: 'contact'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
