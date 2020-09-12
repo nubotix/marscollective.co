@@ -5,10 +5,10 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import WorkItem from '../containers/WorkItem'
 import Contact from '../containers/Contact'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const WorkItemTemplate = ({ data }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const workItem = data.workItem.frontmatter
 
   const description = {
@@ -27,17 +27,17 @@ const WorkItemTemplate = ({ data }) => {
     <Layout>
       <SEO
         title={workItem.title}
-        description={description[t('Lang')]}
-        lang={t('Lang')}
+        description={description[intl.formatMessage({ id: 'lang' })]}
+        lang={intl.formatMessage({ id: 'lang' })}
       />
       <WorkItem
         title={workItem.title}
-        description={description[t('Lang')]}
+        description={description[intl.formatMessage({ id: 'lang' })]}
         content={workItem.content}
         video={workItem.video}
         role={workItem.role}
         team={workItem.team}
-        date={dataLocale[t('Lang')]}
+        date={dataLocale[intl.formatMessage({ id: 'lang' })]}
       />
       <Contact />
     </Layout>

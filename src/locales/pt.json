@@ -87,6 +87,13 @@
       "url": ""
     }
   },
+  "blog": {
+    "title": "Blog",
+    "button": {
+      "label": "View more",
+      "url": ""
+    }
+  },
   "contact": {
     "title": "Vamos criar coisas incríveis juntos",
     "form": {

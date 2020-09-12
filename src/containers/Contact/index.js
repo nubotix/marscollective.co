@@ -5,10 +5,11 @@ import Social from '../../components/Social'
 import ContactForm from '../../components/ContactForm'
 import * as S from './styled'
 import { Container } from '../../components/Container'
-import { injectIntl } from 'gatsby-plugin-intl'
-import { Trans } from 'gatsby-plugin-react-i18next'
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
-const Contact = ({ intl }) => {
+const Contact = () => {
+  const intl = useIntl()
+
   const { markdownRemark } = useStaticQuery(
     graphql`
       query {
@@ -33,7 +34,7 @@ const Contact = ({ intl }) => {
       <S.Wrapper>
         <S.TextWrapper>
           <S.Title data-sal="slide-up">
-            <Trans>Let's build amazing things together</Trans>
+            <FormattedMessage id="contact.title" />
           </S.Title>
           <S.InfoWrapper data-sal="slide-up">
             {/* <S.MapIcon /> <S.InfoItem>Rua Parque Antârtica, 329 <br /> Morumbi, Foz do Iguaçu -
@@ -49,4 +50,4 @@ const Contact = ({ intl }) => {
   )
 }
 
-export default injectIntl(Contact)
+export default Contact

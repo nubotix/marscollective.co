@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 import { Container } from '../../components/Container'
-import { injectIntl } from 'gatsby-plugin-intl'
-import { Trans } from 'gatsby-plugin-react-i18next'
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
-const Blog = ({ intl }) => {
+const Blog = () => {
+  const intl = useIntl()
+
   const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -55,7 +56,7 @@ const Blog = ({ intl }) => {
   return (
     <Container id={intl.formatMessage({ id: 'nav.blog.url' })}>
       <h2 data-sal="slide-up">
-        <Trans>Blog</Trans>
+        <FormattedMessage id="blog.title" />
       </h2>
       <Wrapper>
         {items.map(({ node }, i) => (
@@ -66,4 +67,4 @@ const Blog = ({ intl }) => {
   )
 }
 
-export default injectIntl(Blog)
+export default Blog

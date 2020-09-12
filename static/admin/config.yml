@@ -955,6 +955,26 @@ collections:
                     name: 'url'
                     widget: 'string'
 
+          - label: 'Blog'
+            name: 'blog'
+            widget: 'object'
+            fields:
+              - label: 'Título'
+                name: 'title'
+                widget: 'string'
+
+              - label: 'Botão'
+                name: 'button'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
           - label: 'Contato'
             name: 'contact'
             widget: 'object'
@@ -1260,6 +1280,26 @@ collections:
                     name: 'url'
                     widget: 'string'
 
+          - label: 'Blog'
+            name: 'blog'
+            widget: 'object'
+            fields:
+              - label: 'Título'
+                name: 'title'
+                widget: 'string'
+
+              - label: 'Botão'
+                name: 'button'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
           - label: 'Contato'
             name: 'contact'
             widget: 'object'
@@ -1547,6 +1587,26 @@ collections:
 
           - label: 'Sobre nós'
             name: 'about'
+            widget: 'object'
+            fields:
+              - label: 'Título'
+                name: 'title'
+                widget: 'string'
+
+              - label: 'Botão'
+                name: 'button'
+                widget: 'object'
+                fields:
+                  - label: 'Rótulo'
+                    name: 'label'
+                    widget: 'string'
+
+                  - label: 'URL'
+                    name: 'url'
+                    widget: 'string'
+
+          - label: 'Blog'
+            name: 'blog'
             widget: 'object'
             fields:
               - label: 'Título'

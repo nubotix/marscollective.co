@@ -5,16 +5,11 @@ import Image from '../../images/welcome.svg'
 import * as S from './styled'
 import { Container } from '../../components/Container'
 import { Button, ButtonGhost } from '../../components/Buttons'
-import { injectIntl } from 'gatsby-plugin-intl'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { baseURL } from '../../utils'
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
-const Welcome = ({ intl }) => {
-  const { t } = useTranslation()
-  const baseURL = {
-    en: '/',
-    es: '/es/',
-    pt: '/pt/'
-  }
+const Welcome = () => {
+  const intl = useIntl()
 
   return (
     <Container id={intl.formatMessage({ id: 'nav.home.url' })}>
@@ -28,7 +23,7 @@ const Welcome = ({ intl }) => {
         />
         <S.TextWrapper>
           <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
-            <Trans>We are</Trans>
+            <FormattedMessage id="welcome.title" />
             <S.Big
               data-sal="slide-up"
               data-sal-delay="600"
@@ -42,10 +37,7 @@ const Welcome = ({ intl }) => {
             data-sal-delay="900"
             data-sal-easing="ease"
           >
-            <Trans>
-              A collective of creative minds located in Brazil with an
-              international mindset.
-            </Trans>
+            <FormattedMessage id="welcome.lead" />
           </S.Lead>
           <S.ButtonsWrapper
             data-sal="slide-up"
@@ -53,18 +45,27 @@ const Welcome = ({ intl }) => {
             data-sal-easing="ease"
           >
             <AnchorLink
-              to={baseURL[t('Lang')] + '#contact'}
-              alt={t('Get in touch')}
+              to={
+                baseURL[intl.formatMessage({ id: 'lang' })] +
+                intl.formatMessage({ id: 'welcome.primaryButton.url' })
+              }
+              alt={intl.formatMessage({ id: 'welcome.primaryButton.label' })}
             >
               <Button>
-                <Trans>Get in touch</Trans>
+                <FormattedMessage id="welcome.primaryButton.label" />
               </Button>
             </AnchorLink>
-            {/* <AnchorLink to={baseURL[t('Lang')] + '#our-work'} alt={t('Our work')}>
+            <AnchorLink
+              to={
+                baseURL[intl.formatMessage({ id: 'lang' })] +
+                intl.formatMessage({ id: 'welcome.ghostButton.url' })
+              }
+              alt={intl.formatMessage({ id: 'welcome.ghostButton.url' })}
+            >
               <ButtonGhost>
-                <Trans>Our work</Trans>
+                <FormattedMessage id="welcome.ghostButton.label" />
               </ButtonGhost>
-            </AnchorLink> */}
+            </AnchorLink>
           </S.ButtonsWrapper>
         </S.TextWrapper>
       </S.Wrapper>
@@ -72,4 +73,4 @@ const Welcome = ({ intl }) => {
   )
 }
 
-export default injectIntl(Welcome)
+export default Welcome

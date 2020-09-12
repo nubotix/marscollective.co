@@ -1,10 +1,10 @@
 import React from 'react'
 
 import * as S from './styled'
-import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
 const WorkItemDescription = ({ title, description, role, team, date }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   return (
     <S.Wrapper>
@@ -13,14 +13,18 @@ const WorkItemDescription = ({ title, description, role, team, date }) => {
 
       <S.ItemWrapper>
         <S.TitleItem>
-          <Trans>Role</Trans>
+          <FormattedMessage id="portfolio.itemPage.role" />
         </S.TitleItem>
-        <p>{role.map(roleItem => t(roleItem)).join(', ')}</p>
+        <p>
+          {role
+            .map(roleItem => intl.formatMessage({ id: roleItem }))
+            .join(', ')}
+        </p>
       </S.ItemWrapper>
 
       <S.ItemWrapper>
         <S.TitleItem>
-          <Trans>Team</Trans>
+          <FormattedMessage id="portfolio.itemPage.team" />
         </S.TitleItem>
         <p>{team.join(', ')}</p>
       </S.ItemWrapper>
@@ -28,7 +32,7 @@ const WorkItemDescription = ({ title, description, role, team, date }) => {
       {date && (
         <S.ItemWrapper>
           <S.TitleItem>
-            <Trans>Finished date</Trans>
+            <FormattedMessage id="portfolio.itemPage.finishedDate" />
           </S.TitleItem>
           <p>{date}</p>
         </S.ItemWrapper>

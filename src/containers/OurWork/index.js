@@ -9,65 +9,68 @@ import Audiovisual from '../../components/WorkQueries/Audiovisual'
 import * as S from './styled'
 import { Container } from '../../components/Container'
 import { Button } from '../../components/Buttons'
-import { injectIntl } from 'gatsby-plugin-intl'
-import { Trans } from 'gatsby-plugin-react-i18next'
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
-const OurWork = ({ intl }) => (
-  <Container id={intl.formatMessage({ id: 'nav.portfolio.url' })}>
-    <S.Wrapper>
-      <S.ItemsWrapper>
-        <h2 data-sal="slide-up">
-          <Trans>Our work</Trans>
-        </h2>
-        <S.ItemsListWrapper>
-          <S.ItemsList data-sal="slide-up">
-            <S.Item>
-              <Trans>All</Trans>
-            </S.Item>
-            <S.Item>
-              <Trans>Web design</Trans>
-            </S.Item>
-            <S.Item>
-              <Trans>Branding</Trans>
-            </S.Item>
-            <S.Item>
-              <Trans>Social media</Trans>
-            </S.Item>
-            <S.Item>
-              <Trans>Audiovisual</Trans>
-            </S.Item>
-          </S.ItemsList>
-          <a
-            href="https://www.behance.net/marscollective"
-            title="Behance"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button data-sal="slide-up">
-              <Trans>View more</Trans>
-            </Button>
-          </a>
-        </S.ItemsListWrapper>
-      </S.ItemsWrapper>
-      <div data-sal="slide-up">
-        <S.ImagesWrapper>
-          <All />
-        </S.ImagesWrapper>
-        <S.ImagesWrapper>
-          <WebDesign />
-        </S.ImagesWrapper>
-        <S.ImagesWrapper>
-          <Branding />
-        </S.ImagesWrapper>
-        <S.ImagesWrapper>
-          <SocialMedia />
-        </S.ImagesWrapper>
-        <S.ImagesWrapper>
-          <Audiovisual />
-        </S.ImagesWrapper>
-      </div>
-    </S.Wrapper>
-  </Container>
-)
+const OurWork = () => {
+  const intl = useIntl()
 
-export default injectIntl(OurWork)
+  return (
+    <Container id={intl.formatMessage({ id: 'nav.portfolio.url' })}>
+      <S.Wrapper>
+        <S.ItemsWrapper>
+          <h2 data-sal="slide-up">
+            <FormattedMessage id="portfolio.title" />
+          </h2>
+          <S.ItemsListWrapper>
+            <S.ItemsList data-sal="slide-up">
+              <S.Item>
+                <FormattedMessage id="portfolio.items.all" />
+              </S.Item>
+              <S.Item>
+                <FormattedMessage id="portfolio.items.webDesign" />
+              </S.Item>
+              <S.Item>
+                <FormattedMessage id="portfolio.items.branding" />
+              </S.Item>
+              <S.Item>
+                <FormattedMessage id="portfolio.items.socialMedia" />
+              </S.Item>
+              <S.Item>
+                <FormattedMessage id="portfolio.items.audiovisual" />
+              </S.Item>
+            </S.ItemsList>
+            <a
+              href="https://www.behance.net/marscollective"
+              title="Behance"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button data-sal="slide-up">
+                <FormattedMessage id="portfolio.button.label" />
+              </Button>
+            </a>
+          </S.ItemsListWrapper>
+        </S.ItemsWrapper>
+        <div data-sal="slide-up">
+          <S.ImagesWrapper>
+            <All />
+          </S.ImagesWrapper>
+          <S.ImagesWrapper>
+            <WebDesign />
+          </S.ImagesWrapper>
+          <S.ImagesWrapper>
+            <Branding />
+          </S.ImagesWrapper>
+          <S.ImagesWrapper>
+            <SocialMedia />
+          </S.ImagesWrapper>
+          <S.ImagesWrapper>
+            <Audiovisual />
+          </S.ImagesWrapper>
+        </div>
+      </S.Wrapper>
+    </Container>
+  )
+}
+
+export default OurWork

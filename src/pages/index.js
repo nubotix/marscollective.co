@@ -8,14 +8,14 @@ import OurWork from '../containers/OurWork'
 import WhoWeAre from '../containers/WhoWeAre'
 import Blog from '../containers/Blog'
 import Contact from '../containers/Contact'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const IndexPage = () => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   return (
     <Layout>
-      <SEO lang={t('Lang')} />
+      <SEO lang={intl.formatMessage({ id: 'lang' })} />
       <Welcome />
       <WhatWeDo />
       <OurWork />

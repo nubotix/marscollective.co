@@ -2,31 +2,31 @@ import React from 'react'
 
 import * as S from './styled'
 import { Input, TextArea } from '../Input'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const ContactInputs = () => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   return (
     <S.Wrapper>
       <Input
         type="text"
-        placeholder={t('Your name')}
+        placeholder={intl.formatMessage({ id: 'contact.form.name' })}
         id="name"
-        aria-label={t('Your name')}
+        aria-label={intl.formatMessage({ id: 'contact.form.name' })}
         required
       />
       <Input
         type="email"
-        placeholder={t('Your email')}
+        placeholder={intl.formatMessage({ id: 'contact.form.email' })}
         id="email"
-        aria-label={t('Your email')}
+        aria-label={intl.formatMessage({ id: 'contact.form.email' })}
         required
       />
       <TextArea
-        placeholder={t('Your message')}
+        placeholder={intl.formatMessage({ id: 'contact.form.message' })}
         id="message"
-        aria-label={t('Your message')}
+        aria-label={intl.formatMessage({ id: 'contact.form.message' })}
         required
       />
     </S.Wrapper>

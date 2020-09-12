@@ -2,10 +2,10 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import * as S from './styled'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const Team = () => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
@@ -55,7 +55,7 @@ const Team = () => {
             <S.Image fixed={node.frontmatter.image.childImageSharp.fixed} />
             <S.TextWrapper>
               <h3>{node.frontmatter.name}</h3>
-              <h4>{position[t('Lang')]}</h4>
+              <h4>{position[intl.formatMessage({ id: 'lang' })]}</h4>
             </S.TextWrapper>
           </S.Item>
         )

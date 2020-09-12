@@ -17,7 +17,6 @@
     "gatsby-plugin-no-sourcemaps": "^2.2.0",
     "gatsby-plugin-offline": "^3.2.27",
     "gatsby-plugin-react-helmet": "^3.3.10",
-    "gatsby-plugin-react-i18next": "^0.0.27",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^2.6.35",
@@ -37,7 +36,6 @@
     "react-dom": "^16.12.0",
     "react-headroom": "^3.0.0",
     "react-helmet": "^6.1.0",
-    "react-i18next": "^11.7.2",
     "react-tabs": "^3.1.1",
     "styled-components": "^5.2.0"
   },

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby-plugin-react-i18next'
+import { Link } from 'gatsby-plugin-intl'
 import Img from 'gatsby-image'
 
 export const LinkItem = styled(Link)`

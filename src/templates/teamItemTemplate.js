@@ -3,15 +3,15 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const TeamItemTemplate = ({ data }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const author = data.markdownRemark.frontmatter
 
   return (
     <Layout>
-      <SEO title={author.name} lang={t('Lang')} />
+      <SEO title={author.name} lang={intl.formatMessage({ id: 'lang' })} />
       <h1>{author.name}</h1>
       <p>{author.position.pt}</p>
     </Layout>

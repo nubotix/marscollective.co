@@ -8,10 +8,10 @@ import BlogItemBody from '../components/BlogItemBody'
 import AuthorWrapper from '../components/AuthorWrapper'
 import Contact from '../containers/Contact'
 import { Container } from '../components/Container'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const BlogItemTemplate = ({ data }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const blogItem = data.blogItem.frontmatter
   const blogItemBody = data.blogItem.fields.frontmattermd
   const blogItemAuthor = data.authorInfo.frontmatter
@@ -49,24 +49,24 @@ const BlogItemTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={title[t('Lang')]}
-        description={description[t('Lang')]}
-        lang={t('Lang')}
+        title={title[intl.formatMessage({ id: 'lang' })]}
+        description={description[intl.formatMessage({ id: 'lang' })]}
+        lang={intl.formatMessage({ id: 'lang' })}
       />
 
       <Container>
         <BlogItemHeader
           image={blogItem.image.childImageSharp.fluid}
-          title={title[t('Lang')]}
+          title={title[intl.formatMessage({ id: 'lang' })]}
           avatar={blogItemAuthor.image.childImageSharp.fixed}
           author={blogItem.author}
-          date={dataLocale[t('Lang')]}
+          date={dataLocale[intl.formatMessage({ id: 'lang' })]}
         />
-        <BlogItemBody html={body[t('Lang')]} />
+        <BlogItemBody html={body[intl.formatMessage({ id: 'lang' })]} />
         <AuthorWrapper
           avatar={blogItemAuthor.image.childImageSharp.fixed}
           author={blogItem.author}
-          bio={bio[t('Lang')]}
+          bio={bio[intl.formatMessage({ id: 'lang' })]}
           socialLinks={blogItemAuthor.social}
         />
       </Container>

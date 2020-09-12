@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useIntl } from 'gatsby-plugin-intl'
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -22,7 +22,7 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const { t } = useTranslation()
+  const intl = useIntl()
   const descriptionLocale = {
     en: site.siteMetadata.description.en,
     es: site.siteMetadata.description.es,
@@ -32,7 +32,8 @@ function SEO({ description, lang, meta, title }) {
   const metaTitle =
     (title && `${title} | ${site.siteMetadata.title}`) ||
     site.siteMetadata.title
-  const metaDescription = description || descriptionLocale[t('Lang')]
+  const metaDescription =
+    description || descriptionLocale[intl.formatMessage({ id: 'lang' })]
 
   return (
     <Helmet

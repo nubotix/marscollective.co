@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import ContactInputs from '../ContactInputs'
 import * as S from './styled'
 import { ButtonGhostWhite } from '../Buttons'
-import { Trans } from 'gatsby-plugin-react-i18next'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 class ContactForm extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class ContactForm extends Component {
     return (
       <S.Wrapper>
         <S.Title>
-          <Trans>Contact us</Trans>
+          <FormattedMessage id="contact.form.title" />
         </S.Title>
         <S.Form
           action="/.netlify/functions/sendMail"
@@ -51,9 +51,11 @@ class ContactForm extends Component {
         >
           <ContactInputs />
           <S.SubmitWrapper>
-            <S.Alert>{message ? <Trans>{message}</Trans> : ''}</S.Alert>
+            <S.Alert>
+              {message ? <FormattedMessage id="contact.form.success" /> : ''}
+            </S.Alert>
             <ButtonGhostWhite type="submit" id="sendMail">
-              <Trans>Send</Trans>
+              <FormattedMessage id="contact.form.button" />
             </ButtonGhostWhite>
           </S.SubmitWrapper>
         </S.Form>
