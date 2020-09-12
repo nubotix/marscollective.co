@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 import { Container } from '../../components/Container'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Trans } from 'gatsby-plugin-react-i18next'
 
-const Blog = () => {
+const Blog = ({ intl }) => {
   const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -52,7 +53,7 @@ const Blog = () => {
   const items = allMarkdownRemark.edges
 
   return (
-    <Container>
+    <Container id={intl.formatMessage({ id: 'nav.blog.url' })}>
       <h2 data-sal="slide-up">
         <Trans>Blog</Trans>
       </h2>
@@ -65,4 +66,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default injectIntl(Blog)

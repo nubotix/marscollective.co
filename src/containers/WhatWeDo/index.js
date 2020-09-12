@@ -6,13 +6,14 @@ import weWrite from '../../images/weWrite.svg'
 import weLocalize from '../../images/weLocalize.svg'
 import * as S from './styled'
 import { Container } from '../../components/Container'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
-const WhatWeDo = () => {
+const WhatWeDo = ({ intl }) => {
   const { t } = useTranslation()
 
   return (
-    <Container id="what-we-do">
+    <Container id={intl.formatMessage({ id: 'nav.services.url' })}>
       <S.Wrapper>
         <h2 data-sal="slide-up">
           <Trans>What we do</Trans>
@@ -84,4 +85,4 @@ const WhatWeDo = () => {
   )
 }
 
-export default WhatWeDo
+export default injectIntl(WhatWeDo)

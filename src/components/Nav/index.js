@@ -1,13 +1,21 @@
 import React, { useState } from 'react'
 
 import links from './content'
+import { baseURL } from '../../utils'
 import * as S from './styled'
-import { useTranslation, useI18next } from 'gatsby-plugin-react-i18next'
+import {
+  injectIntl,
+  IntlContextConsumer,
+  changeLocale
+} from 'gatsby-plugin-intl'
 
-const Nav = () => {
-  const { t } = useTranslation()
-  const { languages, originalPath } = useI18next()
+const Nav = ({ intl }) => {
   const [open, setOpen] = useState(false)
+  const languageName = {
+    en: '[en]',
+    es: '[es]',
+    pt: '[pt]'
+  }
 
   return (
     <nav>
@@ -19,37 +27,56 @@ const Nav = () => {
 
       <S.List open={open} onClick={() => setOpen(!open)}>
         {links.map((link, i) => {
-          const baseURL = {
-            en: '/',
-            es: '/es/',
-            pt: '/pt/'
-          }
-
           return (
             <S.ListItem key={i}>
               <S.ItemLink
-                to={baseURL[t('Lang')] + link.url}
-                alt={t(link.label)}
+                to={
+                  `${baseURL[intl.formatMessage({ id: 'lang' })]}` +
+                  `#${intl.formatMessage({ id: link.url })}`
+                }
+                alt={intl.formatMessage({ id: link.label })}
                 activeClassName="active"
               >
-                {t(link.label)}
+                {intl.formatMessage({ id: link.label })}
               </S.ItemLink>
             </S.ListItem>
           )
         })}
         <S.ListItem>
-          <S.LanguageSelectorWrapper>
+          {/* <S.LanguageSelectorWrapper>
+          <IntlContextConsumer>
             {languages.map(lng => (
               <S.LanguageSelectorItem key={lng}>
-                <S.LanguageSelectorItemLink
+                <Link
                   to={originalPath}
-                  language={lng}
-                  activeClassName="active"
                 >
                   [{lng}]
-                </S.LanguageSelectorItemLink>
+                </Link>
               </S.LanguageSelectorItem>
             ))}
+            </IntlContextConsumer>
+          </S.LanguageSelectorWrapper> */}
+
+          <S.LanguageSelectorWrapper>
+            <IntlContextConsumer>
+              {({ languages, language: currentLocale }) =>
+                languages.map(language => (
+                  <S.LanguageSelectorItem
+                    key={language}
+                    onClick={() => changeLocale(language)}
+                    aria-hidden="true"
+                    style={{
+                      color:
+                        currentLocale === language
+                          ? `var(--highLight)`
+                          : `var(--default)`
+                    }}
+                  >
+                    {languageName[language]}
+                  </S.LanguageSelectorItem>
+                ))
+              }
+            </IntlContextConsumer>
           </S.LanguageSelectorWrapper>
         </S.ListItem>
       </S.List>
@@ -57,4 +84,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default injectIntl(Nav)

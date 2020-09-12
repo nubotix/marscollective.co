@@ -1,27 +1,27 @@
 const links = [
   {
-    label: 'Home',
-    url: '#home'
+    label: 'nav.home.label',
+    url: 'nav.home.url'
   },
   {
-    label: 'What we do',
-    url: '#what-we-do'
+    label: 'nav.services.label',
+    url: 'nav.services.url'
   },
-  // {
-  //   label: 'Our work',
-  //   url: '#our-work'
-  // },
   {
-    label: 'Who we are',
-    url: '#who-we-are'
+    label: 'nav.portfolio.label',
+    url: 'nav.portfolio.url'
   },
-  // {
-  //   label: 'Blog',
-  //   url: '#blog'
-  // },
   {
-    label: 'Contact',
-    url: '#contact'
+    label: 'nav.about.label',
+    url: 'nav.about.url'
+  },
+  {
+    label: 'nav.blog.label',
+    url: 'nav.blog.url'
+  },
+  {
+    label: 'nav.contact.label',
+    url: 'nav.contact.url'
   }
 ]
 

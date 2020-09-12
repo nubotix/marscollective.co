@@ -9,10 +9,11 @@ import Audiovisual from '../../components/WorkQueries/Audiovisual'
 import * as S from './styled'
 import { Container } from '../../components/Container'
 import { Button } from '../../components/Buttons'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Trans } from 'gatsby-plugin-react-i18next'
 
-const OurWork = () => (
-  <Container id="our-work">
+const OurWork = ({ intl }) => (
+  <Container id={intl.formatMessage({ id: 'nav.portfolio.url' })}>
     <S.Wrapper>
       <S.ItemsWrapper>
         <h2 data-sal="slide-up">
@@ -69,4 +70,4 @@ const OurWork = () => (
   </Container>
 )
 
-export default OurWork
+export default injectIntl(OurWork)

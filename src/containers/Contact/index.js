@@ -5,9 +5,10 @@ import Social from '../../components/Social'
 import ContactForm from '../../components/ContactForm'
 import * as S from './styled'
 import { Container } from '../../components/Container'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Trans } from 'gatsby-plugin-react-i18next'
 
-const Contact = () => {
+const Contact = ({ intl }) => {
   const { markdownRemark } = useStaticQuery(
     graphql`
       query {
@@ -28,7 +29,7 @@ const Contact = () => {
   const socialLinks = markdownRemark.frontmatter
 
   return (
-    <Container id="contact">
+    <Container id={intl.formatMessage({ id: 'nav.contact.url' })}>
       <S.Wrapper>
         <S.TextWrapper>
           <S.Title data-sal="slide-up">
@@ -48,4 +49,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default injectIntl(Contact)

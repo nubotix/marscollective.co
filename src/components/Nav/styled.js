@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
-import { Link } from 'gatsby-plugin-react-i18next'
 
 export const StyledBurger = styled.div`
   width: 2rem;
@@ -92,15 +91,8 @@ export const LanguageSelectorItem = styled.li`
   display: inline-flex;
   margin: 0 0.5rem 0 0;
   font-weight: 600;
-
-  :last-child {
-    margin: 0;
-  }
-`
-
-export const LanguageSelectorItemLink = styled(Link)`
   color: var(--default);
-  text-decoration: none;
+  cursor: pointer;
 
   :hover {
     color: var(--highLight);
@@ -108,5 +100,9 @@ export const LanguageSelectorItemLink = styled(Link)`
 
   &.active {
     color: var(--highLight);
+  }
+
+  :last-child {
+    margin: 0;
   }
 `

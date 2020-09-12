@@ -5,9 +5,10 @@ import Image from '../../images/welcome.svg'
 import * as S from './styled'
 import { Container } from '../../components/Container'
 import { Button, ButtonGhost } from '../../components/Buttons'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Trans, useTranslation } from 'gatsby-plugin-react-i18next'
 
-const Welcome = () => {
+const Welcome = ({ intl }) => {
   const { t } = useTranslation()
   const baseURL = {
     en: '/',
@@ -16,7 +17,7 @@ const Welcome = () => {
   }
 
   return (
-    <Container id="home">
+    <Container id={intl.formatMessage({ id: 'nav.home.url' })}>
       <S.Wrapper>
         <img
           src={Image}
@@ -71,4 +72,4 @@ const Welcome = () => {
   )
 }
 
-export default Welcome
+export default injectIntl(Welcome)
