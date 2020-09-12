@@ -102,18 +102,12 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-react-i18next`,
+      resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/locales`,
         languages: [`en`, `es`, `pt`],
         defaultLanguage: `en`,
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false
-          },
-          keySeparator: false,
-          nsSeparator: false
-        }
+        redirect: true
       }
     },
     {

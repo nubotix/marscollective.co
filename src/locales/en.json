@@ -1,0 +1,29 @@
+{
+  "lang": "en",
+  "nav": {
+    "home": {
+      "label": "Home",
+      "url": "home"
+    },
+    "services": {
+      "label": "What we do",
+      "url": "what-we-do"
+    },
+    "portfolio": {
+      "label": "Our work",
+      "url": "our-work"
+    },
+    "about": {
+      "label": "Who we are",
+      "url": "who-we-are"
+    },
+    "blog": {
+      "label": "Blog",
+      "url": "blog"
+    },
+    "contact": {
+      "label": "Contact",
+      "url": "contact"
+    }
+  }
+}
