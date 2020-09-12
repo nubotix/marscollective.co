@@ -686,7 +686,7 @@ collections:
             name: 'body'
             widget: 'markdown'
 
-      - file: 'src/locales/en/translation.json'
+      - file: 'src/locales/en.json'
         label: 'Textos em inglês'
         name: 'en'
         fields:
@@ -991,7 +991,7 @@ collections:
                     name: 'success'
                     widget: 'string'
 
-      - file: 'src/locales/es/translation.json'
+      - file: 'src/locales/es.json'
         label: 'Textos em espanhol'
         name: 'es'
         fields:
@@ -1296,7 +1296,7 @@ collections:
                     name: 'success'
                     widget: 'string'
 
-      - file: 'src/locales/pt/translation.json'
+      - file: 'src/locales/pt.json'
         label: 'Textos em português'
         name: 'pt'
         fields:
