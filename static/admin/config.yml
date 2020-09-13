@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: marscollective/marscollective.co
-  branch: dev
+  branch: master
 
   commit_messages:
     create: ':pencil: create “{{path}}”'
