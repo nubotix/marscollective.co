@@ -7,7 +7,9 @@ const settings = {
     en: siteMetadata.description.en,
     es: siteMetadata.description.es,
     pt: siteMetadata.description.pt
-  }
+  },
+  siteUrl: siteMetadata.siteUrl,
+  supportedLanguages: siteMetadata.supportedLanguages
 }
 
 module.exports = settings

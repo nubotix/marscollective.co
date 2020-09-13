@@ -5,5 +5,7 @@
     "en": "A collective of creative minds located in Brazil with an international mindset.",
     "es": "Un colectivo de mentes creativas localizado en Brasil, con una mentalidad internacional.",
     "pt": "Um coletivo de mentes criativas localizado no Brasil com um mindset internacional."
-  }
+  },
+  "siteUrl": "https://marscollective.co",
+  "supportedLanguages": ["en", "es", "pt"]
 }

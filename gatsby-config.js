@@ -7,14 +7,54 @@ module.exports = {
       en: settings.description.en,
       es: settings.description.es,
       pt: settings.description.pt
-    }
+    },
+    siteUrl: settings.siteUrl
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-minify-html`,
     `gatsby-plugin-no-sourcemaps`,
     `gatsby-plugin-scroll-reveal`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes
+            .filter(node => {
+              const path = node.path
+              if (path.includes('404')) {
+                return false
+              }
+              return settings.supportedLanguages.includes(path.split('/')[1])
+            })
+            .map(node => {
+              return {
+                url: `${site.siteMetadata.siteUrl}${node.path}`,
+                changefreq: `weekly`,
+                priority: 0.7
+              }
+            })
+      }
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: settings.siteUrl
+      }
+    },
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
@@ -105,7 +145,7 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/locales`,
-        languages: [`en`, `es`, `pt`],
+        languages: settings.supportedLanguages,
         defaultLanguage: `en`,
         redirect: true
       }
