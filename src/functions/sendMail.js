@@ -2,7 +2,6 @@ const Mailgun = require('mailgun-js')
 
 const sendEmail = async ({ name, email, message }) => {
   return new Promise((resolve, reject) => {
-    console.log('Sending the email')
     const {
       MAILGUN_API_KEY: apiKey,
       MAILGUN_DOMAIN: domain,
@@ -18,7 +17,7 @@ const sendEmail = async ({ name, email, message }) => {
       `Nome: ${name}` + '<br>' + `Email: ${email}` + '<br>' + `${message}`
 
     const mailData = {
-      from: emailFrom,
+      from: `${name} <${emailFrom}>`,
       to: emailTo,
       subject: 'Formulário de contato do site',
       'h:Reply-To': `${name} <${email}>`,
@@ -46,7 +45,6 @@ exports.handler = async event => {
       })
     }
   } catch (e) {
-    console.log(e)
     return {
       statusCode: 500,
       body: e.message

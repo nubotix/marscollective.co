@@ -34,7 +34,6 @@ class ContactForm extends Component {
     this.setState({
       message: response.message
     })
-    console.log(response)
   }
 
   render() {
