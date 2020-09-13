@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: marscollective/marscollective.co
   branch: dev
 
   commit_messages:
