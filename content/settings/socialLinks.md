@@ -7,6 +7,8 @@ social:
     url: https://www.facebook.com/marscollective.co
   - label: Instagram
     url: https://instagram.com/mars.collective
+  - label: Twitter
+    url: https://twitter.com/WeMarsCo
   - label: Behance
     url: https://www.behance.net/marscollective
   - label: Github
