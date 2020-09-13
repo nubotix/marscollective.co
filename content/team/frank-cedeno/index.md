@@ -1,5 +1,5 @@
 ---
-templateKey: team
+key: team
 name: Frank Cedeño
 member: true
 image: FrankCendeno.jpg
