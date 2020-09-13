@@ -130,7 +130,7 @@ export const query = graphql`
       }
     }
     authorInfo: markdownRemark(
-      frontmatter: { name: { eq: $author }, templateKey: { eq: "team" } }
+      frontmatter: { name: { eq: $author }, key: { eq: "team" } }
     ) {
       frontmatter {
         image {
