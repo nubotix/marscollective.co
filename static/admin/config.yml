@@ -518,8 +518,8 @@ collections:
     editor:
       preview: false
     fields:
-      - label: 'templateKey'
-        name: 'templateKey'
+      - label: 'key'
+        name: 'key'
         widget: 'hidden'
         default: 'team'
 
