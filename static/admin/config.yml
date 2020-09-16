@@ -663,21 +663,17 @@ collections:
             name: 'shortTitle'
             widget: 'string'
 
-          - label: 'Descrição'
+          - label: 'Descrição em inglês'
             name: 'description'
-            widget: 'object'
-            fields:
-              - label: 'Em inglês'
-                name: 'en'
-                widget: 'text'
+            widget: 'text'
 
-              - label: 'Em espanhol'
-                name: 'es'
-                widget: 'text'
+          - label: 'Descrição em espanhol'
+            name: 'descES'
+            widget: 'text'
 
-              - label: 'Em português'
-                name: 'pt'
-                widget: 'text'
+          - label: 'Descrição em português'
+            name: 'descPT'
+            widget: 'text'
 
       - file: 'README.md'
         label: 'Readme do repositório'

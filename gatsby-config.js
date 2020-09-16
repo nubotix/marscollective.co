@@ -3,11 +3,9 @@ const settings = require('./content/settings')
 module.exports = {
   siteMetadata: {
     title: settings.title,
-    description: {
-      en: settings.description.en,
-      es: settings.description.es,
-      pt: settings.description.pt
-    },
+    description: settings.description,
+    descES: settings.descES,
+    descPT: settings.descPT,
     siteUrl: settings.siteUrl
   },
   plugins: [

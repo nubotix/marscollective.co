@@ -11,11 +11,9 @@ function SEO({ description, lang, meta, title }) {
         site {
           siteMetadata {
             title
-            description {
-              en
-              es
-              pt
-            }
+            description
+            descES
+            descPT
           }
         }
       }
@@ -24,9 +22,9 @@ function SEO({ description, lang, meta, title }) {
 
   const intl = useIntl()
   const descriptionLocale = {
-    en: site.siteMetadata.description.en,
-    es: site.siteMetadata.description.es,
-    pt: site.siteMetadata.description.pt
+    en: site.siteMetadata.description,
+    es: site.siteMetadata.descES,
+    pt: site.siteMetadata.descPT
   }
 
   const metaTitle =
