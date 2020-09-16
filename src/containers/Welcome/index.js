@@ -24,7 +24,7 @@ const Welcome = () => {
         />
         <S.TextWrapper>
           <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
-            <FormattedMessage id="welcome.title" />
+            <FormattedMessage id="welcome.title" />{' '}
             <S.Big
               data-sal="slide-up"
               data-sal-delay="600"
