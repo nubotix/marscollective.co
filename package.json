@@ -12,7 +12,7 @@
     "gatsby-plugin-google-tagmanager": "^2.3.12",
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-manifest": "^2.4.30",
-    "gatsby-plugin-minify-html": "^1.0.3",
+    "gatsby-plugin-minify-html": "^1.0.4",
     "gatsby-plugin-netlify-cms": "^4.3.14",
     "gatsby-plugin-no-sourcemaps": "^2.2.0",
     "gatsby-plugin-offline": "^3.2.28",
