@@ -2,17 +2,18 @@
 key: team
 name: Anderson Lima
 member: true
-image: AndersonLima.jpg
+image: profile-2020-09.jpg
 position:
   en: Social Strategist
   es: Social Strategist
   pt: Social Strategist
 bio:
-  en:
-    A brazilian strategist working in digital media and planning. I help brands
+  en: A brazilian strategist working in digital media and planning. I help brands
     connect with their target audience by developing marketing strategies and
     managing ad campaigns.
-  es: Lorem ipsum
+  es: Um publicitário iguaçuense apaixonado por mídias digitais e planejamento.
+    Desenvolvo estratégias de comunicação, gerencio campanhas de anúncios e
+    aproximo marcas de seu público alvo.
   pt: Um publicitário iguaçuense apaixonado por mídias digitais e planejamento.
     Desenvolvo estratégias de comunicação, gerencio campanhas de anúncios e
     aproximo marcas de seu público alvo.
