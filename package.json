@@ -31,7 +31,7 @@
     "gatsby-transformer-sharp": "^2.5.17",
     "i18next": "^19.8.2",
     "mailgun-js": "^0.22.0",
-    "netlify-cms-app": "^2.12.25",
+    "netlify-cms-app": "^2.12.27",
     "netlify-plugin-gatsby-cache": "^0.3.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
