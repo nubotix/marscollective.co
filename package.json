@@ -15,7 +15,7 @@
     "gatsby-plugin-minify-html": "^1.0.4",
     "gatsby-plugin-netlify-cms": "^4.3.17",
     "gatsby-plugin-no-sourcemaps": "^2.2.1",
-    "gatsby-plugin-offline": "^3.2.37",
+    "gatsby-plugin-offline": "^3.3.0",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-react-svg": "^3.0.0",
