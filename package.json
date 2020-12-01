@@ -6,7 +6,7 @@
     "@styled-icons/boxicons-regular": "^10.18.0",
     "@styled-icons/remix-line": "^10.18.0",
     "babel-plugin-styled-components": "^1.12.0",
-    "gatsby": "^2.27.1",
+    "gatsby": "^2.27.5",
     "gatsby-image": "^2.6.0",
     "gatsby-plugin-anchor-links": "^1.2.0",
     "gatsby-plugin-google-tagmanager": "^2.6.0",
