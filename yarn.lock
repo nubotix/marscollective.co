@@ -7048,10 +7048,10 @@ gatsby-plugin-netlify-cms@^4.5.0:
     netlify-identity-widget "^1.9.1"
     webpack "^4.44.2"
 
-gatsby-plugin-no-sourcemaps@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-2.4.0.tgz#516a0c59e42621c508e770f05c17d5bdceb55f7d"
-  integrity sha512-CVL4fTeHvcY3SAaCIge/bJbOLA9MFri/vW3BZipwTusDnr8tfLloHjGCU8PlFVpWdXOLKnGaj8E6wqwHKz0plg==
+gatsby-plugin-no-sourcemaps@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-2.5.0.tgz#2711a6a7759979613f3eda0368c3752824f97c9f"
+  integrity sha512-z3BE6+JvZjD59vDPhuLBvNrNEGuu69zjctDlt1hPRHB/iStyhol3RnlCUy1+MN9V0QYpgWTncs/UrlawM3Gw3w==
 
 gatsby-plugin-offline@^3.5.0:
   version "3.5.0"
