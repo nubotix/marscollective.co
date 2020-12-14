@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Team from '../../components/Team'
+import Team from '../../components/team'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
 const WhoWeAre = () => {

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import * as S from './styled'
-import Video from '../../components/Video'
-import WorkItemDescription from '../../components/WorkItemDescription'
+import Video from '../../components/video'
+import WorkItemDescription from '../../components/work-item-description'
 
 const PortfolioItem = ({
   title,

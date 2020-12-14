@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 import Welcome from '../containers/Welcome'
 import WhatWeDo from '../containers/WhatWeDo'
 import OurWork from '../containers/OurWork'
 import WhoWeAre from '../containers/WhoWeAre'
-// import Blog from '../containers/Blog'
+import Blog from '../containers/Blog'
 import Contact from '../components/contact'
 import { useIntl } from 'gatsby-plugin-intl'
 
@@ -20,7 +20,7 @@ const IndexPage = () => {
       <WhatWeDo />
       <OurWork />
       <WhoWeAre />
-      {/* <Blog /> */}
+      <Blog />
       <Contact />
     </Layout>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Social from './Social'
+import Social from './social'
 import ContactForm from './contact-form'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 import { BiEnvelope, BiPhone } from 'react-icons/bi'

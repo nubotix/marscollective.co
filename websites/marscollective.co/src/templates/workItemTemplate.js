@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 import WorkItem from '../containers/WorkItem'
 import Contact from '../components/contact'
 import { useIntl } from 'gatsby-plugin-intl'

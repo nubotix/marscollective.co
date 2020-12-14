@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import Social from '../Social'
+import Social from './social'
 
 const AuthorWrapper = ({ avatar, author, bio, socialLinks }) => (
   <div className="flex items-center space-x-8 p-16 rounded-3xl bg-gray">

@@ -19,7 +19,7 @@ const Team = () => {
                 name
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 150m quality: 100) {
+                    fluid(maxWidth: 150, quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
                     }
                   }
