@@ -9,6 +9,17 @@ module.exports = {
     siteUrl: settings.siteUrl
   },
   plugins: [
+    /////////////////////////////////////
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`tailwindcss`)(`${__dirname}/tailwind.config.js`),
+          require(`autoprefixer`)
+        ]
+      }
+    },
+    /////////////////////////////////////
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-minify-html`,
     `gatsby-plugin-no-sourcemaps`,
