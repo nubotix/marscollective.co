@@ -1,12 +1,11 @@
 import React from 'react'
-
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import All from '../../components/WorkQueries/All'
 import WebDesign from '../../components/WorkQueries/WebDesign'
 import Branding from '../../components/WorkQueries/Branding'
 import SocialMedia from '../../components/WorkQueries/SocialMedia'
 import Audiovisual from '../../components/WorkQueries/Audiovisual'
 
-import * as S from './styled'
 import Button from '../../components/button'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
@@ -18,29 +17,29 @@ const OurWork = () => {
       className="container"
       id={intl.formatMessage({ id: 'nav.portfolio.url' })}
     >
-      <S.Wrapper>
-        <S.ItemsWrapper>
+      <div className="grid grid-cols-3 gap-8">
+        <TabList className="self-center list-none text-center">
           <h2 data-sal="slide-up">
             <FormattedMessage id="portfolio.title" />
           </h2>
-          <S.ItemsListWrapper>
-            <S.ItemsList data-sal="slide-up">
-              <S.Item>
+          <div className="grid gap-16">
+            <div className="grid gap-8" data-sal="slide-up">
+              <Tab className="font-semibold outline-none transition duration-500">
                 <FormattedMessage id="portfolio.items.all" />
-              </S.Item>
-              <S.Item>
+              </Tab>
+              <Tab className="font-semibold outline-none transition duration-500">
                 <FormattedMessage id="portfolio.items.webDesign" />
-              </S.Item>
-              <S.Item>
+              </Tab>
+              <Tab className="font-semibold outline-none transition duration-500">
                 <FormattedMessage id="portfolio.items.branding" />
-              </S.Item>
-              <S.Item>
+              </Tab>
+              <Tab className="font-semibold outline-none transition duration-500">
                 <FormattedMessage id="portfolio.items.socialMedia" />
-              </S.Item>
-              <S.Item>
+              </Tab>
+              <Tab className="font-semibold outline-none transition duration-500">
                 <FormattedMessage id="portfolio.items.audiovisual" />
-              </S.Item>
-            </S.ItemsList>
+              </Tab>
+            </div>
             <a
               href="https://www.behance.net/marscollective"
               title="Behance"
@@ -54,26 +53,26 @@ const OurWork = () => {
                 primary
               />
             </a>
-          </S.ItemsListWrapper>
-        </S.ItemsWrapper>
-        <div data-sal="slide-up">
-          <S.ImagesWrapper>
+          </div>
+        </TabList>
+        <div className="col-span-2" data-sal="slide-up">
+          <TabPanel className="grid grid-cols-3 gap-16">
             <All />
-          </S.ImagesWrapper>
-          <S.ImagesWrapper>
+          </TabPanel>
+          <TabPanel className="grid grid-cols-3 gap-16">
             <WebDesign />
-          </S.ImagesWrapper>
-          <S.ImagesWrapper>
+          </TabPanel>
+          <TabPanel className="grid grid-cols-3 gap-16">
             <Branding />
-          </S.ImagesWrapper>
-          <S.ImagesWrapper>
+          </TabPanel>
+          <TabPanel className="grid grid-cols-3 gap-16">
             <SocialMedia />
-          </S.ImagesWrapper>
-          <S.ImagesWrapper>
+          </TabPanel>
+          <TabPanel className="grid grid-cols-3 gap-16">
             <Audiovisual />
-          </S.ImagesWrapper>
+          </TabPanel>
         </div>
-      </S.Wrapper>
+      </div>
     </div>
   )
 }

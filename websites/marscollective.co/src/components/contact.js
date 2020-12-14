@@ -38,9 +38,13 @@ const Contact = () => {
           <h2 className="text text-left" data-sal="slide-up">
             <FormattedMessage id="contact.title" />
           </h2>
-          <div className="grid grid-cols-2 gap-4 mb-8" data-sal="slide-up">
-            <BiPhone /> <span>{socialLinks.email}</span>
-            <BiEnvelope /> <span>{socialLinks.phone}</span>
+          <div className="space-y-4 mb-8" data-sal="slide-up">
+            <div className="flex space-x-4">
+              <BiPhone /> <span>{socialLinks.email}</span>
+            </div>
+            <div className="flex space-x-4">
+              <BiEnvelope /> <span>{socialLinks.phone}</span>
+            </div>
           </div>
           <Social data-sal="slide-up" socialLinks={socialLinks.social} />
         </div>

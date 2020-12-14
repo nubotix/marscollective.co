@@ -8,12 +8,6 @@ import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 const Blog = () => {
   const intl = useIntl()
 
-  const Wrapper = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-  `
-
   const Div = styled(Img)`
     border-radius: var(--borderRadius);
     max-height: 300px;
@@ -57,11 +51,11 @@ const Blog = () => {
       <h2 data-sal="slide-up">
         <FormattedMessage id="blog.title" />
       </h2>
-      <Wrapper>
+      <div className="grid grid-cols-3 gap-8">
         {items.map(({ node }, i) => (
           <Div fluid={node.frontmatter.image.childImageSharp.fluid} key={i} />
         ))}
-      </Wrapper>
+      </div>
     </div>
   )
 }

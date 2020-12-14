@@ -23,7 +23,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-minify-html`,
     `gatsby-plugin-no-sourcemaps`,
-    `gatsby-plugin-scroll-reveal`,
+    // `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {

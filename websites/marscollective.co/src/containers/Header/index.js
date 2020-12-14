@@ -1,20 +1,20 @@
 import React from 'react'
 import Headroom from 'react-headroom'
-
+import Logo from '../../images/logo.svg'
 import Nav from '../../components/Nav'
-import * as S from './styled'
 
 const Header = () => (
   <Headroom>
     <div className="container">
-      <S.Wrapper
+      <div
+        className="flex justify-between items-center bg"
         data-sal="slide-up"
         data-sal-delay="300"
         data-sal-easing="ease"
       >
-        <S.LogoSVG />
+        <Logo className="w-16 my-4" />
         <Nav />
-      </S.Wrapper>
+      </div>
     </div>
   </Headroom>
 )

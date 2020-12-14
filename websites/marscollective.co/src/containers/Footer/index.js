@@ -1,19 +1,19 @@
 import React from 'react'
-
+import Logo from '../../images/logo.svg'
+import { RiCopyleftLine } from 'react-icons/ri'
 import Nav from '../../components/Nav'
-import * as S from './styled'
 
 const Footer = () => (
   <div className="container">
-    <S.Wrapper>
-      <S.LogoSVG data-sal="slide-up" />
-      <S.NavWrapper>
+    <div className="flex flex-col md:flex-row justify-between items-center">
+      <Logo data-sal="slide-up" />
+      <div className="hidden lg:block">
         <Nav data-sal="slide-up" />
-      </S.NavWrapper>
-      <S.CopyLeft data-sal="slide-up">
-        Mars Collective <S.CopyleftIcon /> 2020
-      </S.CopyLeft>
-    </S.Wrapper>
+      </div>
+      <div className="font-semibold" data-sal="slide-up">
+        Mars Collective <RiCopyleftLine className="w-3" /> 2020
+      </div>
+    </div>
   </div>
 )
 
