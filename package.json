@@ -6,6 +6,7 @@
     "websites/*"
   ],
   "scripts": {
+    "dev": "yarn workspace @marscollective/gatsby-theme-marscollective dev",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
   },
   "devDependencies": {
