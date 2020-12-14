@@ -1,43 +1,42 @@
 import React from 'react'
 
-import * as S from './styled'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
 const WorkItemDescription = ({ title, description, role, team, date }) => {
   const intl = useIntl()
 
   return (
-    <S.Wrapper>
-      <S.Title>{title}</S.Title>
+    <div className="relative md:sticky top-16 md:py-16">
+      <h3 className="text-left">{title}</h3>
       <p>{description}</p>
 
-      <S.ItemWrapper>
-        <S.TitleItem>
+      <div className="border-t-2">
+        <h3 className="text-left">
           <FormattedMessage id="portfolio.itemPage.role" />
-        </S.TitleItem>
+        </h3>
         <p>
           {role
             .map(roleItem => intl.formatMessage({ id: roleItem }))
             .join(', ')}
         </p>
-      </S.ItemWrapper>
+      </div>
 
-      <S.ItemWrapper>
-        <S.TitleItem>
+      <div className="border-t-2">
+        <h3 className="text-left">
           <FormattedMessage id="portfolio.itemPage.team" />
-        </S.TitleItem>
+        </h3>
         <p>{team.join(', ')}</p>
-      </S.ItemWrapper>
+      </div>
 
       {date && (
-        <S.ItemWrapper>
-          <S.TitleItem>
+        <div className="border-t-2">
+          <h3 className="text-left">
             <FormattedMessage id="portfolio.itemPage.finishedDate" />
-          </S.TitleItem>
+          </h3>
           <p>{date}</p>
-        </S.ItemWrapper>
+        </div>
       )}
-    </S.Wrapper>
+    </div>
   )
 }
 

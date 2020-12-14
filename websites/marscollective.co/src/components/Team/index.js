@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-import * as S from './styled'
 import { useIntl } from 'gatsby-plugin-intl'
 
 const Team = () => {
@@ -19,8 +19,8 @@ const Team = () => {
                 name
                 image {
                   childImageSharp {
-                    fixed(width: 150, height: 150, quality: 100) {
-                      ...GatsbyImageSharpFixed_withWebp
+                    fluid(maxWidth: 150m quality: 100) {
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }
@@ -40,7 +40,7 @@ const Team = () => {
   const teamItems = allMarkdownRemark.edges
 
   return (
-    <S.Itens>
+    <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4">
       {teamItems.map(({ node }, i) => {
         const position = {
           en: node.frontmatter.position.en,
@@ -49,16 +49,19 @@ const Team = () => {
         }
 
         return (
-          <S.Item data-sal="slide-up" key={i}>
-            <S.Image fixed={node.frontmatter.image.childImageSharp.fixed} />
-            <S.TextWrapper>
+          <div className="grid gap-8 items-center" data-sal="slide-up" key={i}>
+            <Img
+              fluid={node.frontmatter.image.childImageSharp.fluid}
+              className="w-40 h-40 rounded-full"
+            />
+            <div>
               <h3>{node.frontmatter.name}</h3>
               <h4>{position[intl.formatMessage({ id: 'lang' })]}</h4>
-            </S.TextWrapper>
-          </S.Item>
+            </div>
+          </div>
         )
       })}
-    </S.Itens>
+    </div>
   )
 }
 

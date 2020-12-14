@@ -1,15 +1,17 @@
 import React from 'react'
 
-import * as S from './styled'
-
 const Video = ({ videoID, videoTitle }) => (
-  <S.Wrapper>
-    <S.Iframe
+  <div
+    className="relative overflow-hidden w-full"
+    style={{ paddingTop: '56.25%' }}
+  >
+    <iframe
+      className="absolute inset-0 w-full h-full"
       src={'https://www.youtube.com/embed/' + videoID}
       title={videoTitle}
       frameBorder="0"
     />
-  </S.Wrapper>
+  </div>
 )
 
 export default Video
