@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 
-import ContactInputs from '../ContactInputs'
-import * as S from './styled'
-import Button from '../button'
+import ContactInputs from './contact-inputs'
+import Button from './button'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
 class ContactForm extends Component {
@@ -39,24 +38,25 @@ class ContactForm extends Component {
   render() {
     const { message } = this.state
     return (
-      <S.Wrapper>
-        <S.Title>
+      <div className="p-8 bg-green rounded-3xl">
+        <h3 className="text text-left m-0 mb-8">
           <FormattedMessage id="contact.form.title" />
-        </S.Title>
-        <S.Form
+        </h3>
+        <div
+          className="grid gap-8"
           action="/.netlify/functions/sendMail"
           onSubmit={this.handleSubmit.bind(this)}
         >
           <ContactInputs />
-          <S.SubmitWrapper>
-            <S.Alert>
+          <div className="flex">
+            <span className="flex-1 mr-8 self-center">
               {message ? <FormattedMessage id="contact.form.success" /> : ''}
-            </S.Alert>
+            </span>
             {/* <FormattedMessage id="contact.form.button" /> */}
             <Button label="CONSERTAR" type="submit" id="sendMail" />
-          </S.SubmitWrapper>
-        </S.Form>
-      </S.Wrapper>
+          </div>
+        </div>
+      </div>
     )
   }
 }

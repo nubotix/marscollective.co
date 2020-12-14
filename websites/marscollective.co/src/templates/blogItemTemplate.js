@@ -6,7 +6,7 @@ import SEO from '../components/SEO'
 import BlogItemHeader from '../components/BlogItemHeader'
 import BlogItemBody from '../components/BlogItemBody'
 import AuthorWrapper from '../components/AuthorWrapper'
-import Contact from '../containers/Contact'
+import Contact from '../components/contact'
 import { Container } from '../components/Container'
 import { useIntl } from 'gatsby-plugin-intl'
 

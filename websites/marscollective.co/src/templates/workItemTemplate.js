@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import WorkItem from '../containers/WorkItem'
-import Contact from '../containers/Contact'
+import Contact from '../components/contact'
 import { useIntl } from 'gatsby-plugin-intl'
 
 const WorkItemTemplate = ({ data }) => {

@@ -7,7 +7,7 @@ import WhatWeDo from '../containers/WhatWeDo'
 import OurWork from '../containers/OurWork'
 import WhoWeAre from '../containers/WhoWeAre'
 // import Blog from '../containers/Blog'
-import Contact from '../containers/Contact'
+import Contact from '../components/contact'
 import { useIntl } from 'gatsby-plugin-intl'
 
 const IndexPage = () => {

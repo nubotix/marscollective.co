@@ -1,14 +1,12 @@
 import React from 'react'
-
-import * as S from './styled'
-import { Input, TextArea } from '../input'
+import { Input, TextArea } from './input'
 import { useIntl } from 'gatsby-plugin-intl'
 
 const ContactInputs = () => {
   const intl = useIntl()
 
   return (
-    <S.Wrapper>
+    <div className="grid gap-4">
       <Input
         type="text"
         id="name"
@@ -26,7 +24,7 @@ const ContactInputs = () => {
         label={intl.formatMessage({ id: 'contact.form.message' })}
         required
       />
-    </S.Wrapper>
+    </div>
   )
 }
 
