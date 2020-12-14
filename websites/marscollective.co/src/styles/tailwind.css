@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .container {
+    @apply max-w-7xl my-32;
+  }
+  .container:first-child {
+    @apply my-0;
+  }
+  .container:last-child {
+    @apply my-0;
+  }
+}

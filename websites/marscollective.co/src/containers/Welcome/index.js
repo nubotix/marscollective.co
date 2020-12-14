@@ -3,7 +3,6 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import Image from '../../images/welcome.svg'
 import * as S from './styled'
-import { Container } from '../../components/Container'
 import Button from '../../components/button'
 import { baseURL } from '../../utils'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
@@ -12,7 +11,7 @@ const Welcome = () => {
   const intl = useIntl()
 
   return (
-    <Container id={intl.formatMessage({ id: 'nav.home.url' })}>
+    <div className="container" id={intl.formatMessage({ id: 'nav.home.url' })}>
       <S.Wrapper>
         <img
           src={Image}
@@ -74,7 +73,7 @@ const Welcome = () => {
           </S.ButtonsWrapper>
         </S.TextWrapper>
       </S.Wrapper>
-    </Container>
+    </div>
   )
 }
 

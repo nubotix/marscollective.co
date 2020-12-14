@@ -7,7 +7,6 @@ import BlogItemHeader from '../components/BlogItemHeader'
 import BlogItemBody from '../components/BlogItemBody'
 import AuthorWrapper from '../components/AuthorWrapper'
 import Contact from '../components/contact'
-import { Container } from '../components/Container'
 import { useIntl } from 'gatsby-plugin-intl'
 
 const BlogItemTemplate = ({ data }) => {
@@ -54,7 +53,7 @@ const BlogItemTemplate = ({ data }) => {
         lang={intl.formatMessage({ id: 'lang' })}
       />
 
-      <Container>
+      <div className="container">
         <BlogItemHeader
           image={blogItem.image.childImageSharp.fluid}
           title={title[intl.formatMessage({ id: 'lang' })]}
@@ -69,7 +68,7 @@ const BlogItemTemplate = ({ data }) => {
           bio={bio[intl.formatMessage({ id: 'lang' })]}
           socialLinks={blogItemAuthor.social}
         />
-      </Container>
+      </div>
       <Contact />
     </Layout>
   )

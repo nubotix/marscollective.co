@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-import { Container } from '../../components/Container'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
 const Blog = () => {
@@ -54,7 +53,7 @@ const Blog = () => {
   const items = allMarkdownRemark.edges
 
   return (
-    <Container id={intl.formatMessage({ id: 'nav.blog.url' })}>
+    <div className="container" id={intl.formatMessage({ id: 'nav.blog.url' })}>
       <h2 data-sal="slide-up">
         <FormattedMessage id="blog.title" />
       </h2>
@@ -63,7 +62,7 @@ const Blog = () => {
           <Div fluid={node.frontmatter.image.childImageSharp.fluid} key={i} />
         ))}
       </Wrapper>
-    </Container>
+    </div>
   )
 }
 

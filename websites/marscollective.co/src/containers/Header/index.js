@@ -3,11 +3,10 @@ import Headroom from 'react-headroom'
 
 import Nav from '../../components/Nav'
 import * as S from './styled'
-import { ContainerNM as Container } from '../../components/Container'
 
 const Header = () => (
   <Headroom>
-    <Container>
+    <div className="container">
       <S.Wrapper
         data-sal="slide-up"
         data-sal-delay="300"
@@ -16,7 +15,7 @@ const Header = () => (
         <S.LogoSVG />
         <Nav />
       </S.Wrapper>
-    </Container>
+    </div>
   </Headroom>
 )
 

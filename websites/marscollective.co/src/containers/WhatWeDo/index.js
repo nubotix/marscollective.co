@@ -5,14 +5,16 @@ import weDevelop from '../../images/weDevelop.svg'
 import weWrite from '../../images/weWrite.svg'
 import weLocalize from '../../images/weLocalize.svg'
 import * as S from './styled'
-import { Container } from '../../components/Container'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
 const WhatWeDo = () => {
   const intl = useIntl()
 
   return (
-    <Container id={intl.formatMessage({ id: 'nav.services.url' })}>
+    <div
+      className="container"
+      id={intl.formatMessage({ id: 'nav.services.url' })}
+    >
       <S.Wrapper>
         <h2 data-sal="slide-up">
           <FormattedMessage id="services.title" />
@@ -70,7 +72,7 @@ const WhatWeDo = () => {
           </S.Item>
         </S.Itens>
       </S.Wrapper>
-    </Container>
+    </div>
   )
 }
 

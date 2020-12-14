@@ -1,7 +1,6 @@
 import React from 'react'
 
 import * as S from './styled'
-import { Container } from '../../components/Container'
 import Video from '../../components/Video'
 import WorkItemDescription from '../../components/WorkItemDescription'
 
@@ -14,7 +13,7 @@ const PortfolioItem = ({
   team,
   date
 }) => (
-  <Container>
+  <div className="container">
     <S.Wrapper>
       <S.ImageWrapper>
         {content && (
@@ -36,7 +35,7 @@ const PortfolioItem = ({
         />
       </S.DescriptionWrapper>
     </S.Wrapper>
-  </Container>
+  </div>
 )
 
 export default PortfolioItem

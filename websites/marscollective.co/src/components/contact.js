@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Social from './Social'
 import ContactForm from './contact-form'
-import { Container } from './Container'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 import { BiEnvelope, BiPhone } from 'react-icons/bi'
 
@@ -30,7 +29,10 @@ const Contact = () => {
   const socialLinks = markdownRemark.frontmatter
 
   return (
-    <Container id={intl.formatMessage({ id: 'nav.contact.url' })}>
+    <div
+      className="container"
+      id={intl.formatMessage({ id: 'nav.contact.url' })}
+    >
       <div className="grid gap-16 lg:grid-cols-2 md:p-8 lg:p-16 rounded-3xl lg:bg-gray">
         <div className="self-center">
           <h2 className="text text-left" data-sal="slide-up">
@@ -44,7 +46,7 @@ const Contact = () => {
         </div>
         <ContactForm data-sal="slide-up" />
       </div>
-    </Container>
+    </div>
   )
 }
 

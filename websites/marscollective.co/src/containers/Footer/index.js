@@ -2,10 +2,9 @@ import React from 'react'
 
 import Nav from '../../components/Nav'
 import * as S from './styled'
-import { Container } from '../../components/Container'
 
 const Footer = () => (
-  <Container>
+  <div className="container">
     <S.Wrapper>
       <S.LogoSVG data-sal="slide-up" />
       <S.NavWrapper>
@@ -15,7 +14,7 @@ const Footer = () => (
         Mars Collective <S.CopyleftIcon /> 2020
       </S.CopyLeft>
     </S.Wrapper>
-  </Container>
+  </div>
 )
 
 export default Footer

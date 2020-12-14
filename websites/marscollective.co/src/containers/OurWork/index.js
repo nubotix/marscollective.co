@@ -7,7 +7,6 @@ import SocialMedia from '../../components/WorkQueries/SocialMedia'
 import Audiovisual from '../../components/WorkQueries/Audiovisual'
 
 import * as S from './styled'
-import { Container } from '../../components/Container'
 import Button from '../../components/button'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
@@ -15,7 +14,10 @@ const OurWork = () => {
   const intl = useIntl()
 
   return (
-    <Container id={intl.formatMessage({ id: 'nav.portfolio.url' })}>
+    <div
+      className="container"
+      id={intl.formatMessage({ id: 'nav.portfolio.url' })}
+    >
       <S.Wrapper>
         <S.ItemsWrapper>
           <h2 data-sal="slide-up">
@@ -72,7 +74,7 @@ const OurWork = () => {
           </S.ImagesWrapper>
         </div>
       </S.Wrapper>
-    </Container>
+    </div>
   )
 }
 
