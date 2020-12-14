@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Logo from '../../images/logo.svg'
-import { Copyleft } from '@styled-icons/remix-line/Copyleft'
+import { RiCopyleftLine } from 'react-icons/ri'
 
 export const Wrapper = styled.footer`
   display: flex;
@@ -29,7 +29,7 @@ export const CopyLeft = styled.div`
   font-weight: 600;
 `
 
-export const CopyleftIcon = styled(Copyleft)`
+export const CopyleftIcon = styled(RiCopyleftLine)`
   width: 12px;
   margin-top: -2px;
 `
