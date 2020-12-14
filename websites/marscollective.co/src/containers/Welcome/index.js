@@ -4,8 +4,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import Image from '../../images/welcome.svg'
 import * as S from './styled'
 import { Container } from '../../components/Container'
-// import { Button, ButtonGhost } from '../../components/Buttons'
-import { Button } from '../../components/Buttons'
+import Button from '../../components/button'
 import { baseURL } from '../../utils'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
@@ -52,21 +51,26 @@ const Welcome = () => {
               }
               alt={intl.formatMessage({ id: 'welcome.primaryButton.label' })}
             >
-              <Button>
-                <FormattedMessage id="welcome.primaryButton.label" />
-              </Button>
+              <Button
+                label={intl.formatMessage({
+                  id: 'welcome.primaryButton.label'
+                })}
+                primary
+              />
             </AnchorLink>
-            {/* <AnchorLink
+            <AnchorLink
               to={
                 baseURL[intl.formatMessage({ id: 'lang' })] +
                 intl.formatMessage({ id: 'welcome.ghostButton.url' })
               }
               alt={intl.formatMessage({ id: 'welcome.ghostButton.url' })}
             >
-              <ButtonGhost>
-                <FormattedMessage id="welcome.ghostButton.label" />
-              </ButtonGhost>
-            </AnchorLink> */}
+              <Button
+                label={intl.formatMessage({
+                  id: 'welcome.ghostButton.label'
+                })}
+              />
+            </AnchorLink>
           </S.ButtonsWrapper>
         </S.TextWrapper>
       </S.Wrapper>

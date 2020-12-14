@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ContactInputs from '../ContactInputs'
 import * as S from './styled'
-import { ButtonGhostWhite } from '../Buttons'
+import Button from '../button'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
 class ContactForm extends Component {
@@ -38,7 +38,6 @@ class ContactForm extends Component {
 
   render() {
     const { message } = this.state
-
     return (
       <S.Wrapper>
         <S.Title>
@@ -53,9 +52,8 @@ class ContactForm extends Component {
             <S.Alert>
               {message ? <FormattedMessage id="contact.form.success" /> : ''}
             </S.Alert>
-            <ButtonGhostWhite type="submit" id="sendMail">
-              <FormattedMessage id="contact.form.button" />
-            </ButtonGhostWhite>
+            {/* <FormattedMessage id="contact.form.button" /> */}
+            <Button label="CONSERTAR" type="submit" id="sendMail" />
           </S.SubmitWrapper>
         </S.Form>
       </S.Wrapper>

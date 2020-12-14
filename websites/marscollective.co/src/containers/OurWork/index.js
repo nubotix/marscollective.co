@@ -8,7 +8,7 @@ import Audiovisual from '../../components/WorkQueries/Audiovisual'
 
 import * as S from './styled'
 import { Container } from '../../components/Container'
-import { Button } from '../../components/Buttons'
+import Button from '../../components/button'
 import { useIntl, FormattedMessage } from 'gatsby-plugin-intl'
 
 const OurWork = () => {
@@ -45,9 +45,12 @@ const OurWork = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button data-sal="slide-up">
-                <FormattedMessage id="portfolio.button.label" />
-              </Button>
+              <Button
+                label={intl.formatMessage({
+                  id: 'portfolio.button.label'
+                })}
+                primary
+              />
             </a>
           </S.ItemsListWrapper>
         </S.ItemsWrapper>
