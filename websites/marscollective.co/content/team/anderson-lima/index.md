@@ -8,7 +8,8 @@ position:
   es: Social Strategist
   pt: Social Strategist
 bio:
-  en: A brazilian strategist working in digital media and planning. I help brands
+  en:
+    A brazilian strategist working in digital media and planning. I help brands
     connect with their target audience by developing marketing strategies and
     managing ad campaigns.
   es: Um publicitário iguaçuense apaixonado por mídias digitais e planejamento.

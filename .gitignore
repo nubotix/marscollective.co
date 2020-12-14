@@ -14,6 +14,9 @@ node_modules
 .cache
 public
 
+# Storybook files
+storybook-static
+
 # Mac files
 .DS_Store
 

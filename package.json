@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "dev": "yarn workspace @marscollective/gatsby-theme-marscollective dev",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx,yaml,yml}\""
   },
   "devDependencies": {
     "lerna": "3.22.1",
