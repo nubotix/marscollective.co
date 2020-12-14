@@ -57,13 +57,13 @@ const BlogItemTemplate = ({ data }) => {
         <BlogItemHeader
           image={blogItem.image.childImageSharp.fluid}
           title={title[intl.formatMessage({ id: 'lang' })]}
-          avatar={blogItemAuthor.image.childImageSharp.fixed}
+          avatar={blogItemAuthor.image.childImageSharp.fluid}
           author={blogItem.author}
           date={dataLocale[intl.formatMessage({ id: 'lang' })]}
         />
         <BlogItemBody html={body[intl.formatMessage({ id: 'lang' })]} />
         <AuthorWrapper
-          avatar={blogItemAuthor.image.childImageSharp.fixed}
+          avatar={blogItemAuthor.image.childImageSharp.fluid}
           author={blogItem.author}
           bio={bio[intl.formatMessage({ id: 'lang' })]}
           socialLinks={blogItemAuthor.social}
@@ -134,8 +134,8 @@ export const query = graphql`
       frontmatter {
         image {
           childImageSharp {
-            fixed(width: 160, quality: 100) {
-              ...GatsbyImageSharpFixed_withWebp
+            fluid(maxWidth: 160, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

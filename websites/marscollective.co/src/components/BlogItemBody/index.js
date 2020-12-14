@@ -1,9 +1,8 @@
 import React from 'react'
 
-import * as S from './styled'
-
 const BlogItemBody = ({ html }) => (
-  <S.Body
+  <div
+    className="m-16"
     dangerouslySetInnerHTML={{
       __html: html
     }}
