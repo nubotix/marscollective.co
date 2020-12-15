@@ -1,5 +1,5 @@
 {
-  "name": "@marscollective/style-system-phobos",
+  "name": "@marscollective/phobos",
   "version": "0.0.0-alpha.1",
   "main": "index.js",
   "license": "MIT",
