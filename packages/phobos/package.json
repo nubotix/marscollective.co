@@ -1,7 +1,7 @@
 {
   "name": "@marscollective/phobos",
   "version": "0.0.0-alpha.1",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.10",

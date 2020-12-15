@@ -590,7 +590,7 @@ collections:
                 'Site',
                 'Telegram',
                 'Twitter',
-                'WhatsApp',
+                'WhatsApp'
               ]
 
           - label: 'URL'
@@ -643,7 +643,7 @@ collections:
                     'Messenger',
                     'Telegram',
                     'Twitter',
-                    'WhatsApp',
+                    'WhatsApp'
                   ]
 
               - label: 'URL'
