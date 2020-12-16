@@ -13,13 +13,22 @@ module.exports = () => {
       desc: metadata.desc,
       phone: metadata.phone,
       email: metadata.email,
-      // siteUrl: metadata.siteUrl,
+      siteUrl: metadata.siteUrl,
       social: metadata.social
     },
     plugins: [
       {
         resolve: `@marscollective/gatsby-theme-core`,
         options: { contentPath, favicon, metadata }
+      },
+      {
+        resolve: `gatsby-plugin-postcss`,
+        options: {
+          postCssPlugins: [
+            require(`tailwindcss`)(`${__dirname}/tailwind.config.js`),
+            require(`autoprefixer`)
+          ]
+        }
       }
     ]
   }
