@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const reset = `m-0 p-0`
 const baseBigger = `font-black font-heading uppercase`
@@ -22,6 +23,14 @@ export const H1 = ({ bigger, center, children, mb, mt }) => (
   </h1>
 )
 
+H1.propTypes = {
+  bigger: PropTypes.bool,
+  center: PropTypes.bool,
+  children: PropTypes.element.isRequired,
+  mb: PropTypes.number,
+  mt: PropTypes.number
+}
+
 export const H2 = ({ center, children, mint, mb, mt }) => (
   <h2
     className={`${reset} ${baseBigger} mt-${mt} mb-${mb} ${isCenter(
@@ -31,6 +40,14 @@ export const H2 = ({ center, children, mint, mb, mt }) => (
     {children}
   </h2>
 )
+
+H2.propTypes = {
+  center: PropTypes.bool,
+  children: PropTypes.element.isRequired,
+  mint: PropTypes.bool,
+  mb: PropTypes.number,
+  mt: PropTypes.number
+}
 
 export const H3 = ({ center, children, mint, mb, mt }) => (
   <h3
@@ -42,6 +59,14 @@ export const H3 = ({ center, children, mint, mb, mt }) => (
   </h3>
 )
 
+H3.propTypes = {
+  center: PropTypes.bool,
+  children: PropTypes.element.isRequired,
+  mint: PropTypes.bool,
+  mb: PropTypes.number,
+  mt: PropTypes.number
+}
+
 export const H4 = ({ center, children, mint, mb, mt }) => (
   <h4
     className={`${reset} ${base} mt-${mt} mb-${mb} ${isCenter(center)} ${isMint(
@@ -51,6 +76,14 @@ export const H4 = ({ center, children, mint, mb, mt }) => (
     {children}
   </h4>
 )
+
+H4.propTypes = {
+  center: PropTypes.bool,
+  children: PropTypes.element.isRequired,
+  mint: PropTypes.bool,
+  mb: PropTypes.number,
+  mt: PropTypes.number
+}
 
 export const Lead = ({ center, children, mint, mb, mt }) => (
   <p
@@ -62,3 +95,11 @@ export const Lead = ({ center, children, mint, mb, mt }) => (
     {children}
   </p>
 )
+
+Lead.propTypes = {
+  center: PropTypes.bool,
+  children: PropTypes.element.isRequired,
+  mint: PropTypes.bool,
+  mb: PropTypes.number,
+  mt: PropTypes.number
+}

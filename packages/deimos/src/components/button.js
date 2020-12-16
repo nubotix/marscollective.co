@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Button = ({ label, link, primary, small, ...props }) => (
   <a href={link} alt={label}>
@@ -18,3 +19,10 @@ const Button = ({ label, link, primary, small, ...props }) => (
 )
 
 export default Button
+
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  primary: PropTypes.bool,
+  small: PropTypes.bool
+}
