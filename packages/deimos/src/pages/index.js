@@ -4,7 +4,7 @@ import { H1 } from '../components/heading'
 
 const IndexPage = () => (
   <Layout>
-    <H1>Hello</H1>
+    <H1 >Hello</H1>
   </Layout>
 )
 
