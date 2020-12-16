@@ -14,12 +14,13 @@
     "react-dom": "^16.14.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.1.2",
+    "@emotion/styled": "^11.0.0",
     "@marscollective/gatsby-theme-core": "^0.2.3",
-    "autoprefixer": "^10.1.0",
-    "gatsby-plugin-postcss": "^3.4.0",
-    "postcss": "^8.2.1",
+    "gatsby-plugin-emotion": "^5.1.0",
     "prop-types": "^15.7.2",
     "tailwindcss": "^2.0.2",
+    "twin.macro": "^2.0.7",
     "typeface-baloo-2": "^1.1.13",
     "typeface-rubik": "^1.1.13"
   }

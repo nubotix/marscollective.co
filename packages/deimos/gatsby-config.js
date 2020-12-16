@@ -21,15 +21,7 @@ module.exports = () => {
         resolve: `@marscollective/gatsby-theme-core`,
         options: { contentPath, favicon, metadata }
       },
-      {
-        resolve: `gatsby-plugin-postcss`,
-        options: {
-          postCssPlugins: [
-            require(`tailwindcss`)(`${__dirname}/tailwind.config.js`),
-            require(`autoprefixer`)
-          ]
-        }
-      }
+      `gatsby-plugin-emotion`
     ]
   }
 }
