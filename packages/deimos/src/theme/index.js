@@ -7,7 +7,7 @@ module.exports = {
     'mint-light': '#8cfff1'
   },
   fonts: {
-    body: 'Baloo 2, sans-serif',
+    body: '"Baloo 2", sans-serif',
     heading: 'Rubik, sans-serif'
   }
 }
