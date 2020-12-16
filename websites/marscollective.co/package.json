@@ -2,10 +2,10 @@
   "name": "marscollective.co",
   "version": "2.0.0-alpha.1",
   "dependencies": {
-    "@marscollective/deimos": "*",
-    "gatsby": "^2.28.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@marscollective/deimos": "0.0.1",
+    "gatsby": "^2.29.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "license": "0BSD",
   "scripts": {
