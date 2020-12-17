@@ -6,7 +6,15 @@
     "websites/*"
   ],
   "scripts": {
-    "dev": "yarn workspace @marscollective/gatsby-theme-marscollective dev",
+    "main:dev": "yarn workspace marscollective.co dev",
+    "main:build": "yarn workspace marscollective.co build",
+    "main:clean": "yarn workspace marscollective.co clean",
+    "main:deploy": "yarn workspace links.marscollective.co deploy",
+    "link-free:dev": "yarn workspace links.marscollective.co dev",
+    "link-free:build": "yarn workspace links.marscollective.co build",
+    "link-free:deploy": "yarn workspace links.marscollective.co deploy",
+    "build": "run-s main:build link-free:build",
+    "deploy": "run-s main:deploy link-free:deploy",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx,yaml,yml}\""
   },
   "devDependencies": {
