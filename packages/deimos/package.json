@@ -5,10 +5,6 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@storybook/addon-actions": "^6.1.11",
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/addon-links": "^6.1.11",
-    "@storybook/react": "^6.1.11",
     "babel-loader": "^8.2.2",
     "gatsby": "^2.29.0",
     "react": "^16.14.0",
@@ -23,15 +19,12 @@
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
     "@marscollective/gatsby-theme-core": "^0.2.3",
+    "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-emotion": "^5.1.0",
     "prop-types": "^15.7.2",
     "tailwindcss": "^2.0.2",
     "twin.macro": "^2.0.7",
     "typeface-baloo-2": "^1.1.13",
     "typeface-rubik": "^1.1.13"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
   }
 }

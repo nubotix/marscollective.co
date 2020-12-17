@@ -21,7 +21,15 @@ module.exports = () => {
         resolve: `@marscollective/gatsby-theme-core`,
         options: { contentPath, favicon, metadata }
       },
-      `gatsby-plugin-emotion`
+      `gatsby-plugin-emotion`,
+      {
+        resolve: `gatsby-plugin-alias-imports`,
+        options: {
+          alias: {
+            '@components': `${__dirname}/src/components`
+          }
+        }
+      }
     ]
   }
 }
