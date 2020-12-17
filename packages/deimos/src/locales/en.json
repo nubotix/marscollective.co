@@ -1,0 +1,71 @@
+{
+  "lang": "en",
+  "nav": {
+    "home": {
+      "label": "Home",
+      "url": "home"
+    },
+    "services": {
+      "label": "What we do",
+      "url": "what-we-do"
+    },
+    "portfolio": {
+      "label": "Our work",
+      "url": "our-work"
+    },
+    "about": {
+      "label": "Who we are",
+      "url": "who-we-are"
+    },
+    "blog": {
+      "label": "Blog",
+      "url": "blog"
+    },
+    "contact": {
+      "label": "Contact",
+      "url": "contact"
+    }
+  },
+  "welcome": {
+    "title": "We are",
+    "lead": "A collective of creative minds located in Brazil with an international mindset.",
+    "primaryButton": {
+      "label": "Get in touch",
+      "url": "#contact"
+    },
+    "ghostButton": {
+      "label": "Our work",
+      "url": "#our-work"
+    }
+  },
+  "portfolio": {
+    "title": "Our work",
+    "items": {
+      "all": "All",
+      "webDesign": "Web design",
+      "branding": "Branding",
+      "socialMedia": "Social media",
+      "audiovisual": "Audiovisual"
+    },
+    "button": {
+      "label": "View more",
+      "url": ""
+    },
+    "itemPage": {
+      "role": "Role",
+      "team": "Team",
+      "finishedDate": "Finished date"
+    }
+  },
+  "contact": {
+    "title": "Let's build amazing things together",
+    "form": {
+      "title": "Contact us",
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "button": "Send",
+      "success": "Message sent successfully."
+    }
+  }
+}

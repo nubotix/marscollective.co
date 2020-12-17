@@ -5,21 +5,18 @@ import Container from './container'
 import { Bigger, H1, Lead } from './heading'
 import Button from './button'
 
-const Wrapper = tw.div`grid gap-8`
-const Buttons = tw.div`flex flex-wrap justify-center space-y-6`
-
 const Hero = ({ bigger, buttonPrimary, buttonSecondary, lead, title }) => (
   <Container>
-    <Wrapper>
+    <div css={[tw`grid gap-8`]}>
       <H1 center>
         {title} <Bigger mint>{bigger}</Bigger>
       </H1>
       <Lead center>{lead}</Lead>
-      <Buttons>
-        <Button primary>{buttonPrimary}</Button>
-        <Button>{buttonSecondary}</Button>
-      </Buttons>
-    </Wrapper>
+      <div css={[tw`flex flex-wrap justify-center space-y-6`]}>
+        <Button primary label={buttonPrimary} />
+        <Button label={buttonSecondary} />
+      </div>
+    </div>
   </Container>
 )
 

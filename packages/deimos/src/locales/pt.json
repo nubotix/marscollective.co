@@ -1,0 +1,78 @@
+{
+  "lang": "pt",
+  "nav": {
+    "home": {
+      "label": "Início",
+      "url": "inicio"
+    },
+    "services": {
+      "label": "O que fazemos",
+      "url": "que-fazemos"
+    },
+    "portfolio": {
+      "label": "Nosso trabalho",
+      "url": "nosso-trabalho"
+    },
+    "about": {
+      "label": "Quem somos",
+      "url": "quem-somos"
+    },
+    "blog": {
+      "label": "Blog",
+      "url": "blog"
+    },
+    "contact": {
+      "label": "Contato",
+      "url": "contato"
+    }
+  },
+  "welcome": {
+    "title": "Somos a",
+    "lead": "Um coletivo de mentes criativas localizado no Brasil com um mindset internacional.",
+    "primaryButton": {
+      "label": "Entre em contato",
+      "url": "#contato"
+    },
+    "ghostButton": {
+      "label": "Nosso trabalho",
+      "url": "#our-work"
+    }
+  },
+  "portfolio": {
+    "title": "Nosso trabalho",
+    "items": {
+      "all": "Tudo",
+      "webDesign": "Web design",
+      "branding": "Branding",
+      "socialMedia": "Social media",
+      "audiovisual": "Audiovisual"
+    },
+    "button": {
+      "label": "Ver mais",
+      "url": ""
+    },
+    "itemPage": {
+      "role": "Categoria",
+      "team": "Equipe",
+      "finishedDate": "Data de entrega"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "button": {
+      "label": "View more",
+      "url": ""
+    }
+  },
+  "contact": {
+    "title": "Vamos criar coisas incríveis juntos",
+    "form": {
+      "title": "Entre em contato",
+      "name": "Seu nome",
+      "email": "Seu email",
+      "message": "Sua mensagem",
+      "button": "Enviar",
+      "success": "Mensagem enviada com sucesso."
+    }
+  }
+}

@@ -1,10 +1,9 @@
 import tw, { styled } from 'twin.macro'
 
-const Container = styled.section(({ higher, noMargin, noPadding }) => [
+const Container = styled.section(({ higher, noMargin }) => [
   tw`container my-16`,
   higher && tw`my-32`,
-  noMargin && tw`my-0`,
-  noPadding && tw`px-0`
+  noMargin && tw`my-0`
 ])
 
 export default Container
