@@ -1,4 +1,5 @@
 const fs = require(`fs`)
+const path = require(`path`)
 const yaml = require(`js-yaml`)
 
 module.exports = () => {
@@ -24,10 +25,10 @@ module.exports = () => {
       {
         resolve: `gatsby-plugin-intl`,
         options: {
-          path: `${__dirname}/src/locales`,
+          path: path.resolve(`./content/locales`),
           languages: [`en`, `es`, `pt`],
           defaultLanguage: `en`,
-          redirect: true
+          redirect: false
         }
       },
       `gatsby-plugin-emotion`,
