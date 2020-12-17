@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import tw from 'twin.macro'
-import { H3, Lead } from './heading'
+import { H3, Lead } from '@components/heading'
 
 const TeamMember = ({ image, member, position }) => {
   return (

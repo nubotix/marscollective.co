@@ -4,8 +4,8 @@ import Hero from '@components/hero'
 import Services from '@components/services'
 import Team from '@components/team'
 import Contact from '@components/contact'
-import useTeam from '../hooks/use-team'
-import useServices from '../hooks/use-services'
+import useTeam from '@hooks/use-team'
+import useServices from '@hooks/use-services'
 
 const IndexPage = () => (
   <Layout>

@@ -1,6 +1,6 @@
 import tw, { css } from 'twin.macro'
 
-const Base = css`
+const Theme = css`
   :root {
     --darker: #262626;
     --dark: #353535;
@@ -16,4 +16,4 @@ const Base = css`
   }
 `
 
-export default Base
+export default Theme

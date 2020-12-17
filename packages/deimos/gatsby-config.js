@@ -36,7 +36,9 @@ module.exports = () => {
         resolve: `gatsby-plugin-alias-imports`,
         options: {
           alias: {
-            '@components': `${__dirname}/src/components`
+            '@components': `${__dirname}/src/components`,
+            '@hooks': `${__dirname}/src/hooks`,
+            '@theme': `${__dirname}/src/theme`
           }
         }
       }

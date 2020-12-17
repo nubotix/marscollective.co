@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import tw from 'twin.macro'
-import Container from './container'
-import { Bigger, H1, Lead } from './heading'
-import Button from './button'
+import Container from '@components/container'
+import { Bigger, H1, Lead } from '@components/heading'
+import Button from '@components/button'
 
 const Hero = ({ bigger, buttonPrimary, buttonSecondary, lead, title }) => (
   <Container>

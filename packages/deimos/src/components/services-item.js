@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import tw from 'twin.macro'
-import { H3 } from './heading'
+import { H3 } from '@components/heading'
 
 const ServicesItem = ({ content, image, title }) => (
   <div css={[tw`grid gap-4 justify-items-center`]}>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 import tw from 'twin.macro'
-import Container from './container'
-import { H2 } from './heading'
-import TeamMember from './team-member'
+import Container from '@components/container'
+import { H2 } from '@components/heading'
+import TeamMember from '@components/team-member'
 
 const Team = ({ teamData }) => {
   const intl = useIntl()
