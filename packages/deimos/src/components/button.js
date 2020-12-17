@@ -6,7 +6,7 @@ const Button = styled.button(({ primary, small }) => [
   primary
     ? tw`bg-mint hover:bg-mint-light text-darker border-transparent`
     : tw`bg-transparent text-white hover:text-mint-light border-white hover:border-mint-light`,
-  small ? tw`py-3 px-6` : tw`py-4 px-8`
+  small ? tw`py-3 px-6` : tw`py-3 px-6 md:py-4 px-8`
 ])
 
 export default Button

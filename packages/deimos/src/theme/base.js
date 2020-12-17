@@ -12,7 +12,7 @@ const Base = css`
     --font-heading: Rubik, sans-serif;
   }
   body {
-    ${tw`bg-dark font-body text-white m-16`}
+    ${tw`bg-darker font-body text-white m-4`}
   }
 `
 
