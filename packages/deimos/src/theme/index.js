@@ -2,6 +2,7 @@ import tw, { css } from 'twin.macro'
 
 const Theme = css`
   :root {
+    --default: #ffffff;
     --darker: #262626;
     --dark: #353535;
     --mint: #00d1b7;

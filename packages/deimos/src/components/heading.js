@@ -16,7 +16,7 @@ function hasMint(mint) {
 export const H1 = styled.h1(({ center, mint }) => [
   reset,
   baseBigger,
-  tw`text-4xl`,
+  tw`text-4xl sm:text-5xl md:text-6xl`,
   hasCenter(center),
   hasMint(mint)
 ])
@@ -30,7 +30,7 @@ H1.propTypes = {
 export const Bigger = styled.span(({ center, mint }) => [
   reset,
   baseBigger,
-  tw`text-7xl block`,
+  tw`text-7xl sm:text-8xl md:text-9xl block`,
   hasCenter(center),
   hasMint(mint)
 ])
@@ -44,7 +44,7 @@ Bigger.propTypes = {
 export const H2 = styled.h2(({ center, mint }) => [
   reset,
   baseBigger,
-  tw`text-3xl`,
+  tw`text-3xl md:text-4xl lg:text-5xl`,
   hasCenter(center),
   hasMint(mint)
 ])
@@ -57,7 +57,7 @@ H2.propTypes = {
 export const H3 = styled.h3(({ center, mint }) => [
   reset,
   base,
-  tw`text-2xl`,
+  tw`text-2xl lg:text-3xl`,
   hasCenter(center),
   hasMint(mint)
 ])
@@ -83,7 +83,7 @@ H4.propTypes = {
 export const Lead = styled.p(({ center, mint }) => [
   reset,
   base,
-  tw`text-xl font-normal`,
+  tw`text-xl lg:text-2xl font-normal`,
   hasCenter(center),
   hasMint(mint)
 ])

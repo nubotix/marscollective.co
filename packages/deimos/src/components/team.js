@@ -14,11 +14,11 @@ const Team = ({ teamData }) => {
   }
   return (
     <Container>
-      <div css={[tw`space-y-8`]}>
+      <div css={[tw`space-y-8 sm:space-y-12 md:space-y-16 lg:space-y-20`]}>
         <H2 center mint>
           {title[intl.formatMessage({ id: 'lang' })]}
         </H2>
-        <div css={[tw`grid gap-8`]}>
+        <div css={[tw`grid gap-8 sm:grid-cols-2 lg:(grid-cols-4 gap-10)`]}>
           {teamData.members.map((member, i) => {
             const position = {
               en: member.position.en,

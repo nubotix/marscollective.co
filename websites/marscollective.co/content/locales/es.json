@@ -29,11 +29,11 @@
   "welcome": {
     "title": "Somos",
     "lead": "Un colectivo de mentes creativas localizado en Brasil, con una mentalidad internacional.",
-    "primaryButton": {
+    "buttonPrimary": {
       "label": "Entre en contacto",
       "url": "#contacto"
     },
-    "ghostButton": {
+    "buttonSecondary": {
       "label": "Nuestro trabajo",
       "url": "#nuestro-trabajo"
     }
@@ -79,7 +79,7 @@
       "email": "Su e-mail",
       "message": "Su mensaje",
       "button": "Enviar",
-      "success": "Mensaje enviado exitosamente."
+      "successMessage": "Mensaje enviado exitosamente."
     }
   }
 }

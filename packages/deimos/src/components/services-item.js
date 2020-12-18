@@ -6,7 +6,7 @@ import { H3 } from '@components/heading'
 const ServicesItem = ({ content, image, title }) => (
   <div css={[tw`grid gap-4 justify-items-center`]}>
     <img src={image} alt={title} css={[tw`w-40 h-40`]} />
-    <div>
+    <div css={[tw`md:space-y-2`]}>
       <H3 center mint>
         {title}
       </H3>

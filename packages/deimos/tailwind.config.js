@@ -9,12 +9,6 @@ const colors = {
 module.exports = {
   theme: {
     extend: {
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '1.5rem'
-        }
-      },
       backgroundColor: colors,
       borderColor: colors,
       fontFamily: {

@@ -29,11 +29,11 @@
   "welcome": {
     "title": "Somos a",
     "lead": "Um coletivo de mentes criativas localizado no Brasil com um mindset internacional.",
-    "primaryButton": {
+    "buttonPrimary": {
       "label": "Entre em contato",
       "url": "#contato"
     },
-    "ghostButton": {
+    "buttonSecondary": {
       "label": "Nosso trabalho",
       "url": "#our-work"
     }
@@ -72,7 +72,7 @@
       "email": "Seu email",
       "message": "Sua mensagem",
       "button": "Enviar",
-      "success": "Mensagem enviada com sucesso."
+      "successMessage": "Mensagem enviada com sucesso."
     }
   }
 }

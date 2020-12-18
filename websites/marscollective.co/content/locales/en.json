@@ -29,11 +29,11 @@
   "welcome": {
     "title": "We are",
     "lead": "A collective of creative minds located in Brazil with an international mindset.",
-    "primaryButton": {
+    "buttonPrimary": {
       "label": "Get in touch",
       "url": "#contact"
     },
-    "ghostButton": {
+    "buttonSecondary": {
       "label": "Our work",
       "url": "#our-work"
     }
@@ -65,7 +65,7 @@
       "email": "Your email",
       "message": "Your message",
       "button": "Send",
-      "success": "Message sent successfully."
+      "successMessage": "Message sent successfully."
     }
   }
 }
