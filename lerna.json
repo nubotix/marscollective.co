@@ -1,6 +1,7 @@
 {
-  "packages": ["packages/*"],
+  "packages": ["packages/*, websites/*"],
   "version": "independent",
+  "useWorkspaces": true,
   "command": {
     "publish": {
       "bump": "patch",
