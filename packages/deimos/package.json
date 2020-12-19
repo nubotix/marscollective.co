@@ -1,20 +1,10 @@
 {
   "name": "@marscollective/deimos",
-  "version": "0.0.1",
+  "author": "Mars Collective <hi@marscollective.co>",
+  "version": "2.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "babel-loader": "^8.2.2",
-    "gatsby": "^2.29.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
-  },
-  "peerDependencies": {
-    "gatsby": "^2.29.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
-  },
+  "license": "0BSD",
+  "private": true,
   "dependencies": {
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
@@ -34,5 +24,17 @@
     "twin.macro": "^2.0.7",
     "typeface-baloo-2": "^1.1.13",
     "typeface-rubik": "^1.1.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "gatsby": "^2.29.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.29.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   }
 }
