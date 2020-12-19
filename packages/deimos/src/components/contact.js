@@ -10,6 +10,7 @@ import ContactForm from '@components/contact-form'
 const Contact = ({
   button,
   email,
+  id,
   message,
   name,
   siteMetadata,
@@ -17,7 +18,7 @@ const Contact = ({
   title,
   titleForm
 }) => (
-  <Container>
+  <Container id={id}>
     <div
       css={[
         tw`grid gap-8 lg:(grid-cols-2 items-center bg-gray rounded-3xl p-16)`

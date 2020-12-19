@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { AnchorLink as Link } from 'gatsby-plugin-anchor-links'
 import tw, { css } from 'twin.macro'
 import {
   injectIntl,
@@ -10,27 +10,33 @@ import {
 const links = [
   {
     label: 'nav.home.label',
-    url: 'nav.home.url'
+    url: '', // Link to home
+    anchor: false
   },
   {
     label: 'nav.services.label',
-    url: 'nav.services.url'
+    url: 'nav.services.url',
+    anchor: true
   },
-  {
-    label: 'nav.portfolio.label',
-    url: 'nav.portfolio.url'
-  },
+  // {
+  //   label: 'nav.portfolio.label',
+  //   url: 'nav.portfolio.url',
+  //   anchor: true
+  // },
   {
     label: 'nav.about.label',
-    url: 'nav.about.url'
+    url: 'nav.about.url',
+    anchor: true
   },
   {
     label: 'nav.blog.label',
-    url: 'nav.blog.url'
+    url: 'nav.blog.url',
+    anchor: false
   },
   {
     label: 'nav.contact.label',
-    url: 'nav.contact.url'
+    url: 'nav.contact.url',
+    anchor: true
   }
 ]
 
@@ -58,12 +64,12 @@ const Nav = ({ intl }) => (
         tw`font-semibold list-none py-10 space-y-10 lg:(inline-flex py-0 space-y-0 space-x-8)`
       ]}
     >
-      {links.map(({ label, url }, i) => (
+      {links.map(({ anchor, label, url }, i) => (
         <li key={i}>
           <Link
-            to={`${
-              baseURL[intl.formatMessage({ id: 'lang' })]
-            }#${intl.formatMessage({ id: url })}`}
+            to={`${baseURL[intl.formatMessage({ id: 'lang' })]}${
+              anchor ? '#' : ''
+            }${url && intl.formatMessage({ id: url })}`}
             alt={intl.formatMessage({ id: label })}
             css={[tw`text-default hover:text-mint`]}
           >

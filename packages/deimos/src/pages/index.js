@@ -14,7 +14,7 @@ import useSiteMetadata from '@hooks/use-site-metadata'
 const IndexPage = () => {
   const intl = useIntl().formatMessage
   return (
-    <Layout>
+    <Layout id={intl({ id: 'nav.home.url' })}>
       <SEO lang={intl({ id: 'lang' })} />
       <Hero
         title={intl({ id: 'welcome.title' })}
@@ -24,10 +24,12 @@ const IndexPage = () => {
         buttonPrimaryUrl={intl({ id: 'welcome.buttonPrimary.url' })}
         buttonSecondary={intl({ id: 'welcome.buttonSecondary.label' })}
         buttonSecondaryUrl={intl({ id: 'welcome.buttonSecondary.url' })}
-        id={intl({ id: 'nav.home.url' })}
       />
-      <Services servicesData={useServices()} />
-      <Team teamData={useTeam()} />
+      <Services
+        servicesData={useServices()}
+        id={intl({ id: 'nav.services.url' })}
+      />
+      <Team teamData={useTeam()} id={intl({ id: 'nav.about.url' })} />
       <Contact
         title={intl({ id: 'contact.title' })}
         siteMetadata={useSiteMetadata()}
@@ -37,6 +39,7 @@ const IndexPage = () => {
         message={intl({ id: 'contact.form.message' })}
         button={intl({ id: 'contact.form.button' })}
         successMessage={intl({ id: 'contact.form.successMessage' })}
+        id={intl({ id: 'nav.contact.url' })}
       />
     </Layout>
   )

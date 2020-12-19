@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Container from '@components/container'
 import ServicesItem from '@components/services-item'
 
-const Services = ({ servicesData }) => {
+const Services = ({ id, servicesData }) => {
   const intl = useIntl().formatMessage
   const title = {
     en: servicesData.title.en,
@@ -12,7 +12,7 @@ const Services = ({ servicesData }) => {
     pt: servicesData.title.pt
   }
   return (
-    <Container>
+    <Container id={id}>
       <h2 className="center mint" data-sal="slide-up">
         {title[intl({ id: 'lang' })]}
       </h2>

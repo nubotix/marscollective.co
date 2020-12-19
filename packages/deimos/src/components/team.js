@@ -6,7 +6,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import Container from '@components/container'
 import TeamMember from '@components/team-member'
 
-const Team = ({ teamData }) => {
+const Team = ({ id, teamData }) => {
   const intl = useIntl().formatMessage
   const title = {
     en: teamData.title.en,
@@ -14,7 +14,7 @@ const Team = ({ teamData }) => {
     pt: teamData.title.pt
   }
   return (
-    <Container>
+    <Container id={id}>
       <h2 className="center mint" data-sal="slide-up">
         {title[intl({ id: 'lang' })]}
       </h2>
