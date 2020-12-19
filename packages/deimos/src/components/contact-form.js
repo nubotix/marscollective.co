@@ -44,13 +44,11 @@ const ContactForm = ({
           onChange={handleChange}
           required
         />
-        {success && <p>{successMessage}</p>}
-        {error && <p>Error</p>}
-        <Button
-          type="submit"
-          label={button}
-          css={[tw`text-white border-white`]}
-        />
+        <div css={[tw`flex items-center space-x-4 text-white`]}>
+          <Button type="submit" label={button} css={[tw`border-white`]} />
+          {success && <p>{successMessage}</p>}
+          {error && <p>An error occurred, please try again...</p>}
+        </div>
       </div>
     )}
   </NetlifyForm>
