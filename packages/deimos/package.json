@@ -1,7 +1,7 @@
 {
   "name": "@marscollective/deimos",
   "author": "Mars Collective <hi@marscollective.co>",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "license": "0BSD",
   "private": true,
