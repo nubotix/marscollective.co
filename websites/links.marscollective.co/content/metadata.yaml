@@ -1,7 +1,7 @@
-title: Link free
-shortTitle: Link free
+title: Mars Collective
+shortTitle: Mars
 siteUrl: https://themes.marscollective.co/link-free
-description: ''
+description: 'We are Mars, a collective of creative minds located in Brazil with an international mindset.'
 lang: en
 logo: logo.png
 favicon: favicon.png
@@ -12,5 +12,5 @@ colors:
   accent: '#262626'
   background: '#262626'
 tracking:
-  which: none
-  id: ''
+  which: gtm
+  id: GTM-TG7DCN7
