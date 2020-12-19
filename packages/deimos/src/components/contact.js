@@ -4,7 +4,6 @@ import tw from 'twin.macro'
 import { BiEnvelope, BiPhone } from 'react-icons/bi'
 
 import Container from '@components/container'
-import { H2 } from '@components/heading'
 import Social from '@components/social'
 import ContactForm from '@components/contact-form'
 
@@ -25,7 +24,7 @@ const Contact = ({
       ]}
     >
       <div>
-        <H2>{title}</H2>
+        <h2>{title}</h2>
         <div css={[tw`space-y-4`]}>
           <div css={[tw`flex gap-4`]}>
             <BiEnvelope size={20} />

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 import tw from 'twin.macro'
 
-import { H3 } from '@components/heading'
 import { Input, TextArea } from '@components/input'
 import Button from '@components/button'
 
@@ -18,7 +17,7 @@ const ContactForm = ({
   <NetlifyForm name="Form" action="/" honeypotName="bot-field">
     {({ handleChange, success, error }) => (
       <div css={[tw`bg-mint-secondary rounded-3xl p-6 space-y-4 lg:p-8`]}>
-        <H3 css={[tw`text-white`]}>{titleForm}</H3>
+        <h3 css={[tw`text-white`]}>{titleForm}</h3>
         <Honeypot />
         <Input
           type="text"

@@ -3,40 +3,36 @@ import PropTypes from 'prop-types'
 import tw from 'twin.macro'
 
 import Container from '@components/container'
-import { Bigger, H1, Lead } from '@components/heading'
 import Button from '@components/button'
 import Image from '../assets/welcome.svg'
 
 const Hero = ({ bigger, buttonPrimary, buttonSecondary, lead, title }) => (
   <Container>
     <div
-      css={[tw`grid gap-12 justify-items-center items-center lg:(grid-cols-2)`]}
+      css={[
+        tw`grid gap-12 justify-items-center items-center text-center lg:(grid-cols-2)`
+      ]}
     >
       <div css={[tw`space-y-8`]}>
-        <H1
-          center
-          data-sal="slide-up"
-          data-sal-delay="300"
-          data-sal-easing="ease"
-        >
-          {title}{' '}
-          <Bigger
-            mint
+        <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+          {title}
+          <span
+            className="mint"
             data-sal="slide-up"
             data-sal-delay="600"
             data-sal-easing="ease"
           >
             {bigger}
-          </Bigger>
-        </H1>
-        <Lead
-          center
+          </span>
+        </h1>
+        <p
+          className="lead"
           data-sal="slide-up"
           data-sal-delay="900"
           data-sal-easing="ease"
         >
           {lead}
-        </Lead>
+        </p>
         <div
           css={[tw`flex flex-wrap justify-center space-x-8`]}
           data-sal="slide-up"
