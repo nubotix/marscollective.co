@@ -7,7 +7,7 @@ module.exports = () => {
     fs.readFileSync(`content/metadata/index.yaml`, `utf8`)
   )
   const contentPath = `content`
-  const favicon = metadata.favicon ? `content/${metadata.favicon}` : ``
+  const favicon = metadata.favicon ? `content/metadata/${metadata.favicon}` : ``
   return {
     siteMetadata: {
       title: metadata.title,
