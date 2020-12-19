@@ -27,7 +27,7 @@ const Team = ({ teamData }) => {
           }
           return (
             <TeamMember
-              image={member.image.childImageSharp.fluid}
+              image={member.image}
               member={member.name}
               position={position[intl({ id: 'lang' })]}
               key={i}

@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
 import tw from 'twin.macro'
+
+import Avatar from '@components/avatar'
 
 const TeamMember = ({ image, member, position }) => (
   <div css={[tw`grid gap-4 justify-items-center`]} data-sal="slide-up">
-    <Img fluid={image} css={[tw`w-40 h-40 rounded-full`]} />
+    <Avatar image={image} alt={member} />
     <div>
       <h3 className="mint center">{member}</h3>
       <p className="lead center">{position}</p>
@@ -16,6 +17,7 @@ const TeamMember = ({ image, member, position }) => (
 export default TeamMember
 
 TeamMember.propTypes = {
+  image: PropTypes.object.isRequired,
   member: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired
 }
