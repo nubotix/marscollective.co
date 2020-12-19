@@ -1,0 +1,11 @@
+{
+  "packages": ["packages/*"],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "bump": "patch",
+      "conventionalCommits": true,
+      "message": "chore(release): 🔖 Publish"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "marscollective.co",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "yarn build && netlify deploy -p"
+  },
+  "dependencies": {
+    "@marscollective/deimos": "2.0.0",
+    "gatsby": "^2.29.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}

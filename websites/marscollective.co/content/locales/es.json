@@ -1,0 +1,90 @@
+{
+  "lang": "es",
+  "nav": {
+    "home": {
+      "label": "Inicio",
+      "url": "inicio"
+    },
+    "services": {
+      "label": "Qué hacemos",
+      "url": "que-hacemos"
+    },
+    "portfolio": {
+      "label": "Nuestro trabajo",
+      "url": "nuestro-trabajo"
+    },
+    "about": {
+      "label": "Quienes somos",
+      "url": "quienes-somos"
+    },
+    "blog": {
+      "label": "Blog",
+      "url": "blog"
+    },
+    "contact": {
+      "label": "Contacto",
+      "url": "contacto"
+    }
+  },
+  "welcome": {
+    "title": "Somos",
+    "lead": "Un colectivo de mentes creativas localizado en Brasil, con una mentalidad internacional.",
+    "buttonPrimary": {
+      "label": "Entre en contacto",
+      "url": "#contacto"
+    },
+    "buttonSecondary": {
+      "label": "Nuestro trabajo",
+      "url": "#nuestro-trabajo"
+    }
+  },
+  "portfolio": {
+    "title": "Nuestro trabajo",
+    "items": {
+      "all": "Todo",
+      "webDesign": "Diseño web",
+      "branding": "Branding",
+      "socialMedia": "Social media",
+      "audiovisual": "Audiovisual"
+    },
+    "button": {
+      "label": "Ver más",
+      "url": ""
+    },
+    "itemPage": {
+      "role": "Categoria",
+      "team": "Equipo",
+      "finishedDate": "Fecha de entrega"
+    }
+  },
+  "about": {
+    "title": "Quienes somos",
+    "button": {
+      "label": "Ver más",
+      "url": ""
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "button": {
+      "label": "View more",
+      "url": ""
+    }
+  },
+  "contact": {
+    "title": "Vamos a crear cosas increibles juntos",
+    "form": {
+      "title": "Entre en contacto",
+      "name": "Su nombre",
+      "email": "Su e-mail",
+      "message": "Su mensaje",
+      "button": "Enviar",
+      "successMessage": "Mensaje enviado exitosamente."
+    }
+  },
+  "notFoundPage": {
+    "title": "404:",
+    "message": "Parece que te perdiste...",
+    "button": "Volver a la página de inicio 🏠"
+  }
+}
