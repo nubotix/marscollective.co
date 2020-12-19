@@ -1,6 +1,6 @@
 {
   "name": "marscollective.co",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
@@ -10,7 +10,7 @@
     "deploy": "yarn build && netlify deploy -p"
   },
   "dependencies": {
-    "@marscollective/theme": "^2.0.1",
+    "@marscollective/theme": "^2.0.2",
     "gatsby": "^2.29.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"

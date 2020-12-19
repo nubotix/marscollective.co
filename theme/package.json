@@ -1,7 +1,7 @@
 {
   "name": "@marscollective/theme",
   "author": "Mars Collective <hi@marscollective.co>",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "index.js",
   "license": "0BSD",
   "private": true,
