@@ -7,7 +7,7 @@ const TeamMember = ({ image, member, position }) => (
   <div css={[tw`grid gap-4 justify-items-center`]}>
     <Img fluid={image} css={[tw`w-40 h-40 rounded-full`]} />
     <div>
-      <h2 className="mint center">{member}</h2>
+      <h3 className="mint center">{member}</h3>
       <p className="lead center">{position}</p>
     </div>
   </div>

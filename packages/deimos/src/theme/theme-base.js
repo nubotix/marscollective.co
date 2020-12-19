@@ -1,11 +1,6 @@
 import tw, { css } from 'twin.macro'
 
 const ThemeBase = css`
-  :root {
-    --font-default: 'Baloo 2', sans-serif;
-    --font-heading: Rubik, sans-serif;
-  }
-
   .light {
     --bg-default: #ffffff;
     --bg-gray: #f1f1f1;
@@ -31,19 +26,21 @@ const ThemeBase = css`
   }
 
   body {
+    --font-default: 'Baloo 2', sans-serif;
+    --font-heading: Rubik, sans-serif;
     ${tw`bg-default font-default text-default transition-colors`}
   }
 
   h1,
   h2 {
-    ${tw`font-black font-heading! uppercase`}
+    ${tw`font-black font-heading uppercase`}
   }
 
   h3,
   h4,
   h5,
   h6 {
-    ${tw`font-default! font-semibold leading-6`}
+    ${tw`font-default font-semibold leading-6`}
   }
 
   h1 {

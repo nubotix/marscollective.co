@@ -15,7 +15,7 @@ module.exports = {
         reverse: 'var(--color-reverse)'
       },
       fontFamily: {
-        default: 'var(--font-body)',
+        default: 'var(--font-default)',
         heading: 'var(--font-heading)'
       },
       textColor: {
