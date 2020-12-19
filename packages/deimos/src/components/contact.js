@@ -27,12 +27,14 @@ const Contact = ({
         <h2 data-sal="slide-up">{title}</h2>
         <div css={[tw`space-y-6 lg:space-y-4`]} data-sal="slide-up">
           <div css={[tw`flex space-x-6 lg:space-x-4`]}>
-            <BiEnvelope css={[tw`w-6 h-6 lg:(w-4 h-4)`]} />
-            <a href={`mailto:${siteMetadata.email}`}>{siteMetadata.email}</a>
+            <BiEnvelope css={[tw`w-6 h-6 lg:(w-4 h-4 mt-1)`]} />
+            <a href={`mailto:${siteMetadata.email}`} css={[tw`text-default`]}>
+              {siteMetadata.email}
+            </a>
           </div>
           <div css={[tw`flex space-x-6 lg:space-x-4`]}>
-            <BiPhone css={[tw`w-6 h-6 lg:(w-4 h-4)`]} />
-            <span>{siteMetadata.phone}</span>
+            <BiPhone css={[tw`w-6 h-6 lg:(w-4 h-4 mt-1)`]} />
+            <span css={[tw`text-default`]}>{siteMetadata.phone}</span>
           </div>
           <Social socialData={siteMetadata.social} />
         </div>

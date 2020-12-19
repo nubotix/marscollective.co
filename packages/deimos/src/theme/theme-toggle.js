@@ -13,12 +13,10 @@ const ThemeToggle = () => {
 
   return (
     <button
-      css={[
-        tw`focus:outline-none fill-current hover:text-mint transition duration-500`
-      ]}
+      css={[tw`focus:outline-none fill-current `]}
       onClick={() => setTheme(isDark() ? 'light' : 'dark')}
     >
-      {isDark() ? <BiSun size={20} /> : <BiMoon size={20} />}
+      {isDark() ? <BiSun size={22} /> : <BiMoon size={22} />}
     </button>
   )
 }

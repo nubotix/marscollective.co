@@ -47,46 +47,55 @@ const languageName = {
 }
 
 const Nav = ({ intl }) => (
-  <ul
+  <div
     css={[
-      tw`bg-default font-semibold list-none py-10 space-y-10 absolute lg:(bg-transparent w-auto inline-flex relative py-0 space-y-0 space-x-8)`,
+      tw`absolute bg-default transition-colors lg:(relative bg-transparent w-auto)`,
       css({ width: 'calc(100% - 3rem)' })
     ]}
   >
-    {links.map(({ label, url }, i) => (
-      <li css={[tw`transition-colors duration-500 hover:text-mint`]} key={i}>
-        <Link
-          to={`${
-            baseURL[intl.formatMessage({ id: 'lang' })]
-          }#${intl.formatMessage({ id: url })}`}
-          alt={intl.formatMessage({ id: label })}
-        >
-          {intl.formatMessage({ id: label })}
-        </Link>
+    <ul
+      css={[
+        tw`font-semibold list-none py-10 space-y-10 lg:(inline-flex py-0 space-y-0 space-x-8)`
+      ]}
+    >
+      {links.map(({ label, url }, i) => (
+        <li key={i}>
+          <Link
+            to={`${
+              baseURL[intl.formatMessage({ id: 'lang' })]
+            }#${intl.formatMessage({ id: url })}`}
+            alt={intl.formatMessage({ id: label })}
+            css={[tw`text-default hover:text-mint`]}
+          >
+            {intl.formatMessage({ id: label })}
+          </Link>
+        </li>
+      ))}
+      <li>
+        <ul css={[tw`flex space-x-4`]}>
+          <IntlContextConsumer>
+            {({ languages, language: currentLocale }) =>
+              languages.map(language => (
+                <li
+                  key={language}
+                  onClick={() => changeLocale(language)}
+                  aria-hidden="true"
+                  css={[
+                    tw`hover:text-mint duration-500 cursor-pointer`,
+                    currentLocale === language
+                      ? tw`text-mint`
+                      : tw`text-default`
+                  ]}
+                >
+                  {languageName[language]}
+                </li>
+              ))
+            }
+          </IntlContextConsumer>
+        </ul>
       </li>
-    ))}
-    <li>
-      <ul css={[tw`flex space-x-4`]}>
-        <IntlContextConsumer>
-          {({ languages, language: currentLocale }) =>
-            languages.map(language => (
-              <li
-                key={language}
-                onClick={() => changeLocale(language)}
-                aria-hidden="true"
-                css={[
-                  tw`hover:text-mint transition duration-500 cursor-pointer`,
-                  currentLocale === language ? tw`text-mint` : tw`text-default`
-                ]}
-              >
-                {languageName[language]}
-              </li>
-            ))
-          }
-        </IntlContextConsumer>
-      </ul>
-    </li>
-  </ul>
+    </ul>
+  </div>
 )
 
 export default injectIntl(Nav)

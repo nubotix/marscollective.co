@@ -17,7 +17,7 @@ const Header = () => {
       data-sal-delay="300"
       data-sal-easing="ease"
     >
-      <header css={[tw`flex`]}>
+      <header css={[tw`flex justify-between`]}>
         <nav css={[tw`lg:(flex justify-between w-full)`]}>
           <div css={[tw`flex`]}>
             <button
@@ -34,14 +34,14 @@ const Header = () => {
           </div>
           <div
             css={[
-              tw`transition duration-500 lg:(transition-none opacity-100)`,
+              tw`transition lg:(opacity-100)`,
               menuOpen ? tw`opacity-100` : tw`opacity-0`
             ]}
           >
             <Nav />
           </div>
         </nav>
-        <div css={[tw`ml-8 mt-1`]}>
+        <div css={[tw`ml-8`]}>
           <ThemeToggle />
         </div>
       </header>

@@ -63,6 +63,10 @@ const ThemeBase = css`
     ${tw`text-lg`}
   }
 
+  a {
+    ${tw`text-mint transition duration-500`}
+  }
+
   .lead {
     ${tw`text-xl lg:text-2xl font-normal`}
   }
