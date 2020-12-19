@@ -17,35 +17,33 @@ const Header = () => {
       data-sal-delay="300"
       data-sal-easing="ease"
     >
-      <header>
-        <nav>
-          <div css={[tw`lg:(flex justify-between)`]}>
-            <div css={[tw`flex`]}>
-              <button
-                css={[tw`mr-4 -mt-1 outline-none focus:outline-none lg:hidden`]}
-                onClick={() => setMenuOpen(!menuOpen)}
-              >
-                <FiMenu size={24} />
-              </button>
-              <Link to="/" alt="Home">
-                <div css={[tw`w-16`]}>
-                  <Logo />
-                </div>
-              </Link>
-            </div>
-            <div
-              css={[
-                tw`transition duration-500 lg:(transition-none opacity-100)`,
-                menuOpen ? tw`opacity-100` : tw`opacity-0`
-              ]}
+      <header css={[tw`flex`]}>
+        <nav css={[tw`lg:(flex justify-between w-full)`]}>
+          <div css={[tw`flex`]}>
+            <button
+              css={[tw`mr-4 -mt-1 outline-none focus:outline-none lg:hidden`]}
+              onClick={() => setMenuOpen(!menuOpen)}
             >
-              <div css={[tw`flex space-x-8`]}>
-              <Nav />
-              <ThemeToggle />
+              <FiMenu size={24} />
+            </button>
+            <Link to="/" alt="Home">
+              <div css={[tw`w-16`]}>
+                <Logo />
               </div>
-            </div>
+            </Link>
+          </div>
+          <div
+            css={[
+              tw`transition duration-500 lg:(transition-none opacity-100)`,
+              menuOpen ? tw`opacity-100` : tw`opacity-0`
+            ]}
+          >
+            <Nav />
           </div>
         </nav>
+        <div css={[tw`ml-8 mt-1`]}>
+          <ThemeToggle />
+        </div>
       </header>
     </Container>
   )
