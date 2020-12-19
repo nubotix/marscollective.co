@@ -10,7 +10,7 @@
     "deploy": "yarn build && netlify deploy -p"
   },
   "dependencies": {
-    "@marscollective/deimos": "^2.0.1",
+    "@marscollective/theme": "^2.0.1",
     "gatsby": "^2.29.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"

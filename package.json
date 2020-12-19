@@ -2,24 +2,18 @@
   "name": "marscollective.co",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "websites/*"
+    "theme",
+    "website"
   ],
   "scripts": {
-    "main:dev": "yarn workspace marscollective.co dev",
-    "main:build": "yarn workspace marscollective.co build",
-    "main:clean": "yarn workspace marscollective.co clean",
-    "main:deploy": "yarn workspace links.marscollective.co deploy",
-    "link-free:dev": "yarn workspace links.marscollective.co dev",
-    "link-free:build": "yarn workspace links.marscollective.co build",
-    "link-free:deploy": "yarn workspace links.marscollective.co deploy",
-    "build": "run-s main:build link-free:build",
-    "deploy": "run-s main:deploy link-free:deploy",
+    "dev": "yarn workspace marscollective.co dev",
+    "build": "yarn workspace marscollective.co build",
+    "clean": "yarn workspace marscollective.co clean",
+    "deploy": "yarn workspace links.marscollective.co deploy",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx,yaml,yml}\""
   },
   "devDependencies": {
     "lerna": "3.22.1",
-    "npm-run-all": "^4.1.5",
     "prettier": "2.2.1"
   },
   "prettier": {
