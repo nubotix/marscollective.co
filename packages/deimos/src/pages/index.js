@@ -2,6 +2,7 @@ import React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from '@components/layout'
+import SEO from '@components/seo'
 import Hero from '@components/hero'
 import Services from '@components/services'
 import Team from '@components/team'
@@ -14,6 +15,7 @@ const IndexPage = () => {
   const intl = useIntl().formatMessage
   return (
     <Layout>
+      <SEO lang={intl({ id: 'lang' })} />
       <Hero
         title={intl({ id: 'welcome.title' })}
         bigger="Mars"

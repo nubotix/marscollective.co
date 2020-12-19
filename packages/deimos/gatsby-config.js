@@ -30,7 +30,8 @@ module.exports = () => {
           path: path.resolve(`./content/locales`),
           languages: [`en`, `es`, `pt`],
           defaultLanguage: `en`,
-          redirect: true
+          redirect: true,
+          redirectComponent: `${__dirname}/src/components/redirect.js`
         }
       },
       {
@@ -39,7 +40,8 @@ module.exports = () => {
           alias: {
             '@components': `${__dirname}/src/components`,
             '@hooks': `${__dirname}/src/hooks`,
-            '@theme': `${__dirname}/src/theme`
+            '@theme': `${__dirname}/src/theme`,
+            '@seo': `${__dirname}/src/components/seo`
           }
         }
       }
