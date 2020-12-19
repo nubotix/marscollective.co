@@ -14,8 +14,10 @@ const Team = ({ teamData }) => {
     pt: teamData.title.pt
   }
   return (
-    <Container data-sal="slide-up">
-      <h2 className="center mint">{title[intl({ id: 'lang' })]}</h2>
+    <Container>
+      <h2 className="center mint" data-sal="slide-up">
+        {title[intl({ id: 'lang' })]}
+      </h2>
       <div css={[tw`grid gap-8 sm:grid-cols-2 lg:(grid-cols-4 gap-10)`]}>
         {teamData.members.map((member, i) => {
           const position = {

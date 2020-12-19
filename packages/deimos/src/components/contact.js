@@ -17,15 +17,15 @@ const Contact = ({
   title,
   titleForm
 }) => (
-  <Container data-sal="slide-up">
+  <Container>
     <div
       css={[
         tw`grid gap-8 lg:(grid-cols-2 items-center bg-gray rounded-3xl p-16)`
       ]}
     >
       <div>
-        <h2>{title}</h2>
-        <div css={[tw`space-y-6 lg:space-y-4`]}>
+        <h2 data-sal="slide-up">{title}</h2>
+        <div css={[tw`space-y-6 lg:space-y-4`]} data-sal="slide-up">
           <div css={[tw`flex space-x-6 lg:space-x-4`]}>
             <BiEnvelope css={[tw`w-6 h-6 lg:(w-4 h-4)`]} />
             <a href={`mailto:${siteMetadata.email}`}>{siteMetadata.email}</a>

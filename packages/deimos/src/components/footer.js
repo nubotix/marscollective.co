@@ -12,6 +12,7 @@ const Footer = () => (
       css={[
         tw`grid gap-4 justify-items-center lg:(flex justify-between items-center)`
       ]}
+      data-sal="slide-up"
     >
       <div css={[tw`w-28`]}>
         <Logo />
