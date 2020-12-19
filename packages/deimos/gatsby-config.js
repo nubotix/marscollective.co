@@ -25,6 +25,12 @@ module.exports = () => {
         options: { contentPath, favicon, metadata }
       },
       {
+        resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+        options: {
+          siteUrl: metadata.siteUrl
+        }
+      },
+      {
         resolve: 'gatsby-plugin-anchor-links',
         options: {
           offset: -100
