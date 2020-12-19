@@ -31,7 +31,7 @@ const Icons = {
 }
 
 const Social = ({ socialData }) => (
-  <ul css={[tw`flex space-x-4`]}>
+  <ul css={[tw`flex space-x-6 lg:space-x-4`]}>
     {socialData.map((item, i) => {
       const Icon = Icons[item.label]
       return (
@@ -42,7 +42,7 @@ const Social = ({ socialData }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon size={20} />
+            <Icon css={[tw`w-6 h-6 lg:(w-4 h-4)`]} />
           </a>
         </li>
       )

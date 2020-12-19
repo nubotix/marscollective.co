@@ -25,14 +25,14 @@ const Contact = ({
     >
       <div>
         <h2>{title}</h2>
-        <div css={[tw`space-y-4`]}>
-          <div css={[tw`flex gap-4`]}>
-            <BiEnvelope size={20} />
+        <div css={[tw`space-y-6 lg:space-y-4`]}>
+          <div css={[tw`flex space-x-6 lg:space-x-4`]}>
+            <BiEnvelope css={[tw`w-6 h-6 lg:(w-4 h-4)`]} />
             <a href={`mailto:${siteMetadata.email}`}>{siteMetadata.email}</a>
           </div>
-          <div css={[tw`flex gap-4`]}>
-            <BiPhone size={20} />
-            {siteMetadata.phone}
+          <div css={[tw`flex space-x-6 lg:space-x-4`]}>
+            <BiPhone css={[tw`w-6 h-6 lg:(w-4 h-4)`]} />
+            <span>{siteMetadata.phone}</span>
           </div>
           <Social socialData={siteMetadata.social} />
         </div>
