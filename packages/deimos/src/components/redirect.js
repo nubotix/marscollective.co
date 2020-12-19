@@ -14,16 +14,9 @@ const Redirect = () => {
     pt: data.desc.pt
   }
 
-  const metaTitle = data.title
   const metaDescription = descriptionLocale[intl({ id: 'lang' })]
 
-  return (
-    <SEO
-      title={metaTitle}
-      description={metaDescription}
-      lang={intl({ id: 'lang' })}
-    />
-  )
+  return <SEO description={metaDescription} lang={intl({ id: 'lang' })} />
 }
 
 export default Redirect
