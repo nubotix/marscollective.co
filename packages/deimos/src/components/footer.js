@@ -19,7 +19,7 @@ const Footer = () => (
       <div css={[tw`hidden xl:block`]}>
         <Nav />
       </div>
-      <span css={[tw`flex items-center`]}>
+      <span css={[tw`flex items-center font-semibold`]}>
         Mars Collective <RiCopyleftLine size={12} css={[tw`mx-1`]} />
         {new Date().getFullYear()}
       </span>
