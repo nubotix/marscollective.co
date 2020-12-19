@@ -74,5 +74,10 @@
       "button": "Enviar",
       "successMessage": "Mensagem enviada com sucesso."
     }
+  },
+  "notFoundPage": {
+    "title": "404:",
+    "message": "Parece que você se perdeu...",
+    "button": "Voltar para a página inicial 🏠"
   }
 }

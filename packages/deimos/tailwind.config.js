@@ -1,21 +1,29 @@
-const colors = {
-  darker: 'var(--darker)',
-  dark: 'var(--dark)',
-  mint: 'var(--mint)',
-  'mint-dark': 'var(--mint-dark)',
-  'mint-light': 'var(--mint-light)'
-}
-
 module.exports = {
   theme: {
     extend: {
-      backgroundColor: colors,
-      borderColor: colors,
+      backgroundColor: {
+        default: 'var(--bg-default)',
+        gray: 'var(--bg-gray)',
+        mint: 'var(--bg-mint)',
+        'mint-hover': 'var(--bg-mint-hover)',
+        'mint-secondary': 'var(--bg-mint-secondary)'
+      },
+      borderColor: {
+        default: 'var(--color-default)',
+        mint: 'var(--color-mint)',
+        'mint-hover': 'var(--color-mint-hover)',
+        reverse: 'var(--color-reverse)'
+      },
       fontFamily: {
-        body: 'var(--font-body)',
+        default: 'var(--font-body)',
         heading: 'var(--font-heading)'
       },
-      textColor: colors
+      textColor: {
+        default: 'var(--color-default)',
+        mint: 'var(--color-mint)',
+        'mint-hover': 'var(--color-mint-hover)',
+        reverse: 'var(--color-reverse)'
+      }
     }
   }
 }

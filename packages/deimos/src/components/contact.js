@@ -1,10 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import tw from 'twin.macro'
+import { BiEnvelope, BiPhone } from 'react-icons/bi'
+
 import Container from '@components/container'
 import { H2 } from '@components/heading'
 import Social from '@components/social'
 import ContactForm from '@components/contact-form'
-import { BiEnvelope, BiPhone } from 'react-icons/bi'
 
 const Contact = ({
   button,
@@ -16,9 +18,13 @@ const Contact = ({
   title,
   titleForm
 }) => (
-  <Container>
-    <div css={[tw`grid gap-8`]}>
-      <div css={[tw`grid gap-8`]}>
+  <Container data-sal="slide-up">
+    <div
+      css={[
+        tw`grid gap-8 lg:(grid-cols-2 items-center bg-gray rounded-3xl p-16)`
+      ]}
+    >
+      <div>
         <H2>{title}</H2>
         <div css={[tw`space-y-4`]}>
           <div css={[tw`flex gap-4`]}>
@@ -45,3 +51,14 @@ const Contact = ({
 )
 
 export default Contact
+
+Contact.propTypes = {
+  button: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  siteMetadata: PropTypes.object.isRequired,
+  successMessage: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  titleForm: PropTypes.string.isRequired
+}

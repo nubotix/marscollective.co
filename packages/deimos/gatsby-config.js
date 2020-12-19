@@ -18,6 +18,8 @@ module.exports = () => {
       social: metadata.social
     },
     plugins: [
+      `gatsby-plugin-emotion`,
+      `gatsby-plugin-scroll-reveal`,
       {
         resolve: `@marscollective/gatsby-theme-core`,
         options: { contentPath, favicon, metadata }
@@ -28,10 +30,9 @@ module.exports = () => {
           path: path.resolve(`./content/locales`),
           languages: [`en`, `es`, `pt`],
           defaultLanguage: `en`,
-          redirect: false
+          redirect: true
         }
       },
-      `gatsby-plugin-emotion`,
       {
         resolve: `gatsby-plugin-alias-imports`,
         options: {

@@ -1,62 +1,25 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import {
-  injectIntl,
-  IntlContextConsumer,
-  changeLocale
-} from 'gatsby-plugin-intl'
+import { Link } from 'gatsby-plugin-intl'
+import tw from 'twin.macro'
 import { FiMenu } from 'react-icons/fi'
-import tw, { css } from 'twin.macro'
+
 import Container from '@components/container'
 import Logo from '@components/logo'
+import Nav from '@components/nav'
+import ThemeToggle from '@theme/theme-toggle'
 
-const links = [
-  {
-    label: 'nav.home.label',
-    url: 'nav.home.url'
-  },
-  {
-    label: 'nav.services.label',
-    url: 'nav.services.url'
-  },
-  {
-    label: 'nav.portfolio.label',
-    url: 'nav.portfolio.url'
-  },
-  {
-    label: 'nav.about.label',
-    url: 'nav.about.url'
-  },
-  {
-    label: 'nav.blog.label',
-    url: 'nav.blog.url'
-  },
-  {
-    label: 'nav.contact.label',
-    url: 'nav.contact.url'
-  }
-]
-
-const baseURL = {
-  en: '/en/',
-  es: '/es/',
-  pt: '/pt/'
-}
-
-const languageName = {
-  en: '[en]',
-  es: '[es]',
-  pt: '[pt]'
-}
-
-const Header = ({ intl }) => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-
   return (
-    <Container smaller>
+    <Container
+      smaller
+      data-sal="slide-up"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+    >
       <header>
         <nav>
-          <div css={[tw`lg:flex lg:justify-between`]}>
+          <div css={[tw`lg:(flex justify-between)`]}>
             <div css={[tw`flex`]}>
               <button
                 css={[tw`mr-4 -mt-1 outline-none focus:outline-none lg:hidden`]}
@@ -70,49 +33,17 @@ const Header = ({ intl }) => {
                 </div>
               </Link>
             </div>
-            <ul
+            <div
               css={[
-                tw`bg-darker font-semibold hover:text-mint py-10 list-none space-y-10 lg:inline-flex lg:space-y-0 lg:space-x-8 lg:m-0 absolute lg:relative lg:opacity-100 transition duration-500`,
-                menuOpen ? tw`opacity-100` : tw`opacity-0`,
-                css({ width: 'calc(100% - 3rem)' })
+                tw`transition duration-500 lg:(transition-none opacity-100)`,
+                menuOpen ? tw`opacity-100` : tw`opacity-0`
               ]}
             >
-              {links.map(({ label, url }, i) => (
-                <li key={i}>
-                  <Link
-                    to={`${
-                      baseURL[intl.formatMessage({ id: 'lang' })]
-                    }#${intl.formatMessage({ id: url })}`}
-                    alt={intl.formatMessage({ id: label })}
-                  >
-                    {intl.formatMessage({ id: label })}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <ul css={[tw`flex space-x-6`]}>
-                  <IntlContextConsumer>
-                    {({ languages, language: currentLocale }) =>
-                      languages.map(language => (
-                        <li
-                          key={language}
-                          onClick={() => changeLocale(language)}
-                          aria-hidden="true"
-                          style={{
-                            color:
-                              currentLocale === language
-                                ? `var(--highLight)`
-                                : `var(--default)`
-                          }}
-                        >
-                          {languageName[language]}
-                        </li>
-                      ))
-                    }
-                  </IntlContextConsumer>
-                </ul>
-              </li>
-            </ul>
+              <div css={[tw`flex space-x-8`]}>
+              <Nav />
+              <ThemeToggle />
+              </div>
+            </div>
           </div>
         </nav>
       </header>
@@ -120,4 +51,4 @@ const Header = ({ intl }) => {
   )
 }
 
-export default injectIntl(Header)
+export default Header

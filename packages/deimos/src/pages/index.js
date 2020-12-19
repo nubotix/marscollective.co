@@ -1,5 +1,6 @@
 import React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
+
 import Layout from '@components/layout'
 import Hero from '@components/hero'
 import Services from '@components/services'
@@ -10,40 +11,30 @@ import useServices from '@hooks/use-services'
 import useSiteMetadata from '@hooks/use-site-metadata'
 
 const IndexPage = () => {
-  const intl = useIntl()
+  const intl = useIntl().formatMessage
   return (
     <Layout>
       <Hero
-        title={intl.formatMessage({ id: 'welcome.title' })}
+        title={intl({ id: 'welcome.title' })}
         bigger="Mars"
-        lead={intl.formatMessage({ id: 'welcome.lead' })}
-        buttonPrimary={intl.formatMessage({
-          id: 'welcome.buttonPrimary.label'
-        })}
-        buttonPrimaryUrl={intl.formatMessage({
-          id: 'welcome.buttonPrimary.url'
-        })}
-        buttonSecondary={intl.formatMessage({
-          id: 'welcome.buttonSecondary.label'
-        })}
-        buttonSecondaryUrl={intl.formatMessage({
-          id: 'welcome.buttonSecondary.url'
-        })}
-        id={intl.formatMessage({ id: 'nav.home.url' })}
+        lead={intl({ id: 'welcome.lead' })}
+        buttonPrimary={intl({ id: 'welcome.buttonPrimary.label' })}
+        buttonPrimaryUrl={intl({ id: 'welcome.buttonPrimary.url' })}
+        buttonSecondary={intl({ id: 'welcome.buttonSecondary.label' })}
+        buttonSecondaryUrl={intl({ id: 'welcome.buttonSecondary.url' })}
+        id={intl({ id: 'nav.home.url' })}
       />
       <Services servicesData={useServices()} />
       <Team teamData={useTeam()} />
       <Contact
-        title={intl.formatMessage({ id: 'contact.title' })}
+        title={intl({ id: 'contact.title' })}
         siteMetadata={useSiteMetadata()}
-        titleForm={intl.formatMessage({ id: 'contact.form.title' })}
-        name={intl.formatMessage({ id: 'contact.form.name' })}
-        email={intl.formatMessage({ id: 'contact.form.email' })}
-        message={intl.formatMessage({ id: 'contact.form.message' })}
-        button={intl.formatMessage({ id: 'contact.form.button' })}
-        successMessage={intl.formatMessage({
-          id: 'contact.form.successMessage'
-        })}
+        titleForm={intl({ id: 'contact.form.title' })}
+        name={intl({ id: 'contact.form.name' })}
+        email={intl({ id: 'contact.form.email' })}
+        message={intl({ id: 'contact.form.message' })}
+        button={intl({ id: 'contact.form.button' })}
+        successMessage={intl({ id: 'contact.form.successMessage' })}
       />
     </Layout>
   )

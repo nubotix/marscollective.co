@@ -67,5 +67,10 @@
       "button": "Send",
       "successMessage": "Message sent successfully."
     }
+  },
+  "notFoundPage": {
+    "title": "404:",
+    "message": "It looks like you're lost...",
+    "button": "Go back home 🏠"
   }
 }

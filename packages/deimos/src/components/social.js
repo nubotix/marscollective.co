@@ -35,13 +35,12 @@ const Social = ({ socialData }) => (
     {socialData.map((item, i) => {
       const Icon = Icons[item.label]
       return (
-        <li>
+        <li css={[tw`hover:text-mint transition duration-500`]} key={i}>
           <a
             href={item.url}
             alt={item.label}
             target="_blank"
             rel="noopener noreferrer"
-            key={i}
           >
             <Icon size={20} />
           </a>

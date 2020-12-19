@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 
 const reset = tw`m-0 p-0`
 const baseBigger = tw`font-black font-heading! uppercase`
-const base = tw`font-body font-semibold leading-6`
+const base = tw`font-default font-semibold leading-6`
 
 function hasCenter(center) {
   return center && tw`text-center`
 }
 
 function hasMint(mint) {
-  return mint ? tw`text-mint` : tw`text-white`
+  return mint ? tw`text-mint` : tw`text-default`
 }
 
 export const H1 = styled.h1(({ center, mint }) => [
@@ -44,7 +44,7 @@ Bigger.propTypes = {
 export const H2 = styled.h2(({ center, mint }) => [
   reset,
   baseBigger,
-  tw`text-3xl md:text-4xl lg:text-5xl`,
+  tw`mb-8 text-3xl sm:mb-12 md:(mb-16 text-4xl) lg:(mb-20 text-5xl)`,
   hasCenter(center),
   hasMint(mint)
 ])
@@ -57,7 +57,7 @@ H2.propTypes = {
 export const H3 = styled.h3(({ center, mint }) => [
   reset,
   base,
-  tw`text-2xl lg:text-3xl`,
+  tw`text-2xl md:mb-2 lg:text-3xl`,
   hasCenter(center),
   hasMint(mint)
 ])

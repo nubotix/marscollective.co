@@ -154,4 +154,3 @@ textPT: >-
 
   Gostou da nossa proposta? Vamos construir coisas incríveis juntos! Envie um email para [hi@marscollective.co](mailto:hi@marscollective.co) ou uma mensagem para [nosso WhatsApp](https://wa.me/5545991328593) ou pelo [formulário em nosso site](#contact) e venha conhecer o que podemos fazer por sua empresa.
 ---
-

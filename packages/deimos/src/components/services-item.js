@@ -4,9 +4,9 @@ import tw from 'twin.macro'
 import { H3 } from '@components/heading'
 
 const ServicesItem = ({ content, image, title }) => (
-  <div css={[tw`grid gap-4 justify-items-center`]}>
+  <div css={[tw`grid gap-4 justify-items-center`]} data-sal="slide-up">
     <img src={image} alt={title} css={[tw`w-40 h-40`]} />
-    <div css={[tw`md:space-y-2`]}>
+    <div>
       <H3 center mint>
         {title}
       </H3>
