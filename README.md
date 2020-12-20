@@ -1,6 +1,6 @@
 # Mars Collective
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e141ffa0-96ab-4159-ab6e-8ab538165f48/deploy-status)](https://app.netlify.com/sites/marscollective/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f318ebeb-5ac5-4a58-add4-cdb81915f4e9/deploy-status)](https://app.netlify.com/sites/marscollective-co/deploys)
 
 We are a collective of great minds and this website is one of our creations.
 
