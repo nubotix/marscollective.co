@@ -28,7 +28,7 @@ export default function useTeam() {
             url
           }
         }
-        title {
+        titles {
           en
           es
           pt

@@ -7,12 +7,11 @@ export default function useSiteMetadata() {
     query {
       site {
         siteMetadata {
-          desc {
+          descriptions {
             en
             es
             pt
           }
-          description
           email
           phone
           siteUrl

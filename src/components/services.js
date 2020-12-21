@@ -7,9 +7,9 @@ import ServicesItem from '@components/services-item'
 const Services = ({ id, servicesData }) => {
   const intl = useIntl().formatMessage
   const title = {
-    en: servicesData.title.en,
-    es: servicesData.title.es,
-    pt: servicesData.title.pt
+    en: servicesData.titles.en,
+    es: servicesData.titles.es,
+    pt: servicesData.titles.pt
   }
   return (
     <Container id={id}>
@@ -19,14 +19,14 @@ const Services = ({ id, servicesData }) => {
       <div css={[tw`grid gap-8 sm:grid-cols-2 lg:(grid-cols-4 gap-10)`]}>
         {servicesData.items.map((item, i) => {
           const title = {
-            en: item.title.en,
-            es: item.title.es,
-            pt: item.title.pt
+            en: item.titles.en,
+            es: item.titles.es,
+            pt: item.titles.pt
           }
           const content = {
-            en: item.content.en,
-            es: item.content.es,
-            pt: item.content.pt
+            en: item.contents.en,
+            es: item.contents.es,
+            pt: item.contents.pt
           }
           return (
             <ServicesItem

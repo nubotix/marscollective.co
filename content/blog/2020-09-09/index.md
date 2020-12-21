@@ -1,5 +1,4 @@
 ---
-templateKey: blog
 titles:
   en: A digital agency, but different
   es: Una agencia digital, pero diferente
@@ -9,7 +8,6 @@ descriptions:
   es: Lorem
   pt: Lorem
 image: images/alizee-baudez-srUzc3I_h8Q-unsplash.jpg
-credits: Alizée Baudez
 date: 2020-09-09 12:08:28
 tags:
   - processos internos

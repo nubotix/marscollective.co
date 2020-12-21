@@ -1,40 +1,40 @@
-title:
+titles:
   en: What we do
   es: Qué hacemos
   pt: O que fazemos
 items:
-  - title:
+  - titles:
       en: We design
       es: Diseño
       pt: Design
-    content:
+    contents:
       en: Inspired by simplicity, we design elegant solutions in branding, advertising and UI/UX, crafting the strong presence your brand needs to make a difference.
       es: Inspirados en la simplicidad, proyectamos soluciones elegantes en branding, publicidad y UI/UX, creando la fuerte presencia que su marca necesita para hacer la diferencia.
       pt: Inspirados na simplicidade, projetamos soluções elegantes em branding, publicidade e UI/UX, criando a forte presença que sua marca precisa para fazer a diferença.
     image: images/weDesign.svg
-  - title:
+  - titles:
       en: We develop
       es: Desarrollo Web
       pt: Web design
-    content:
+    contents:
       en: Your website on the first page. Using modern technologies, we develop powerful websites optimized to your public and your company needs.
       es: Su website en la primera página de los motores de búsqueda. Usando tecnologías modernas, creamos websites poderosos y optimizados para su público y las necesidades de su negocio.
       pt: Seu site na primeira página. Usando tecnologias modernas, criamos sites poderosos e otimizados para o seu público e as necessidades do seu negócio.
     image: images/weDevelop.svg
-  - title:
+  - titles:
       en: We write
       es: Redacción
       pt: Redação
-    content:
+    contents:
       en: Your company is what it does; your brand is what it speaks. We craft strong, direct and compelling messages for all your communication needs.
       es: Su empresa es lo que ella hace; su marca es lo que ella comunica. Desarrollamos mensajes fuortes, directas y convincentes para todas las necesidades de comunicación.
       pt: Sua empresa é o que ela faz; sua marca é o que ela fala. Desenvolvemos mensagens fortes, diretas e convincentes para todas as suas necessidades de comunicação.
     image: images/weWrite.svg
-  - title:
+  - titles:
       en: We localize
       es: Traducciones
       pt: Traduções
-    content:
+    contents:
       en: 'Does your audience hablas español or fala português? We can help you reach them. We do more than just a simple translation: we adapt your tone to their native language.'
       es: 'Su público fala português o speak English? Te ayudamos a alcanzarlos. Hacemos más que una simple traducción: adaptamos su tono a la lengua de ellos.'
       pt: 'O seu público hablas español ou speak English? Nós te ajudamos a alcançá-los. Fazemos mais do que apenas uma simples tradução: adaptamos seu tom à língua deles.'

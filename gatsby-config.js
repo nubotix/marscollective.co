@@ -9,7 +9,7 @@ const favicon = metadata.favicon ? `content/metadata/${metadata.favicon}` : ``
 module.exports = {
   siteMetadata: {
     title: metadata.title,
-    desc: metadata.desc,
+    descriptions: metadata.descriptions,
     phone: metadata.phone,
     email: metadata.email,
     siteUrl: metadata.siteUrl,
@@ -48,11 +48,22 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
+          '@collections': `src/cms/collections`,
           '@components': `src/components`,
+          '@cmsUtils': `src/cms/collections/utils`,
           '@hooks': `src/hooks`,
           '@theme': `src/theme`,
           '@seo': `src/components/seo`
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        htmlTitle: `${metadata.title}: CMS`,
+        htmlFavicon: favicon,
+        modulePath: `${__dirname}/src/cms`,
+        manualInit: true
       }
     }
   ]

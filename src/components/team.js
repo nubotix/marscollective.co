@@ -9,9 +9,9 @@ import TeamMember from '@components/team-member'
 const Team = ({ id, teamData }) => {
   const intl = useIntl().formatMessage
   const title = {
-    en: teamData.title.en,
-    es: teamData.title.es,
-    pt: teamData.title.pt
+    en: teamData.titles.en,
+    es: teamData.titles.es,
+    pt: teamData.titles.pt
   }
   return (
     <Container id={id}>

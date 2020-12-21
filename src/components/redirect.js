@@ -9,9 +9,9 @@ const Redirect = () => {
   const data = useSiteMetadata()
 
   const descriptionLocale = {
-    en: data.desc.en,
-    es: data.desc.es,
-    pt: data.desc.pt
+    en: data.descriptions.en,
+    es: data.descriptions.es,
+    pt: data.descriptions.pt
   }
 
   const metaDescription = descriptionLocale[intl({ id: 'lang' })]

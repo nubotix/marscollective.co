@@ -5,7 +5,7 @@ export default function useTeam() {
     query {
       servicesYaml {
         items {
-          content {
+          contents {
             en
             es
             pt
@@ -13,13 +13,13 @@ export default function useTeam() {
           image {
             publicURL
           }
-          title {
+          titles {
             en
             es
             pt
           }
         }
-        title {
+        titles {
           en
           es
           pt

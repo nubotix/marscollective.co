@@ -10,9 +10,9 @@ function SEO({ description, lang, meta, title }) {
   const data = useSiteMetadata()
 
   const descriptionLocale = {
-    en: data.desc.en,
-    es: data.desc.es,
-    pt: data.desc.pt
+    en: data.descriptions.en,
+    es: data.descriptions.es,
+    pt: data.descriptions.pt
   }
   const metaTitle = (title && `${title} | ${data.title}`) || data.title
   const metaDescription = description || descriptionLocale[intl({ id: 'lang' })]
