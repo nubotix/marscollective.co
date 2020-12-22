@@ -7,6 +7,7 @@ export default function usePosts() {
     query {
       posts: allMarkdownRemark(
         filter: { frontmatter: { key: { eq: "post-item" } } }
+        sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
           node {
