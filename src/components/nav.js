@@ -1,6 +1,5 @@
 import React from 'react'
 import { AnchorLink as Link } from 'gatsby-plugin-anchor-links'
-import tw, { css } from 'twin.macro'
 import {
   injectIntl,
   IntlContextConsumer,
@@ -53,17 +52,8 @@ const languageName = {
 }
 
 const Nav = ({ intl }) => (
-  <div
-    css={[
-      tw`absolute bg-default transition-colors lg:(relative bg-transparent w-auto)`,
-      css({ width: 'calc(100% - 3rem)' })
-    ]}
-  >
-    <ul
-      css={[
-        tw`font-semibold list-none py-10 space-y-10 lg:(inline-flex py-0 space-y-0 space-x-8)`
-      ]}
-    >
+  <div className="nav absolute bg-default z-10 transition lg:relative lg:bg-transparent lg:w-auto">
+    <ul className="font-semibold list-none py-10 space-y-10 lg:inline-flex lg:py-0 lg:space-y-0 lg:space-x-8">
       {links.map(({ anchor, label, url }, i) => (
         <li key={i}>
           <Link
@@ -71,14 +61,14 @@ const Nav = ({ intl }) => (
               anchor ? '#' : ''
             }${url && intl.formatMessage({ id: url })}`}
             alt={intl.formatMessage({ id: label })}
-            css={[tw`text-default hover:text-mint`]}
+            className="text-default hover:text-mint"
           >
             {intl.formatMessage({ id: label })}
           </Link>
         </li>
       ))}
       <li>
-        <ul css={[tw`flex space-x-4`]}>
+        <ul className="flex space-x-4">
           <IntlContextConsumer>
             {({ languages, language: currentLocale }) =>
               languages.map(language => (
@@ -86,12 +76,9 @@ const Nav = ({ intl }) => (
                   key={language}
                   onClick={() => changeLocale(language)}
                   aria-hidden="true"
-                  css={[
-                    tw`hover:text-mint duration-500 cursor-pointer`,
-                    currentLocale === language
-                      ? tw`text-mint`
-                      : tw`text-default`
-                  ]}
+                  className={`hover:text-mint duration-500 cursor-pointer ${
+                    currentLocale === language ? `text-mint` : `text-default`
+                  }`}
                 >
                   {languageName[language]}
                 </li>

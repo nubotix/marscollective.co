@@ -1,15 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import tw from 'twin.macro'
 
 const Button = ({ label, primary, ...props }) => (
   <button
-    css={[
-      tw`p-3 md:(py-4 px-8) border-2 font-semibold leading-none rounded-lg transition duration-500`,
+    className={`p-3 md:py-4 md:px-8 border-2 font-semibold leading-none rounded-lg transition duration-500 ${
       primary
-        ? tw`bg-mint hover:bg-mint-hover text-reverse border-transparent`
-        : tw`bg-transparent text-default border-default hover:(text-mint-hover border-mint-hover)`
-    ]}
+        ? `bg-mint hover:bg-mint-hover text-reverse border-transparent`
+        : `bg-transparent text-default border-default hover:text-mint-hover hover:border-mint-hover`
+    }`}
     {...props}
   >
     {label}

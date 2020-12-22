@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import tw from 'twin.macro'
 
 import Avatar from '@components/avatar'
 
 const TeamMember = ({ image, member, position }) => (
-  <div css={[tw`grid gap-4 justify-items-center`]} data-sal="slide-up">
+  <div className="grid gap-4 justify-items-center" data-sal="slide-up">
     <Avatar image={image} alt={member} />
     <div>
       <h3 className="mint center">{member}</h3>

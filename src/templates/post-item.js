@@ -4,7 +4,6 @@ import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from '@components/layout'
 import SEO from '@components/seo'
-import Container from '@components/container'
 import PostItem from '@components/post-item'
 
 const PostItemTemplate = ({ data }) => {
@@ -51,7 +50,7 @@ const PostItemTemplate = ({ data }) => {
         description={description[intl.formatMessage({ id: 'lang' })]}
         lang={intl.formatMessage({ id: 'lang' })}
       />
-      <Container>
+      <section className="container">
         <PostItem
           authorBio={authorBio[intl.formatMessage({ id: 'lang' })]}
           authorName={author.frontmatter.name}
@@ -66,7 +65,7 @@ const PostItemTemplate = ({ data }) => {
           image={postItem.frontmatter.image.childImageSharp.fluid}
           title={title[intl.formatMessage({ id: 'lang' })]}
         />
-      </Container>
+      </section>
     </Layout>
   )
 }

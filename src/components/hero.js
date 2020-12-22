@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { AnchorLink as Link } from 'gatsby-plugin-anchor-links'
-import tw from 'twin.macro'
 
-import Container from '@components/container'
 import Button from '@components/button'
 import Image from '../assets/welcome.svg'
 
@@ -16,13 +14,9 @@ const Hero = ({
   lead,
   title
 }) => (
-  <Container>
-    <div
-      css={[
-        tw`grid gap-12 justify-items-center items-center text-center lg:(grid-cols-2)`
-      ]}
-    >
-      <div css={[tw`space-y-8`]}>
+  <section className="container">
+    <div className="grid gap-12 justify-items-center items-center text-center lg:grid-cols-2">
+      <div className="space-y-8">
         <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
           {title}
           <span
@@ -43,7 +37,7 @@ const Hero = ({
           {lead}
         </p>
         <div
-          css={[tw`flex flex-wrap justify-center space-x-8`]}
+          className="flex flex-wrap justify-center space-x-8"
           data-sal="slide-up"
           data-sal-delay="900"
           data-sal-easing="ease"
@@ -59,13 +53,13 @@ const Hero = ({
       <img
         src={Image}
         alt={`${title} ${bigger}`}
-        css={[tw`w-2/3 lg:w-full`]}
+        className="w-2/3 lg:w-full"
         data-sal="slide-up"
         data-sal-delay="300"
         data-sal-easing="ease"
       />
     </div>
-  </Container>
+  </section>
 )
 
 export default Hero

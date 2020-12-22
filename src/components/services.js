@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useIntl } from 'gatsby-plugin-intl'
-import tw from 'twin.macro'
 
-import Container from '@components/container'
 import ServicesItem from '@components/services-item'
 
 const Services = ({ id, servicesData }) => {
@@ -14,11 +12,11 @@ const Services = ({ id, servicesData }) => {
     pt: servicesData.titles.pt
   }
   return (
-    <Container id={id}>
+    <section className="container" id={id}>
       <h2 className="center mint" data-sal="slide-up">
         {title[intl({ id: 'lang' })]}
       </h2>
-      <div css={[tw`grid gap-8 sm:grid-cols-2 lg:(grid-cols-4 gap-10)`]}>
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
         {servicesData.items.map((item, i) => {
           const title = {
             en: item.titles.en,
@@ -40,7 +38,7 @@ const Services = ({ id, servicesData }) => {
           )
         })}
       </div>
-    </Container>
+    </section>
   )
 }
 

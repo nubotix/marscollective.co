@@ -1,31 +1,27 @@
 import React from 'react'
-import tw from 'twin.macro'
 import { RiCopyleftLine } from 'react-icons/ri'
 
-import Container from '@components/container'
 import Logo from '@components/logo'
 import Nav from '@components/nav'
 
 const Footer = () => (
-  <Container smaller>
+  <section className="container">
     <footer
-      css={[
-        tw`grid gap-4 justify-items-center lg:(flex justify-between items-center)`
-      ]}
+      className="grid gap-4 justify-items-center lg:flex lg:justify-between lg:items-center"
       data-sal="slide-up"
     >
-      <div css={[tw`w-28`]}>
+      <div className="w-28">
         <Logo />
       </div>
-      <div css={[tw`hidden xl:block`]}>
+      <div className="hidden xl:block">
         <Nav />
       </div>
-      <span css={[tw`flex items-center font-semibold`]}>
-        Mars Collective <RiCopyleftLine size={12} css={[tw`mx-1`]} />
+      <span className="flex items-center font-semibold">
+        Mars Collective <RiCopyleftLine size={12} className="mx-1" />
         {new Date().getFullYear()}
       </span>
     </footer>
-  </Container>
+  </section>
 )
 
 export default Footer

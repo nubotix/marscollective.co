@@ -17,11 +17,20 @@ module.exports = {
     social: metadata.social
   },
   plugins: [
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-scroll-reveal`,
     {
       resolve: `@marscollective/gatsby-theme-core`,
       options: { contentPath, favicon, metadata }
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`tailwindcss`)(`${__dirname}/src/theme/tailwind.config.js`),
+          require(`autoprefixer`),
+          require(`postcss-nested`)
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,

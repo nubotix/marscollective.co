@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby-plugin-intl'
-import tw from 'twin.macro'
 import { FiMenu } from 'react-icons/fi'
 
-import Container from '@components/container'
 import Logo from '@components/logo'
 import Nav from '@components/nav'
 import ThemeToggle from '@theme/theme-toggle'
@@ -12,17 +10,17 @@ import useSiteMetadata from '@hooks/use-site-metadata'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <Container
-      smaller
+    <section
+      className="container"
       data-sal="slide-up"
       data-sal-delay="300"
       data-sal-easing="ease"
     >
-      <header css={[tw`flex justify-between`]}>
-        <nav css={[tw`lg:(flex justify-between w-full)`]}>
-          <div css={[tw`flex`]}>
+      <header className="flex justify-between">
+        <nav className="lg:flex lg:justify-between lg:w-full">
+          <div className="flex">
             <button
-              css={[tw`mr-4 -mt-1 outline-none focus:outline-none lg:hidden`]}
+              className="mr-4 -mt-1 outline-none focus:outline-none lg:hidden"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Menu"
             >
@@ -33,25 +31,24 @@ const Header = () => {
               alt={useSiteMetadata().title}
               aria-label={useSiteMetadata().title}
             >
-              <div css={[tw`w-16`]}>
+              <div className="w-16">
                 <Logo />
               </div>
             </Link>
           </div>
           <div
-            css={[
-              tw`transition lg:(opacity-100)`,
-              menuOpen ? tw`opacity-100` : tw`opacity-0`
-            ]}
+            className={`transition lg:opacity-100 ${
+              menuOpen ? `opacity-100` : `opacity-0`
+            }`}
           >
             <Nav />
           </div>
         </nav>
-        <div css={[tw`ml-8`]}>
+        <div className="ml-8">
           <ThemeToggle />
         </div>
       </header>
-    </Container>
+    </section>
   )
 }
 

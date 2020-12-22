@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import tw from 'twin.macro'
 import {
   FaBehance as Behance,
   FaDribbble as Dribbble,
@@ -32,7 +31,7 @@ const Icons = {
 }
 
 const Social = ({ socialData }) => (
-  <ul css={[tw`flex space-x-5 lg:space-x-4`]}>
+  <ul className="flex space-x-5 lg:space-x-4">
     {socialData.map((item, i) => {
       const Icon = Icons[item.label]
       return (
@@ -43,9 +42,9 @@ const Social = ({ socialData }) => (
             aria-label={item.label}
             target="_blank"
             rel="noopener noreferrer"
-            css={[tw`text-default hover:text-mint transition duration-500`]}
+            className="text-default hover:text-mint transition duration-500"
           >
-            <Icon css={[tw`w-5 h-5 lg:(w-4 h-4)`]} />
+            <Icon className="w-5 h-5 lg:w-4 lg:h-4" />
           </a>
         </li>
       )

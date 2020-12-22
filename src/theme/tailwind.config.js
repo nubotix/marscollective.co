@@ -1,6 +1,14 @@
 module.exports = {
+  purge: ['./src/**/*.js'],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1.5rem',
+          md: '2rem'
+        }
+      },
       backgroundColor: {
         default: 'var(--bg-default)',
         gray: 'var(--bg-gray)',
@@ -24,6 +32,11 @@ module.exports = {
         'mint-hover': 'var(--color-mint-hover)',
         reverse: 'var(--color-reverse)'
       }
+    }
+  },
+  variants: {
+    extend: {
+      margin: ['first', 'last']
     }
   }
 }
