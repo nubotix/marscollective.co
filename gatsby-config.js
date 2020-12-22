@@ -98,7 +98,8 @@ module.exports = {
         htmlTitle: `${metadata.title}: CMS`,
         htmlFavicon: favicon,
         modulePath: `${__dirname}/src/cms`,
-        manualInit: true
+        manualInit: true,
+        enableIdentityWidget: false
       }
     },
     {

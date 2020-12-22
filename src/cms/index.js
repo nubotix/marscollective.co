@@ -13,7 +13,8 @@ import Settings from '@collections/settings'
 init({
   config: {
     backend: {
-      name: 'git-gateway',
+      name: 'github',
+      repo: 'marscollective/marscollective.co',
       branch: 'main',
       commit_messages: {
         create: 'feat: create “{{slug}}”',
