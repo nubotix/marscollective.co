@@ -28,7 +28,6 @@ const BlogPage = () => {
       }
     }
   `)
-  console.log(edges)
   return (
     <Layout>
       <Container>
