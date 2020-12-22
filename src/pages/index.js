@@ -2,7 +2,7 @@ import React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from '@components/layout'
-import SEO from '@components/seo'
+import SEO from '@seo'
 import Hero from '@components/hero'
 import Services from '@components/services'
 import Team from '@components/team'

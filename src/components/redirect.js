@@ -1,7 +1,7 @@
 import React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 
-import SEO from '@components/seo'
+import SEO from '@seo'
 import useSiteMetadata from '@hooks/use-site-metadata'
 
 const Redirect = () => {

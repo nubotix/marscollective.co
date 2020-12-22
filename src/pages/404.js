@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useIntl } from 'gatsby-plugin-intl'
 
 import Layout from '@components/layout'
-import SEO from '@components/seo'
+import SEO from '@seo'
 import Button from '@components/button'
 
 const NotFoundPage = () => {

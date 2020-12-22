@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from '@components/layout'
-import SEO from '@components/seo'
+import SEO from '@seo'
 import PostItem from '@components/post-item'
 
 const PostItemTemplate = ({ data }) => {
