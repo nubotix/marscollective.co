@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { AnchorLink as Link } from 'gatsby-plugin-anchor-links'
 
 import Button from '@components/button'
-import Image from '../assets/welcome.svg'
+import welcome from '@assets/welcome.svg'
 
 const Hero = ({
   bigger,
@@ -40,7 +40,7 @@ const Hero = ({
         </div>
       </div>
       <img
-        src={Image}
+        src={welcome}
         alt={`${title} ${bigger}`}
         className="w-2/3 lg:w-full"
         data-sal="slide-up"

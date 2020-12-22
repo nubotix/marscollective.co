@@ -82,6 +82,7 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
+          '@assets': `src/assets`,
           '@collections': `src/cms/collections`,
           '@components': `src/components`,
           '@cmsUtils': `src/cms/collections/utils`,
