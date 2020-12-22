@@ -99,6 +99,51 @@ const Posts = {
       ]
     },
     {
+      label: 'Serviços',
+      name: 'services',
+      widget: 'object',
+      fields: [
+        { label: 'Título', name: 'title', widget: 'string' },
+
+        {
+          label: 'Design',
+          name: 'design',
+          widget: 'object',
+          fields: [
+            { label: 'Título', name: 'title', widget: 'string' },
+            { label: 'Conteúdo', name: 'content', widget: 'text' }
+          ]
+        },
+        {
+          label: 'Web design',
+          name: 'develop',
+          widget: 'object',
+          fields: [
+            { label: 'Título', name: 'title', widget: 'string' },
+            { label: 'Conteúdo', name: 'content', widget: 'text' }
+          ]
+        },
+        {
+          label: 'Redação',
+          name: 'write',
+          widget: 'object',
+          fields: [
+            { label: 'Título', name: 'title', widget: 'string' },
+            { label: 'Conteúdo', name: 'content', widget: 'text' }
+          ]
+        },
+        {
+          label: 'Traduções',
+          name: 'localize',
+          widget: 'object',
+          fields: [
+            { label: 'Título', name: 'title', widget: 'string' },
+            { label: 'Conteúdo', name: 'content', widget: 'text' }
+          ]
+        }
+      ]
+    },
+    {
       label: 'Equipe',
       name: 'team',
       widget: 'object',

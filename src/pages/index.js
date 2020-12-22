@@ -9,7 +9,6 @@ import Team from '@components/team'
 import Posts from '@components/posts'
 import Contact from '@components/contact'
 import useTeam from '@hooks/use-team'
-import useServices from '@hooks/use-services'
 import usePosts from '@hooks/use-posts'
 import useSiteMetadata from '@hooks/use-site-metadata'
 
@@ -27,10 +26,7 @@ const IndexPage = () => {
         buttonSecondary={intl({ id: 'welcome.buttonSecondary.label' })}
         buttonSecondaryUrl={intl({ id: 'welcome.buttonSecondary.url' })}
       />
-      <Services
-        servicesData={useServices()}
-        id={intl({ id: 'nav.services.url' })}
-      />
+      <Services id={intl({ id: 'nav.services.url' })} />
       <Team teamData={useTeam()} id={intl({ id: 'nav.about.url' })} />
       <Posts postsData={usePosts()} id={intl({ id: 'nav.blog.url' })} />
       <Contact

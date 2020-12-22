@@ -3,40 +3,39 @@ import PropTypes from 'prop-types'
 import { useIntl } from 'gatsby-plugin-intl'
 
 import ServicesItem from '@components/services-item'
+import weDesign from '@assets/weDesign.svg'
+import weDevelop from '@assets/weDevelop.svg'
+import weLocalize from '@assets/weLocalize.svg'
+import weWrite from '@assets/weWrite.svg'
 
-const Services = ({ id, servicesData }) => {
+const Services = ({ id }) => {
   const intl = useIntl().formatMessage
-  const title = {
-    en: servicesData.titles.en,
-    es: servicesData.titles.es,
-    pt: servicesData.titles.pt
-  }
   return (
     <section className="container" id={id}>
       <h2 className="center mint" data-sal="fade">
-        {title[intl({ id: 'lang' })]}
+        {intl({ id: 'services.title' })}
       </h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
-        {servicesData.items.map((item, i) => {
-          const title = {
-            en: item.titles.en,
-            es: item.titles.es,
-            pt: item.titles.pt
-          }
-          const content = {
-            en: item.contents.en,
-            es: item.contents.es,
-            pt: item.contents.pt
-          }
-          return (
-            <ServicesItem
-              image={item.image.publicURL}
-              title={title[intl({ id: 'lang' })]}
-              content={content[intl({ id: 'lang' })]}
-              key={i}
-            />
-          )
-        })}
+        <ServicesItem
+          image={weDesign}
+          title={intl({ id: 'services.design.title' })}
+          content={intl({ id: 'services.design.content' })}
+        />
+        <ServicesItem
+          image={weDevelop}
+          title={intl({ id: 'services.develop.title' })}
+          content={intl({ id: 'services.develop.content' })}
+        />
+        <ServicesItem
+          image={weLocalize}
+          title={intl({ id: 'services.write.title' })}
+          content={intl({ id: 'services.write.content' })}
+        />
+        <ServicesItem
+          image={weWrite}
+          title={intl({ id: 'services.localize.title' })}
+          content={intl({ id: 'services.localize.content' })}
+        />
       </div>
     </section>
   )
@@ -45,6 +44,5 @@ const Services = ({ id, servicesData }) => {
 export default Services
 
 Services.propTypes = {
-  id: PropTypes.string.isRequired,
-  servicesData: PropTypes.object.isRequired
+  id: PropTypes.string.isRequired
 }
