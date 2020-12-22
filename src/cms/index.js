@@ -29,6 +29,7 @@ init({
     media_folder: 'static/assets',
     public_folder: 'assets',
     locale: 'pt',
+    display_url: 'https://marscollective.co',
     collections: [
       Posts,
       Works,

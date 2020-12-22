@@ -7,7 +7,7 @@ const Posts = {
   media_folder: 'images',
   public_folder: 'images',
   sortable_fields: [],
-  slug: '{{year}}-{{month}}-{{day}}',
+  slug: '{{date}}',
   path: '{{slug}}/index',
   identifier_field: 'titles.pt',
   editor: { preview: false },
@@ -38,9 +38,9 @@ const Posts = {
       label: 'Data',
       name: 'date',
       widget: 'datetime',
-      format: 'YYYY-MM-DD HH:mm:ss',
+      format: 'YYYY-MM-DD',
       date_format: 'DD-MM-YYYY',
-      time_format: 'HH:mm'
+      time_format: ''
     },
     {
       label: 'Autor(a)',
@@ -50,9 +50,63 @@ const Posts = {
       value_field: 'name',
       search_fields: ['name']
     },
-    { label: 'Texto em inglês', name: 'textEN', widget: 'markdown' },
-    { label: 'Texto em espanhol', name: 'textES', widget: 'markdown' },
-    { label: 'Texto em português', name: 'textPT', widget: 'markdown' }
+    {
+      label: 'Texto em inglês',
+      name: 'textEN',
+      widget: 'markdown',
+      buttons: [
+        'heading-two',
+        'heading-three',
+        'heading-four',
+        'heading-five',
+        'heading-six',
+        'bold',
+        'italic',
+        'link',
+        'code',
+        'quote',
+        'bulleted-list',
+        'numbered-list'
+      ]
+    },
+    {
+      label: 'Texto em espanhol',
+      name: 'textES',
+      widget: 'markdown',
+      buttons: [
+        'heading-two',
+        'heading-three',
+        'heading-four',
+        'heading-five',
+        'heading-six',
+        'bold',
+        'italic',
+        'link',
+        'code',
+        'quote',
+        'bulleted-list',
+        'numbered-list'
+      ]
+    },
+    {
+      label: 'Texto em português',
+      name: 'textPT',
+      widget: 'markdown',
+      buttons: [
+        'heading-two',
+        'heading-three',
+        'heading-four',
+        'heading-five',
+        'heading-six',
+        'bold',
+        'italic',
+        'link',
+        'code',
+        'quote',
+        'bulleted-list',
+        'numbered-list'
+      ]
+    }
   ]
 }
 
