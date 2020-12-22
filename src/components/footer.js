@@ -8,7 +8,7 @@ const Footer = () => (
   <section className="container">
     <footer
       className="grid gap-4 justify-items-center lg:flex lg:justify-between lg:items-center"
-      data-sal="slide-up"
+      data-sal="fade"
     >
       <div className="w-28">
         <Logo />

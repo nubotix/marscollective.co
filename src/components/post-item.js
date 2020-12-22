@@ -18,14 +18,13 @@ const PostItem = ({
   <article>
     <header className="grid gap-8 lg:grid-cols-2 lg:items-center">
       <div className="space-y-8">
-        <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+        <h1 data-sal="slide-up" data-sal-delay="300">
           {title}
         </h1>
         <div
           className="flex space-x-2"
           data-sal="slide-up"
           data-sal-delay="600"
-          data-sal-easing="ease"
         >
           <Avatar image={authorImage} alt={authorName} small />
           <div>
@@ -34,7 +33,7 @@ const PostItem = ({
           </div>
         </div>
       </div>
-      <div data-sal="slide-up" data-sal-delay="900" data-sal-easing="ease">
+      <div data-sal="slide-up" data-sal-delay="900">
         <Img fluid={image} className="h-96 rounded-3xl" />
       </div>
     </header>

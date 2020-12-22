@@ -8,7 +8,7 @@ const PostsItem = ({ date, image, slug, title }) => (
     <BackgroundImage
       fluid={image.childImageSharp.fluid}
       className="relative h-96 rounded-3xl overflow-hidden"
-      data-sal="slide-up"
+      data-sal="fade"
     >
       <div className="h-full bg-black bg-opacity-10 bg-gradient-to-t from-black">
         <div className="absolute p-8 bottom-0 w-full">

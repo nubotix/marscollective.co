@@ -10,12 +10,7 @@ import useSiteMetadata from '@hooks/use-site-metadata'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <section
-      className="container"
-      data-sal="slide-up"
-      data-sal-delay="300"
-      data-sal-easing="ease"
-    >
+    <section className="container" data-sal="slide-up" data-sal-delay="300">
       <header className="flex justify-between">
         <nav className="lg:flex lg:justify-between lg:w-full">
           <div className="flex">

@@ -17,30 +17,19 @@ const Hero = ({
   <section className="container">
     <div className="grid gap-12 justify-items-center items-center text-center lg:grid-cols-2">
       <div className="space-y-8">
-        <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+        <h1 data-sal="slide-up" data-sal-delay="300">
           {title}
-          <span
-            className="mint"
-            data-sal="slide-up"
-            data-sal-delay="600"
-            data-sal-easing="ease"
-          >
+          <span className="mint" data-sal="slide-up" data-sal-delay="600">
             {bigger}
           </span>
         </h1>
-        <p
-          className="lead"
-          data-sal="slide-up"
-          data-sal-delay="900"
-          data-sal-easing="ease"
-        >
+        <p className="lead" data-sal="slide-up" data-sal-delay="900">
           {lead}
         </p>
         <div
           className="flex flex-wrap justify-center space-x-8"
           data-sal="slide-up"
           data-sal-delay="900"
-          data-sal-easing="ease"
         >
           <Link to={buttonPrimaryUrl}>
             <Button primary label={buttonPrimary} />
@@ -56,7 +45,6 @@ const Hero = ({
         className="w-2/3 lg:w-full"
         data-sal="slide-up"
         data-sal-delay="300"
-        data-sal-easing="ease"
       />
     </div>
   </section>

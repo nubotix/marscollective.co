@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Avatar from '@components/avatar'
 
 const TeamMember = ({ image, member, position }) => (
-  <div className="grid gap-4 justify-items-center" data-sal="slide-up">
+  <div className="grid gap-4 justify-items-center" data-sal="fade">
     <Avatar image={image} alt={member} />
     <div>
       <h3 className="mint center">{member}</h3>

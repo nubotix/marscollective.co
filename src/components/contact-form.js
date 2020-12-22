@@ -13,12 +13,7 @@ const ContactForm = ({
   successMessage,
   titleForm
 }) => (
-  <NetlifyForm
-    name="Form"
-    action="/"
-    honeypotName="bot-field"
-    data-sal="slide-up"
-  >
+  <NetlifyForm name="Form" action="/" honeypotName="bot-field" data-sal="fade">
     {({ handleChange, success, error }) => (
       <div className="bg-mint-secondary rounded-3xl p-6 space-y-4 lg:p-8">
         <h3 className="text-white">{titleForm}</h3>

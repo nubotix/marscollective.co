@@ -19,8 +19,8 @@ const Contact = ({
   <section className="container" id={id}>
     <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:bg-gray lg:rounded-3xl lg:p-16">
       <div>
-        <h2 data-sal="slide-up">{title}</h2>
-        <div className="space-y-6 lg:space-y-4" data-sal="slide-up">
+        <h2 data-sal="fade">{title}</h2>
+        <div className="space-y-6 lg:space-y-4" data-sal="fade">
           <div className="flex space-x-6 lg:space-x-4">
             <BiEnvelope className="w-6 h-6 lg:w-4 lg:h-4 lg:mt-1" />
             <a href={`mailto:${siteMetadata.email}`} className="text-default">

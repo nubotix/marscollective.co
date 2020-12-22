@@ -13,7 +13,7 @@ const Services = ({ id, servicesData }) => {
   }
   return (
     <section className="container" id={id}>
-      <h2 className="center mint" data-sal="slide-up">
+      <h2 className="center mint" data-sal="fade">
         {title[intl({ id: 'lang' })]}
       </h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">

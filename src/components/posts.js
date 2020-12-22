@@ -8,7 +8,7 @@ const Posts = ({ id, postsData }) => {
   const intl = useIntl()
   return (
     <section className="container" id={id}>
-      <h2 className="center mint" data-sal="slide-up">
+      <h2 className="center mint" data-sal="fade">
         {intl.formatMessage({ id: 'blog.title' })}
       </h2>
       <div className="grid gap-8 md:grid-cols-2 md:gap-10">
