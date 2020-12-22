@@ -8,7 +8,7 @@ position:
   pt: Desenvolvedor Web
 bio:
   en: Graduated in Design and Political Science and Sociology, I work since 2004 with advertising, where I specialized in web development.
-  es: Lorem ipsum
+  es: Licenciado en Diseño y Ciencias Políticas y Sociología, trabajo con la publicidad desde 2004, donde me especialicé en desarrollo web.
   pt: Graduado em Design e Ciência Política e Sociologia, trabalho desde 2004 com publicidade, onde me especializei no desenvolvimento web.
 social:
   - label: Instagram
