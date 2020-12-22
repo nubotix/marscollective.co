@@ -8,7 +8,6 @@ import WorksBranding from '@collections/works-branding'
 import WorksSocialMedia from '@collections/works-social-media'
 import WorksWebDesign from '@collections/works-web-design'
 import Locales from '@collections/locales'
-import Sections from '@collections/sections'
 import Settings from '@collections/settings'
 
 init({
@@ -39,7 +38,6 @@ init({
       WorksWebDesign,
       Team,
       Locales,
-      Sections,
       Settings
     ]
   }
