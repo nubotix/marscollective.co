@@ -7,7 +7,7 @@ titles:
 descriptions:
   en: 'These are some questions we hear when we talk about Mars for the first
     time to clients, providers, and even colleagues, and one of them is:
-    "what\'s different?". In this post, we explain the reason why we consider
+    "what’s different?". In this post, we explain the reason why we consider
     ourselves different than an agency.'
   es: 'Siempre que presentamos Mars a clientes, proveedores e incluso colegas,
     escuchamos algunas preguntas, y una de ellas: "¿Cuál es la diferencia?". En
