@@ -32,6 +32,7 @@ textEN: >-
 
   An advertising agency is a group of professionals from different areas who work together to communicate for your brand. Copywriters, designers and programmers are some of those.
 
+
   A digital agency seeks to bring the essence of a traditional agency to an online environment, prioritizing the use of digital media to communicate with its clients, giving up even a physical space for meetings.
 
 
@@ -40,7 +41,9 @@ textEN: >-
 
   Yes and no. The main point that differentiates Mars from an agency is our internal organization.
 
+
   We are not a single company, but a collective of independent professionals working under the same name. This means that all the members are here because they believe in the project. In addition, our structure is totally horizontal: there is no traditional *boss* figure and everyone has an active voice in decisions, helping to build our future. This system also allows our team to work in an open and inclusive environment and allows flexible schedules and scalable demands, increasing productivity and also the quality of life of the professionals.
+
 
   ![Photo by Štefan Štefančík](images/stefan-stefancik-bEeq7l5LoiI-unsplash.jpg)
 
@@ -71,6 +74,7 @@ textES: >-
 
   Una agencia de publicidad es un conjunto de profesionales de diversas áreas, que trabajan juntos para comunicar. Redactores, Diseñadores y Programadores son algunos de ellos.
 
+
   Una agencia digital pretende trasladar la esencia de una agencia tradicional para un ambiente online, priorizando el uso de medios digitales para comunicarse con sus clientes, inclusive, dejando de lado el uso de espacio físico para reuniones.
 
 
@@ -79,7 +83,9 @@ textES: >-
 
   Sí y no. El punto principal que diferecia a Mars de una agencia es nuestra organización interna.
 
+
   No somos una empresa única, y sí un colectivo de profesionales independientes trabajando bajo un mismo nombre. Eso significa que todos los miembros hacen parte del equipo porque creen en el proyecto. Además, nuestra estructura es totalmente horizontal: no existe la figura tradicional de jefe y todos tienen voz activa en las decisiones, ayudando a construir nuestro futuro. Ese sistema también permite que nuestro equipo trabaje en un ambiente abierto e inclusivo, así como horarios flexibles y demandas escalables, aumentando la productividad, y claro, la calidad de vida de los profesionales.
+
 
   ![Foto por Štefan Štefančík](images/stefan-stefancik-bEeq7l5LoiI-unsplash.jpg)
 
@@ -88,6 +94,7 @@ textES: >-
 
 
   Nada de eso impacta en el servicio ofrecido por Mars, tampoco en la relación de clientes con nosotros.
+
 
   A pesar de no tener una estructura centralizada, contamos con procesos internos que garantizan la calidad de nuestros servicios ofrecidos, comenzando desde la selección de profesionales que hacen parte del colectivo, hasta los materiales finalizados y entregados a nuestros clientes.
 
@@ -106,7 +113,9 @@ textPT: >-
 
   Ao longo deste texto, vamos explicar exatamente o que é uma agência e o porquê de não nos considerarmos uma.
 
+
   ## O que é uma agência digital?
+
 
   Uma agência de publicidade é um conjunto de profissionais de áreas diversas que, juntos, trabalham para comunicar. Redatores, designers e programadores são alguns deles.
 
@@ -114,21 +123,29 @@ textPT: >-
 
   ## A Mars é uma agência digital?
 
+
   Sim e não. O principal ponto que diferencia a Mars de uma agência é a nossa organização interna.
+
 
   Não somos uma empresa única, e sim um coletivo de profissionais independentes trabalhando sob um mesmo nome. Isso significa que todos os membros estão aqui pois acreditam no projeto. Além disso, nossa estrutura é totalmente horizontal: não existe a figura tradicional de _chefe_ e todos têm voz ativa nas decisões, ajudando a construir nosso futuro. Esse sistema também permite que nossa equipe trabalhe em um ambiente aberto e inclusivo e permite horários flexíveis e demandas escaláveis, aumentando a produtividade e, é claro, a qualidade de vida dos profissionais.
 
+
   ![Foto por Štefan Štefančík](images/stefan-stefancik-bEeq7l5LoiI-unsplash.jpg)
+
 
   ## Como isso afeta sua relação com a Mars?
 
+
   Nada disso impacta o serviço oferecido pela Mars e nem a sua relação como cliente com a gente.
 
+
   Apesar de não ter uma estrutura centralizada, contamos com processos internos que garantem a qualidade dos serviços oferecidos, começando desde a seleção dos profissionais que fazem parte do coletivo até os materiais finalizados e entregues para nossos clientes.
+
 
   Além disso, todos os nossos clientes contam com canais diretos de contato com a Mars, tendo a sua disposição telefone, email, WhatsApp e redes sociais.
 
   ## Venha conhecer Marte! 🚀
+
 
   Gostou da nossa proposta? Vamos construir coisas incríveis juntos! Envie um email para [hi@marscollective.co](mailto:hi@marscollective.co) ou uma mensagem para [nosso WhatsApp](https://wa.me/5545991328593) ou pelo [formulário em nosso site](/pt/#contato) e venha conhecer o que podemos fazer por sua empresa.
 ---
