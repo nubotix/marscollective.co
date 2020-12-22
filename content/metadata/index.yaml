@@ -25,5 +25,5 @@ tracking:
   which: gtm
   id: GTM-TG7DCN7
 colors:
-  background: '#fff'
-  highlight: '#fff'
+  background: '#262626'
+  highlight: '#00d1b7'
