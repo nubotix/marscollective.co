@@ -5,43 +5,48 @@ titles:
   es: Una agencia digital, pero diferente
   pt: Uma agência digital, só que diferente
 descriptions:
-  en: 'These are some questions we hear when we talk about Mars for the first
-    time to clients, providers, and even colleagues, and one of them is:
-    "what’s different?". In this post, we explain the reason why we consider
-    ourselves different than an agency.'
+  en: 'These are some questions we hear when we talk about Mars for the first time
+    to clients, providers, and even colleagues, and one of them is: "what’s
+    different?". In this post, we explain the reason why we consider ourselves
+    different than an agency.'
   es: 'Siempre que presentamos Mars a clientes, proveedores e incluso colegas,
     escuchamos algunas preguntas, y una de ellas: "¿Cuál es la diferencia?". En
     esta publicación, explicamos la razón por la que consideramos a Mars
     diferente a una agencia.'
-  pt: 'Sempre que apresentamos a Mars para clientes, fornecedores e até mesmo
+  pt: "Sempre que apresentamos a Mars para clientes, fornecedores e até mesmo
     colegas, ouvimos alguns questionamentos, e um deles: “qual a diferença?”.
     Nesse post, explicamos o motivo que nos leva considerar a Mars diferente de
-    uma agência.'
+    uma agência."
 image: images/alizee-baudez-srUzc3I_h8Q-unsplash.jpg
 date: 2020-09-09 12:08:28
 author: Anderson Lima
 textEN: >-
   > How come it is not an agency? And what is the difference?
 
-  These are some questions we hear when we talk about Mars for the first time to clients, providers and even colleagues.
 
-  Throughout this text, we will explain exactly what an agency is and why we don't consider ourselves one.
+  These are some questions we hear when we talk about Mars for the first time to clients, providers and even colleagues. Throughout this text, we will explain exactly what an agency is and why we don't consider ourselves one.
+
 
   ## What is a digital agency?
+
 
   An advertising agency is a group of professionals from different areas who work together to communicate for your brand. Copywriters, designers and programmers are some of those.
 
   A digital agency seeks to bring the essence of a traditional agency to an online environment, prioritizing the use of digital media to communicate with its clients, giving up even a physical space for meetings.
 
+
   ## Is Mars a digital agency?
+
 
   Yes and no. The main point that differentiates Mars from an agency is our internal organization.
 
-  We are not a single company, but a collective of independent professionals working under the same name. This means that all the members are here because they believe in the project. In addition, our structure is totally horizontal: there is no traditional _boss_ figure and everyone has an active voice in decisions, helping to build our future. This system also allows our team to work in an open and inclusive environment and allows flexible schedules and scalable demands, increasing productivity and also the quality of life of the professionals.
+  We are not a single company, but a collective of independent professionals working under the same name. This means that all the members are here because they believe in the project. In addition, our structure is totally horizontal: there is no traditional *boss* figure and everyone has an active voice in decisions, helping to build our future. This system also allows our team to work in an open and inclusive environment and allows flexible schedules and scalable demands, increasing productivity and also the quality of life of the professionals.
 
   ![Photo by Štefan Štefančík](images/stefan-stefancik-bEeq7l5LoiI-unsplash.jpg)
 
+
   ## How does this affect your relationship with Mars?
+
 
   None of this impacts the service offered by Mars or your relationship as a client with us.
 
@@ -49,24 +54,28 @@ textEN: >-
 
   In addition, all of our clients have direct channels of contact with Mars, having at their disposal telephone, email, WhatsApp and social networks.
 
+
   ## Come meet Mars! 🚀
 
-  Did you like our proposal? Let's build amazing things together! Send an email to [hi@marscollective.co](mailto:hi@marscollective.co) or a message to [our WhatsApp](https://wa.me/5545991328593) or the [form on our website](/en/#contact) and come see what we can do for your company.
 
+  Did you like our proposal? Let's build amazing things together! Send an email to [hi@marscollective.co](mailto:hi@marscollective.co) or a message to [our WhatsApp](https://wa.me/5545991328593) or the [form on our website](/en/#contact) and come see what we can do for your company.
 textES: >-
   > ¿Cómo que no es una agencia? ¿Cuál es la diferencia?
 
-  Esas son algunas preguntas que nos hacen cuando hablamos sobre Mars por la primera vez a nuestros clientes, proveedores e incluso colegas profesionales.
 
-  En el decorrer del texto, explicaremos exactamento qué es una agencia y porqué no nos consideramos una.
+  Esas son algunas preguntas que nos hacen cuando hablamos sobre Mars por la primera vez a nuestros clientes, proveedores e incluso colegas profesionales. En el decorrer del texto, explicaremos exactamento qué es una agencia y porqué no nos consideramos una.
+
 
   ## ¿Qué es una agencia digital?
+
 
   Una agencia de publicidad es un conjunto de profesionales de diversas áreas, que trabajan juntos para comunicar. Redactores, Diseñadores y Programadores son algunos de ellos.
 
   Una agencia digital pretende trasladar la esencia de una agencia tradicional para un ambiente online, priorizando el uso de medios digitales para comunicarse con sus clientes, inclusive, dejando de lado el uso de espacio físico para reuniones.
 
+
   ## ¿Mars es una agencia digital?
+
 
   Sí y no. El punto principal que diferecia a Mars de una agencia es nuestra organización interna.
 
@@ -74,7 +83,9 @@ textES: >-
 
   ![Foto por Štefan Štefančík](images/stefan-stefancik-bEeq7l5LoiI-unsplash.jpg)
 
+
   ## ¿Cómo afecta eso la relación con Mars?
+
 
   Nada de eso impacta en el servicio ofrecido por Mars, tampoco en la relación de clientes con nosotros.
 
@@ -82,12 +93,14 @@ textES: >-
 
   Asimismo, nuestros clientes cuentan con canales de contacto directo con Mars, teniendo a disposición teléfono, e-mail y WhatsApp.
 
+
   ## Venha conhecer Marte! 🚀
 
-  ¿Se interesó por nuestra propuesta? ¡Vamos a construir cosas increíbles juntos! Envíenos un e-mail a [hi@marscollective.co](mailto:hi@marscollective.co) o un mensaje en [nuestro WhatsApp](https://wa.me/5545991328593), o por el [formulario de contacto de nuestro sitio web](/es/#contacto).
 
+  ¿Se interesó por nuestra propuesta? ¡Vamos a construir cosas increíbles juntos! Envíenos un e-mail a [hi@marscollective.co](mailto:hi@marscollective.co) o un mensaje en [nuestro WhatsApp](https://wa.me/5545991328593), o por el [formulario de contacto de nuestro sitio web](/es/#contacto).
 textPT: >-
   > Como assim não é uma agência? E qual é a diferença?
+
 
   Essas são algumas perguntas que ouvimos quando falamos da Mars pela primeira vez para clientes, fornecedores e até mesmo colegas de profissão.
 
