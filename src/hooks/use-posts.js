@@ -1,37 +1,31 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
-export default function useTeam() {
+export default function usePosts() {
   const {
-    team: { edges }
+    posts: { edges }
   } = useStaticQuery(graphql`
     query {
-      team: allMarkdownRemark(
-        filter: { frontmatter: { key: { eq: "team-member" } } }
+      posts: allMarkdownRemark(
+        filter: { frontmatter: { key: { eq: "post-item" } } }
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             frontmatter {
-              bio {
-                en
-                es
-                pt
-              }
+              date
               image {
                 childImageSharp {
-                  fluid(maxWidth: 160, quality: 100) {
+                  fluid(maxWidth: 800, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
-              name
-              position {
+              titles {
                 en
                 es
                 pt
-              }
-              social {
-                label
-                url
               }
             }
           }

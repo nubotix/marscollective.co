@@ -1,4 +1,5 @@
 ---
+key: post-item
 titles:
   en: A digital agency, but different
   es: Una agencia digital, pero diferente
@@ -9,9 +10,6 @@ descriptions:
   pt: Lorem
 image: images/alizee-baudez-srUzc3I_h8Q-unsplash.jpg
 date: 2020-09-09 12:08:28
-tags:
-  - processos internos
-  - sobre a gente
 author: Anderson Lima
 textEN: >-
   > How come it is not an agency? And what is the difference?

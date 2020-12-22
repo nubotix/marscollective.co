@@ -5,6 +5,7 @@ const metadata = yaml.safeLoad(
 )
 const contentPath = `content`
 const favicon = metadata.favicon ? `content/metadata/${metadata.favicon}` : ``
+const supportedLanguages = [`en`, `es`, `pt`]
 
 module.exports = {
   siteMetadata: {
@@ -29,16 +30,40 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-anchor-links',
+      resolve: `gatsby-plugin-anchor-links`,
       options: {
-        offset: -100
+        offset: -80
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-transformer-remark-frontmatter`,
+            options: {
+              whitelist: [`textEN`, `textES`, `textPT`]
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1216,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              backgroundColor: `transparent`,
+              quality: 100,
+              withWebp: true
+            }
+          }
+        ]
       }
     },
     {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/content/locales`,
-        languages: [`en`, `es`, `pt`],
+        languages: supportedLanguages,
         defaultLanguage: `en`,
         redirect: true,
         redirectComponent: `${__dirname}/src/components/redirect.js`
@@ -64,6 +89,42 @@ module.exports = {
         htmlFavicon: favicon,
         modulePath: `${__dirname}/src/cms`,
         manualInit: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes
+            .filter(node => {
+              const path = node.path
+              if (path.includes(`404`)) {
+                return false
+              }
+              if (path.includes(`offline-plugin-app-shell-fallback`)) {
+                return false
+              }
+              return supportedLanguages.includes(path.split(`/`)[1])
+            })
+            .map(node => {
+              return {
+                url: `${site.siteMetadata.siteUrl}${node.path}`,
+                changefreq: `weekly`,
+                priority: 0.7
+              }
+            })
       }
     }
   ]

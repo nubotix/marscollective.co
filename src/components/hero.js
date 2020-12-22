@@ -73,7 +73,9 @@ export default Hero
 Hero.propTypes = {
   bigger: PropTypes.string.isRequired,
   buttonPrimary: PropTypes.string.isRequired,
+  buttonPrimaryUrl: PropTypes.string.isRequired,
   buttonSecondary: PropTypes.string.isRequired,
+  buttonSecondaryUrl: PropTypes.string.isRequired,
   lead: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 }

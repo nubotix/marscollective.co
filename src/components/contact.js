@@ -57,6 +57,7 @@ export default Contact
 Contact.propTypes = {
   button: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   siteMetadata: PropTypes.object.isRequired,

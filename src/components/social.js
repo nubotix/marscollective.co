@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import tw from 'twin.macro'
 import {
   FaBehance as Behance,
@@ -31,7 +32,7 @@ const Icons = {
 }
 
 const Social = ({ socialData }) => (
-  <ul css={[tw`flex space-x-6 lg:space-x-4`]}>
+  <ul css={[tw`flex space-x-5 lg:space-x-4`]}>
     {socialData.map((item, i) => {
       const Icon = Icons[item.label]
       return (
@@ -44,7 +45,7 @@ const Social = ({ socialData }) => (
             rel="noopener noreferrer"
             css={[tw`text-default hover:text-mint transition duration-500`]}
           >
-            <Icon css={[tw`w-6 h-6 lg:(w-4 h-4)`]} />
+            <Icon css={[tw`w-5 h-5 lg:(w-4 h-4)`]} />
           </a>
         </li>
       )
@@ -53,3 +54,7 @@ const Social = ({ socialData }) => (
 )
 
 export default Social
+
+Social.propTypes = {
+  socialData: PropTypes.array.isRequired
+}

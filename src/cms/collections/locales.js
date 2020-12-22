@@ -99,6 +99,12 @@ const Posts = {
       ]
     },
     {
+      label: 'Equipe',
+      name: 'team',
+      widget: 'object',
+      field: { label: 'Título', name: 'title', widget: 'string' }
+    },
+    {
       label: 'Portfólio',
       name: 'portfolio',
       widget: 'object',
@@ -133,6 +139,23 @@ const Posts = {
             { label: 'Categoria', name: 'role', widget: 'string' },
             { label: 'Equipe', name: 'team', widget: 'string' },
             { label: 'Data de entrega', name: 'finishedDate', widget: 'string' }
+          ]
+        }
+      ]
+    },
+    {
+      label: 'Blog',
+      name: 'blog',
+      widget: 'object',
+      fields: [
+        { label: 'Título', name: 'title', widget: 'string' },
+        {
+          label: 'Botão',
+          name: 'button',
+          widget: 'object',
+          fields: [
+            { label: 'Rótulo', name: 'label', widget: 'string' },
+            { label: 'URL', name: 'url', widget: 'string' }
           ]
         }
       ]

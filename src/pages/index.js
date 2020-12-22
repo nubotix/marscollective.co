@@ -6,9 +6,11 @@ import SEO from '@components/seo'
 import Hero from '@components/hero'
 import Services from '@components/services'
 import Team from '@components/team'
+import Posts from '@components/posts'
 import Contact from '@components/contact'
 import useTeam from '@hooks/use-team'
 import useServices from '@hooks/use-services'
+import usePosts from '@hooks/use-posts'
 import useSiteMetadata from '@hooks/use-site-metadata'
 
 const IndexPage = () => {
@@ -30,6 +32,7 @@ const IndexPage = () => {
         id={intl({ id: 'nav.services.url' })}
       />
       <Team teamData={useTeam()} id={intl({ id: 'nav.about.url' })} />
+      <Posts postsData={usePosts()} id={intl({ id: 'nav.blog.url' })} />
       <Contact
         title={intl({ id: 'contact.title' })}
         siteMetadata={useSiteMetadata()}

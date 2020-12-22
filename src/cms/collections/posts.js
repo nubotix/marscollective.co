@@ -12,6 +12,7 @@ const Posts = {
   identifier_field: 'titles.pt',
   editor: { preview: false },
   fields: [
+    { label: 'key', name: 'key', widget: 'hidden', default: 'post-item' },
     {
       label: 'Títulos',
       name: 'titles',
@@ -41,15 +42,13 @@ const Posts = {
       date_format: 'DD-MM-YYYY',
       time_format: 'HH:mm'
     },
-    { label: 'Tags', name: 'tags', widget: 'list' },
     {
       label: 'Autor(a)',
       name: 'author',
       widget: 'relation',
-      collection: 'sections',
-      file: 'team',
-      value_field: 'members.*.name',
-      search_fields: ['members.*.name']
+      collection: 'team',
+      value_field: 'name',
+      search_fields: ['name']
     },
     { label: 'Texto em inglês', name: 'textEN', widget: 'markdown' },
     { label: 'Texto em espanhol', name: 'textES', widget: 'markdown' },

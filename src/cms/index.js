@@ -2,6 +2,7 @@ import { init } from 'netlify-cms-app'
 
 import Posts from '@collections/posts'
 import Works from '@collections/works'
+import Team from '@collections/team'
 import WorksAudiovisual from '@collections/works-audiovisual'
 import WorksBranding from '@collections/works-branding'
 import WorksSocialMedia from '@collections/works-social-media'
@@ -36,6 +37,7 @@ init({
       WorksBranding,
       WorksSocialMedia,
       WorksWebDesign,
+      Team,
       Locales,
       Sections,
       Settings

@@ -38,6 +38,9 @@
       "url": "#our-work"
     }
   },
+  "team": {
+    "title": "Quem somos"
+  },
   "portfolio": {
     "title": "Nosso trabalho",
     "items": {

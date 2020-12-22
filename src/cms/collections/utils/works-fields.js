@@ -22,10 +22,9 @@ const WorksFields = [
     name: 'team',
     widget: 'relation',
     multiple: true,
-    collection: 'sections',
-    file: 'team',
-    value_field: 'members.*.name',
-    search_fields: ['members.*.name']
+    collection: 'team',
+    value_field: 'name',
+    search_fields: ['name']
   },
   {
     label: 'Data de estrega',

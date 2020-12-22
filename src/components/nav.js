@@ -28,11 +28,11 @@ const links = [
     url: 'nav.about.url',
     anchor: true
   },
-  // {
-  //   label: 'nav.blog.label',
-  //   url: 'nav.blog.url',
-  //   anchor: false
-  // },
+  {
+    label: 'nav.blog.label',
+    url: 'nav.blog.url',
+    anchor: true
+  },
   {
     label: 'nav.contact.label',
     url: 'nav.contact.url',

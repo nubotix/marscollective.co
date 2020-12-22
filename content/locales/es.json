@@ -38,6 +38,9 @@
       "url": "#nuestro-trabajo"
     }
   },
+  "team": {
+    "title": "Quienes somos"
+  },
   "portfolio": {
     "title": "Nuestro trabajo",
     "items": {
@@ -55,13 +58,6 @@
       "role": "Categoria",
       "team": "Equipo",
       "finishedDate": "Fecha de entrega"
-    }
-  },
-  "about": {
-    "title": "Quienes somos",
-    "button": {
-      "label": "Ver más",
-      "url": ""
     }
   },
   "blog": {

@@ -1,6 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useIntl } from 'gatsby-plugin-intl'
 import tw from 'twin.macro'
+
 import Container from '@components/container'
 import ServicesItem from '@components/services-item'
 
@@ -43,3 +45,8 @@ const Services = ({ id, servicesData }) => {
 }
 
 export default Services
+
+Services.propTypes = {
+  id: PropTypes.string.isRequired,
+  servicesData: PropTypes.object.isRequired
+}

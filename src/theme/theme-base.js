@@ -78,6 +78,46 @@ const ThemeBase = css`
   .mint {
     ${tw`text-mint`}
   }
+
+  .post {
+    ${tw`my-16`}
+
+    h1, h2, h3, h4, h5, h6, ol, li, p, blockquote {
+      ${tw`md:(ml-20 mr-20) lg:(ml-28 mr-28)`}
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      ${tw`mt-12 mb-6`}
+    }
+
+    p {
+      ${tw`mb-4 last:mb-0`}
+    }
+
+    blockquote {
+      ${tw`border-l-4 border-mint text-xl italic my-8 py-4 pl-4`}
+
+      p {
+        ${tw`mx-0`}
+      }
+    }
+
+    figure {
+      ${tw`my-8`}
+    }
+
+    img {
+      ${tw`rounded-3xl`}
+    }
+
+    figcaption {
+      ${tw`mt-4 text-sm text-center italic`}
+    }
+  }
 `
 
 export default ThemeBase

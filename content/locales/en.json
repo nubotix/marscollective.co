@@ -38,6 +38,9 @@
       "url": "#our-work"
     }
   },
+  "team": {
+    "title": "Who we are"
+  },
   "portfolio": {
     "title": "Our work",
     "items": {
@@ -55,6 +58,13 @@
       "role": "Role",
       "team": "Team",
       "finishedDate": "Finished date"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "button": {
+      "label": "View more",
+      "url": ""
     }
   },
   "contact": {
