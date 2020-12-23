@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import { Image } from '@components/image'
 
 const Avatar = ({ alt, image, small }) => (
-  <Img
-    fluid={image.childImageSharp.fluid}
+  <Image
+    src={image}
     alt={alt}
     className={`rounded-full ${small ? `w-14 h-14` : `w-40 h-40`}`}
   />

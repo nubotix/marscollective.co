@@ -10,7 +10,7 @@ const TeamMemberBio = ({ bio, image, name, social }) => (
     <div className="flex-1 space-y-4">
       <p className="lead">{name}</p>
       <p className="text-sm">{bio}</p>
-      <Social socialData={social} />
+      {social && <Social socialData={social} />}
     </div>
   </div>
 )

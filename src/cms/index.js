@@ -1,4 +1,4 @@
-import { init } from 'netlify-cms-app'
+import { init, registerPreviewTemplate as template } from 'netlify-cms-app'
 
 import Posts from '@collections/posts'
 import Works from '@collections/works'
@@ -9,6 +9,16 @@ import WorksSocialMedia from '@collections/works-social-media'
 import WorksWebDesign from '@collections/works-web-design'
 import Locales from '@collections/locales'
 import Settings from '@collections/settings'
+
+import PostItemPreview from '@templates/post-item'
+import TeamMemberPreview from '@templates/team-member'
+
+import '@theme/theme-base.css'
+import 'typeface-baloo-2'
+import 'typeface-rubik'
+
+template('posts', PostItemPreview)
+template('team', TeamMemberPreview)
 
 init({
   config: {

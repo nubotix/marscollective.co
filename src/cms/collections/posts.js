@@ -10,7 +10,6 @@ const Posts = {
   slug: '{{date}}',
   path: '{{slug}}/index',
   identifier_field: 'titles.pt',
-  editor: { preview: false },
   fields: [
     { label: 'key', name: 'key', widget: 'hidden', default: 'post-item' },
     {

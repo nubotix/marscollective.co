@@ -8,9 +8,9 @@ const Team = {
   public_folder: '',
   sortable_fields: [],
   path: '{{slug}}/index',
-  editor: { preview: false },
+  identifier_field: 'name',
   fields: [
-    { label: 'Nome', name: 'name', widget: 'string' },
+    { label: 'Nome', name: 'name', widget: 'hidden' },
     { label: 'Imagem', name: 'image', widget: 'image' },
     {
       label: 'Função',

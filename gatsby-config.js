@@ -87,6 +87,7 @@ module.exports = {
           '@components': `src/components`,
           '@cmsUtils': `src/cms/collections/utils`,
           '@hooks': `src/hooks`,
+          '@templates': `src/cms/templates`,
           '@theme': `src/theme`,
           '@seo': `src/components/seo`
         }

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
 
+import { Image } from '@components/image'
 import Avatar from '@components/avatar'
 import TeamMemberBio from '@components/team-member-bio'
 
@@ -26,7 +26,7 @@ const PostItem = ({
           data-sal="slide-up"
           data-sal-delay="600"
         >
-          <Avatar image={authorImage} alt={authorName} small />
+          {authorImage && <Avatar image={authorImage} alt={authorName} small />}
           <div>
             <p className="lead">{authorName}</p>
             <span className="text-sm">{date}</span>
@@ -34,17 +34,19 @@ const PostItem = ({
         </div>
       </div>
       <div data-sal="slide-up" data-sal-delay="900">
-        <Img fluid={image} className="h-96 rounded-3xl" />
+        <Image src={image} className="h-96 rounded-3xl" />
       </div>
     </header>
     <main className="post">{html}</main>
     <footer data-sal="slide-up">
-      <TeamMemberBio
-        bio={authorBio}
-        image={authorImage}
-        name={authorName}
-        social={authorSocial}
-      />
+      {authorBio && (
+        <TeamMemberBio
+          bio={authorBio}
+          image={authorImage}
+          name={authorName}
+          social={authorSocial}
+        />
+      )}
     </footer>
   </article>
 )

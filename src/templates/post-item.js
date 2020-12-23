@@ -61,7 +61,7 @@ const PostItemTemplate = ({ data }) => {
           day: 'numeric'
         })}
         html={html}
-        image={postItem.frontmatter.image.childImageSharp.fluid}
+        image={postItem.frontmatter.image}
         title={title[intl.formatMessage({ id: 'lang' })]}
       />
     </Layout>
