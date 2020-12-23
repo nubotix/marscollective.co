@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const ServicesItem = ({ children, content, title }) => (
-  <div className="grid gap-4 justify-items-center" data-sal="fade">
+  <div className="flex flex-col space-y-4 items-center" data-sal="fade">
     <div className="w-40 h-40">{children}</div>
     <div>
       <h3 className="center mint">{title}</h3>
