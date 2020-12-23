@@ -1,13 +1,7 @@
 import React from 'react'
 
 const Welcome = () => (
-  <svg
-    width={694}
-    height={533}
-    viewBox="0 0 694 533"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg viewBox="0 0 694 533" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0)">
       <path
         d="M259.347 402.251C302.844 402.251 338.106 394.459 338.106 384.846C338.106 375.233 302.844 367.44 259.347 367.44C215.849 367.44 180.587 375.233 180.587 384.846C180.587 394.459 215.849 402.251 259.347 402.251Z"
