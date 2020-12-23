@@ -8,6 +8,29 @@ import WeDevelop from '@assets/we-develop'
 import WeLocalize from '@assets/we-localize'
 import WeWrite from '@assets/we-write'
 
+const data = [
+  {
+    image: <WeDesign />,
+    title: 'services.design.title',
+    content: 'services.design.content'
+  },
+  {
+    image: <WeDevelop />,
+    title: 'services.develop.title',
+    content: 'services.develop.content'
+  },
+  {
+    image: <WeWrite />,
+    title: 'services.write.title',
+    content: 'services.write.content'
+  },
+  {
+    image: <WeLocalize />,
+    title: 'services.localize.title',
+    content: 'services.localize.content'
+  }
+]
+
 const Services = ({ id }) => {
   const intl = useIntl().formatMessage
   return (
@@ -16,30 +39,15 @@ const Services = ({ id }) => {
         {intl({ id: 'services.title' })}
       </h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
-        <ServicesItem
-          title={intl({ id: 'services.design.title' })}
-          content={intl({ id: 'services.design.content' })}
-        >
-          <WeDesign />
-        </ServicesItem>
-        <ServicesItem
-          title={intl({ id: 'services.develop.title' })}
-          content={intl({ id: 'services.develop.content' })}
-        >
-          <WeDevelop />
-        </ServicesItem>
-        <ServicesItem
-          title={intl({ id: 'services.write.title' })}
-          content={intl({ id: 'services.write.content' })}
-        >
-          <WeLocalize />
-        </ServicesItem>
-        <ServicesItem
-          title={intl({ id: 'services.localize.title' })}
-          content={intl({ id: 'services.localize.content' })}
-        >
-          <WeWrite />
-        </ServicesItem>
+        {data.map(({ content, image, title }, i) => (
+          <ServicesItem
+            title={intl({ id: title })}
+            content={intl({ id: content })}
+            key={i}
+          >
+            {image}
+          </ServicesItem>
+        ))}
       </div>
     </section>
   )
