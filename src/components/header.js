@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby-plugin-intl'
 import { FiMenu } from 'react-icons/fi'
 
-import Logo from '@components/logo'
+import Logo from '@assets/logo'
 import Nav from '@components/nav'
 import ThemeToggle from '@theme/theme-toggle'
 import useSiteMetadata from '@hooks/use-site-metadata'

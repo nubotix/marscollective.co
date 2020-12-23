@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { useIntl } from 'gatsby-plugin-intl'
 
 import ServicesItem from '@components/services-item'
-import weDesign from '@assets/weDesign.svg'
-import weDevelop from '@assets/weDevelop.svg'
-import weLocalize from '@assets/weLocalize.svg'
-import weWrite from '@assets/weWrite.svg'
+import WeDesign from '@assets/we-design'
+import WeDevelop from '@assets/we-develop'
+import WeLocalize from '@assets/we-localize'
+import WeWrite from '@assets/we-write'
 
 const Services = ({ id }) => {
   const intl = useIntl().formatMessage
@@ -17,25 +17,29 @@ const Services = ({ id }) => {
       </h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
         <ServicesItem
-          image={weDesign}
           title={intl({ id: 'services.design.title' })}
           content={intl({ id: 'services.design.content' })}
-        />
+        >
+          <WeDesign />
+        </ServicesItem>
         <ServicesItem
-          image={weDevelop}
           title={intl({ id: 'services.develop.title' })}
           content={intl({ id: 'services.develop.content' })}
-        />
+        >
+          <WeDevelop />
+        </ServicesItem>
         <ServicesItem
-          image={weLocalize}
           title={intl({ id: 'services.write.title' })}
           content={intl({ id: 'services.write.content' })}
-        />
+        >
+          <WeLocalize />
+        </ServicesItem>
         <ServicesItem
-          image={weWrite}
           title={intl({ id: 'services.localize.title' })}
           content={intl({ id: 'services.localize.content' })}
-        />
+        >
+          <WeWrite />
+        </ServicesItem>
       </div>
     </section>
   )

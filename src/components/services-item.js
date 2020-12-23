@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ServicesItem = ({ content, image, title }) => (
+const ServicesItem = ({ children, content, title }) => (
   <div className="grid gap-4 justify-items-center" data-sal="fade">
-    <img src={image} alt={title} className="w-40 h-40" />
+    <div className="w-40 h-40">{children}</div>
     <div>
       <h3 className="center mint">{title}</h3>
       <p>{content}</p>
@@ -14,7 +14,7 @@ const ServicesItem = ({ content, image, title }) => (
 export default ServicesItem
 
 ServicesItem.propTypes = {
-  content: PropTypes.string,
-  image: PropTypes.string,
-  title: PropTypes.string
+  children: PropTypes.node.isRequired,
+  content: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 }
