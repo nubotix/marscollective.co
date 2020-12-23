@@ -15,7 +15,7 @@ const PostItem = ({
   image,
   title
 }) => (
-  <article>
+  <article className="container">
     <header className="grid gap-8 lg:grid-cols-2 lg:items-center">
       <div className="space-y-8">
         <h1 data-sal="slide-up" data-sal-delay="300">

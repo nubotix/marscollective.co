@@ -50,22 +50,20 @@ const PostItemTemplate = ({ data }) => {
         description={description[intl.formatMessage({ id: 'lang' })]}
         lang={intl.formatMessage({ id: 'lang' })}
       />
-      <section className="container">
-        <PostItem
-          authorBio={authorBio[intl.formatMessage({ id: 'lang' })]}
-          authorName={author.frontmatter.name}
-          authorImage={author.frontmatter.image}
-          authorSocial={author.frontmatter.social}
-          date={intl.formatDate(postItem.frontmatter.date, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-          html={html}
-          image={postItem.frontmatter.image.childImageSharp.fluid}
-          title={title[intl.formatMessage({ id: 'lang' })]}
-        />
-      </section>
+      <PostItem
+        authorBio={authorBio[intl.formatMessage({ id: 'lang' })]}
+        authorName={author.frontmatter.name}
+        authorImage={author.frontmatter.image}
+        authorSocial={author.frontmatter.social}
+        date={intl.formatDate(postItem.frontmatter.date, {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
+        html={html}
+        image={postItem.frontmatter.image.childImageSharp.fluid}
+        title={title[intl.formatMessage({ id: 'lang' })]}
+      />
     </Layout>
   )
 }

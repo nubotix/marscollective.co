@@ -10,8 +10,8 @@ import useSiteMetadata from '@hooks/use-site-metadata'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <section className="container" data-sal="slide-up" data-sal-delay="300">
-      <header className="flex justify-between">
+    <header className="container" data-sal="slide-up" data-sal-delay="300">
+      <div className="flex justify-between">
         <nav className="lg:flex lg:justify-between lg:w-full">
           <div className="flex">
             <button
@@ -42,8 +42,8 @@ const Header = () => {
         <div className="ml-8">
           <ThemeToggle />
         </div>
-      </header>
-    </section>
+      </div>
+    </header>
   )
 }
 

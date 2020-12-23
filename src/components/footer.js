@@ -5,8 +5,8 @@ import Logo from '@assets/logo'
 import Nav from '@components/nav'
 
 const Footer = () => (
-  <section className="container">
-    <footer
+  <footer className="container">
+    <div
       className="grid gap-4 justify-items-center lg:flex lg:justify-between lg:items-center"
       data-sal="fade"
     >
@@ -20,8 +20,8 @@ const Footer = () => (
         Mars Collective <RiCopyleftLine size={12} className="mx-1" />
         {new Date().getFullYear()}
       </span>
-    </footer>
-  </section>
+    </div>
+  </footer>
 )
 
 export default Footer
