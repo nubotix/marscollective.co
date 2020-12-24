@@ -1,6 +1,6 @@
-const Posts = {
-  name: 'posts',
-  label: 'Posts',
+const Blog = {
+  name: 'blog',
+  label: 'Blog',
   label_singular: 'post',
   folder: 'content/blog',
   create: true,
@@ -11,7 +11,7 @@ const Posts = {
   path: '{{slug}}/index',
   identifier_field: 'titles.pt',
   fields: [
-    { label: 'key', name: 'key', widget: 'hidden', default: 'post-item' },
+    { label: 'key', name: 'key', widget: 'hidden', default: 'blog-item' },
     {
       label: 'Títulos',
       name: 'titles',
@@ -109,4 +109,4 @@ const Posts = {
   ]
 }
 
-export default Posts
+export default Blog

@@ -4,23 +4,23 @@ import { useIntl } from 'gatsby-plugin-intl'
 
 import Layout from '@components/layout'
 import SEO from '@seo'
-import PostItem from '@components/post-item'
+import BlogItem from '@components/blog-item'
 
-const PostItemTemplate = ({ data }) => {
+const BlogItemTemplate = ({ data }) => {
   const intl = useIntl()
-  const { postItem, author } = data
-  const bodyData = postItem.fields.frontmattermd
+  const { blogItem, author } = data
+  const bodyData = blogItem.fields.frontmattermd
 
   const title = {
-    en: postItem.frontmatter.titles.en,
-    es: postItem.frontmatter.titles.es,
-    pt: postItem.frontmatter.titles.pt
+    en: blogItem.frontmatter.titles.en,
+    es: blogItem.frontmatter.titles.es,
+    pt: blogItem.frontmatter.titles.pt
   }
 
   const description = {
-    en: postItem.frontmatter.descriptions.en,
-    es: postItem.frontmatter.descriptions.es,
-    pt: postItem.frontmatter.descriptions.pt
+    en: blogItem.frontmatter.descriptions.en,
+    es: blogItem.frontmatter.descriptions.es,
+    pt: blogItem.frontmatter.descriptions.pt
   }
 
   const body = {
@@ -50,18 +50,18 @@ const PostItemTemplate = ({ data }) => {
         description={description[intl.formatMessage({ id: 'lang' })]}
         lang={intl.formatMessage({ id: 'lang' })}
       />
-      <PostItem
+      <BlogItem
         authorBio={authorBio[intl.formatMessage({ id: 'lang' })]}
         authorName={author.frontmatter.name}
         authorImage={author.frontmatter.image}
         authorSocial={author.frontmatter.social}
-        date={intl.formatDate(postItem.frontmatter.date, {
+        date={intl.formatDate(blogItem.frontmatter.date, {
           year: 'numeric',
           month: 'long',
           day: 'numeric'
         })}
         html={html}
-        image={postItem.frontmatter.image}
+        image={blogItem.frontmatter.image}
         title={title[intl.formatMessage({ id: 'lang' })]}
       />
     </Layout>
@@ -70,7 +70,7 @@ const PostItemTemplate = ({ data }) => {
 
 export const query = graphql`
   query($author: String!, $slug: String!) {
-    postItem: markdownRemark(fields: { slug: { eq: $slug } }) {
+    blogItem: markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         date
         descriptions {
@@ -131,4 +131,4 @@ export const query = graphql`
   }
 `
 
-export default PostItemTemplate
+export default BlogItemTemplate

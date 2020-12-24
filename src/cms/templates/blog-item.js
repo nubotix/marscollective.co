@@ -2,9 +2,9 @@ import React from 'react'
 import { format, zonedTimeToUtc } from 'date-fns-tz'
 import { es, pt } from 'date-fns/locale'
 
-import PostItem from '@components/post-item'
+import BlogItem from '@components/blog-item'
 
-const PostItemPreview = ({ entry, getAsset, widgetFor }) => {
+const BlogItemPreview = ({ entry, getAsset, widgetFor }) => {
   const { author, date, image, titles } = entry.getIn(['data']).toJS()
   const znDate = zonedTimeToUtc(date || new Date(), 'America/Sao_Paulo')
 
@@ -31,7 +31,7 @@ const PostItemPreview = ({ entry, getAsset, widgetFor }) => {
   return (
     <div className="light">
       {data.map(({ date, text, title }, i) => (
-        <PostItem
+        <BlogItem
           authorName={author || 'Autor(a)'}
           date={date}
           html={text}
@@ -44,4 +44,4 @@ const PostItemPreview = ({ entry, getAsset, widgetFor }) => {
   )
 }
 
-export default PostItemPreview
+export default BlogItemPreview

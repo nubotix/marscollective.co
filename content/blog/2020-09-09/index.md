@@ -1,11 +1,12 @@
 ---
-key: post-item
+key: blog-item
 titles:
   en: A digital agency, but different
   es: Una agencia digital, pero diferente
   pt: Uma agência digital, só que diferente
 descriptions:
-  en: 'These are some questions we hear when we talk about Mars for the first time
+  en:
+    'These are some questions we hear when we talk about Mars for the first time
     to clients, providers, and even colleagues, and one of them is: "what’s
     different?". In this post, we explain the reason why we consider ourselves
     different than an agency.'
@@ -13,10 +14,10 @@ descriptions:
     escuchamos algunas preguntas, y una de ellas: "¿Cuál es la diferencia?". En
     esta publicación, explicamos la razón por la que consideramos a Mars
     diferente a una agencia.'
-  pt: "Sempre que apresentamos a Mars para clientes, fornecedores e até mesmo
+  pt: 'Sempre que apresentamos a Mars para clientes, fornecedores e até mesmo
     colegas, ouvimos alguns questionamentos, e um deles: “qual a diferença?”.
     Nesse post, explicamos o motivo que nos leva considerar a Mars diferente de
-    uma agência."
+    uma agência.'
 image: images/alizee-baudez-srUzc3I_h8Q-unsplash.jpg
 date: 2020-09-09 12:08:28
 author: Anderson Lima

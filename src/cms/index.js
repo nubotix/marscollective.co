@@ -1,6 +1,6 @@
 import { init, registerPreviewTemplate as template } from 'netlify-cms-app'
 
-import Posts from '@collections/posts'
+import Blog from '@collections/blog'
 import Portfolio from '@collections/portfolio'
 import PortfolioAudiovisual from '@collections/portfolio-audiovisual'
 import PortfolioBranding from '@collections/portfolio-branding'
@@ -10,14 +10,14 @@ import Team from '@collections/team'
 import Locales from '@collections/locales'
 import Settings from '@collections/settings'
 
-import PostItemPreview from '@templates/post-item'
+import BlogItemPreview from '@templates/blog-item'
 import TeamMemberPreview from '@templates/team-member'
 
 import '@theme/theme-base.css'
 import 'typeface-baloo-2'
 import 'typeface-rubik'
 
-template('posts', PostItemPreview)
+template('blog', BlogItemPreview)
 template('team', TeamMemberPreview)
 
 init({
@@ -42,7 +42,7 @@ init({
     locale: 'pt',
     display_url: 'https://marscollective.co',
     collections: [
-      Posts,
+      Blog,
       Portfolio,
       PortfolioAudiovisual,
       PortfolioBranding,

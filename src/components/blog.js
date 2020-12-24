@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useIntl } from 'gatsby-plugin-intl'
 
-import PostsItem from '@components/posts-item'
+import Card from '@components/card'
 
-const Posts = ({ id, postsData }) => {
+const Blog = ({ id, blogData }) => {
   const intl = useIntl()
   return (
     <section className="container" id={id}>
@@ -12,14 +12,14 @@ const Posts = ({ id, postsData }) => {
         {intl.formatMessage({ id: 'blog.title' })}
       </h2>
       <div className="grid gap-8 md:grid-cols-2 md:gap-10">
-        {postsData.map(({ node }, i) => {
+        {blogData.map(({ node }, i) => {
           const title = {
             en: node.frontmatter.titles.en,
             es: node.frontmatter.titles.es,
             pt: node.frontmatter.titles.pt
           }
           return (
-            <PostsItem
+            <Card
               date={intl.formatDate(node.frontmatter.date, {
                 year: 'numeric',
                 month: 'long',
@@ -37,9 +37,9 @@ const Posts = ({ id, postsData }) => {
   )
 }
 
-export default Posts
+export default Blog
 
-Posts.propTypes = {
+Blog.propTypes = {
   id: PropTypes.string.isRequired,
-  postsData: PropTypes.array.isRequired
+  blogData: PropTypes.array.isRequired
 }

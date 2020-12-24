@@ -1,12 +1,12 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
-export default function usePosts() {
+export default function useBlog() {
   const {
-    posts: { edges }
+    blog: { edges }
   } = useStaticQuery(graphql`
     query {
-      posts: allMarkdownRemark(
-        filter: { frontmatter: { key: { eq: "post-item" } } }
+      blog: allMarkdownRemark(
+        filter: { frontmatter: { key: { eq: "blog-item" } } }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {

@@ -1,24 +1,24 @@
 ---
-key: post-item
+key: blog-item
 titles:
-  en: "Jamstack: why you should abandon WordPress"
-  es: "Jamstack: porqué deberías abandonar WordPress"
-  pt: "Jamstack: porque você deveria abandonar o WordPress"
+  en: 'Jamstack: why you should abandon WordPress'
+  es: 'Jamstack: porqué deberías abandonar WordPress'
+  pt: 'Jamstack: porque você deveria abandonar o WordPress'
 descriptions:
-  en: "WordPress has revolutionized the web, but over time it has become a heavy
+  en: 'WordPress has revolutionized the web, but over time it has become a heavy
     and slow application. To get around this problem, a new development culture
     with a total focus on performance emerged: Jamstack. In this post, we
     explain better how it works, and if it is the ideal solution for your
-    business."
-  es: "WordPress revolucionó la web, pero con el tiempo se convirtió en una
+    business.'
+  es: 'WordPress revolucionó la web, pero con el tiempo se convirtió en una
     aplicación pesado y lento. Para sortear este problema, una nueva cultura de
     desarrollo con un enfoque total en el rendimiento: Jamstack. En esta
     publicación, te explicamos mejor cómo funciona, y si es la solución ideal
-    para tu negocio."
-  pt: "O WordPress revolucionou a web, mas com o tempo se tornou uma aplicação
+    para tu negocio.'
+  pt: 'O WordPress revolucionou a web, mas com o tempo se tornou uma aplicação
     pesada e lenta. Para contornar esse problema, surgiu uma nova cultura de
     desenvolvimento com foco total no desempenho: o Jamstack. Nesse post,
-    explicamos melhor como funciona, e se é a solução ideal para seu negócio."
+    explicamos melhor como funciona, e se é a solução ideal para seu negócio.'
 image: images/react-gatsby.jpg
 date: 2020-11-18 06:33:28
 author: Daniel Soares

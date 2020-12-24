@@ -5,7 +5,7 @@ import { Image } from '@components/image'
 import Avatar from '@components/avatar'
 import TeamMemberBio from '@components/team-member-bio'
 
-const PostItem = ({
+const BlogItem = ({
   authorName,
   authorImage,
   authorBio,
@@ -37,7 +37,7 @@ const PostItem = ({
         <Image src={image} className="h-96 rounded-3xl" />
       </div>
     </header>
-    <main className="post">{html}</main>
+    <main className="blog">{html}</main>
     <footer data-sal="slide-up">
       {authorBio && (
         <TeamMemberBio
@@ -51,9 +51,9 @@ const PostItem = ({
   </article>
 )
 
-export default PostItem
+export default BlogItem
 
-PostItem.propTypes = {
+BlogItem.propTypes = {
   authorName: PropTypes.string.isRequired,
   authorImage: PropTypes.object.isRequired,
   authorBio: PropTypes.string.isRequired,

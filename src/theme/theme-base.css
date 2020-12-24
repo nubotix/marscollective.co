@@ -85,12 +85,6 @@
   width: calc(100% - 3rem);
 }
 
-/* @screen lg {
-  .nav {
-    width:
-  }
-} */
-
 .lead {
   @apply text-xl lg:text-2xl font-normal;
 }
@@ -103,7 +97,7 @@
   @apply text-mint;
 }
 
-.post {
+.blog {
   @apply my-16;
 
   h1,

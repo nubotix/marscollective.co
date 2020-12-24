@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby-plugin-intl'
 import BackgroundImage from 'gatsby-background-image'
 
-const PostsItem = ({ date, image, slug, title }) => (
+const Card = ({ date, image, slug, title }) => (
   <Link to={slug}>
     <BackgroundImage
       fluid={image.childImageSharp.fluid}
@@ -22,9 +22,9 @@ const PostsItem = ({ date, image, slug, title }) => (
   </Link>
 )
 
-export default PostsItem
+export default Card
 
-PostsItem.propTypes = {
+Card.propTypes = {
   date: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
   slug: PropTypes.string.isRequired,

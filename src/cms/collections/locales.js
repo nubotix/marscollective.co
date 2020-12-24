@@ -1,4 +1,4 @@
-const Posts = {
+const Locales = {
   name: 'locales',
   label: 'Traduções',
   folder: 'content/locales',
@@ -243,4 +243,4 @@ const Posts = {
   ]
 }
 
-export default Posts
+export default Locales
