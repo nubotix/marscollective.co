@@ -31,11 +31,11 @@
     "lead": "A collective of creative minds located in Brazil with an international mindset.",
     "buttonPrimary": {
       "label": "Get in touch",
-      "url": "#contact"
+      "url": "/en/#contact"
     },
     "buttonSecondary": {
       "label": "Our work",
-      "url": "#our-work"
+      "url": "/en/#our-work"
     }
   },
   "services": {

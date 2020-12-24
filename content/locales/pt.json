@@ -31,11 +31,11 @@
     "lead": "Um coletivo de mentes criativas localizado no Brasil com um mindset internacional.",
     "buttonPrimary": {
       "label": "Entre em contato",
-      "url": "#contato"
+      "url": "/pt/#contato"
     },
     "buttonSecondary": {
       "label": "Nosso trabalho",
-      "url": "#our-work"
+      "url": "/pt/#our-work"
     }
   },
   "services": {
