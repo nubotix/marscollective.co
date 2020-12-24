@@ -138,6 +138,7 @@ module.exports = {
               }
             })
       }
-    }
+    },
+    `gatsby-plugin-client-side-redirect`
   ]
 }

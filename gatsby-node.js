@@ -14,7 +14,52 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  // temporary redirects
+  // don't forget to remove gatsby-plugin-client-
+  // side-redirect in the future
+  createRedirect({
+    fromPath: '/portfolio',
+    toPath: '/#portfolio',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/en/portfolio',
+    toPath: '/en/#portfolio',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/es/portfolio',
+    toPath: '/es/#portfolio',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/pt/portfolio',
+    toPath: '/pt/#portfolio',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/blog',
+    toPath: '/#blog',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/en/blog',
+    toPath: '/en/#blog',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/es/blog',
+    toPath: '/es/#blog',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/pt/blog',
+    toPath: '/pt/#blog',
+    isPermanent: true
+  })
+
   return graphql(`
     {
       allMarkdownRemark(filter: { frontmatter: { key: { eq: "post-item" } } }) {
