@@ -1,3 +1,5 @@
+---
+key: portfolio-item
 title: DevFarias
 descriptions:
   en: Lorem ipsum
@@ -14,3 +16,4 @@ role:
 team:
   - Frank Cedeño
 date: 2020-09-05 16:24:18
+---

@@ -1,4 +1,5 @@
-const WorksFields = [
+const PortfolioFields = [
+  { label: 'key', name: 'key', widget: 'hidden', default: 'portfolio-item' },
   { label: 'Título', name: 'title', widget: 'string' },
   {
     label: 'Descrições',
@@ -45,4 +46,4 @@ const WorksFields = [
   { label: 'Vídeo ID', name: 'video', widget: 'string', required: false }
 ]
 
-export default WorksFields
+export default PortfolioFields

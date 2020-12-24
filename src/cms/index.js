@@ -1,12 +1,12 @@
 import { init, registerPreviewTemplate as template } from 'netlify-cms-app'
 
 import Posts from '@collections/posts'
-import Works from '@collections/works'
+import Portfolio from '@collections/portfolio'
+import PortfolioAudiovisual from '@collections/portfolio-audiovisual'
+import PortfolioBranding from '@collections/portfolio-branding'
+import PortfolioSocialMedia from '@collections/portfolio-social-media'
+import PortfolioWebDesign from '@collections/portfolio-web-design'
 import Team from '@collections/team'
-import WorksAudiovisual from '@collections/works-audiovisual'
-import WorksBranding from '@collections/works-branding'
-import WorksSocialMedia from '@collections/works-social-media'
-import WorksWebDesign from '@collections/works-web-design'
 import Locales from '@collections/locales'
 import Settings from '@collections/settings'
 
@@ -43,11 +43,11 @@ init({
     display_url: 'https://marscollective.co',
     collections: [
       Posts,
-      Works,
-      WorksAudiovisual,
-      WorksBranding,
-      WorksSocialMedia,
-      WorksWebDesign,
+      Portfolio,
+      PortfolioAudiovisual,
+      PortfolioBranding,
+      PortfolioSocialMedia,
+      PortfolioWebDesign,
       Team,
       Locales,
       Settings
