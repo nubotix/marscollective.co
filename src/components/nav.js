@@ -17,11 +17,11 @@ const links = [
     url: 'nav.services.url',
     anchor: true
   },
-  // {
-  //   label: 'nav.portfolio.label',
-  //   url: 'nav.portfolio.url',
-  //   anchor: true
-  // },
+  {
+    label: 'nav.portfolio.label',
+    url: 'nav.portfolio.url',
+    anchor: true
+  },
   {
     label: 'nav.about.label',
     url: 'nav.about.url',

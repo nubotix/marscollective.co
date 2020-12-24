@@ -34,9 +34,9 @@ const Hero = ({
           <Link to={buttonPrimaryUrl}>
             <Button primary label={buttonPrimary} />
           </Link>
-          {/* <Link to={buttonSecondaryUrl}>
+          <Link to={buttonSecondaryUrl}>
             <Button label={buttonSecondary} />
-          </Link> */}
+          </Link>
         </div>
       </div>
       <div className="w-2/3 lg:w-full" data-sal="slide-up" data-sal-delay="300">
