@@ -70,7 +70,10 @@ const BlogItemTemplate = ({ data }) => {
 
 export const query = graphql`
   query($author: String!, $slug: String!) {
-    blogItem: markdownRemark(fields: { slug: { eq: $slug } }) {
+    blogItem: markdownRemark(
+      fields: { slug: { eq: $slug } }
+      frontmatter: { key: { eq: "blog-item" } }
+    ) {
       frontmatter {
         date
         descriptions {

@@ -62,15 +62,19 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(filter: { frontmatter: { key: { eq: "post-item" } } }) {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: { key: { in: ["blog-item", "portfolio-item"] } }
+        }
+      ) {
         edges {
           node {
-            fields {
-              slug
-            }
             frontmatter {
               author
               key
+            }
+            fields {
+              slug
             }
           }
         }
@@ -84,10 +88,11 @@ exports.createPages = ({ actions, graphql }) => {
     const data = result.data.allMarkdownRemark.edges
     data.forEach(({ node }) => {
       const author = node.frontmatter.author
+      const key = node.frontmatter.key
       const slug = node.fields.slug
       createPage({
         path: slug,
-        component: path.resolve(`./src/templates/post-item.js`),
+        component: path.resolve(`./src/templates/${key}.js`),
         context: {
           author,
           slug
