@@ -4,7 +4,7 @@ const PortfolioSocialMedia = {
   name: 'portfolio-social-media',
   label: 'Portfólio de social media',
   folder: 'content/portfolio',
-  filter: { field: 'role', value: 'Social Media' },
+  filter: { field: 'role', value: 'Social media' },
   media_folder: 'images',
   public_folder: 'images',
   sortable_fields: [],
