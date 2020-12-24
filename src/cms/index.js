@@ -11,6 +11,7 @@ import Locales from '@collections/locales'
 import Settings from '@collections/settings'
 
 import BlogItemPreview from '@templates/blog-item'
+import PortfolioItemPreview from '@templates/portfolio-item'
 import TeamMemberPreview from '@templates/team-member'
 
 import '@theme/theme-base.css'
@@ -18,6 +19,7 @@ import 'typeface-baloo-2'
 import 'typeface-rubik'
 
 template('blog', BlogItemPreview)
+template('portfolio', PortfolioItemPreview)
 template('team', TeamMemberPreview)
 
 init({

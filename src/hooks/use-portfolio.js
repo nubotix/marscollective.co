@@ -12,6 +12,9 @@ export default function usePortfolio() {
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             frontmatter {
               content {
                 absolutePath
@@ -23,8 +26,13 @@ export default function usePortfolio() {
                 pt
               }
               image {
-                absolutePath
+                childImageSharp {
+                  fluid(maxWidth: 768, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
               }
+              title
               role
               team
               video

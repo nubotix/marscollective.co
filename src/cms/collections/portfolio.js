@@ -10,7 +10,6 @@ const Portfolio = {
   public_folder: 'images',
   sortable_fields: [],
   path: '{{slug}}/index',
-  editor: { preview: false },
   fields: PortfolioFields
 }
 

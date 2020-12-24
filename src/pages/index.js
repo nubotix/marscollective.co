@@ -5,9 +5,12 @@ import Layout from '@components/layout'
 import SEO from '@seo'
 import Hero from '@components/hero'
 import Services from '@components/services'
+import Portfolio from '@components/portfolio'
 import Team from '@components/team'
 import Blog from '@components/blog'
 import Contact from '@components/contact'
+
+import usePortfolio from '@hooks/use-portfolio'
 import useTeam from '@hooks/use-team'
 import useBlog from '@hooks/use-blog'
 import useSiteMetadata from '@hooks/use-site-metadata'
@@ -27,6 +30,10 @@ const IndexPage = () => {
         buttonSecondaryUrl={intl({ id: 'welcome.buttonSecondary.url' })}
       />
       <Services id={intl({ id: 'nav.services.url' })} />
+      <Portfolio
+        id={intl({ id: 'nav.portfolio.url' })}
+        portfolioData={usePortfolio()}
+      />
       <Team teamData={useTeam()} id={intl({ id: 'nav.about.url' })} />
       <Blog blogData={useBlog()} id={intl({ id: 'nav.blog.url' })} />
       <Contact
