@@ -1,10 +1,13 @@
 title: Mars Collective
 shortTitle: Mars
 descriptions:
-  en: A collective of creative minds located in Brazil with an international mindset.
-  es: Un colectivo de mentes creativas localizado en Brasil, con una mentalidad internacional.
-  pt: Um coletivo de mentes criativas localizado no Brasil com um mindset internacional.
-phone: +55 45 99132-8593
+  en: A collective of creative minds located in Brazil with an international
+    mindset.
+  es: Un colectivo de mentes creativas localizado en Brasil, con una mentalidad
+    internacional.
+  pt: Um coletivo de mentes criativas localizado no Brasil com um mindset
+    internacional.
+phone: +55 45 98408-2627
 email: hi@marscollective.co
 siteUrl: https://marscollective.co
 favicon: favicon.png
@@ -20,10 +23,10 @@ social:
   - label: Github
     url: https://github.com/marscollective
   - label: WhatsApp
-    url: https://wa.me/5545991328593
+    url: https://wa.me/+5545984082627
 tracking:
   which: gtm
   id: GTM-TG7DCN7
 colors:
-  background: '#262626'
-  highlight: '#00d1b7'
+  background: "#262626"
+  highlight: "#00d1b7"
