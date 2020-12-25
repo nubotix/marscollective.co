@@ -5,12 +5,12 @@ descriptions:
   en: Lorem ipsum
   es: Lorem ipsum
   pt: Lorem ipsum
-image:
-content:
-video: 'N0rwsKtfEGs'
 role:
-  - Audiovisual
+  - audiovisual
 team:
   - Frank Cedeño
-date: 2018-09-05 16:24
+date: 2018-09-05
+image: images/jasmijn-jansen-nipme2bymii-unsplash.jpg
+content: null
+video: N0rwsKtfEGs
 ---

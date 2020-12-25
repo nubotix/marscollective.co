@@ -5,12 +5,12 @@ descriptions:
   en: Lorem ipsum
   es: Lorem ipsum
   pt: Lorem ipsum
-image: test.png
-content:
-video: iV2eWX60jIw
 role:
-  - Audiovisual
+  - audiovisual
 team:
   - Frank Cedeño
-date: 2018-09-05 16:24
+date: 2018-09-05
+image: images/chanhee-lee-xow_ru8rcv4-unsplash.jpg
+content: null
+video: iV2eWX60jIw
 ---

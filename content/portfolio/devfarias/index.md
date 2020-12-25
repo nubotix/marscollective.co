@@ -5,15 +5,15 @@ descriptions:
   en: Lorem ipsum
   es: Lorem ipsum
   pt: Lorem ipsum
-image: devfarias-2.jpg
+image: images/devfarias-2.jpg
 content:
   - images/devfarias-1.jpg
   - images/devfarias-2.jpg
   - images/devfarias-3.jpg
 video:
 role:
-  - Branding
+  - branding
 team:
   - Frank Cedeño
-date: 2020-09-05 16:24:18
+date: 2020-09-05
 ---
