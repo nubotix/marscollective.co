@@ -39,7 +39,9 @@ const PortfolioItemTemplate = ({ data }) => {
         }
         image={portfolioItem.image}
         role={portfolioItem.role
-          .map(roleItem => intl.formatMessage({ id: roleItem }))
+          .map(roleItem =>
+            intl.formatMessage({ id: `portfolio.items.${roleItem}` })
+          )
           .join(', ')}
         roleTitle={intl.formatMessage({ id: 'portfolio.itemPage.role' })}
         title={portfolioItem.title}

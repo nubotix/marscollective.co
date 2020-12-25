@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby-plugin-intl'
 import BackgroundImage from 'gatsby-background-image'
 
-const Card = ({ date, image, slug, title }) => (
+const Card = ({ image, slug, subtitle, title }) => (
   <Link to={slug}>
     <BackgroundImage
       fluid={image.childImageSharp.fluid}
@@ -15,7 +15,7 @@ const Card = ({ date, image, slug, title }) => (
           <h3 className="text-white hover:text-mint mb-4 transition duration-500">
             {title}
           </h3>
-          <span className="text-white">{date}</span>
+          <span className="text-white">{subtitle}</span>
         </div>
       </div>
     </BackgroundImage>
@@ -25,8 +25,8 @@ const Card = ({ date, image, slug, title }) => (
 export default Card
 
 Card.propTypes = {
-  date: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
   slug: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
 }

@@ -16,7 +16,11 @@ const Portfolio = ({ id, portfolioData }) => {
           <Card
             image={node.frontmatter.image}
             slug={node.fields.slug}
+            subtitle={node.frontmatter.role
+              .map(roleItem => intl({ id: `portfolio.items.${roleItem}` }))
+              .join(', ')}
             title={node.frontmatter.title}
+            key={i}
           />
         ))}
       </div>

@@ -59,6 +59,21 @@ exports.createPages = ({ actions, graphql }) => {
     toPath: '/pt/#blog',
     isPermanent: true
   })
+  createRedirect({
+    fromPath: '/en/admin',
+    toPath: '/admin',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/es/admin',
+    toPath: '/admin',
+    isPermanent: true
+  })
+  createRedirect({
+    fromPath: '/pt/admin',
+    toPath: '/admin',
+    isPermanent: true
+  })
 
   return graphql(`
     {

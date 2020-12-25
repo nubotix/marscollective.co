@@ -20,13 +20,13 @@ const Blog = ({ id, blogData }) => {
           }
           return (
             <Card
-              date={intl.formatDate(node.frontmatter.date, {
+              image={node.frontmatter.image}
+              slug={node.fields.slug}
+              subtitle={intl.formatDate(node.frontmatter.date, {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
               })}
-              image={node.frontmatter.image}
-              slug={node.fields.slug}
               title={title[intl.formatMessage({ id: 'lang' })]}
               key={i}
             />

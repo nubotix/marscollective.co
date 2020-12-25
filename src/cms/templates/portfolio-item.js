@@ -17,6 +17,12 @@ const PortfolioItemPreview = ({ entry, getAsset }) => {
     title
   } = entry.getIn(['data']).toJS()
   const znDate = zonedTimeToUtc(date || new Date(), 'America/Sao_Paulo')
+  const roleTransl = {
+    webDesign: 'Web design',
+    branding: 'Branding',
+    socialMedia: 'Social media',
+    audiovisual: 'Audiovisual'
+  }
 
   return (
     <div className="light">
@@ -27,7 +33,10 @@ const PortfolioItemPreview = ({ entry, getAsset }) => {
         dateTitle="Data de entrega"
         description={descriptions?.pt}
         image={getAsset(image)}
-        role={role?.map(roleItem => roleItem).join(', ') || 'Lorem ipsum'}
+        role={
+          role?.map(roleItem => roleTransl[roleItem]).join(', ') ||
+          'Lorem ipsum'
+        }
         roleTitle="Categoria"
         title={title || 'Título'}
         team={team?.join(', ') || 'Lorem ipsum'}

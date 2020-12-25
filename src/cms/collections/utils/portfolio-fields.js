@@ -19,7 +19,12 @@ const PortfolioFields = [
     name: 'role',
     widget: 'select',
     multiple: true,
-    options: ['Web design', 'Branding', 'Social media', 'Audiovisual']
+    options: [
+      { label: 'Web design', value: 'webDesign' },
+      { label: 'Branding', value: 'branding' },
+      { label: 'Social media', value: 'socialMedia' },
+      { label: 'Audiovisual', value: 'audiovisual' }
+    ]
   },
   {
     label: 'Autor(a) e/ou Equipe',
