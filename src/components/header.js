@@ -33,7 +33,7 @@ const Header = () => {
           </Link>
         </div>
         <div
-          className={`absolute inset-x-0 z-10 duration-1000 transform overflow-hidden ${
+          className={`absolute inset-x-0 z-10 duration-500 transform overflow-hidden ${
             menuOpen ? `top-32` : `-translate-y-full top-0`
           } lg:relative lg:translate-y-0 lg:top-0`}
         >

@@ -67,7 +67,7 @@ const Nav = ({ intl }) => (
       </li>
     ))}
     <li>
-      <ul className="flex justify-center space-x-4 md:space-x-6 lg:space-x-4">
+      <ul className="flex space-x-4 md:justify-center md:space-x-6 lg:space-x-4">
         <IntlContextConsumer>
           {({ languages, language: currentLocale }) =>
             languages.map(language => (
