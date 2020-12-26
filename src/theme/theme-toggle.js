@@ -12,11 +12,11 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className="focus:outline-none fill-current"
+      className="ml-8 -mt-1 focus:outline-none fill-current"
       onClick={() => setTheme(isDark() ? 'light' : 'dark')}
       aria-label="Theme toggle"
     >
-      {isDark() ? <BiSun size={22} /> : <BiMoon size={22} />}
+      {isDark() ? <BiSun size={20} /> : <BiMoon size={20} />}
     </button>
   )
 }
