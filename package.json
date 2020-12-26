@@ -42,8 +42,6 @@
     "typeface-rubik": "^1.1.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "babel-loader": "^8.2.2",
     "prettier": "2.2.1"
   },
   "prettier": {
