@@ -52,43 +52,41 @@ const languageName = {
 }
 
 const Nav = ({ intl }) => (
-  <div className="nav absolute bg-default z-10 transition lg:relative lg:bg-transparent lg:w-auto">
-    <ul className="font-semibold list-none py-10 space-y-10 lg:inline-flex lg:py-0 lg:space-y-0 lg:space-x-8">
-      {links.map(({ anchor, label, url }, i) => (
-        <li key={i}>
-          <Link
-            to={`${baseURL[intl.formatMessage({ id: 'lang' })]}${
-              anchor ? '#' : ''
-            }${url && intl.formatMessage({ id: url })}`}
-            alt={intl.formatMessage({ id: label })}
-            className="text-default hover:text-mint"
-          >
-            {intl.formatMessage({ id: label })}
-          </Link>
-        </li>
-      ))}
-      <li>
-        <ul className="flex space-x-4">
-          <IntlContextConsumer>
-            {({ languages, language: currentLocale }) =>
-              languages.map(language => (
-                <li
-                  key={language}
-                  onClick={() => changeLocale(language)}
-                  aria-hidden="true"
-                  className={`hover:text-mint duration-500 cursor-pointer ${
-                    currentLocale === language ? `text-mint` : `text-default`
-                  }`}
-                >
-                  {languageName[language]}
-                </li>
-              ))
-            }
-          </IntlContextConsumer>
-        </ul>
+  <ul className="bg-default p-6 space-y-8 font-semibold md:space-y-12 md:py-20 lg:bg-transparent lg:p-0 lg:space-y-0 lg:space-x-8  lg:flex">
+    {links.map(({ anchor, label, url }, i) => (
+      <li className="md:text-center" key={i}>
+        <Link
+          to={`${baseURL[intl.formatMessage({ id: 'lang' })]}${
+            anchor ? '#' : ''
+          }${url && intl.formatMessage({ id: url })}`}
+          alt={intl.formatMessage({ id: label })}
+          className="text-default hover:text-mint"
+        >
+          {intl.formatMessage({ id: label })}
+        </Link>
       </li>
-    </ul>
-  </div>
+    ))}
+    <li>
+      <ul className="flex justify-center space-x-4 md:space-x-6 lg:space-x-4">
+        <IntlContextConsumer>
+          {({ languages, language: currentLocale }) =>
+            languages.map(language => (
+              <li
+                key={language}
+                onClick={() => changeLocale(language)}
+                aria-hidden="true"
+                className={`hover:text-mint duration-500 cursor-pointer ${
+                  currentLocale === language ? `text-mint` : `text-default`
+                }`}
+              >
+                {languageName[language]}
+              </li>
+            ))
+          }
+        </IntlContextConsumer>
+      </ul>
+    </li>
+  </ul>
 )
 
 export default injectIntl(Nav)

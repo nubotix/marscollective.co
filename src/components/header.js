@@ -10,39 +10,37 @@ import useSiteMetadata from '@hooks/use-site-metadata'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <header className="container" data-sal="slide-up" data-sal-delay="300">
-      <div className="flex justify-between">
-        <nav className="lg:flex lg:justify-between lg:w-full">
-          <div className="flex">
-            <button
-              className="mr-4 -mt-1 outline-none focus:outline-none lg:hidden"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Menu"
-            >
-              <FiMenu size={24} />
-            </button>
-            <Link
-              to="/"
-              alt={useSiteMetadata().title}
-              aria-label={useSiteMetadata().title}
-            >
-              <div className="w-16">
-                <Logo />
-              </div>
-            </Link>
-          </div>
-          <div
-            className={`transition lg:opacity-100 ${
-              menuOpen ? `opacity-100` : `opacity-0`
-            }`}
+    <header
+      className="container flex justify-between items-center"
+      data-sal="slide-up"
+      data-sal-delay="300"
+    >
+      <nav className="lg:flex lg:justify-between lg:w-full">
+        <div className="flex">
+          <button
+            className="mr-4 outline-none focus:outline-none lg:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
           >
-            <Nav />
-          </div>
-        </nav>
-        <div className="ml-8">
-          <ThemeToggle />
+            <FiMenu size={24} />
+          </button>
+          <Link
+            to="/"
+            alt={useSiteMetadata().title}
+            aria-label={useSiteMetadata().title}
+          >
+            <Logo className="w-16" />
+          </Link>
         </div>
-      </div>
+        <div
+          className={`absolute inset-x-0 z-10 duration-1000 transform overflow-hidden ${
+            menuOpen ? `top-32` : `-translate-y-full top-0`
+          } lg:relative lg:translate-y-0 lg:top-0`}
+        >
+          <Nav />
+        </div>
+      </nav>
+      <ThemeToggle />
     </header>
   )
 }
