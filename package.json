@@ -27,7 +27,7 @@
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-transformer-remark-frontmatter": "^0.1.0",
-    "i18next": "^19.8.4",
+    "i18next": "^20.0.0",
     "netlify-cms-app": "^2.14.6",
     "postcss": "^8.2.1",
     "postcss-nested": "^5.0.3",
